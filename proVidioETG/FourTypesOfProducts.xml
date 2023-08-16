@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ProvidioTestcases">
+
+  <!--  <listeners>
+		<listener class-name="com.providio.ExtentReports.ExtentReporterNG" />
+	</listeners> -->
+  <test thread-count="5" name="Automation">
+
+    <classes>
+	  
+	   
+	  <class name="com.providio.payments.tc__PaypalFromViewCartPage_GuestUser"/>
+	  <class name="com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser"/> 
+	   <class name="com.providio.payments.tc__PaypalFromPDPpage_GuestUser"/> 
+	   <class name="com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser"/> 
+	   
+	  
+	   <class name="com.providio.testcases.tc__LoginSc"/>
+	   
+	   <class name="com.providio.payments.tc__PaypalFromViewCartPage_RegUser"/> 
+	   <class name="com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser"/> 
+	   <class name="com.providio.payments.tc__PaypalFromCheckoutPage_RegUser"/>
+	   <class name="com.providio.payments.tc__PaypalFromPDPpage_RegUser"/>
+	   <class name="com.providio.payments.tc__PaymentProccessByGCandCC_RegUser"/> 
+	    <class name="com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser"/> 
+	    
+	    <class name="com.providio.testcases.tc__LogOut" />
+	    
+	     <class name="com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser"/> 
+	     <class name="com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser"/> 
+	     
+	<!--  <class name="com.providio.testcases.tc__VariationProductForGuestUser"/> 
+	  <class name="com.providio.testcases.tc__PdpPagewithGuestuser"/>
+	   <class name="com.providio.payments.tc__PaypalCheckout_MiniCart"/>
+	   <class name="com.providio.testcases.Tc_OrderByGc_GuestUser"/>
+	   <class name="com.providio.payments.tc__PaypalFromViewCartPage"/>
+	  
+	   
+      <class name="com.providio.testcases.tc__BundleProductRegUser"/>     
+      <class name="com.providio.testcases.tc__SimpleProductRegUser" />   
+      <class name="com.providio.testcases.tc__VariationProductRegUser" />  
+      <class name="com.providio.testcases.tc__ProductSetRegUser" />  
+      
+      <class name="com.providio.testcases.tc__BySearchingProduct"/>
+      
+      <class name="com.providio.testcases.tc__LogOut" />
+      --> 
+    </classes>
+  </test> <!-- Automation -->
+</suite> <!-- ProvidioTestcases -->
+
