@@ -314,14 +314,16 @@ WebDriver lDriver;
 			WebElement revieworder;
 		    public void clickonrevieworder(WebDriver driver) throws InterruptedException {	
 		    	if(driver.findElements(By.xpath("//button[contains(@class,'submit-payment')]")).size()!=0) {
-			    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", revieworder);
-			    	
+			    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", revieworder);			    	
 			    	Thread.sleep(5000);
-//			    	JavascriptExecutor js = (JavascriptExecutor) driver;
-//			    	js.executeScript("arguments[0].click();", revieworder);
-			    	revieworder.click();
-	
-			        Thread.sleep(3000);
+			    	JavascriptExecutor js = (JavascriptExecutor) driver;
+			    	js.executeScript("arguments[0].click();", revieworder);
+			    	Thread.sleep(3000);
+			    	if(driver.findElements(By.xpath("//button[contains(@class,'submit-payment')]")).size()!=0) {
+			    		 Thread.sleep(3000);
+				    	revieworder.click();	
+				       
+			        }
 		    	}
 		    }
 		    
@@ -453,13 +455,17 @@ WebDriver lDriver;
                  WebElement parentDiv= driver.findElement(By.xpath("//div[@class='tab-pane paypal-content js_braintree_paypalContent active']"));
                  Thread.sleep(3000);
                  WebElement paypalCheckout=parentDiv.findElement(By.xpath("//div[@class='js_braintree_paypal_billing_button']"));
-                 Thread.sleep(10000);
+                // Thread.sleep(10000);
 
                  JavascriptExecutor js = (JavascriptExecutor) driver;  
                  js.executeScript("arguments[0].click();", paypalCheckout);
-                 Thread.sleep(10000);
-                 paypalCheckout.click();
-                 Thread.sleep(10000);
+                 Thread.sleep(3000);
+                 WebElement regPaypalCheckout=parentDiv.findElement(By.xpath("//label[contains(text(),'Select a PayPal account')]"));
+                 if(!regPaypalCheckout.isDisplayed()) {
+                	 paypalCheckout.click();
+                     Thread.sleep(3000);
+                 }
+                 
             }
                
           

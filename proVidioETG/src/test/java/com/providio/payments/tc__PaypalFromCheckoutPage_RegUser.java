@@ -18,19 +18,12 @@ public class tc__PaypalFromCheckoutPage_RegUser extends baseClass {
 	public void paypalFromCheckoutPage() throws InterruptedException {
 	
 	     if(isLoggedIn) { 
-		
-	        navigationPage navMenu = new navigationPage(driver);
-	        navMenu.clickwoMensMenubaritems(driver);
-	        logger.info("hovered on Womens");
-	        
-	        navMenu.ClickwoMensofBraceletss(driver);
-	        logger.info("clicked on Braceletss  sub menu");
 
-	        productListingPage plp = new productListingPage(driver);
-	        plp.clickOnProduct(driver);
-	       // plp.selectProductRandom(driver);
-	        logger.info("clicked on earings product");
-	        
+	          navigationPage navPage =new navigationPage(driver);
+	    	  navPage.selectRandomMenu(driver);
+	    	 
+	    	  productListingPage plp = new productListingPage(driver);
+	    	  plp.selectProductRandom(driver);
    
 	        //pdp page
 	          Thread.sleep(2000);

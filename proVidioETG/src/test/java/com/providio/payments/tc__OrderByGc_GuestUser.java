@@ -20,23 +20,13 @@ public class tc__OrderByGc_GuestUser extends baseClass {
 	@Test
 	public void paymentByGiftCardInGuestUser() throws InterruptedException  {
 	
-		    driver.get(this.baseURL);
-	        logger.info("enterd into url");	       
-	      
-	        navigationPage navMenu = new navigationPage(driver);
-	        navMenu.clickwoMensMenubaritems(driver);
-	        logger.info("hovered on Womens");
-	        
-	        navMenu.ClickwoMensofBraceletss(driver);
-	        logger.info("clicked on Braceletss  sub menu");
-	        	      
-	        
-	        productListingPage plp = new productListingPage(driver);
-	        plp.clickOnProduct(driver);
-	       // plp.selectProductRandom(driver);
-	        logger.info("clicked on earings product");
-	        
-    
+		      driver.get(this.baseURL);
+	          logger.info("enterd into url");	       
+	          navigationPage navPage =new navigationPage(driver);
+	    	  navPage.selectRandomMenu(driver);
+	    	 
+	    	  productListingPage plp = new productListingPage(driver);
+	    	  plp.selectProductRandom(driver);
 	        //pdp page
 	          Thread.sleep(2000);
 	          WebElement minicartcount = driver.findElement(By.xpath("//span[@class ='minicart-quantity ml-1']"));

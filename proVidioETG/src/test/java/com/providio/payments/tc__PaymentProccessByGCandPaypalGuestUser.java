@@ -18,7 +18,7 @@ public class tc__PaymentProccessByGCandPaypalGuestUser extends baseClass {
 	public void paypalFromCheckoutPage() throws InterruptedException {	
 	       
 			driver.get(baseURL);
-	        navigationPage navMenu = new navigationPage(driver);
+	       
 	        navigationPage navPage =new navigationPage(driver);
 	    	 navPage.selectRandomMenu(driver);
 	    	 

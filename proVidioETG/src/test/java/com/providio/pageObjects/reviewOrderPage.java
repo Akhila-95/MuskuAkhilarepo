@@ -20,8 +20,9 @@ WebDriver lDriver;
 	@FindBy(xpath ="//button[contains(text(), 'Next: Review Order')]")
 	WebElement reviewOrderPage;
     public void clickonReviewOrder(WebDriver driver) throws InterruptedException {	 
-   	
-    	 reviewOrderPage.click();
+    	JavascriptExecutor js = (JavascriptExecutor) driver;     
+    	js.executeScript("arguments[0].click();",reviewOrderPage);
+    	 //reviewOrderPage.click();
     }
     //In checkout page if the it will check the button of revieworder and place order buttons
 	@FindBy(xpath ="//button[contains(@class,' place-order')]")

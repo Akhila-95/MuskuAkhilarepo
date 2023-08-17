@@ -169,11 +169,12 @@ public class baseClass {
 	            System.out.println("Exception while taking screenshot: " + e.getMessage());
 	        }
 	    }
-//	            if(result.getStatus() == ITestResult.FAILURE) {
-//	    	  homePage hp =new homePage(driver);
-//              hp.clickOnLogo();
-//              logger.info("Test case failed and returned into homepage");
-//	    }
+	            if(result.getStatus() == ITestResult.FAILURE) {
+	    	  homePage hp =new homePage(driver);
+              hp.clickOnLogo();
+              logger.info("Test case failed and returned into homepage");
+              Thread.sleep(3000);
+	    }
 	}
 	
 //	@AfterClass
@@ -203,18 +204,16 @@ public class baseClass {
 			String screenshotPath = "C:\\Users\\user\\eclipse-workspace\\Providio_25th\\AutomationsScripts-Etg-by-upendra-main\\proVidioETG_25th\\Reports\\ReportsScreenshot.png";
 			// Save the screenshot to the specified path
 			FileUtils.copyFile(screenshot, new File(screenshotPath));
-	//	System.out.println("captured screenshot of report  " + result.getMethod().getMethodName());
-			 
-//			//reportToMail Sendmail = new reportToMail();
-			
-			
-	       //driver.quit();
+
 	      
 	      //Report send to mail
-		 // reportToMail.Reporttomail();
+		 reportToMail.Reporttomail();
 	    }
 	   
 	   //Invoking the web chrome driver
+	   /*
+	    *  webdriver manager is a library which will manage and set up the specific browser and doe
+	    */
 	   private void initializeDriver() {
 	        WebDriverManager.chromedriver().setup();
 	        driver = new ChromeDriver();

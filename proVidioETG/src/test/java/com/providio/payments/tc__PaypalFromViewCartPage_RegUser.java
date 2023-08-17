@@ -25,12 +25,8 @@ public class tc__PaypalFromViewCartPage_RegUser extends baseClass {
 	        navMenu.ClickwoMensofBraceletss(driver);
 	        logger.info("clicked on Braceletss  sub menu");
 
-//			navigationPage navPage =new navigationPage(driver);
-//			navPage.selectRandomMenu(driver);
-//			
 			productListingPage plp = new productListingPage(driver);
-//			plp.selectProductRandom(driver);
-//			
+
     	//The cart value before adding the product to cart
     		Thread.sleep(2000);
             WebElement minicartcount = driver.findElement(By.xpath("//span[@class ='minicart-quantity ml-1']"));
@@ -46,8 +42,7 @@ public class tc__PaypalFromViewCartPage_RegUser extends baseClass {
 	        size s = new size();
 	        s.selectSize(driver);
 	        		
-//	        productDescriptionPage pdp = new productDescriptionPage(driver);
-//	        pdp.clickcartbutton(driver);
+
 	        logger.info("click on the add to cart button");
 	        	     
 	      

@@ -17,34 +17,13 @@ public class tc__PaypalFromCheckoutPage_GuestUser extends baseClass {
 	public void paypalFromCheckoutPage() throws InterruptedException {
 	
 	       
-			driver.get(baseURL);
-	        navigationPage navMenu = new navigationPage(driver);
-	        navMenu.clickwoMensMenubaritems(driver);
-	        logger.info("hovered on Womens");
-	        
-	        navMenu.ClickwoMensofBraceletss(driver);
-	        logger.info("clicked on Braceletss  sub menu");
-	        
-	        //validate the Television
-	        WebElement braclets = driver.findElement(By.xpath("//h1[@class ='page-title']"));
-	        String ActualTitleofBraclets =braclets.getText();
-	        String ExpectedTitleofBraclets = "BRACELETS";
-	        logger.info(braclets .getText());
-	        if (ActualTitleofBraclets.equals(ExpectedTitleofBraclets)) {
-	            test.pass( "Successfully clicked on the womens of  " + ActualTitleofBraclets + " ");
-	            logger.info("Successfully clicked on the womens of  " + ActualTitleofBraclets + " ");
-	        } else {
-	            test.fail( "The page Title does not match expected " + ExpectedTitleofBraclets + " " + "  but found" + " " + ActualTitleofBraclets + " ");
-	            logger.info( "The page Title does not match expected " + ExpectedTitleofBraclets + " " + "  but found" + " " + ActualTitleofBraclets + " ");
-	        }
+		  driver.get(baseURL);	     
+          navigationPage navPage =new navigationPage(driver);
+    	  navPage.selectRandomMenu(driver);
+    	 
+    	  productListingPage plp = new productListingPage(driver);
+    	  plp.selectProductRandom(driver);
 
-	        
-	        productListingPage plp = new productListingPage(driver);
-	        plp.clickOnProduct(driver);
-	       // plp.selectProductRandom(driver);
-	        logger.info("clicked on earings product");
-	        
-    
 	        //pdp page
           Thread.sleep(2000);
           WebElement minicartcount = driver.findElement(By.xpath("//span[@class ='minicart-quantity ml-1']"));
@@ -73,13 +52,13 @@ public class tc__PaypalFromCheckoutPage_GuestUser extends baseClass {
 		            logger.info("Product is not added to cart");
 		        }
 	        
-		    // common checkoutProcess	         
-				tc__CheckOutProcess cp = new tc__CheckOutProcess();         
-				cp.checkoutprocess();
-	         
-			//paypal process from chechout
-				tc__CheckOutProcessByPayPal cpp = new tc__CheckOutProcessByPayPal();
-				cpp.checkoutprocessFromCheckout();
+	  // common checkoutProcess	         
+		 tc__CheckOutProcess cp = new tc__CheckOutProcess();         
+		 cp.checkoutprocess();
+         
+	//paypal process from chechout
+		 tc__CheckOutProcessByPayPal cpp = new tc__CheckOutProcessByPayPal();
+		 cpp.checkoutprocessFromCheckout();
 		
 	}
 }

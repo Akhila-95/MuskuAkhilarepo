@@ -212,7 +212,7 @@ public class tc__PaymentProccessByGC extends baseClass{
 	// to pick the GC code sequentially
 	
 	public void performSequentialOperations(WebDriver driver) throws InterruptedException {
-	    String filePath = "C:\\Users\\user\\eclipse-workspace\\Providio_25th\\AutomationsScripts-Etg-by-upendra-main\\proVidioETG_25th\\testDate\\GiftCertificateCodes.xlsx";
+	    String filePath = "C:\\Users\\user\\git\\MuskuAkhilaRepo16\\proVidioETG\\testDate\\GiftCertificateCodes.xlsx";
 	    String sheetName = "GC_Codes";
 
 	    try {
@@ -345,7 +345,7 @@ public class tc__PaymentProccessByGC extends baseClass{
 	
 	//TO PLACE THE ORDER BY GC AND CC
 		public void paymentBySemiGC () throws InterruptedException {
-			String filePath = "C:\\Users\\user\\eclipse-workspace\\Providio_25th\\AutomationsScripts-Etg-by-upendra-main\\proVidioETG_25th\\testDate\\GiftCertificateCodes.xlsx";
+			String filePath = "C:\\Users\\user\\git\\MuskuAkhilaRepo16\\proVidioETG\\testDate\\GiftCertificateCodes.xlsx";
 		    String sheetName = "GC_Codes";
 
 		    try {
@@ -430,6 +430,7 @@ public class tc__PaymentProccessByGC extends baseClass{
 			                int sizeOfGc = gcText.size();
 			                if (sizeOfGc==1) {
 			                    logger.info("Gift certificate codes are applied");
+			                    test.info("Gift certificate codes are applied");
 			                   // giftCertificate.clear();
 			                    break;
 			                } else {

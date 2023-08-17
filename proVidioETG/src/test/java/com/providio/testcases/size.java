@@ -100,6 +100,8 @@ public class size extends baseClass{
 	     List<WebElement> memoryBox = driver.findElements(By.xpath("//div[@class='select-memorySize size-change d-flex flex-wrap']"));
 	     
 		 List<WebElement> widthBox = driver.findElements(By.xpath("//div[@class='select-width size-change d-flex flex-wrap']"));
+		 
+		 List<WebElement> showNameBox= driver.findElements(By.cssSelector(".showName"));
 	     
 	     for(int i=1; i<=mainDiv.size();i++) {
 	    	 
@@ -112,9 +114,7 @@ public class size extends baseClass{
 				productDescriptionPage pdp = new productDescriptionPage(driver);
 				pdp.clickOnSize(driver);
 				System.out.println("selected size");
-				Thread.sleep(4000);
-				
-	
+				Thread.sleep(4000);					
 			} if(memoryElement.size()>0||  memoryBox.size()>0) {
 				productDescriptionPage pdp = new productDescriptionPage(driver);
 				pdp.selecttheMemorySize(driver);
@@ -126,11 +126,11 @@ public class size extends baseClass{
 				pdp.selectWidth(driver);
 				System.out.println("selected width");
 				Thread.sleep(4000);
-			}if(showName.size()>0) {
+			}if(showName.size()>0 || showNameBox.size()>0) {
 				Thread.sleep(4000);
 				productDescriptionPage pdp = new productDescriptionPage(driver);
 				pdp.selectShowName(driver);
-				System.out.println("Selected ");
+				System.out.println("Selected show name ");
 			}
 			
 //			WebElement mainDiv1= driver.findElement(By.xpath("(//div[@class='attributes px-0']) [" +i+"]"));

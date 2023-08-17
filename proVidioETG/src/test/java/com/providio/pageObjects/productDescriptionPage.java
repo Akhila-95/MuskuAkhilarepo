@@ -441,19 +441,23 @@ public void clickOnProduct1() throws InterruptedException{
 				public void selecttheMemorySize(WebDriver driver) throws InterruptedException {
 					 List<WebElement> memoryBox = driver.findElements(By.xpath("//div[@class='select-memorySize size-change d-flex flex-wrap']"));
 					if(memoryBox.size()>0) {
-						 List<WebElement> memorySizeElements = driver.findElements(By.cssSelector(".select-memorySize .text-center.selectable"));
+						// Find all memory size elements
+				        List<WebElement> memorySizeElements = driver.findElements(By.cssSelector(".select-memorySize .text-center"));
 
-					        // Create a random instance
-					        Random random = new Random();
+				        // Filter enabled memory size options
+				        List<WebElement> enabledMemorySizeOptions = new ArrayList<>();
+				        for (WebElement memorySizeElement : memorySizeElements) {
+				            if (!memorySizeElement.getAttribute("class").contains("disabled")) {
+				                enabledMemorySizeOptions.add(memorySizeElement);
+				            }
+				        }
 
-					        // Choose a random index
-					        int randomIndex = random.nextInt(memorySizeElements.size());
-
-					        // Get the randomly selected memory size element
-					        WebElement selectedMemorySizeElement = memorySizeElements.get(randomIndex);
-
-					        // Click the selected memory size element
-					        selectedMemorySizeElement.click();
+				        // Select a random enabled memory size
+				        if (!enabledMemorySizeOptions.isEmpty()) {
+				            Random random = new Random();
+				            int randomIndex = random.nextInt(enabledMemorySizeOptions.size());
+				            enabledMemorySizeOptions.get(randomIndex).click();
+				        }
 					}else {
 					
 					
@@ -620,6 +624,10 @@ public void clickOnProduct1() throws InterruptedException{
 				 	
 				 	//select showname
 				 	public void selectShowName(WebDriver driver) throws InterruptedException {
+				 		
+				 		List<WebElement> showNameBox= driver.findElements(By.cssSelector(".select-memorySize"));
+				 		if(showNameBox.size()>0) {
+				 		
 				 		List<WebElement> showNameElements = driver.findElements(By.xpath("//select[contains(@class,'select-showName')]"));
 			    	    System.out.println(showNameElements.size());
 			    	        
@@ -651,6 +659,25 @@ public void clickOnProduct1() throws InterruptedException{
 	        			  showNameSelect.selectByIndex(randomIndexofwidth); 
 	        			
 	        			  Thread.sleep(5000);
+				 		}else {
+				 			 // Find all show name elements
+				 	        List<WebElement> showNameElements = driver.findElements(By.cssSelector(".select-showName .text-center"));
+
+				 	        // Filter enabled show name options
+				 	        List<WebElement> enabledShowNameOptions = new ArrayList<>();
+				 	        for (WebElement showNameElement : showNameElements) {
+				 	            if (!showNameElement.getAttribute("class").contains("disabled")) {
+				 	                enabledShowNameOptions.add(showNameElement);
+				 	            }
+				 	        }
+
+				 	        // Select a random enabled show name
+				 	        if (!enabledShowNameOptions.isEmpty()) {
+				 	            Random random = new Random();
+				 	            int randomIndex = random.nextInt(enabledShowNameOptions.size());
+				 	            enabledShowNameOptions.get(randomIndex).click();
+				 	        }
+				 		}
 				 	}
 				 	
 				//Paypal buynow button

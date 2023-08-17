@@ -15,39 +15,20 @@ public class tc__PaypalCheckout_MiniCart_GuestUser extends baseClass {
 @Test
 	public void paypalCheckout_MiniCart() throws InterruptedException {
 		
-		    driver.get(this.baseURL);
+		    driver.get(baseURL);
 	        logger.info("enterd into url");
-	       
-	        navigationPage navMenu = new navigationPage(driver);
-	     
-	        navMenu.clickwoMensMenubaritems(driver);
-	        logger.info("hovered on Womens");
-	        
-	        navMenu.ClickwoMensofBraceletss(driver);
-	        logger.info("clicked on Braceletss  sub menu");
-	        
-//	        navMenu.selectRandomMenu(driver);
-//	        logger.info("Selecting random menu");
-//	        
-	        //validate the Television
-	        WebElement braclets = driver.findElement(By.xpath("//h1[@class ='page-title']"));
-	        String ActualTitleofBraclets =braclets.getText();
-	        String ExpectedTitleofBraclets = "BRACELETS";
-	        logger.info(braclets .getText());
-	        if (ActualTitleofBraclets.equals(ExpectedTitleofBraclets)) {
-	            test.pass( "Successfully clicked on the womens of  " + ActualTitleofBraclets + " ");
-	            logger.info("Successfully clicked on the womens of  " + ActualTitleofBraclets + " ");
-	        } else {
-	            test.fail( "The page Title does not match expected " + ExpectedTitleofBraclets + " " + "  but found" + " " + ActualTitleofBraclets + " ");
-	            logger.info( "The page Title does not match expected " + ExpectedTitleofBraclets + " " + "  but found" + " " + ActualTitleofBraclets + " ");
-	        }
-
-	        productListingPage plp = new productListingPage(driver);
-	        plp.clickOnProduct(driver);
-	       // plp.selectProductRandom(driver);
-	        logger.info("clicked on earings product");
-	        
-	     
+	       /*
+	      //naviagated into random menu
+			navigationPage navPage= new navigationPage(driver);
+			navPage.selectRandomMenu(driver);
+			logger.info("Entered into menu");
+		
+		//plp page	
+			productListingPage plp = new productListingPage(driver);
+			plp.selectProductRandom(driver);
+			logger.info("Entered into plp page");
+			
+	     */
 	        
 	        //pdp page
             Thread.sleep(2000);

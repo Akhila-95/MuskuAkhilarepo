@@ -9,6 +9,7 @@ import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productListingPage;
 import com.providio.paymentProccess.tc__CheckOutProcess;
 import com.providio.paymentProccess.tc__CheckOutProcessByPayPal;
+import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
 import com.providio.paymentProccess.tc__PaymentProccessByGC;
 import com.providio.testcases.baseClass;
 import com.providio.testcases.size;
@@ -62,9 +63,10 @@ public class tc__PaymentProccessByGCandCC_GuestUser extends baseClass {
 				code.paymentBySemiGC();					
 				logger.info("applied gift card code ");
 
-			//paypal process from chechout
-				tc__CheckOutProcessByPayPal cpp = new tc__CheckOutProcessByPayPal();
-				cpp.checkoutprocessFromCheckout();
+			//paypal process from chechout			
+			     tc__CreditCardPaymentProcess cc = new tc__CreditCardPaymentProcess();			     
+			     cc.paymentByCreditCard();
+		        
 	   
 	}
 }

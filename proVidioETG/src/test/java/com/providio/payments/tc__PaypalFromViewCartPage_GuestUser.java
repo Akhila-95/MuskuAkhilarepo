@@ -26,42 +26,21 @@ public class tc__PaypalFromViewCartPage_GuestUser extends baseClass {
 		//entered into url
 			driver.get(baseURL);
 			logger.info("Entered into url");
+			
+			//naviagated into random menu
+			navigationPage navPage= new navigationPage(driver);
+			navPage.selectRandomMenu(driver);
+			logger.info("Entered into menu");
 		
-		//into categories
-	        navigationPage navMenu = new navigationPage(driver);
-	        navMenu.clickwoMensMenubaritems(driver);
-	        logger.info("hovered on Womens");
-	        
-	        navMenu.ClickwoMensofBraceletss(driver);
-	        logger.info("clicked on Braceletss  sub menu");
-
-//			navigationPage navPage =new navigationPage(driver);
-//			navPage.selectRandomMenu(driver);
-//			
+		//plp page	
 			productListingPage plp = new productListingPage(driver);
-//			plp.selectProductRandom(driver);
-//			
-    	//The cart value before adding the product to cart
-    		Thread.sleep(2000);
-            WebElement minicartcount = driver.findElement(By.xpath("//span[@class ='minicart-quantity ml-1']"));
-            String countOfMinicart = minicartcount.getText();
-            int minicartCountValue = Integer.parseInt(countOfMinicart);
-            logger.info("The minicart count before adding the product is "+minicartCountValue);
-    		
-
-
-	      
-	        plp.clickOnProduct(driver);
-	       // plp.selectProductRandom(driver);
-	        logger.info("clicked on earings product");
-	        
+			plp.selectProductRandom(driver);
+			logger.info("Entered into plp page");
+			
+	
 	        size s = new size();
 	        s.selectSize(driver);
-	        		
-//	        productDescriptionPage pdp = new productDescriptionPage(driver);
-//	        pdp.clickcartbutton(driver);
-	        logger.info("click on the add to cart button");
-	        	     
+
 	        //validate the productname
 	        String actualProductName = driver.getTitle();
 	        String expectedProductName = driver.getTitle();
