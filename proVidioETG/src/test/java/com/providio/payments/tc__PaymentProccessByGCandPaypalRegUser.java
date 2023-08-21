@@ -14,7 +14,7 @@ import com.providio.testcases.baseClass;
 import com.providio.testcases.size;
 
 public class tc__PaymentProccessByGCandPaypalRegUser extends baseClass {
-
+	int minicartCountValue;
 	@Test(dependsOnMethods = {"com.providio.testcases.tc__LoginSc.verifySuccessfulLogin"}, alwaysRun = true)
 	public void paypalFromCheckoutPage() throws InterruptedException {	
 
@@ -26,12 +26,16 @@ public class tc__PaymentProccessByGCandPaypalRegUser extends baseClass {
 	    	 plp.selectProductRandom(driver);
  
     
-		        //pdp page
-	          Thread.sleep(2000);
-	          WebElement minicartcount = driver.findElement(By.xpath("//span[@class ='minicart-quantity ml-1']"));
-	          String countOfMinicart = minicartcount.getText();
-	          int minicartCountValue = Integer.parseInt(countOfMinicart);
-	          logger.info(minicartCountValue);
+	    	 //The cart value before adding the product to cart
+	    		Thread.sleep(2000);
+	    		 WebElement minicartcount = driver.findElement(By.xpath("//span[@class='minicart-quantity ml-1']"));
+	             String countOfMinicart = minicartcount.getText();
+
+	             // Check if the string is not empty and contains only digits
+	             if (!countOfMinicart.isEmpty() && countOfMinicart.matches("\\d+")) {
+	                minicartCountValue = Integer.parseInt(countOfMinicart);
+	                 System.out.println("The minicart count before adding the product is " + minicartCountValue);    		
+	             }
 	          
 	          size s = new size();
 	          s.selectSize(driver);

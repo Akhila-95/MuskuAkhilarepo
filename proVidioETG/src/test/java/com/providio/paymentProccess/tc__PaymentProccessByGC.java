@@ -97,9 +97,9 @@ public class tc__PaymentProccessByGC extends baseClass{
 		            //check balance validation and checking the bal of GC
 		             WebElement checkBalButton= driver.findElement(By.xpath("//button[@class='btn btn-primary check-balance']"));
 		             test.info("Verifying check balance button");
-		             Actions actions = new Actions(driver);
+		            
 		                // Scroll down by 500 pixels
-		                actions.scrollByAmount(0, 500).perform();	                
+		             js.executeScript("window.scrollBy(0, 500);");                 
 		                js.executeScript("arguments[0].click();",checkBalButton);
 		                //checkBalButton.click();
 		                Thread.sleep(2000);
@@ -124,7 +124,7 @@ public class tc__PaymentProccessByGC extends baseClass{
 		                WebElement applyGiftCard = driver.findElement(By.xpath("//button[@value='submit-gifrcert']"));
 		                Thread.sleep(3000);	              
 		                // Scroll down by 500 pixels
-		                actions.scrollByAmount(0, 500).perform();
+		                js.executeScript("window.scrollBy(0, 500);");  
 		             
 		                // apply button validation
 		                test.info("Verifying apply button is selected");
@@ -167,28 +167,28 @@ public class tc__PaymentProccessByGC extends baseClass{
 		
 				e.printStackTrace();
 	   }	
-		
-		 //revieworder button  
-	    paymentpPage pp = new paymentpPage(driver);
-	    pp.clickonrevieworder(driver);
-		logger.info("clicked on the review oreder");
-		
-	  //review order page
-        reviewOrderPage rop = new reviewOrderPage(driver);
-		Thread.sleep(10000);
-	
-		rop.clickonplaceorderwithJsExuter(driver);
-		logger.info("successfully click on the place order button");
-		Thread.sleep(10000);
-		logger.info(driver.getTitle());
-	
-		 Checkout_Validation checkout= new Checkout_Validation();
-	 //validate the final place the order page
-		 checkout.validatePlacetheOrderPage();
-	
-     //ordernumberandOrderdate
-		 checkout.ordernumberandOrderdat();
-		
+		   if (driver.findElements(By.xpath("//div[contains(text(),'Your order has no balance, so no payment method is necessary to complete this order')]")).size() != 0) {
+				 //revieworder button  
+			    paymentpPage pp = new paymentpPage(driver);
+			    pp.clickonrevieworder(driver);
+				logger.info("clicked on the review oreder");
+				
+			  //review order page
+		        reviewOrderPage rop = new reviewOrderPage(driver);
+				Thread.sleep(10000);
+			
+				rop.clickonplaceorderwithJsExuter(driver);
+				logger.info("successfully click on the place order button");
+				Thread.sleep(10000);
+				logger.info(driver.getTitle());
+			
+				 Checkout_Validation checkout= new Checkout_Validation();
+			 //validate the final place the order page
+				 checkout.validatePlacetheOrderPage();
+			
+		     //ordernumberandOrderdate
+				 checkout.ordernumberandOrderdat();
+		   }
 	}
 	private String pickRandomValueWithoutDuplicate(List<String> dataList, Set<String> pickedValues) {
         Random random = new Random();
@@ -245,9 +245,9 @@ public class tc__PaymentProccessByGC extends baseClass{
 			            //check balance validation and checking the bal of GC
 			             WebElement checkBalButton= driver.findElement(By.xpath("//button[@class='btn btn-primary check-balance']"));
 			             test.info("Verifying check balance button");
-			             Actions actions = new Actions(driver);
+			           
 		                // Scroll down by 500 pixels
-		                actions.scrollByAmount(0, 500).perform();	                
+			             js.executeScript("window.scrollBy(0, 500);");                 
 		                js.executeScript("arguments[0].click();",checkBalButton);
 		                //checkBalButton.click();
 		                Thread.sleep(2000);
@@ -272,7 +272,7 @@ public class tc__PaymentProccessByGC extends baseClass{
 		                WebElement applyGiftCard = driver.findElement(By.xpath("//button[@value='submit-gifrcert']"));
 		                Thread.sleep(3000);	              
 		                // Scroll down by 500 pixels
-		                actions.scrollByAmount(0, 500).perform();
+		                js.executeScript("window.scrollBy(0, 500);");  
 		             
 		                // apply button validation
 		                test.info("Verifying apply button is selected");
@@ -320,27 +320,28 @@ public class tc__PaymentProccessByGC extends baseClass{
 	    
 	 //revieworder button  
 	    Thread.sleep(4000);
-	    paymentpPage pp = new paymentpPage(driver);
-	    pp.clickonrevieworder(driver);
-		logger.info("clicked on the review oreder");
+	    if (driver.findElements(By.xpath("//div[contains(text(),'Your order has no balance, so no payment method is necessary to complete this order')]")).size() != 0) {
+			 //revieworder button  
+		    paymentpPage pp = new paymentpPage(driver);
+		    pp.clickonrevieworder(driver);
+			logger.info("clicked on the review oreder");
+			
+		  //review order page
+	        reviewOrderPage rop = new reviewOrderPage(driver);
+			Thread.sleep(10000);
 		
-	  //review order page
-        reviewOrderPage rop = new reviewOrderPage(driver);
-		Thread.sleep(10000);
-	
-		rop.clickonplaceorderwithJsExuter(driver);
-		logger.info("successfully click on the place order button");
-		Thread.sleep(5000);
+			rop.clickonplaceorderwithJsExuter(driver);
+			logger.info("successfully click on the place order button");
+			Thread.sleep(10000);
+			logger.info(driver.getTitle());
 		
-	if(driver.getTitle().endsWith("Order Confirmation | Providio")) {
+			 Checkout_Validation checkout= new Checkout_Validation();
+		 //validate the final place the order page
+			 checkout.validatePlacetheOrderPage();
 		
-		 Checkout_Validation checkout= new Checkout_Validation();
-	 //validate the final place the order page
-		 checkout.validatePlacetheOrderPage();
-	
-     //ordernumberandOrderdate
-		 checkout.ordernumberandOrderdat();
-		}
+	     //ordernumberandOrderdate
+			 checkout.ordernumberandOrderdat();
+	   }
 	}
 	
 	//TO PLACE THE ORDER BY GC AND CC
@@ -380,9 +381,9 @@ public class tc__PaymentProccessByGC extends baseClass{
 		            //check balance validation and checking the bal of GC
 		             WebElement checkBalButton= driver.findElement(By.xpath("//button[@class='btn btn-primary check-balance']"));
 		             test.info("Verifying check balance button");
-		             Actions actions = new Actions(driver);
+		            
 		                // Scroll down by 500 pixels
-		                actions.scrollByAmount(0, 500).perform();	                
+		             	js.executeScript("window.scrollBy(0, 500);");         
 		                js.executeScript("arguments[0].click();",checkBalButton);
 		                //checkBalButton.click();
 		                Thread.sleep(2000);
@@ -407,7 +408,7 @@ public class tc__PaymentProccessByGC extends baseClass{
 		                WebElement applyGiftCard = driver.findElement(By.xpath("//button[@value='submit-gifrcert']"));
 		                Thread.sleep(3000);	              
 		                // Scroll down by 500 pixels
-		                actions.scrollByAmount(0, 500).perform();
+		                js.executeScript("window.scrollBy(0, 500);");
 		             
 		                // apply button validation
 		                test.info("Verifying apply button is selected");

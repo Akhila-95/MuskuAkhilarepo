@@ -11,7 +11,7 @@ import com.providio.testcases.baseClass;
 import com.providio.testcases.size;
 
 public class tc__PaypalFromPDPpage_GuestUser  extends baseClass{
-
+	int minicartCountValue;
 	@Test
 	public void paypalFromPDPpage() throws InterruptedException {
 		
@@ -32,14 +32,16 @@ public class tc__PaypalFromPDPpage_GuestUser  extends baseClass{
 			logger.info("Entered into plp page");
 			
 		//minicart count
-			//The cart value before adding the product to cart
-			Thread.sleep(2000);
-	        WebElement minicartcount = driver.findElement(By.xpath("//span[@class ='minicart-quantity ml-1']"));
-	        String countOfMinicart = minicartcount.getText();
-	        int minicartCountValue = Integer.parseInt(countOfMinicart);
-	        logger.info("The minicart count before adding the product is "+minicartCountValue);
-			
+			//The cart value before adding the product to cart			
+    		Thread.sleep(2000);
+    		 WebElement minicartcount = driver.findElement(By.xpath("//span[@class='minicart-quantity ml-1']"));
+             String countOfMinicart = minicartcount.getText();
 
+             // Check if the string is not empty and contains only digits
+             if (!countOfMinicart.isEmpty() && countOfMinicart.matches("\\d+")) {
+                minicartCountValue = Integer.parseInt(countOfMinicart);
+                 System.out.println("The minicart count before adding the product is " + minicartCountValue);    		
+             }
 	  //paypal buy now button
 	        
 	        size s = new size();

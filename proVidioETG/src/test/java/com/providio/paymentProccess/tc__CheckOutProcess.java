@@ -70,8 +70,14 @@ public class tc__CheckOutProcess extends baseClass {
 		          //selecting shipping address
 		            selectShippingAddress(cp);
 		            selectPaymentMethod(cp);
-		            
-		        
+		          /*  
+		            List<WebElement> phonNumError = driver.findElements(By.xpath("//div[contains(text(),'Please enter a valid Phone Number.')]"));
+		            List<WebElement> cityError = driver.findElements(By.xpath("//div[contains(text(),'Please enter a City')]"));
+		           if(phonNumError.size()>0 || cityError.size()>0) {
+		        	    selectShippingAddress(cp);
+			            selectPaymentMethod(cp);
+		           }
+		        */
 		           
 		        } else {
 		            logger.info("The cart value is empty");
@@ -94,6 +100,8 @@ public class tc__CheckOutProcess extends baseClass {
 		          //selecting shipping address
 		            selectShippingAddress(cp);
 		            selectPaymentMethod(cp);
+		            
+		         
 		            
 	       }
     }
@@ -138,7 +146,7 @@ public class tc__CheckOutProcess extends baseClass {
             Address1.clear();
             Address1.sendKeys(address);
             WebElement Address11 = driver.switchTo().activeElement();
-            Actions actions = new Actions(driver);
+          
             Thread.sleep(1000);
             Address11.sendKeys(Keys.ARROW_DOWN);
             Thread.sleep(1000);

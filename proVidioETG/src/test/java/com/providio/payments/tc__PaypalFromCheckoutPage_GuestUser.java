@@ -1,5 +1,7 @@
 package com.providio.payments;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
@@ -12,24 +14,43 @@ import com.providio.testcases.baseClass;
 import com.providio.testcases.size;
 
 public class tc__PaypalFromCheckoutPage_GuestUser extends baseClass {
-
+	int  minicartCountValue=0;
 	@Test
 	public void paypalFromCheckoutPage() throws InterruptedException {
 	
 	       
-		  driver.get(baseURL);	     
-          navigationPage navPage =new navigationPage(driver);
-    	  navPage.selectRandomMenu(driver);
-    	 
-    	  productListingPage plp = new productListingPage(driver);
-    	  plp.selectProductRandom(driver);
+		   driver.get(baseURL);	     
+		   navigationPage navPage =new navigationPage(driver);
+    	   navPage.selectRandomMenu(driver);
+    	  
+    		 productListingPage plp = new productListingPage(driver);
+	    	 plp.selectProductRandom(driver);
+    	/*
+    	  //for outfits
+	    	 List<WebElement> outfits= driver.findElements(By.xpath("//h1[contains(text(),'Outfits')]"));
+	    	 if(outfits.size()>0) {
+	    		
+		    	 navPage.selectRandomMenu(driver);
+		    	 if(outfits.size()>0) {
+			    		
+			    	 navPage.selectRandomMenu(driver);
+			    	 productListingPage plp = new productListingPage(driver);
+			    	 plp.selectProductRandom(driver);
+			    	 
+		    	 }
+	    	 }
+	    	
+	*/
+          //The cart value before adding the product to cart
+  		Thread.sleep(2000);
+  		 WebElement minicartcount = driver.findElement(By.xpath("//span[@class='minicart-quantity ml-1']"));
+           String countOfMinicart = minicartcount.getText();
 
-	        //pdp page
-          Thread.sleep(2000);
-          WebElement minicartcount = driver.findElement(By.xpath("//span[@class ='minicart-quantity ml-1']"));
-          String countOfMinicart = minicartcount.getText();
-          int minicartCountValue = Integer.parseInt(countOfMinicart);
-          logger.info(minicartCountValue);
+           // Check if the string is not empty and contains only digits
+           if (!countOfMinicart.isEmpty() && countOfMinicart.matches("\\d+")) {
+              minicartCountValue = Integer.parseInt(countOfMinicart);
+               System.out.println("The minicart count before adding the product is " + minicartCountValue);    		
+           }
           
           size s = new size();
           s.selectSize(driver);

@@ -232,57 +232,7 @@ public void clickOnProduct1() throws InterruptedException{
 			        colorSelect.selectByIndex(randomIndex);
 			}
 			*/
-		//to select size
-			
-			@FindBy(xpath ="//select[contains(@class,'select-size')]" )
-			WebElement Size;
-			public void clickOnSize(WebDriver driver) throws InterruptedException {
-				//sizes in boxess
-				List<WebElement> sizeBox= driver.findElements(By.xpath("//div[@class='select-size size-change d-flex flex-wrap']"));
-				if(sizeBox.size()>0) {
-					
-					  List<WebElement> sizeElements = driver.findElements(By.cssSelector(".select-size .text-center:not(.disabled)"));
-
-				        // Generate a random index within the range of available sizes
-				        int randomIndex = new Random().nextInt(sizeElements.size());
-
-				        // Get the randomly selected size element
-				        WebElement selectedSizeElement = sizeElements.get(randomIndex);
-
-				        // Click the selected size element
-				        selectedSizeElement.click();
-
-				}else {
-				// sizes from drop down Create a Select object and select the first enabled size
-				
-			    Select colorElement = new Select(Size);
-			    List<WebElement> options = colorElement.getOptions();
-			    List<String> enabledSizes = new ArrayList<>();
-			    int optionIndex = 0;
-			    for (WebElement option : options) {
-			    	if (optionIndex > 0 && option.isEnabled()) {
-			    		String text = option.getText();
-			    		  //System.out.println(text);
-			            if (!text.isEmpty()) {      	
-			            	String value = option.getAttribute("data-attr-value");
-			                enabledSizes.add(value);
-			                //System.out.println(value);
-			                option.click();
-			                break; 
-			                // Select the first enabled size and exit the loop
-			            }
-			        }
-			    	else {
-			    		//System.out.println("This size is not avaliable");
-			    	}
-			    	
-			    	 optionIndex++;
-			    }
-			    
-			    //System.out.println(enabledSizes);
-
-			  }
-			}
+		
 			//decrease the qunatity
 			@FindBy (xpath="//span[@class='qty-minus']")
 			WebElement decreaseTheQunatity;
@@ -432,7 +382,67 @@ public void clickOnProduct1() throws InterruptedException{
 					 Thread.sleep(2000);
 					 
 				}
+				//to select size
 				
+				@FindBy(xpath ="//select[contains(@class,'select-size')]" )
+				WebElement Size;
+				public void clickOnSize(WebDriver driver) throws InterruptedException {
+					//sizes in boxess
+					List<WebElement> sizeBox= driver.findElements(By.xpath("//div[@class='select-size size-change d-flex flex-wrap']"));
+					List<WebElement> sizeDropDown= driver.findElements(By.xpath("//select[@class='custom-select form-control select-size']"));
+					if(sizeBox.size()>0) {
+						
+						 // Find the parent div containing size options
+			            WebElement parentDiv = driver.findElement(By.id("size-null"));
+
+			            // Find all size option elements
+			            List<WebElement> sizeElements = parentDiv.findElements(By.cssSelector(".text-center"));
+
+			            // Filter enabled size options
+			            List<WebElement> enabledSizeOptions = new ArrayList<>();
+			            for (WebElement sizeElement : sizeElements) {
+			                if (!sizeElement.getAttribute("class").contains("disabled")) {
+			                    enabledSizeOptions.add(sizeElement);
+			                }
+			            }
+
+			            // Select a random enabled size
+			            if (!enabledSizeOptions.isEmpty()) {
+			                Random random = new Random();
+			                int randomIndex = random.nextInt(enabledSizeOptions.size());
+
+			                // Get the randomly selected size element
+			                WebElement selectedSizeElement = enabledSizeOptions.get(randomIndex);
+
+			                // Click the selected size element
+			                selectedSizeElement.click();
+			            }
+					}else if(sizeDropDown.size()>0) {
+					// sizes from drop down Create a Select object and select the first enabled size
+					
+				    Select colorElement = new Select(Size);
+				    List<WebElement> options = colorElement.getOptions();
+				    List<String> enabledSizes = new ArrayList<>();
+				    int optionIndex = 0;
+				    for (WebElement option : options) {
+				    	if (optionIndex > 0 && option.isEnabled()) {
+				    		String text = option.getText();
+				    		  //System.out.println(text);
+				            if (!text.isEmpty()) {      	
+				            	String value = option.getAttribute("data-attr-value");
+				                enabledSizes.add(value);
+				                //System.out.println(value);
+				                option.click();
+				                break; 
+				                // Select the first enabled size and exit the loop
+				            }
+				        }
+
+				    	 optionIndex++;
+				    }
+
+				}
+			}
 				
 				//memory size element
 				
@@ -460,7 +470,6 @@ public void clickOnProduct1() throws InterruptedException{
 				        }
 					}else {
 					
-					
 					// Create a Select object and select the first enabled size
 					WebElement memorySize= driver.findElement(By.xpath("//select[contains(@class,'select-memorySize')]"));
 				    Select MemoryElement = new Select(memorySize);
@@ -486,9 +495,7 @@ public void clickOnProduct1() throws InterruptedException{
 				    		System.out.println("This memory size is not avaliable");
 				    	}				    	
 				    	 optionIndex++;
-				    }
-				    
-				    //System.out.println(enabledSizes);
+				       }
 					}
 				}
 				
@@ -567,32 +574,39 @@ public void clickOnProduct1() throws InterruptedException{
 				 		 List<WebElement> widthBox = driver.findElements(By.xpath("//div[@class='select-width size-change d-flex flex-wrap']"));
 				 		
 				 		if(widthBox.size()>0) {
-				 		// Find all the width size elements that are selectable
-				 			WebElement parentDiv= driver.findElement(By.xpath("//div[@class='select-width size-change d-flex flex-wrap']"));
-				 			
-				 	        List<WebElement> widthSizeElements =  parentDiv.findElements(By.xpath("//span[@class='text-center']"));
+				 			  WebElement parentDiv = driver.findElement(By.id("width-null"));
 
-				 	        // Create a random instance
-				 	        Random random = new Random();
+				 	            // Find all width option elements
+				 	            List<WebElement> widthElements = parentDiv.findElements(By.cssSelector(".text-center"));
 
-				 	        Thread.sleep(2000);
-				 	        // Choose a random index
-				 	       // if() {
-				 	        int randomIndex = random.nextInt(widthSizeElements.size());
+				 	            // Filter enabled width options
+				 	            List<WebElement> enabledWidthOptions = new ArrayList<>();
+				 	            for (WebElement widthElement : widthElements) {
+				 	                if (!widthElement.getAttribute("class").contains("disabled")) {
+				 	                    enabledWidthOptions.add(widthElement);
+				 	                }
+				 	            }
 
-				 	        // Get the randomly selected width size element
-				 	        WebElement selectedWidthSizeElement = widthSizeElements.get(randomIndex);
+				 	            // Select a random enabled width
+				 	            if (!enabledWidthOptions.isEmpty()) {
+				 	                Random random = new Random();
+				 	                int randomIndex = random.nextInt(enabledWidthOptions.size());
+				 	               enabledWidthOptions.get(randomIndex).click();
+				 	               /*
+				 	                // Get the randomly selected width element
+				 	                WebElement selectedWidthElement = enabledWidthOptions.get(randomIndex);
 
-				 	        // Click the selected width size element
-				 	        selectedWidthSizeElement.click();
-				 	       // }
-				 	        
+				 	                // Click the selected width element
+				 	                selectedWidthElement.click();
+		 	               	*/
+				 	            }
+				 		
 				 		}else {
-				 		List<WebElement> widthElements = driver.findElements(By.xpath(".//select[@id='width-null']"));
-			    	    System.out.println(widthElements.size());
+				 		List<WebElement> widthElementsDropDown = driver.findElements(By.xpath(".//select[@id='width-null']"));
+			    	    System.out.println(widthElementsDropDown.size());
 			    	        
 				 		  //width 
-	        			  WebElement widthElement = widthElements.get(0);
+	        			  WebElement widthElement = widthElementsDropDown.get(0);
 	        			  System.out.println("width element is present on the page.");
 	        			  
 	        				Select widthSelect = new Select(widthElement);
@@ -620,12 +634,14 @@ public void clickOnProduct1() throws InterruptedException{
 	        			
 	        			  Thread.sleep(5000);
 				 		}
-				 	}
+				 	
+				 }
 				 	
 				 	//select showname
 				 	public void selectShowName(WebDriver driver) throws InterruptedException {
 				 		
 				 		List<WebElement> showNameBox= driver.findElements(By.cssSelector(".select-memorySize"));
+				 		
 				 		if(showNameBox.size()>0) {
 				 		
 				 		List<WebElement> showNameElements = driver.findElements(By.xpath("//select[contains(@class,'select-showName')]"));

@@ -313,13 +313,13 @@ WebDriver lDriver;
 		    @FindBy(xpath ="//button[contains(@class,'submit-payment')]")
 			WebElement revieworder;
 		    public void clickonrevieworder(WebDriver driver) throws InterruptedException {	
-		    	if(driver.findElements(By.xpath("//button[contains(@class,'submit-payment')]")).size()!=0) {
+		    	if(revieworder.isDisplayed()) {
 			    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", revieworder);			    	
 			    	Thread.sleep(5000);
 			    	JavascriptExecutor js = (JavascriptExecutor) driver;
 			    	js.executeScript("arguments[0].click();", revieworder);
 			    	Thread.sleep(3000);
-			    	if(driver.findElements(By.xpath("//button[contains(@class,'submit-payment')]")).size()!=0) {
+			    	if(revieworder.isDisplayed()) {
 			    		 Thread.sleep(3000);
 				    	revieworder.click();	
 				       
@@ -410,7 +410,7 @@ WebDriver lDriver;
 		        Thread.sleep(2000);
 		    }
 		    
-		    
+		 /*   
 		    @FindBy(xpath = "//img[@alt='PayPal Credit']")
             WebElement paypal;
 
@@ -418,16 +418,16 @@ WebDriver lDriver;
             WebElement  paypalCheckout;
 
             @FindBy(xpath = "//input[@name='login_email']")
-            List<WebElement> emailLogin;
+            WebElement emailLogin;
 
             @FindBy(xpath = "//button[contains(text(), 'Next')]")
-            List<WebElement> nextButton;
+            WebElement nextButton;
  
             @FindBy(xpath = "//input[@id='password']")
-            List<WebElement> password;
+            WebElement password;
 
             @FindBy(xpath = "//button[contains(text(), 'Log In')]")
-            List<WebElement> loginbutton;
+            WebElement loginbutton;
             
             @FindBy(xpath = "(//div[@class='FundingInstrument_item_3lQ2z'])[3]")
             WebElement cardParentDiv;
@@ -436,17 +436,16 @@ WebDriver lDriver;
             List<WebElement> reviewOrderButton;
 
             @FindBy(xpath = "//button[contains(text(), 'Save and Continue')]")
-            List<WebElement> saveAndContinue;
-
+            WebElement saveAndContinue;
+*/
             //braintreee paypal
             public void braintreePaypal(WebDriver driver) throws InterruptedException {
                 Thread.sleep(3000);
 
                 // Create an instance of Actions class
-                Actions actions = new Actions(driver);
-                actions.scrollByAmount(0, 500).perform();
-
                 JavascriptExecutor js = (JavascriptExecutor) driver;
+                js.executeScript("window.scrollBy(0,700)", "");
+                              
                 js.executeScript("arguments[0].click();", paypal);
                 //paypal.click();
                 Thread.sleep(2000);
@@ -456,14 +455,19 @@ WebDriver lDriver;
                  Thread.sleep(3000);
                  WebElement paypalCheckout=parentDiv.findElement(By.xpath("//div[@class='js_braintree_paypal_billing_button']"));
                 // Thread.sleep(10000);
-
+                 /*
                  JavascriptExecutor js = (JavascriptExecutor) driver;  
                  js.executeScript("arguments[0].click();", paypalCheckout);
                  Thread.sleep(3000);
+                 */
+                 JavascriptExecutor js = (JavascriptExecutor) driver;  
                  WebElement regPaypalCheckout=parentDiv.findElement(By.xpath("//label[contains(text(),'Select a PayPal account')]"));
                  if(!regPaypalCheckout.isDisplayed()) {
                 	 paypalCheckout.click();
                      Thread.sleep(3000);
+                     if(!regPaypalCheckout.isDisplayed()) {
+                    	 js.executeScript("arguments[0].click();", paypalCheckout);
+                     }
                  }
                  
             }
@@ -503,6 +507,42 @@ WebDriver lDriver;
                 }
             }
             
+            @FindBy(xpath = "//img[@alt='PayPal Credit']")
+            WebElement paypal;
+
+ 
+
+            @FindBy(xpath = "//div[@aria-label='PayPal Checkout']")
+            WebElement  paypalCheckout;
+
+ 
+
+            @FindBy(xpath = "//input[@name='login_email']")
+            List<WebElement> emailLogin;
+
+ 
+
+            @FindBy(css = "#btnNext")
+            List<WebElement> nextButton;
+
+            @FindBy(xpath = "//input[@id='password']")
+            List<WebElement> password;
+
+ 
+
+            @FindBy(xpath = "//button[contains(text(), 'Log In')]")
+            List<WebElement> loginbutton;
+
+            @FindBy(xpath = "(//div[@class='FundingInstrument_item_3lQ2z'])[3]")
+            WebElement cardParentDiv;
+
+            @FindBy(xpath = "//div[contains(@class,'CheckoutButton')]")
+            List<WebElement> reviewOrderButton;
+
+ 
+
+            @FindBy(xpath = "//button[contains(text(), 'Save and Continue')]")
+            List<WebElement> saveAndContinue;
             public void paypalPopup(WebDriver driver) throws InterruptedException {
             	
                 String mainWindowHandle = driver.getWindowHandle();
@@ -519,9 +559,9 @@ WebDriver lDriver;
                 	 WebElement  emailLogin1=driver.findElement(By.xpath("//input[@name='login_email']")); 
                 	 emailLogin1.sendKeys("rahulnaik@etisbew.com");
                  }
-                 Thread.sleep(1000);
+                 Thread.sleep(3000);
                  if(nextButton.size()>0) {
-                	 WebElement nextButton1=driver.findElement(By.xpath("//button[contains(text(), 'Next')]"));
+                	 WebElement nextButton1=driver.findElement(By.cssSelector("#btnNext"));
 	                 nextButton1.click();
 	                 Thread.sleep(4000);
                  }
@@ -548,9 +588,8 @@ WebDriver lDriver;
                 	WebElement reviewOrder=driver.findElement(By.xpath("//div[contains(@class,'CheckoutButton')]"));
                 	reviewOrder.click();
                 	Thread.sleep(6000);
-                	if(reviewOrderButton.size()>0) {
-                	reviewOrder.click();
-                	}
+                	
+                	//reviewOrder.click();
                 	                	
                  }else {
                 	 if(saveAndContinue.size()>0) {
@@ -562,7 +601,6 @@ WebDriver lDriver;
                  driver.switchTo().window(mainWindowHandle);
                  Thread.sleep(2000);
               }
-            
             
             //salesfoce creditcard
             

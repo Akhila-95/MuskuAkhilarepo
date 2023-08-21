@@ -43,13 +43,7 @@ public class size extends baseClass{
 	    	 navigationPage navPage =new navigationPage(driver);
 	    	 navPage.selectRandomMenu(driver);
 	    	 
-	    	 //for outfits
-	    	 List<WebElement> outfits= driver.findElements(By.xpath("//h1[contains(text(),'Outfits')]"));
-	    	 if(outfits.size()>0) {
-	    		
-		    	 navPage.selectRandomMenu(driver);
-	    	 }
-	    	 
+	    	
 	    	 productListingPage plp = new productListingPage(driver);
 	    	 plp.selectProductRandom(driver);
 	    	
@@ -80,7 +74,7 @@ public class size extends baseClass{
 		List<WebElement> colorElement = driver.findElements(By.xpath("//span[contains(@class,' non-input-label')]"));
 		System.out.println("The color count is " + colorElement.size());
 		
-		List<WebElement> sizeElement = driver.findElements(By.xpath("//label[contains(@class,'size')]"));
+		List<WebElement> sizeElement = driver.findElements(By.xpath("//select[@class='custom-select form-control select-size']"));
 		System.out.println("The size count is " +  sizeElement.size());
 		
 		List<WebElement> memoryElement = driver.findElements(By.id("memorySize-null"));
@@ -110,7 +104,8 @@ public class size extends baseClass{
 				pdp.clickOnColor(driver);
 				System.out.println("selected color");
 				Thread.sleep(4000);
-			}if(sizeElement.size()>0 || sizeBox.size()>0) {
+			}if(sizeElement.size()>0|| sizeBox.size()>0 ) {
+				
 				productDescriptionPage pdp = new productDescriptionPage(driver);
 				pdp.clickOnSize(driver);
 				System.out.println("selected size");

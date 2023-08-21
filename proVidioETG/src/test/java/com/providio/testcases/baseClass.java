@@ -67,26 +67,26 @@ public class baseClass {
 	
 
 	// to write a review
-		public String  headline=readconfig.getWriteAReview();
-		public String comment =readconfig.getComments();
-		public String nickName =readconfig.getNickName();
-		public String location=readconfig.getLocation();
-		
-		
-		// In Find a store
-		public String zipcodeStore =readconfig.getZipcodeInStore();
-		
-		//search bar
-		public String searchBar =readconfig.searchSomething();
-		
-		//footer mail
-		public String footerMail =readconfig.getFooterMail();
-		
-		//guest login details
-		public String  guestmail =readconfig.getGuestMail();
-		public String guestPassword = readconfig.getGuestPassword();
-		public String reEnterMail=readconfig.getReEnterMail();
+	public String  headline=readconfig.getWriteAReview();
+	public String comment =readconfig.getComments();
+	public String nickName =readconfig.getNickName();
+	public String location=readconfig.getLocation();
 	
+	
+	// In Find a store
+	public String zipcodeStore =readconfig.getZipcodeInStore();
+	
+	//search bar
+	public String searchBar =readconfig.searchSomething();
+	
+	//footer mail
+	public String footerMail =readconfig.getFooterMail();
+	
+	//guest login details
+	public String  guestmail =readconfig.getGuestMail();
+	public String guestPassword = readconfig.getGuestPassword();
+	public String reEnterMail=readconfig.getReEnterMail();
+
 	
 	public static WebDriver driver;
 	public static   Logger logger ;
@@ -98,19 +98,13 @@ public class baseClass {
 	//Reporting
 	//static ExtentReports report;
 	protected static ExtentTest test;
-	
 
-
-	
 	@BeforeSuite
     public void setUpforReport() {
         report = new ExtentReports();
         report.attachReporter(reporter);
         
         initializeDriver() ;
-       
-           
-        
 
 	}
 	@BeforeClass
@@ -123,11 +117,8 @@ public class baseClass {
 	    PropertyConfigurator.configure("log4j.properties");
 	    
 	    //logger.info(test);
-	   
 		
 	}
-	
-
 
 	@AfterMethod
 	public void afterMethod(ITestResult result) throws InterruptedException {
@@ -169,12 +160,13 @@ public class baseClass {
 	            System.out.println("Exception while taking screenshot: " + e.getMessage());
 	        }
 	    }
-	            if(result.getStatus() == ITestResult.FAILURE) {
+	    
+	       /*     if(result.getStatus() == ITestResult.FAILURE) {
 	    	  homePage hp =new homePage(driver);
               hp.clickOnLogo();
               logger.info("Test case failed and returned into homepage");
               Thread.sleep(3000);
-	    }
+	    }*/
 	}
 	
 //	@AfterClass
@@ -212,7 +204,8 @@ public class baseClass {
 	   
 	   //Invoking the web chrome driver
 	   /*
-	    *  webdriver manager is a library which will manage and set up the specific browser and doe
+	    *  webdriver manager is a library which will manage and set up the specific browser and download  the executable driver 
+	    *  driver:- by creating this instance we creating connection with specific browser
 	    */
 	   private void initializeDriver() {
 	        WebDriverManager.chromedriver().setup();

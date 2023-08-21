@@ -58,18 +58,15 @@ public class CheckoutPage1_Validation extends baseClass {
 		driver.get(this.baseURL);
         logger.info("enterd into url");
        
-        navigationPage navMenu = new navigationPage(driver);
-     
-        navMenu.clickwoMensMenubaritems(driver);
-        logger.info("hovered on Womens");
-        
-        navMenu.ClickwoMensofBraceletss(driver);
-        logger.info("clicked on Braceletss  sub menu");	        
-
-        productListingPage plp = new productListingPage(driver);
-        plp.clickOnProduct(driver);
-       // plp.selectProductRandom(driver);
-        logger.info("clicked on earings product");
+    //naviagated into random menu
+ 		navigationPage navPage= new navigationPage(driver);
+ 		navPage.selectRandomMenu(driver);
+ 		logger.info("Entered into menu");
+ 	
+ 		//plp page	
+ 		productListingPage plp = new productListingPage(driver);
+ 		plp.selectProductRandom(driver);
+ 		logger.info("Entered into plp page");
 
         size s = new size();
         s.selectSize(driver);

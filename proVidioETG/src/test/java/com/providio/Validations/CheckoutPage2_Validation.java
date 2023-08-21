@@ -20,32 +20,17 @@ public class CheckoutPage2_Validation extends baseClass {
 	@Test
 	public void checkoutPage() throws InterruptedException {
 		driver.get(baseURL);
-        navigationPage navMenu = new navigationPage(driver);
-        navMenu.clickwoMensMenubaritems(driver);
-        logger.info("hovered on Womens");
-        
-        navMenu.ClickwoMensofBraceletss(driver);
-        logger.info("clicked on Braceletss  sub menu");
-        
-        //validate the Television
-        WebElement braclets = driver.findElement(By.xpath("//h1[@class ='page-title']"));
-        String ActualTitleofBraclets =braclets.getText();
-        String ExpectedTitleofBraclets = "BRACELETS";
-        logger.info(braclets .isDisplayed());
-        if (ActualTitleofBraclets.equals(ExpectedTitleofBraclets)) {
-            test.pass( "Successfully clicked on the womens of  " + ActualTitleofBraclets + " ");
-            logger.info("Successfully clicked on the womens of  " + ActualTitleofBraclets + " ");
-        } else {
-            test.fail( "The page Title does not match expected " + ExpectedTitleofBraclets + " " + "  but found" + " " + ActualTitleofBraclets + " ");
-            logger.info( "The page Title does not match expected " + ExpectedTitleofBraclets + " " + "  but found" + " " + ActualTitleofBraclets + " ");
-        }
+		
+   //naviagated into random menu
+		navigationPage navPage= new navigationPage(driver);
+		navPage.selectRandomMenu(driver);
+		logger.info("Entered into menu");
+	
+		//plp page	
+		productListingPage plp = new productListingPage(driver);
+		plp.selectProductRandom(driver);
+		logger.info("Entered into plp page");
 
-        
-        productListingPage plp = new productListingPage(driver);
-        plp.clickOnProduct(driver);
-       // plp.selectProductRandom(driver);
-        logger.info("clicked on earings product");
-        
 
         //pdp page
       Thread.sleep(2000);

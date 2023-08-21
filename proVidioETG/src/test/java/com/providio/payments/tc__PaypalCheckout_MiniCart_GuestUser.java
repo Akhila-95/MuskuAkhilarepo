@@ -11,13 +11,13 @@ import com.providio.testcases.baseClass;
 import com.providio.testcases.size;
 
 public class tc__PaypalCheckout_MiniCart_GuestUser extends baseClass {
-	
+	int  minicartCountValue=0;
 @Test
 	public void paypalCheckout_MiniCart() throws InterruptedException {
 		
 		    driver.get(baseURL);
 	        logger.info("enterd into url");
-	       /*
+	       
 	      //naviagated into random menu
 			navigationPage navPage= new navigationPage(driver);
 			navPage.selectRandomMenu(driver);
@@ -28,14 +28,19 @@ public class tc__PaypalCheckout_MiniCart_GuestUser extends baseClass {
 			plp.selectProductRandom(driver);
 			logger.info("Entered into plp page");
 			
-	     */
+	  
 	        
-	        //pdp page
-            Thread.sleep(2000);
-            WebElement minicartcount = driver.findElement(By.xpath("//span[@class ='minicart-quantity ml-1']"));
-            String countOfMinicart = minicartcount.getText();
-            int minicartCountValue = Integer.parseInt(countOfMinicart);
-            logger.info(minicartCountValue);
+	       
+            //The cart value before adding the product to cart
+    		Thread.sleep(2000);
+    		 WebElement minicartcount = driver.findElement(By.xpath("//span[@class='minicart-quantity ml-1']"));
+             String countOfMinicart = minicartcount.getText();
+
+             // Check if the string is not empty and contains only digits
+             if (!countOfMinicart.isEmpty() && countOfMinicart.matches("\\d+")) {
+                minicartCountValue = Integer.parseInt(countOfMinicart);
+                 System.out.println("The minicart count before adding the product is " + minicartCountValue);    		
+             }
             
             size s = new size();
             s.selectSize(driver);
@@ -45,7 +50,7 @@ public class tc__PaypalCheckout_MiniCart_GuestUser extends baseClass {
             String countOfMinicartafteradding = minicartcountafteradding.getText();
             int minicartCountValueafteradding = Integer.parseInt(countOfMinicartafteradding);
 
-            logger.info(minicartCountValueafteradding);
+            logger.info("Cart value after adding the product "+minicartCountValueafteradding);
 
 	     //validation for product add to cart
 	        test.info("Verifying the product is added to cart or not ");

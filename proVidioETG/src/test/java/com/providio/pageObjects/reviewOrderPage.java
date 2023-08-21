@@ -22,7 +22,10 @@ WebDriver lDriver;
     public void clickonReviewOrder(WebDriver driver) throws InterruptedException {	 
     	JavascriptExecutor js = (JavascriptExecutor) driver;     
     	js.executeScript("arguments[0].click();",reviewOrderPage);
-    	 //reviewOrderPage.click();
+    	Thread.sleep(2000);
+    	if(reviewOrderPage.isDisplayed()) {
+    	 reviewOrderPage.click();
+    	}
     }
     //In checkout page if the it will check the button of revieworder and place order buttons
 	@FindBy(xpath ="//button[contains(@class,' place-order')]")
