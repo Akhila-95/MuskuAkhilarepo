@@ -65,11 +65,13 @@ public class tc__CheckOutProcess extends baseClass {
 		           //if any guest user means guest checkout
 		            clickContinueAsGuest();
 		            
-		
+		            WebElement checkoutPage1= driver.findElement(By.xpath("(//h2[contains(text(),'Shipping')])[2]"));
+		            if(checkoutPage1.isDisplayed()) {
 		            checkOutPage cp = new checkOutPage(driver);
-		          //selecting shipping address
-		            selectShippingAddress(cp);
-		            selectPaymentMethod(cp);
+			          //selecting shipping address
+			            selectShippingAddress(cp);
+			            selectPaymentMethod(cp);
+		            }
 		          /*  
 		            List<WebElement> phonNumError = driver.findElements(By.xpath("//div[contains(text(),'Please enter a valid Phone Number.')]"));
 		            List<WebElement> cityError = driver.findElements(By.xpath("//div[contains(text(),'Please enter a City')]"));

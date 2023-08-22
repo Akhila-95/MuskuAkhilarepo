@@ -179,6 +179,7 @@ public class tc__CheckOutProcessByPayPal extends baseClass{
 					
 				}
 	    	}else {	 
+	    	
 	    		test.info("salesoforce payment integration is activated");
 			    paymentpPage pp = new paymentpPage(driver);		   	         
 			    pp.salesforcePaypalCheckout(driver);	

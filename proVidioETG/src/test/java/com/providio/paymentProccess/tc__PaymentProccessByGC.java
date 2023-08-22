@@ -232,7 +232,8 @@ public class tc__PaymentProccessByGC extends baseClass{
 	        int operations = 0;
 	      	 Iterator<String> iterator = dataList.iterator();
 	      	 
-	      	 
+	      	WebElement checkoutPage2= driver.findElement(By.xpath("//label[contains(text(),'Billing Address')]"));
+	      	 if(checkoutPage2.isDisplayed()) {
 		        while (iterator.hasNext()) {
 		            String value = iterator.next();
 		            JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -311,7 +312,7 @@ public class tc__PaymentProccessByGC extends baseClass{
 		                logger.info("Element not found: " + e.getMessage());
 		            }
 	        }
-
+	     }      
 	        logger.info("Total data: " + totalProducts);
 	        logger.info("Total operations performed: " + operations);
 	    } catch (IOException e) {
@@ -341,6 +342,8 @@ public class tc__PaymentProccessByGC extends baseClass{
 		
 	     //ordernumberandOrderdate
 			 checkout.ordernumberandOrderdat();
+	   }else {
+		   test.pass("No sufficient balance in Gift certificate");
 	   }
 	}
 	

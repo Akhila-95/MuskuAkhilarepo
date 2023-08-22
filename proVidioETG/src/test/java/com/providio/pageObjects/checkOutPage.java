@@ -108,7 +108,7 @@ WebDriver lDriver;
 	@FindBy(xpath="//input[@id='shippingPhoneNumberdefault']")
 	WebElement Phone;
 	public void setPhone(String phonenumber ){
-		 Phone.clear();
+		
 		 Phone.sendKeys(phonenumber);
 	}
 	
