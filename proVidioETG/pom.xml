@@ -61,19 +61,22 @@
     <scope>provided</scope>
   </dependency>
   
-    <!-- Selenium -->
-    <dependency>
-      <groupId>org.seleniumhq.selenium</groupId>
-      <artifactId>selenium-java</artifactId>
-      <version>4.8.2</version>
-    </dependency>
+    <!-- Selenium -->   
+	
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.10.0</version>
+</dependency>
 
-    <!-- WebDriverManager -->
-    <dependency>
-      <groupId>io.github.bonigarcia</groupId>
-      <artifactId>webdrivermanager</artifactId>
-      <version>5.3.2</version>
-    </dependency>
+	    
+
+    <!-- WebDriverManager -->   
+	<dependency>
+	    <groupId>io.github.bonigarcia</groupId>
+	    <artifactId>webdrivermanager</artifactId>
+	    <version>5.4.1</version>
+	</dependency>
 
     <!-- TestNG -->
     <dependency>

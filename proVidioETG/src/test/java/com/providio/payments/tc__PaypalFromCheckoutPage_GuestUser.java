@@ -25,22 +25,7 @@ public class tc__PaypalFromCheckoutPage_GuestUser extends baseClass {
     	  
     		 productListingPage plp = new productListingPage(driver);
 	    	 plp.selectProductRandom(driver);
-    	/*
-    	  //for outfits
-	    	 List<WebElement> outfits= driver.findElements(By.xpath("//h1[contains(text(),'Outfits')]"));
-	    	 if(outfits.size()>0) {
-	    		
-		    	 navPage.selectRandomMenu(driver);
-		    	 if(outfits.size()>0) {
-			    		
-			    	 navPage.selectRandomMenu(driver);
-			    	 productListingPage plp = new productListingPage(driver);
-			    	 plp.selectProductRandom(driver);
-			    	 
-		    	 }
-	    	 }
-	    	
-	*/
+   
           //The cart value before adding the product to cart
   		Thread.sleep(2000);
   		 WebElement minicartcount = driver.findElement(By.xpath("//span[@class='minicart-quantity ml-1']"));

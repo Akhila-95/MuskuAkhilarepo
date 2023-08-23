@@ -31,7 +31,7 @@ public class tc__PaypalFromPDPpage_RegUser extends baseClass{
 		//minicart count
 			 //The cart value before adding the product to cart
     		Thread.sleep(2000);
-    		 WebElement minicartcount = driver.findElement(By.xpath("//span[@class='minicart-quantity ml-1']"));
+    		WebElement minicartcount = driver.findElement(By.cssSelector(".minicart-quantity"));
              String countOfMinicart = minicartcount.getText();
 
              // Check if the string is not empty and contains only digits

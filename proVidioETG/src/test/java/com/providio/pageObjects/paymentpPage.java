@@ -556,7 +556,9 @@ WebDriver lDriver;
 		
                  Thread.sleep(4000);
                  if(emailLogin.size()>0) {
+                	
                 	 WebElement  emailLogin1=driver.findElement(By.xpath("//input[@name='login_email']")); 
+                	 emailLogin1.clear();
                 	 emailLogin1.sendKeys("rahulnaik@etisbew.com");
                  }
                  Thread.sleep(3000);
@@ -567,6 +569,7 @@ WebDriver lDriver;
                  }
                  if(password.size()>0) {
                 	 WebElement password1=driver.findElement(By.xpath("//input[@id='password']"));
+                	 password1.clear();
 	                 password1.sendKeys("Etgsfcc245@");
 	                 Thread.sleep(3000);
                  }
@@ -585,9 +588,13 @@ WebDriver lDriver;
                  Thread.sleep(2000);
                  
                  if(reviewOrderButton.size()>0) {
-                	WebElement reviewOrder=driver.findElement(By.xpath("//div[contains(@class,'CheckoutButton')]"));
+                	WebElement reviewOrder=driver.findElement(By.cssSelector("#payment-submit-btn"));
                 	reviewOrder.click();
                 	Thread.sleep(6000);
+                	if(reviewOrder.isDisplayed()) {
+                		reviewOrder.click();
+                	}
+                	
                 	
                 	//reviewOrder.click();
                 	                	

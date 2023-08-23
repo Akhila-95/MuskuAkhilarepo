@@ -3,6 +3,15 @@
 <suite name="Failed suite [ProvidioTestcases]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Automation(failed)">
     <classes>
+      <class name="com.providio.payments.tc__PaymentProccessByGCandCC_RegUser">
+        <methods>
+          <include name="paypalFromCheckoutPage"/>
+          <include name="setUpforReport"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.payments.tc__PaymentProccessByGCandCC_RegUser -->
       <class name="com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser">
         <methods>
           <include name="setUpforReport"/>
@@ -12,43 +21,34 @@
           <include name="paypalFromCheckoutPage"/>
         </methods>
       </class> <!-- com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser -->
-      <class name="com.providio.payments.tc__OrderByGc_RegUser">
+      <class name="com.providio.payments.tc__PaypalFromPDPpage_RegUser">
         <methods>
-          <include name="orderByGc_RegUser"/>
           <include name="setUpforReport"/>
           <include name="setUp"/>
+          <include name="paypalFromPDPpage"/>
           <include name="afterMethod"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.providio.payments.tc__OrderByGc_RegUser -->
-      <class name="com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser">
-        <methods>
-          <include name="setUpforReport"/>
-          <include name="paypalFromCheckoutPage"/>
-          <include name="afterMethod"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser -->
-      <class name="com.providio.payments.tc__OrderByGc_GuestUser">
-        <methods>
-          <include name="setUpforReport"/>
-          <include name="paymentByGiftCardInGuestUser"/>
-          <include name="afterMethod"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.providio.payments.tc__OrderByGc_GuestUser -->
+      </class> <!-- com.providio.payments.tc__PaypalFromPDPpage_RegUser -->
       <class name="com.providio.testcases.tc__LogOut">
         <methods>
           <include name="setUpforReport"/>
           <include name="Logout1"/>
           <include name="Logout"/>
-          <include name="setUp"/>
           <include name="afterMethod"/>
+          <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.providio.testcases.tc__LogOut -->
+      <class name="com.providio.payments.tc__OrderByGc_RegUser">
+        <methods>
+          <include name="orderByGc_RegUser"/>
+          <include name="setUpforReport"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.payments.tc__OrderByGc_RegUser -->
     </classes>
   </test> <!-- Automation(failed) -->
 </suite> <!-- Failed suite [ProvidioTestcases] -->

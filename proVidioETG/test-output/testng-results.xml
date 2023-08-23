@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="28" total="51" passed="17" failed="6" skipped="0">
+<testng-results ignored="30" total="54" passed="18" failed="6" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-22T17:40:47 IST" name="ProvidioTestcases" finished-at="2023-08-22T18:14:46 IST" duration-ms="2039204">
+  <suite started-at="2023-08-23T16:46:59 IST" name="ProvidioTestcases" finished-at="2023-08-23T17:23:48 IST" duration-ms="2209344">
     <groups>
     </groups>
-    <test started-at="2023-08-22T17:40:47 IST" name="Automation" finished-at="2023-08-22T18:14:46 IST" duration-ms="2039204">
+    <test started-at="2023-08-23T16:46:59 IST" name="Automation" finished-at="2023-08-23T17:23:48 IST" duration-ms="2209344">
       <class name="com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser@42a940dc]" started-at="2023-08-22T17:47:59 IST" name="setUp" finished-at="2023-08-22T17:48:01 IST" duration-ms="2015" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser@219acda9]" started-at="2023-08-23T16:55:58 IST" name="setUp" finished-at="2023-08-23T16:56:00 IST" duration-ms="2008" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser@42a940dc]" started-at="2023-08-22T17:48:01 IST" name="paypalFromCheckoutPage" finished-at="2023-08-22T17:52:22 IST" duration-ms="261064" status="PASS">
+        <test-method signature="paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser@219acda9]" started-at="2023-08-23T16:56:00 IST" name="paypalFromCheckoutPage" finished-at="2023-08-23T17:01:35 IST" duration-ms="334502" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- paypalFromCheckoutPage -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser@42a940dc]" started-at="2023-08-22T17:52:22 IST" name="afterMethod" finished-at="2023-08-22T17:52:22 IST" duration-ms="12" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser@219acda9]" started-at="2023-08-23T17:01:35 IST" name="afterMethod" finished-at="2023-08-23T17:01:35 IST" duration-ms="7" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=paypalFromCheckoutPage status=SUCCESS method=tc__PaymentProccessByGCandCC_GuestUser.paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser@42a940dc] output={null}]]]>
+                <![CDATA[[TestResult name=paypalFromCheckoutPage status=SUCCESS method=tc__PaymentProccessByGCandCC_GuestUser.paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser@219acda9] output={null}]]]>
               </value>
             </param>
           </params>
@@ -28,117 +28,48 @@
         </test-method> <!-- afterMethod -->
       </class> <!-- com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser -->
       <class name="com.providio.payments.tc__PaypalFromViewCartPage_GuestUser">
-        <test-method is-config="true" signature="setUpforReport()[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_GuestUser@29050de5]" started-at="2023-08-22T17:40:41 IST" name="setUpforReport" finished-at="2023-08-22T17:40:47 IST" duration-ms="6559" status="PASS">
+        <test-method is-config="true" signature="setUpforReport()[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_GuestUser@3610f277]" started-at="2023-08-23T16:46:52 IST" name="setUpforReport" finished-at="2023-08-23T16:46:59 IST" duration-ms="6503" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpforReport -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_GuestUser@29050de5]" started-at="2023-08-22T17:40:47 IST" name="setUp" finished-at="2023-08-22T17:40:49 IST" duration-ms="2044" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_GuestUser@3610f277]" started-at="2023-08-23T16:46:59 IST" name="setUp" finished-at="2023-08-23T16:47:01 IST" duration-ms="2140" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="paypalFromViewCartPage()[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_GuestUser@29050de5]" started-at="2023-08-22T17:40:49 IST" name="paypalFromViewCartPage" finished-at="2023-08-22T17:42:38 IST" duration-ms="108768" status="PASS">
+        <test-method signature="paypalFromViewCartPage()[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_GuestUser@3610f277]" started-at="2023-08-23T16:47:01 IST" name="paypalFromViewCartPage" finished-at="2023-08-23T16:49:00 IST" duration-ms="118386" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- paypalFromViewCartPage -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_GuestUser@29050de5]" started-at="2023-08-22T17:42:38 IST" name="afterMethod" finished-at="2023-08-22T17:42:38 IST" duration-ms="13" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_GuestUser@3610f277]" started-at="2023-08-23T16:49:00 IST" name="afterMethod" finished-at="2023-08-23T16:49:00 IST" duration-ms="10" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=paypalFromViewCartPage status=SUCCESS method=tc__PaypalFromViewCartPage_GuestUser.paypalFromViewCartPage()[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_GuestUser@29050de5] output={null}]]]>
+                <![CDATA[[TestResult name=paypalFromViewCartPage status=SUCCESS method=tc__PaypalFromViewCartPage_GuestUser.paypalFromViewCartPage()[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_GuestUser@3610f277] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_GuestUser@29050de5]" started-at="2023-08-22T18:14:46 IST" name="tearDown" finished-at="2023-08-22T18:14:59 IST" duration-ms="12324" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_GuestUser@3610f277]" started-at="2023-08-23T17:23:48 IST" name="tearDown" finished-at="2023-08-23T17:24:01 IST" duration-ms="12207" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.providio.payments.tc__PaypalFromViewCartPage_GuestUser -->
       <class name="com.providio.payments.tc__OrderByGc_GuestUser">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__OrderByGc_GuestUser@496d7bd9]" started-at="2023-08-22T17:54:13 IST" name="setUp" finished-at="2023-08-22T17:54:15 IST" duration-ms="2014" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__OrderByGc_GuestUser@76ad04a1]" started-at="2023-08-23T17:08:09 IST" name="setUp" finished-at="2023-08-23T17:08:11 IST" duration-ms="2014" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="paymentByGiftCardInGuestUser()[pri:0, instance:com.providio.payments.tc__OrderByGc_GuestUser@496d7bd9]" started-at="2023-08-22T17:54:15 IST" name="paymentByGiftCardInGuestUser" finished-at="2023-08-22T17:56:11 IST" duration-ms="116691" status="FAIL">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
-            <message>
-              <![CDATA[element not interactable
-  (Session info: chrome=115.0.5790.173)
-Build info: version: '4.8.2', revision: '826dbfc730'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d6b2617b7db1a5b44a6b6efa2b1314df, sendKeysToElement {id=67B4F109F66ADE8BCF4069939A79C141_element_1505, value=[Ljava.lang.CharSequence;@440ed65a}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.173, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52716}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52716/devtoo..., se:cdpVersion: 115.0.5790.173, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (d6b2617b7db1a5b44a6b6efa2b1314df)] -> xpath: //input[@id='giftCert']]
-Session ID: d6b2617b7db1a5b44a6b6efa2b1314df]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=115.0.5790.173)
-Build info: version: '4.8.2', revision: '826dbfc730'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d6b2617b7db1a5b44a6b6efa2b1314df, sendKeysToElement {id=67B4F109F66ADE8BCF4069939A79C141_element_1505, value=[Ljava.lang.CharSequence;@440ed65a}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.173, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52716}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52716/devtoo..., se:cdpVersion: 115.0.5790.173, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (d6b2617b7db1a5b44a6b6efa2b1314df)] -> xpath: //input[@id='giftCert']]
-Session ID: d6b2617b7db1a5b44a6b6efa2b1314df
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:113)
-at com.providio.paymentProccess.tc__PaymentProccessByGC.performSequentialOperations(tc__PaymentProccessByGC.java:241)
-at com.providio.payments.tc__OrderByGc_GuestUser.paymentByGiftCardInGuestUser(tc__OrderByGc_GuestUser.java:65)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+        <test-method signature="paymentByGiftCardInGuestUser()[pri:0, instance:com.providio.payments.tc__OrderByGc_GuestUser@76ad04a1]" started-at="2023-08-23T17:08:11 IST" name="paymentByGiftCardInGuestUser" finished-at="2023-08-23T17:15:06 IST" duration-ms="414455" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- paymentByGiftCardInGuestUser -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__OrderByGc_GuestUser@496d7bd9]" started-at="2023-08-22T17:56:11 IST" name="afterMethod" finished-at="2023-08-22T17:56:11 IST" duration-ms="157" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__OrderByGc_GuestUser@76ad04a1]" started-at="2023-08-23T17:15:06 IST" name="afterMethod" finished-at="2023-08-23T17:15:06 IST" duration-ms="6" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=paymentByGiftCardInGuestUser status=FAILURE method=tc__OrderByGc_GuestUser.paymentByGiftCardInGuestUser()[pri:0, instance:com.providio.payments.tc__OrderByGc_GuestUser@496d7bd9] output={null}]]]>
+                <![CDATA[[TestResult name=paymentByGiftCardInGuestUser status=SUCCESS method=tc__OrderByGc_GuestUser.paymentByGiftCardInGuestUser()[pri:0, instance:com.providio.payments.tc__OrderByGc_GuestUser@76ad04a1] output={null}]]]>
               </value>
             </param>
           </params>
@@ -147,96 +78,19 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
         </test-method> <!-- afterMethod -->
       </class> <!-- com.providio.payments.tc__OrderByGc_GuestUser -->
       <class name="com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser@4b6f196c]" started-at="2023-08-22T17:52:22 IST" name="setUp" finished-at="2023-08-22T17:52:24 IST" duration-ms="2017" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser@4ab4f6d7]" started-at="2023-08-23T17:01:35 IST" name="setUp" finished-at="2023-08-23T17:01:37 IST" duration-ms="2011" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser@4b6f196c]" started-at="2023-08-22T17:52:24 IST" name="paypalFromCheckoutPage" finished-at="2023-08-22T17:54:12 IST" duration-ms="108109" status="FAIL">
-          <exception class="org.openqa.selenium.InvalidElementStateException">
-            <message>
-              <![CDATA[invalid element state: Element is not currently interactable and may not be manipulated
-  (Session info: chrome=115.0.5790.173)
-Build info: version: '4.8.2', revision: '826dbfc730'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d6b2617b7db1a5b44a6b6efa2b1314df, clearElement {id=ADA03539D619806F34B1A3B340E85CE7_element_1241}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.173, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52716}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52716/devtoo..., se:cdpVersion: 115.0.5790.173, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (d6b2617b7db1a5b44a6b6efa2b1314df)] -> xpath: //input[@id='shippingPhoneNumberdefault']]
-Session ID: d6b2617b7db1a5b44a6b6efa2b1314df]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.InvalidElementStateException: invalid element state: Element is not currently interactable and may not be manipulated
-  (Session info: chrome=115.0.5790.173)
-Build info: version: '4.8.2', revision: '826dbfc730'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d6b2617b7db1a5b44a6b6efa2b1314df, clearElement {id=ADA03539D619806F34B1A3B340E85CE7_element_1241}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.173, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52716}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52716/devtoo..., se:cdpVersion: 115.0.5790.173, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on WINDOWS (d6b2617b7db1a5b44a6b6efa2b1314df)] -> xpath: //input[@id='shippingPhoneNumberdefault']]
-Session ID: d6b2617b7db1a5b44a6b6efa2b1314df
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-at org.openqa.selenium.remote.RemoteWebElement.clear(RemoteWebElement.java:132)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
-at jdk.proxy2/jdk.proxy2.$Proxy19.clear(Unknown Source)
-at com.providio.pageObjects.checkOutPage.setPhone(checkOutPage.java:111)
-at com.providio.paymentProccess.tc__CheckOutProcess.selectShippingAddress(tc__CheckOutProcess.java:156)
-at com.providio.paymentProccess.tc__CheckOutProcess.checkoutprocess(tc__CheckOutProcess.java:71)
-at com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser.paypalFromCheckoutPage(tc__PaymentProccessByGCandPaypalGuestUser.java:63)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.InvalidElementStateException -->
+        <test-method signature="paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser@4ab4f6d7]" started-at="2023-08-23T17:01:37 IST" name="paypalFromCheckoutPage" finished-at="2023-08-23T17:08:09 IST" duration-ms="392636" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- paypalFromCheckoutPage -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser@4b6f196c]" started-at="2023-08-22T17:54:12 IST" name="afterMethod" finished-at="2023-08-22T17:54:13 IST" duration-ms="220" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser@4ab4f6d7]" started-at="2023-08-23T17:08:09 IST" name="afterMethod" finished-at="2023-08-23T17:08:09 IST" duration-ms="8" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=paypalFromCheckoutPage status=FAILURE method=tc__PaymentProccessByGCandPaypalGuestUser.paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser@4b6f196c] output={null}]]]>
+                <![CDATA[[TestResult name=paypalFromCheckoutPage status=SUCCESS method=tc__PaymentProccessByGCandPaypalGuestUser.paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser@4ab4f6d7] output={null}]]]>
               </value>
             </param>
           </params>
@@ -245,659 +99,50 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
         </test-method> <!-- afterMethod -->
       </class> <!-- com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser -->
       <class name="com.providio.payments.tc__PaymentProccessByGCandCC_RegUser">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandCC_RegUser@29d72ce1]" started-at="2023-08-22T18:06:43 IST" name="setUp" finished-at="2023-08-22T18:06:45 IST" duration-ms="2010" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandCC_RegUser@1cc00a6c]" started-at="2023-08-23T17:23:33 IST" name="setUp" finished-at="2023-08-23T17:23:35 IST" duration-ms="2009" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandCC_RegUser@29d72ce1]" started-at="2023-08-22T18:06:45 IST" name="paypalFromCheckoutPage" finished-at="2023-08-22T18:10:47 IST" depends-on-methods="com.providio.testcases.tc__LoginSc.verifySuccessfulLogin" duration-ms="242400" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- paypalFromCheckoutPage -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandCC_RegUser@29d72ce1]" started-at="2023-08-22T18:10:47 IST" name="afterMethod" finished-at="2023-08-22T18:10:47 IST" duration-ms="7" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=paypalFromCheckoutPage status=SUCCESS method=tc__PaymentProccessByGCandCC_RegUser.paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandCC_RegUser@29d72ce1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.providio.payments.tc__PaymentProccessByGCandCC_RegUser -->
-      <class name="com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser@22057f80]" started-at="2023-08-22T18:00:47 IST" name="setUp" finished-at="2023-08-22T18:00:49 IST" duration-ms="2015" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="paypalCheckout_MiniCart()[pri:0, instance:com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser@22057f80]" started-at="2023-08-22T18:00:49 IST" name="paypalCheckout_MiniCart" finished-at="2023-08-22T18:02:43 IST" depends-on-methods="com.providio.testcases.tc__LoginSc.verifySuccessfulLogin" duration-ms="113628" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- paypalCheckout_MiniCart -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser@22057f80]" started-at="2023-08-22T18:02:43 IST" name="afterMethod" finished-at="2023-08-22T18:02:43 IST" duration-ms="14" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=paypalCheckout_MiniCart status=SUCCESS method=tc__PaypalCheckout_MiniCart_RegUser.paypalCheckout_MiniCart()[pri:0, instance:com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser@22057f80] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser -->
-      <class name="com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser@65d23aa3]" started-at="2023-08-22T17:42:38 IST" name="setUp" finished-at="2023-08-22T17:42:40 IST" duration-ms="2005" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="paypalCheckout_MiniCart()[pri:0, instance:com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser@65d23aa3]" started-at="2023-08-22T17:42:40 IST" name="paypalCheckout_MiniCart" finished-at="2023-08-22T17:45:00 IST" duration-ms="139928" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- paypalCheckout_MiniCart -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser@65d23aa3]" started-at="2023-08-22T17:45:00 IST" name="afterMethod" finished-at="2023-08-22T17:45:00 IST" duration-ms="21" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=paypalCheckout_MiniCart status=SUCCESS method=tc__PaypalCheckout_MiniCart_GuestUser.paypalCheckout_MiniCart()[pri:0, instance:com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser@65d23aa3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser -->
-      <class name="com.providio.payments.tc__PaypalFromViewCartPage_RegUser">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_RegUser@607624b7]" started-at="2023-08-22T17:58:59 IST" name="setUp" finished-at="2023-08-22T17:59:01 IST" duration-ms="2017" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="paypalFromViewCartPage()[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_RegUser@607624b7]" started-at="2023-08-22T17:59:01 IST" name="paypalFromViewCartPage" finished-at="2023-08-22T18:00:47 IST" depends-on-methods="com.providio.testcases.tc__LoginSc.verifySuccessfulLogin" duration-ms="106502" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- paypalFromViewCartPage -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_RegUser@607624b7]" started-at="2023-08-22T18:00:47 IST" name="afterMethod" finished-at="2023-08-22T18:00:47 IST" duration-ms="9" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=paypalFromViewCartPage status=SUCCESS method=tc__PaypalFromViewCartPage_RegUser.paypalFromViewCartPage()[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_RegUser@607624b7] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.providio.payments.tc__PaypalFromViewCartPage_RegUser -->
-      <class name="com.providio.testcases.tc__LoginSc">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.testcases.tc__LoginSc@6e49d72a]" started-at="2023-08-22T17:56:11 IST" name="setUp" finished-at="2023-08-22T17:56:13 IST" duration-ms="2006" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="openBrowserandClickSignInButton()[pri:0, instance:com.providio.testcases.tc__LoginSc@6e49d72a]" started-at="2023-08-22T17:56:13 IST" name="openBrowserandClickSignInButton" finished-at="2023-08-22T17:56:22 IST" duration-ms="8727" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowserandClickSignInButton -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LoginSc@6e49d72a]" started-at="2023-08-22T17:56:22 IST" name="afterMethod" finished-at="2023-08-22T17:56:22 IST" duration-ms="7" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=openBrowserandClickSignInButton status=SUCCESS method=tc__LoginSc.openBrowserandClickSignInButton()[pri:0, instance:com.providio.testcases.tc__LoginSc@6e49d72a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="verifyLoginFailureWithEmptyEmail()[pri:0, instance:com.providio.testcases.tc__LoginSc@6e49d72a]" started-at="2023-08-22T17:56:22 IST" name="verifyLoginFailureWithEmptyEmail" finished-at="2023-08-22T17:56:48 IST" duration-ms="26364" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoginFailureWithEmptyEmail -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LoginSc@6e49d72a]" started-at="2023-08-22T17:56:48 IST" name="afterMethod" finished-at="2023-08-22T17:56:48 IST" duration-ms="16" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyLoginFailureWithEmptyEmail status=SUCCESS method=tc__LoginSc.verifyLoginFailureWithEmptyEmail()[pri:0, instance:com.providio.testcases.tc__LoginSc@6e49d72a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="verifyLoginFailureWithEmptyEmailAndPassword()[pri:0, instance:com.providio.testcases.tc__LoginSc@6e49d72a]" started-at="2023-08-22T17:56:48 IST" name="verifyLoginFailureWithEmptyEmailAndPassword" finished-at="2023-08-22T17:57:13 IST" duration-ms="24440" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoginFailureWithEmptyEmailAndPassword -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LoginSc@6e49d72a]" started-at="2023-08-22T17:57:13 IST" name="afterMethod" finished-at="2023-08-22T17:57:13 IST" duration-ms="5" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyLoginFailureWithEmptyEmailAndPassword status=SUCCESS method=tc__LoginSc.verifyLoginFailureWithEmptyEmailAndPassword()[pri:0, instance:com.providio.testcases.tc__LoginSc@6e49d72a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="verifyLoginFailureWithEmptyPassword()[pri:0, instance:com.providio.testcases.tc__LoginSc@6e49d72a]" started-at="2023-08-22T17:57:13 IST" name="verifyLoginFailureWithEmptyPassword" finished-at="2023-08-22T17:57:34 IST" duration-ms="21517" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoginFailureWithEmptyPassword -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LoginSc@6e49d72a]" started-at="2023-08-22T17:57:34 IST" name="afterMethod" finished-at="2023-08-22T17:57:34 IST" duration-ms="12" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyLoginFailureWithEmptyPassword status=SUCCESS method=tc__LoginSc.verifyLoginFailureWithEmptyPassword()[pri:0, instance:com.providio.testcases.tc__LoginSc@6e49d72a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="verifyLoginFailureWithIncorrectCredentials()[pri:0, instance:com.providio.testcases.tc__LoginSc@6e49d72a]" started-at="2023-08-22T17:57:34 IST" name="verifyLoginFailureWithIncorrectCredentials" finished-at="2023-08-22T17:57:56 IST" duration-ms="21442" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoginFailureWithIncorrectCredentials -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LoginSc@6e49d72a]" started-at="2023-08-22T17:57:56 IST" name="afterMethod" finished-at="2023-08-22T17:57:56 IST" duration-ms="7" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyLoginFailureWithIncorrectCredentials status=SUCCESS method=tc__LoginSc.verifyLoginFailureWithIncorrectCredentials()[pri:0, instance:com.providio.testcases.tc__LoginSc@6e49d72a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="verifyLoginFailureWithIncorrectPassword()[pri:0, instance:com.providio.testcases.tc__LoginSc@6e49d72a]" started-at="2023-08-22T17:57:56 IST" name="verifyLoginFailureWithIncorrectPassword" finished-at="2023-08-22T17:58:16 IST" duration-ms="19937" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoginFailureWithIncorrectPassword -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LoginSc@6e49d72a]" started-at="2023-08-22T17:58:16 IST" name="afterMethod" finished-at="2023-08-22T17:58:16 IST" duration-ms="9" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyLoginFailureWithIncorrectPassword status=SUCCESS method=tc__LoginSc.verifyLoginFailureWithIncorrectPassword()[pri:0, instance:com.providio.testcases.tc__LoginSc@6e49d72a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="verifyLoginFailureWithInvalidEmailFormat()[pri:0, instance:com.providio.testcases.tc__LoginSc@6e49d72a]" started-at="2023-08-22T17:58:16 IST" name="verifyLoginFailureWithInvalidEmailFormat" finished-at="2023-08-22T17:58:37 IST" duration-ms="21482" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyLoginFailureWithInvalidEmailFormat -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LoginSc@6e49d72a]" started-at="2023-08-22T17:58:37 IST" name="afterMethod" finished-at="2023-08-22T17:58:37 IST" duration-ms="5" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyLoginFailureWithInvalidEmailFormat status=SUCCESS method=tc__LoginSc.verifyLoginFailureWithInvalidEmailFormat()[pri:0, instance:com.providio.testcases.tc__LoginSc@6e49d72a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="verifySuccessfulLogin()[pri:0, instance:com.providio.testcases.tc__LoginSc@6e49d72a]" started-at="2023-08-22T17:58:37 IST" name="verifySuccessfulLogin" finished-at="2023-08-22T17:58:59 IST" depends-on-methods="com.providio.testcases.testlogin.openBrowserandClickSignInButton" duration-ms="21422" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySuccessfulLogin -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LoginSc@6e49d72a]" started-at="2023-08-22T17:58:59 IST" name="afterMethod" finished-at="2023-08-22T17:58:59 IST" duration-ms="6" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifySuccessfulLogin status=SUCCESS method=tc__LoginSc.verifySuccessfulLogin()[pri:0, instance:com.providio.testcases.tc__LoginSc@6e49d72a] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.providio.testcases.tc__LoginSc -->
-      <class name="com.providio.testcases.tc__LogOut">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.testcases.tc__LogOut@745eb563]" started-at="2023-08-22T18:14:44 IST" name="setUp" finished-at="2023-08-22T18:14:46 IST" duration-ms="2018" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="Logout()[pri:0, instance:com.providio.testcases.tc__LogOut@745eb563]" started-at="2023-08-22T18:14:46 IST" name="Logout" finished-at="2023-08-22T18:14:46 IST" depends-on-methods="com.providio.testcases.tc__LoginSc.verifySuccessfulLogin" duration-ms="21" status="FAIL">
-          <exception class="org.openqa.selenium.json.JsonException">
-            <message>
-              <![CDATA[java.lang.reflect.InvocationTargetException
-Build info: version: '4.8.2', revision: '826dbfc730'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d6b2617b7db1a5b44a6b6efa2b1314df, actions {actions=[org.openqa.selenium.interactions.Sequence@6509f6aa]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.173, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52716}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52716/devtoo..., se:cdpVersion: 115.0.5790.173, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d6b2617b7db1a5b44a6b6efa2b1314df]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
-Build info: version: '4.8.2', revision: '826dbfc730'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d6b2617b7db1a5b44a6b6efa2b1314df, actions {actions=[org.openqa.selenium.interactions.Sequence@6509f6aa]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.173, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52716}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52716/devtoo..., se:cdpVersion: 115.0.5790.173, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d6b2617b7db1a5b44a6b6efa2b1314df
-at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:362)
-at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:154)
-at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
-at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:169)
-at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
-at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
-at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845)
-at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-at org.openqa.selenium.json.JsonOutput.lambda$new$23(JsonOutput.java:169)
-at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
-at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:182)
-at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:68)
-at org.openqa.selenium.json.JsonOutput.lambda$new$25(JsonOutput.java:177)
-at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
-at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:278)
-at org.openqa.selenium.json.Json.toJson(Json.java:42)
-at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:259)
-at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:122)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:181)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:611)
-at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:567)
-at org.openqa.selenium.interactions.Actions.perform(Actions.java:536)
-at com.providio.pageObjects.profilePage.howeraccount(profilePage.java:26)
-at com.providio.testcases.tc__LogOut.Logout(tc__LogOut.java:18)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
-Build info: version: '4.8.2', revision: '826dbfc730'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: driver.version: RemoteWebDriver
-at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:303)
-at org.openqa.selenium.json.Json.toJson(Json.java:40)
-... 39 more
-Caused by: java.lang.reflect.InvocationTargetException
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:358)
-... 60 more
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//a[@id='myaccount' and @aria-label ='My Account'])[1]"}
-  (Session info: chrome=115.0.5790.173)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.8.2', revision: '826dbfc730'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d6b2617b7db1a5b44a6b6efa2b1314df, findElement {using=xpath, value=(//a[@id='myaccount' and @aria-label ='My Account'])[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.173, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52716}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52716/devtoo..., se:cdpVersion: 115.0.5790.173, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d6b2617b7db1a5b44a6b6efa2b1314df
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy19.getWrappedElement(Unknown Source)
-at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:269)
-at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:218)
-at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:73)
-at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:82)
-... 65 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.json.JsonException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Logout -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LogOut@745eb563]" started-at="2023-08-22T18:14:46 IST" name="afterMethod" finished-at="2023-08-22T18:14:46 IST" duration-ms="138" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Logout status=FAILURE method=tc__LogOut.Logout()[pri:0, instance:com.providio.testcases.tc__LogOut@745eb563] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method signature="Logout1()[pri:0, instance:com.providio.testcases.tc__LogOut@745eb563]" started-at="2023-08-22T18:14:46 IST" name="Logout1" finished-at="2023-08-22T18:14:46 IST" duration-ms="10" status="FAIL">
-          <exception class="org.openqa.selenium.json.JsonException">
-            <message>
-              <![CDATA[java.lang.reflect.InvocationTargetException
-Build info: version: '4.8.2', revision: '826dbfc730'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d6b2617b7db1a5b44a6b6efa2b1314df, actions {actions=[org.openqa.selenium.interactions.Sequence@6a18c786]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.173, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52716}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52716/devtoo..., se:cdpVersion: 115.0.5790.173, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d6b2617b7db1a5b44a6b6efa2b1314df]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
-Build info: version: '4.8.2', revision: '826dbfc730'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d6b2617b7db1a5b44a6b6efa2b1314df, actions {actions=[org.openqa.selenium.interactions.Sequence@6a18c786]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.173, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52716}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52716/devtoo..., se:cdpVersion: 115.0.5790.173, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d6b2617b7db1a5b44a6b6efa2b1314df
-at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:362)
-at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:154)
-at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
-at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:169)
-at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
-at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
-at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845)
-at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-at org.openqa.selenium.json.JsonOutput.lambda$new$23(JsonOutput.java:169)
-at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
-at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:182)
-at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:68)
-at org.openqa.selenium.json.JsonOutput.lambda$new$25(JsonOutput.java:177)
-at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:287)
-at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:278)
-at org.openqa.selenium.json.Json.toJson(Json.java:42)
-at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:259)
-at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:122)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:181)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:611)
-at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:567)
-at org.openqa.selenium.interactions.Actions.perform(Actions.java:536)
-at com.providio.pageObjects.profilePage.howeraccount(profilePage.java:26)
-at com.providio.testcases.tc__LogOut.Logout1(tc__LogOut.java:45)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
-Build info: version: '4.8.2', revision: '826dbfc730'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: driver.version: RemoteWebDriver
-at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:303)
-at org.openqa.selenium.json.Json.toJson(Json.java:40)
-... 39 more
-Caused by: java.lang.reflect.InvocationTargetException
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:358)
-... 60 more
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//a[@id='myaccount' and @aria-label ='My Account'])[1]"}
-  (Session info: chrome=115.0.5790.173)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.8.2', revision: '826dbfc730'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d6b2617b7db1a5b44a6b6efa2b1314df, findElement {using=xpath, value=(//a[@id='myaccount' and @aria-label ='My Account'])[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.173, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52716}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52716/devtoo..., se:cdpVersion: 115.0.5790.173, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d6b2617b7db1a5b44a6b6efa2b1314df
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy19.getWrappedElement(Unknown Source)
-at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:269)
-at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:218)
-at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:73)
-at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:82)
-... 65 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.json.JsonException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Logout1 -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LogOut@745eb563]" started-at="2023-08-22T18:14:46 IST" name="afterMethod" finished-at="2023-08-22T18:14:46 IST" duration-ms="153" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Logout1 status=FAILURE method=tc__LogOut.Logout1()[pri:0, instance:com.providio.testcases.tc__LogOut@745eb563] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.providio.testcases.tc__LogOut -->
-      <class name="com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser@3338d29d]" started-at="2023-08-22T17:45:00 IST" name="setUp" finished-at="2023-08-22T17:45:02 IST" duration-ms="2019" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser@3338d29d]" started-at="2023-08-22T17:45:02 IST" name="paypalFromCheckoutPage" finished-at="2023-08-22T17:47:59 IST" duration-ms="176936" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- paypalFromCheckoutPage -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser@3338d29d]" started-at="2023-08-22T17:47:59 IST" name="afterMethod" finished-at="2023-08-22T17:47:59 IST" duration-ms="11" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=paypalFromCheckoutPage status=SUCCESS method=tc__PaypalFromCheckoutPage_GuestUser.paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser@3338d29d] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser -->
-      <class name="com.providio.payments.tc__OrderByGc_RegUser">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__OrderByGc_RegUser@793de73f]" started-at="2023-08-22T18:14:42 IST" name="setUp" finished-at="2023-08-22T18:14:44 IST" duration-ms="2013" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="orderByGc_RegUser()[pri:0, instance:com.providio.payments.tc__OrderByGc_RegUser@793de73f]" started-at="2023-08-22T18:14:44 IST" name="orderByGc_RegUser" finished-at="2023-08-22T18:14:44 IST" depends-on-methods="com.providio.testcases.tc__LoginSc.verifySuccessfulLogin" duration-ms="29" status="FAIL">
-          <exception class="java.lang.IllegalArgumentException">
-            <message>
-              <![CDATA[bound must be positive]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.IllegalArgumentException: bound must be positive
-at java.base/java.util.Random.nextInt(Random.java:322)
-at com.providio.pageObjects.navigationPage.selectRandomMenu(navigationPage.java:29)
-at com.providio.payments.tc__OrderByGc_RegUser.orderByGc_RegUser(tc__OrderByGc_RegUser.java:24)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:829)
-at org.testng.TestRunner.run(TestRunner.java:602)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
-at org.testng.SuiteRunner.run(SuiteRunner.java:330)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
-at org.testng.TestNG.runSuites(TestNG.java:1099)
-at org.testng.TestNG.run(TestNG.java:1067)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.IllegalArgumentException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- orderByGc_RegUser -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__OrderByGc_RegUser@793de73f]" started-at="2023-08-22T18:14:44 IST" name="afterMethod" finished-at="2023-08-22T18:14:44 IST" duration-ms="152" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=orderByGc_RegUser status=FAILURE method=tc__OrderByGc_RegUser.orderByGc_RegUser()[pri:0, instance:com.providio.payments.tc__OrderByGc_RegUser@793de73f] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.providio.payments.tc__OrderByGc_RegUser -->
-      <class name="com.providio.payments.tc__PaypalFromPDPpage_RegUser">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaypalFromPDPpage_RegUser@22a2fd7]" started-at="2023-08-22T18:05:36 IST" name="setUp" finished-at="2023-08-22T18:05:38 IST" duration-ms="2015" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="paypalFromPDPpage()[pri:0, instance:com.providio.payments.tc__PaypalFromPDPpage_RegUser@22a2fd7]" started-at="2023-08-22T18:05:38 IST" name="paypalFromPDPpage" finished-at="2023-08-22T18:06:43 IST" duration-ms="65452" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- paypalFromPDPpage -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaypalFromPDPpage_RegUser@22a2fd7]" started-at="2023-08-22T18:06:43 IST" name="afterMethod" finished-at="2023-08-22T18:06:43 IST" duration-ms="17" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=paypalFromPDPpage status=SUCCESS method=tc__PaypalFromPDPpage_RegUser.paypalFromPDPpage()[pri:0, instance:com.providio.payments.tc__PaypalFromPDPpage_RegUser@22a2fd7] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-      </class> <!-- com.providio.payments.tc__PaypalFromPDPpage_RegUser -->
-      <class name="com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser@62514f38]" started-at="2023-08-22T18:10:47 IST" name="setUp" finished-at="2023-08-22T18:10:49 IST" duration-ms="2011" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser@62514f38]" started-at="2023-08-22T18:10:49 IST" name="paypalFromCheckoutPage" finished-at="2023-08-22T18:14:42 IST" depends-on-methods="com.providio.testcases.tc__LoginSc.verifySuccessfulLogin" duration-ms="232285" status="FAIL">
+        <test-method signature="paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandCC_RegUser@1cc00a6c]" started-at="2023-08-23T17:23:35 IST" name="paypalFromCheckoutPage" finished-at="2023-08-23T17:23:37 IST" depends-on-methods="com.providio.testcases.tc__LoginSc.verifySuccessfulLogin" duration-ms="2052" status="FAIL">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'sfpp-payment-method-header-paypal')]"}
-  (Session info: chrome=115.0.5790.173)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.8.2', revision: '826dbfc730'
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//span[@class='minicart-quantity ml-1']"}
+  (Session info: chrome=116.0.5845.111)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d6b2617b7db1a5b44a6b6efa2b1314df, findElement {using=xpath, value=//div[contains(@class,'sfpp-payment-method-header-paypal')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.173, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52716}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52716/devtoo..., se:cdpVersion: 115.0.5790.173, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d6b2617b7db1a5b44a6b6efa2b1314df]]>
+Command: [08118664ae38fbb2a2424eabcb3b9890, findElement {using=xpath, value=//span[@class='minicart-quantity ml-1']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64962/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 08118664ae38fbb2a2424eabcb3b9890]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[contains(@class,'sfpp-payment-method-header-paypal')]"}
-  (Session info: chrome=115.0.5790.173)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.8.2', revision: '826dbfc730'
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[@class='minicart-quantity ml-1']"}
+  (Session info: chrome=116.0.5845.111)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [d6b2617b7db1a5b44a6b6efa2b1314df, findElement {using=xpath, value=//div[contains(@class,'sfpp-payment-method-header-paypal')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.173, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\Users\user\AppData\Local...}, goog:chromeOptions: {debuggerAddress: localhost:52716}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:52716/devtoo..., se:cdpVersion: 115.0.5790.173, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d6b2617b7db1a5b44a6b6efa2b1314df
+Command: [08118664ae38fbb2a2424eabcb3b9890, findElement {using=xpath, value=//span[@class='minicart-quantity ml-1']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64962/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 08118664ae38fbb2a2424eabcb3b9890
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
 at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-at com.providio.pageObjects.paymentpPage.salesforcePaypalCheckout(paymentpPage.java:479)
-at com.providio.paymentProccess.tc__CheckOutProcessByPayPal.checkoutprocessFromCheckout(tc__CheckOutProcessByPayPal.java:184)
-at com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser.paypalFromCheckoutPage(tc__PaymentProccessByGCandPaypalRegUser.java:71)
+at com.providio.payments.tc__PaymentProccessByGCandCC_RegUser.paypalFromCheckoutPage(tc__PaymentProccessByGCandCC_RegUser.java:31)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -932,11 +177,809 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- paypalFromCheckoutPage -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser@62514f38]" started-at="2023-08-22T18:14:42 IST" name="afterMethod" finished-at="2023-08-22T18:14:42 IST" duration-ms="160" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandCC_RegUser@1cc00a6c]" started-at="2023-08-23T17:23:37 IST" name="afterMethod" finished-at="2023-08-23T17:23:37 IST" duration-ms="162" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=paypalFromCheckoutPage status=FAILURE method=tc__PaymentProccessByGCandPaypalRegUser.paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser@62514f38] output={null}]]]>
+                <![CDATA[[TestResult name=paypalFromCheckoutPage status=FAILURE method=tc__PaymentProccessByGCandCC_RegUser.paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandCC_RegUser@1cc00a6c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.providio.payments.tc__PaymentProccessByGCandCC_RegUser -->
+      <class name="com.providio.payments.tc__PaypalFromPDPpage_GuestUser">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaypalFromPDPpage_GuestUser@5e1e19af]" started-at="2023-08-23T16:51:32 IST" name="setUp" finished-at="2023-08-23T16:51:34 IST" duration-ms="2018" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="paypalFromPDPpage()[pri:0, instance:com.providio.payments.tc__PaypalFromPDPpage_GuestUser@5e1e19af]" started-at="2023-08-23T16:51:34 IST" name="paypalFromPDPpage" finished-at="2023-08-23T16:52:44 IST" duration-ms="70100" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- paypalFromPDPpage -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaypalFromPDPpage_GuestUser@5e1e19af]" started-at="2023-08-23T16:52:44 IST" name="afterMethod" finished-at="2023-08-23T16:52:44 IST" duration-ms="11" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=paypalFromPDPpage status=SUCCESS method=tc__PaypalFromPDPpage_GuestUser.paypalFromPDPpage()[pri:0, instance:com.providio.payments.tc__PaypalFromPDPpage_GuestUser@5e1e19af] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.providio.payments.tc__PaypalFromPDPpage_GuestUser -->
+      <class name="com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser@9f52c05]" started-at="2023-08-23T17:19:46 IST" name="setUp" finished-at="2023-08-23T17:19:48 IST" duration-ms="2025" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="paypalCheckout_MiniCart()[pri:0, instance:com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser@9f52c05]" started-at="2023-08-23T17:19:48 IST" name="paypalCheckout_MiniCart" finished-at="2023-08-23T17:21:16 IST" depends-on-methods="com.providio.testcases.tc__LoginSc.verifySuccessfulLogin" duration-ms="88402" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- paypalCheckout_MiniCart -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser@9f52c05]" started-at="2023-08-23T17:21:16 IST" name="afterMethod" finished-at="2023-08-23T17:21:16 IST" duration-ms="7" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=paypalCheckout_MiniCart status=SUCCESS method=tc__PaypalCheckout_MiniCart_RegUser.paypalCheckout_MiniCart()[pri:0, instance:com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser@9f52c05] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser -->
+      <class name="com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser@52eca410]" started-at="2023-08-23T16:49:00 IST" name="setUp" finished-at="2023-08-23T16:49:02 IST" duration-ms="2021" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="paypalCheckout_MiniCart()[pri:0, instance:com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser@52eca410]" started-at="2023-08-23T16:49:02 IST" name="paypalCheckout_MiniCart" finished-at="2023-08-23T16:51:32 IST" duration-ms="149999" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- paypalCheckout_MiniCart -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser@52eca410]" started-at="2023-08-23T16:51:32 IST" name="afterMethod" finished-at="2023-08-23T16:51:32 IST" duration-ms="9" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=paypalCheckout_MiniCart status=SUCCESS method=tc__PaypalCheckout_MiniCart_GuestUser.paypalCheckout_MiniCart()[pri:0, instance:com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser@52eca410] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser -->
+      <class name="com.providio.payments.tc__PaypalFromViewCartPage_RegUser">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_RegUser@7b0fce68]" started-at="2023-08-23T17:17:52 IST" name="setUp" finished-at="2023-08-23T17:17:54 IST" duration-ms="2018" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="paypalFromViewCartPage()[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_RegUser@7b0fce68]" started-at="2023-08-23T17:17:54 IST" name="paypalFromViewCartPage" finished-at="2023-08-23T17:19:46 IST" depends-on-methods="com.providio.testcases.tc__LoginSc.verifySuccessfulLogin" duration-ms="112301" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- paypalFromViewCartPage -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_RegUser@7b0fce68]" started-at="2023-08-23T17:19:46 IST" name="afterMethod" finished-at="2023-08-23T17:19:46 IST" duration-ms="7" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=paypalFromViewCartPage status=SUCCESS method=tc__PaypalFromViewCartPage_RegUser.paypalFromViewCartPage()[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_RegUser@7b0fce68] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.providio.payments.tc__PaypalFromViewCartPage_RegUser -->
+      <class name="com.providio.testcases.tc__LoginSc">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.testcases.tc__LoginSc@226451a2]" started-at="2023-08-23T17:15:06 IST" name="setUp" finished-at="2023-08-23T17:15:08 IST" duration-ms="2022" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="openBrowserandClickSignInButton()[pri:0, instance:com.providio.testcases.tc__LoginSc@226451a2]" started-at="2023-08-23T17:15:08 IST" name="openBrowserandClickSignInButton" finished-at="2023-08-23T17:15:15 IST" duration-ms="6961" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowserandClickSignInButton -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LoginSc@226451a2]" started-at="2023-08-23T17:15:15 IST" name="afterMethod" finished-at="2023-08-23T17:15:15 IST" duration-ms="25" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=openBrowserandClickSignInButton status=SUCCESS method=tc__LoginSc.openBrowserandClickSignInButton()[pri:0, instance:com.providio.testcases.tc__LoginSc@226451a2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifyLoginFailureWithEmptyEmail()[pri:0, instance:com.providio.testcases.tc__LoginSc@226451a2]" started-at="2023-08-23T17:15:15 IST" name="verifyLoginFailureWithEmptyEmail" finished-at="2023-08-23T17:15:41 IST" duration-ms="26435" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginFailureWithEmptyEmail -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LoginSc@226451a2]" started-at="2023-08-23T17:15:41 IST" name="afterMethod" finished-at="2023-08-23T17:15:41 IST" duration-ms="7" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginFailureWithEmptyEmail status=SUCCESS method=tc__LoginSc.verifyLoginFailureWithEmptyEmail()[pri:0, instance:com.providio.testcases.tc__LoginSc@226451a2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifyLoginFailureWithEmptyEmailAndPassword()[pri:0, instance:com.providio.testcases.tc__LoginSc@226451a2]" started-at="2023-08-23T17:15:41 IST" name="verifyLoginFailureWithEmptyEmailAndPassword" finished-at="2023-08-23T17:16:05 IST" duration-ms="24338" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginFailureWithEmptyEmailAndPassword -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LoginSc@226451a2]" started-at="2023-08-23T17:16:05 IST" name="afterMethod" finished-at="2023-08-23T17:16:05 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginFailureWithEmptyEmailAndPassword status=SUCCESS method=tc__LoginSc.verifyLoginFailureWithEmptyEmailAndPassword()[pri:0, instance:com.providio.testcases.tc__LoginSc@226451a2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifyLoginFailureWithEmptyPassword()[pri:0, instance:com.providio.testcases.tc__LoginSc@226451a2]" started-at="2023-08-23T17:16:05 IST" name="verifyLoginFailureWithEmptyPassword" finished-at="2023-08-23T17:16:27 IST" duration-ms="21414" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginFailureWithEmptyPassword -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LoginSc@226451a2]" started-at="2023-08-23T17:16:27 IST" name="afterMethod" finished-at="2023-08-23T17:16:27 IST" duration-ms="13" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginFailureWithEmptyPassword status=SUCCESS method=tc__LoginSc.verifyLoginFailureWithEmptyPassword()[pri:0, instance:com.providio.testcases.tc__LoginSc@226451a2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifyLoginFailureWithIncorrectCredentials()[pri:0, instance:com.providio.testcases.tc__LoginSc@226451a2]" started-at="2023-08-23T17:16:27 IST" name="verifyLoginFailureWithIncorrectCredentials" finished-at="2023-08-23T17:16:48 IST" duration-ms="21403" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginFailureWithIncorrectCredentials -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LoginSc@226451a2]" started-at="2023-08-23T17:16:48 IST" name="afterMethod" finished-at="2023-08-23T17:16:48 IST" duration-ms="7" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginFailureWithIncorrectCredentials status=SUCCESS method=tc__LoginSc.verifyLoginFailureWithIncorrectCredentials()[pri:0, instance:com.providio.testcases.tc__LoginSc@226451a2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifyLoginFailureWithIncorrectPassword()[pri:0, instance:com.providio.testcases.tc__LoginSc@226451a2]" started-at="2023-08-23T17:16:48 IST" name="verifyLoginFailureWithIncorrectPassword" finished-at="2023-08-23T17:17:09 IST" duration-ms="20351" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginFailureWithIncorrectPassword -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LoginSc@226451a2]" started-at="2023-08-23T17:17:09 IST" name="afterMethod" finished-at="2023-08-23T17:17:09 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginFailureWithIncorrectPassword status=SUCCESS method=tc__LoginSc.verifyLoginFailureWithIncorrectPassword()[pri:0, instance:com.providio.testcases.tc__LoginSc@226451a2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifyLoginFailureWithInvalidEmailFormat()[pri:0, instance:com.providio.testcases.tc__LoginSc@226451a2]" started-at="2023-08-23T17:17:09 IST" name="verifyLoginFailureWithInvalidEmailFormat" finished-at="2023-08-23T17:17:30 IST" duration-ms="21341" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginFailureWithInvalidEmailFormat -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LoginSc@226451a2]" started-at="2023-08-23T17:17:30 IST" name="afterMethod" finished-at="2023-08-23T17:17:30 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginFailureWithInvalidEmailFormat status=SUCCESS method=tc__LoginSc.verifyLoginFailureWithInvalidEmailFormat()[pri:0, instance:com.providio.testcases.tc__LoginSc@226451a2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifySuccessfulLogin()[pri:0, instance:com.providio.testcases.tc__LoginSc@226451a2]" started-at="2023-08-23T17:17:30 IST" name="verifySuccessfulLogin" finished-at="2023-08-23T17:17:52 IST" depends-on-methods="com.providio.testcases.testlogin.openBrowserandClickSignInButton" duration-ms="21492" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySuccessfulLogin -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LoginSc@226451a2]" started-at="2023-08-23T17:17:52 IST" name="afterMethod" finished-at="2023-08-23T17:17:52 IST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifySuccessfulLogin status=SUCCESS method=tc__LoginSc.verifySuccessfulLogin()[pri:0, instance:com.providio.testcases.tc__LoginSc@226451a2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.providio.testcases.tc__LoginSc -->
+      <class name="com.providio.testcases.tc__LogOut">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.testcases.tc__LogOut@3973f4f2]" started-at="2023-08-23T17:23:46 IST" name="setUp" finished-at="2023-08-23T17:23:48 IST" duration-ms="2013" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Logout()[pri:0, instance:com.providio.testcases.tc__LogOut@3973f4f2]" started-at="2023-08-23T17:23:48 IST" name="Logout" finished-at="2023-08-23T17:23:48 IST" depends-on-methods="com.providio.testcases.tc__LoginSc.verifySuccessfulLogin" duration-ms="22" status="FAIL">
+          <exception class="org.openqa.selenium.json.JsonException">
+            <message>
+              <![CDATA[java.lang.reflect.InvocationTargetException
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [08118664ae38fbb2a2424eabcb3b9890, actions {actions=[org.openqa.selenium.interactions.Sequence@36134323]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64962/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 08118664ae38fbb2a2424eabcb3b9890]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [08118664ae38fbb2a2424eabcb3b9890, actions {actions=[org.openqa.selenium.interactions.Sequence@36134323]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64962/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 08118664ae38fbb2a2424eabcb3b9890
+at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:395)
+at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:165)
+at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:322)
+at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:185)
+at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845)
+at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+at org.openqa.selenium.json.JsonOutput.lambda$new$23(JsonOutput.java:185)
+at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:322)
+at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:203)
+at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:68)
+at org.openqa.selenium.json.JsonOutput.lambda$new$25(JsonOutput.java:198)
+at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:322)
+at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:313)
+at org.openqa.selenium.json.Json.toJson(Json.java:43)
+at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:256)
+at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:120)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:179)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:603)
+at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:585)
+at org.openqa.selenium.interactions.Actions.perform(Actions.java:554)
+at com.providio.pageObjects.profilePage.howeraccount(profilePage.java:26)
+at com.providio.testcases.tc__LogOut.Logout(tc__LogOut.java:18)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:338)
+at org.openqa.selenium.json.Json.toJson(Json.java:41)
+... 39 more
+Caused by: java.lang.reflect.InvocationTargetException
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:391)
+... 60 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//a[@id='myaccount' and @aria-label ='My Account'])[1]"}
+  (Session info: chrome=116.0.5845.111)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [08118664ae38fbb2a2424eabcb3b9890, findElement {using=xpath, value=(//a[@id='myaccount' and @aria-label ='My Account'])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64962/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 08118664ae38fbb2a2424eabcb3b9890
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy19.getWrappedElement(Unknown Source)
+at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:275)
+at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:224)
+at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:72)
+at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:81)
+... 65 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.json.JsonException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logout -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LogOut@3973f4f2]" started-at="2023-08-23T17:23:48 IST" name="afterMethod" finished-at="2023-08-23T17:23:48 IST" duration-ms="156" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Logout status=FAILURE method=tc__LogOut.Logout()[pri:0, instance:com.providio.testcases.tc__LogOut@3973f4f2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="Logout1()[pri:0, instance:com.providio.testcases.tc__LogOut@3973f4f2]" started-at="2023-08-23T17:23:48 IST" name="Logout1" finished-at="2023-08-23T17:23:48 IST" duration-ms="13" status="FAIL">
+          <exception class="org.openqa.selenium.json.JsonException">
+            <message>
+              <![CDATA[java.lang.reflect.InvocationTargetException
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [08118664ae38fbb2a2424eabcb3b9890, actions {actions=[org.openqa.selenium.interactions.Sequence@2cc9e43d]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64962/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 08118664ae38fbb2a2424eabcb3b9890]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [08118664ae38fbb2a2424eabcb3b9890, actions {actions=[org.openqa.selenium.interactions.Sequence@2cc9e43d]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64962/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 08118664ae38fbb2a2424eabcb3b9890
+at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:395)
+at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:165)
+at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:322)
+at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:185)
+at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845)
+at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+at org.openqa.selenium.json.JsonOutput.lambda$new$23(JsonOutput.java:185)
+at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:322)
+at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:203)
+at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:68)
+at org.openqa.selenium.json.JsonOutput.lambda$new$25(JsonOutput.java:198)
+at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:322)
+at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:313)
+at org.openqa.selenium.json.Json.toJson(Json.java:43)
+at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:256)
+at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:120)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:179)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:603)
+at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:585)
+at org.openqa.selenium.interactions.Actions.perform(Actions.java:554)
+at com.providio.pageObjects.profilePage.howeraccount(profilePage.java:26)
+at com.providio.testcases.tc__LogOut.Logout1(tc__LogOut.java:45)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:338)
+at org.openqa.selenium.json.Json.toJson(Json.java:41)
+... 39 more
+Caused by: java.lang.reflect.InvocationTargetException
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:391)
+... 60 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//a[@id='myaccount' and @aria-label ='My Account'])[1]"}
+  (Session info: chrome=116.0.5845.111)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [08118664ae38fbb2a2424eabcb3b9890, findElement {using=xpath, value=(//a[@id='myaccount' and @aria-label ='My Account'])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64962/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 08118664ae38fbb2a2424eabcb3b9890
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy19.getWrappedElement(Unknown Source)
+at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:275)
+at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:224)
+at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:72)
+at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:81)
+... 65 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.json.JsonException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logout1 -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LogOut@3973f4f2]" started-at="2023-08-23T17:23:48 IST" name="afterMethod" finished-at="2023-08-23T17:23:48 IST" duration-ms="163" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Logout1 status=FAILURE method=tc__LogOut.Logout1()[pri:0, instance:com.providio.testcases.tc__LogOut@3973f4f2] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.providio.testcases.tc__LogOut -->
+      <class name="com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser@4619e076]" started-at="2023-08-23T16:52:44 IST" name="setUp" finished-at="2023-08-23T16:52:46 IST" duration-ms="2018" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser@4619e076]" started-at="2023-08-23T16:52:46 IST" name="paypalFromCheckoutPage" finished-at="2023-08-23T16:55:58 IST" duration-ms="192282" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- paypalFromCheckoutPage -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser@4619e076]" started-at="2023-08-23T16:55:58 IST" name="afterMethod" finished-at="2023-08-23T16:55:58 IST" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=paypalFromCheckoutPage status=SUCCESS method=tc__PaypalFromCheckoutPage_GuestUser.paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser@4619e076] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser -->
+      <class name="com.providio.payments.tc__OrderByGc_RegUser">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__OrderByGc_RegUser@4b7c9229]" started-at="2023-08-23T17:23:42 IST" name="setUp" finished-at="2023-08-23T17:23:44 IST" duration-ms="2012" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="orderByGc_RegUser()[pri:0, instance:com.providio.payments.tc__OrderByGc_RegUser@4b7c9229]" started-at="2023-08-23T17:23:44 IST" name="orderByGc_RegUser" finished-at="2023-08-23T17:23:46 IST" depends-on-methods="com.providio.testcases.tc__LoginSc.verifySuccessfulLogin" duration-ms="2050" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//span[@class='minicart-quantity ml-1']"}
+  (Session info: chrome=116.0.5845.111)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [08118664ae38fbb2a2424eabcb3b9890, findElement {using=xpath, value=//span[@class='minicart-quantity ml-1']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64962/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 08118664ae38fbb2a2424eabcb3b9890]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[@class='minicart-quantity ml-1']"}
+  (Session info: chrome=116.0.5845.111)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [08118664ae38fbb2a2424eabcb3b9890, findElement {using=xpath, value=//span[@class='minicart-quantity ml-1']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64962/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 08118664ae38fbb2a2424eabcb3b9890
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+at com.providio.payments.tc__OrderByGc_RegUser.orderByGc_RegUser(tc__OrderByGc_RegUser.java:35)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderByGc_RegUser -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__OrderByGc_RegUser@4b7c9229]" started-at="2023-08-23T17:23:46 IST" name="afterMethod" finished-at="2023-08-23T17:23:46 IST" duration-ms="165" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=orderByGc_RegUser status=FAILURE method=tc__OrderByGc_RegUser.orderByGc_RegUser()[pri:0, instance:com.providio.payments.tc__OrderByGc_RegUser@4b7c9229] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.providio.payments.tc__OrderByGc_RegUser -->
+      <class name="com.providio.payments.tc__PaypalFromPDPpage_RegUser">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaypalFromPDPpage_RegUser@1b8c10c0]" started-at="2023-08-23T17:23:29 IST" name="setUp" finished-at="2023-08-23T17:23:31 IST" duration-ms="2013" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="paypalFromPDPpage()[pri:0, instance:com.providio.payments.tc__PaypalFromPDPpage_RegUser@1b8c10c0]" started-at="2023-08-23T17:23:31 IST" name="paypalFromPDPpage" finished-at="2023-08-23T17:23:33 IST" duration-ms="2069" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":".minicart-quantity"}
+  (Session info: chrome=116.0.5845.111)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [08118664ae38fbb2a2424eabcb3b9890, findElement {using=css selector, value=.minicart-quantity}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64962/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 08118664ae38fbb2a2424eabcb3b9890]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".minicart-quantity"}
+  (Session info: chrome=116.0.5845.111)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [08118664ae38fbb2a2424eabcb3b9890, findElement {using=css selector, value=.minicart-quantity}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64962/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 08118664ae38fbb2a2424eabcb3b9890
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+at com.providio.payments.tc__PaypalFromPDPpage_RegUser.paypalFromPDPpage(tc__PaypalFromPDPpage_RegUser.java:34)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- paypalFromPDPpage -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaypalFromPDPpage_RegUser@1b8c10c0]" started-at="2023-08-23T17:23:33 IST" name="afterMethod" finished-at="2023-08-23T17:23:33 IST" duration-ms="378" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=paypalFromPDPpage status=FAILURE method=tc__PaypalFromPDPpage_RegUser.paypalFromPDPpage()[pri:0, instance:com.providio.payments.tc__PaypalFromPDPpage_RegUser@1b8c10c0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.providio.payments.tc__PaypalFromPDPpage_RegUser -->
+      <class name="com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser@fcdd4f5]" started-at="2023-08-23T17:23:37 IST" name="setUp" finished-at="2023-08-23T17:23:39 IST" duration-ms="2010" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser@fcdd4f5]" started-at="2023-08-23T17:23:39 IST" name="paypalFromCheckoutPage" finished-at="2023-08-23T17:23:41 IST" depends-on-methods="com.providio.testcases.tc__LoginSc.verifySuccessfulLogin" duration-ms="2053" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//span[@class='minicart-quantity ml-1']"}
+  (Session info: chrome=116.0.5845.111)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [08118664ae38fbb2a2424eabcb3b9890, findElement {using=xpath, value=//span[@class='minicart-quantity ml-1']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64962/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 08118664ae38fbb2a2424eabcb3b9890]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//span[@class='minicart-quantity ml-1']"}
+  (Session info: chrome=116.0.5845.111)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [08118664ae38fbb2a2424eabcb3b9890, findElement {using=xpath, value=//span[@class='minicart-quantity ml-1']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64962/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 08118664ae38fbb2a2424eabcb3b9890
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+at com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser.paypalFromCheckoutPage(tc__PaymentProccessByGCandPaypalRegUser.java:31)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- paypalFromCheckoutPage -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser@fcdd4f5]" started-at="2023-08-23T17:23:41 IST" name="afterMethod" finished-at="2023-08-23T17:23:42 IST" duration-ms="175" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=paypalFromCheckoutPage status=FAILURE method=tc__PaymentProccessByGCandPaypalRegUser.paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser@fcdd4f5] output={null}]]]>
               </value>
             </param>
           </params>
@@ -945,19 +988,19 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
         </test-method> <!-- afterMethod -->
       </class> <!-- com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser -->
       <class name="com.providio.payments.tc__PaypalFromCheckoutPage_RegUser">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaypalFromCheckoutPage_RegUser@7d32d6af]" started-at="2023-08-22T18:02:43 IST" name="setUp" finished-at="2023-08-22T18:02:45 IST" duration-ms="2015" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaypalFromCheckoutPage_RegUser@6f615cd9]" started-at="2023-08-23T17:21:16 IST" name="setUp" finished-at="2023-08-23T17:21:18 IST" duration-ms="2018" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaypalFromCheckoutPage_RegUser@7d32d6af]" started-at="2023-08-22T18:02:45 IST" name="paypalFromCheckoutPage" finished-at="2023-08-22T18:05:36 IST" depends-on-methods="com.providio.testcases.tc__LoginSc.verifySuccessfulLogin" duration-ms="170534" status="PASS">
+        <test-method signature="paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaypalFromCheckoutPage_RegUser@6f615cd9]" started-at="2023-08-23T17:21:18 IST" name="paypalFromCheckoutPage" finished-at="2023-08-23T17:23:29 IST" depends-on-methods="com.providio.testcases.tc__LoginSc.verifySuccessfulLogin" duration-ms="130409" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- paypalFromCheckoutPage -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaypalFromCheckoutPage_RegUser@7d32d6af]" started-at="2023-08-22T18:05:36 IST" name="afterMethod" finished-at="2023-08-22T18:05:36 IST" duration-ms="6" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaypalFromCheckoutPage_RegUser@6f615cd9]" started-at="2023-08-23T17:23:29 IST" name="afterMethod" finished-at="2023-08-23T17:23:29 IST" duration-ms="10" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=paypalFromCheckoutPage status=SUCCESS method=tc__PaypalFromCheckoutPage_RegUser.paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaypalFromCheckoutPage_RegUser@7d32d6af] output={null}]]]>
+                <![CDATA[[TestResult name=paypalFromCheckoutPage status=SUCCESS method=tc__PaypalFromCheckoutPage_RegUser.paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaypalFromCheckoutPage_RegUser@6f615cd9] output={null}]]]>
               </value>
             </param>
           </params>

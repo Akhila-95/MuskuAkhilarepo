@@ -25,8 +25,10 @@ public navigationPage(WebDriver rDriver ){
 		public void selectRandomMenu(WebDriver driver) throws InterruptedException {
 	        List<WebElement> elements = driver.findElements(By.xpath("//a[@class='nav-link dropdown-toggle text-uppercase font-weight-bold level-1']"));
 	        int count = elements.size();
-	        Random random = new Random();
-	        int randomNumbermenu = random.nextInt(count) + 1;
+	        if (count > 0) {
+	            Random random = new Random();
+	            int randomNumbermenu = random.nextInt(count) + 1;
+	        
 	        List<WebElement> elementsofdrop = driver.findElements(By.xpath("(//li[@class='nav-item dropdown'])[" + randomNumbermenu + "]//a[@class='dropdown-link']"));
 	        int countdropdown = elementsofdrop.size();
 
@@ -37,6 +39,7 @@ public navigationPage(WebDriver rDriver ){
 	            // Handle the case where there are no dropdown items
 	            System.out.println("No dropdown items available.");
 	        }
+	        
 	       // int randomNumberitem = random.nextInt(countdropdown) + 1;
 	        WebElement NavigationRandomMenu = driver.findElement(By.xpath("(//a[@class='nav-link dropdown-toggle text-uppercase font-weight-bold level-1'])[" + randomNumbermenu + "]"));
 	        Thread.sleep(5000L);
@@ -47,6 +50,7 @@ public navigationPage(WebDriver rDriver ){
 	        JavascriptExecutor js = (JavascriptExecutor)driver;
 	        js.executeScript("arguments[0].click();", new Object[]{NavigationRandomMenuitem});
 	        Thread.sleep(5000L);
+	        }
 	    }
 
 	    public void goingThroughAlltheMenus(WebDriver driver) throws InterruptedException {

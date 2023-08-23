@@ -3,7 +3,6 @@ package com.providio.pageObjects;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.io.Zip;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
@@ -65,7 +64,7 @@ WebDriver lDriver;
 		LastName.sendKeys(lname);
 	}
 	//Address1
-	@FindBy(xpath="//input[@id='shippingAddressOnedefault']")
+	@FindBy(css="#shippingAddressOnedefault")
 	WebElement Address1;
 	public void setAddress1(String address ){
 		Address1.clear();
@@ -105,10 +104,9 @@ WebDriver lDriver;
 	}
 	
 	//Phone
-	@FindBy(xpath="//input[@id='shippingPhoneNumberdefault']")
+	@FindBy(css="#shippingPhoneNumberdefault")
 	WebElement Phone;
-	public void setPhone(String phonenumber ){
-		
+	public void setPhone(String phonenumber ){		
 		 Phone.sendKeys(phonenumber);
 	}
 	

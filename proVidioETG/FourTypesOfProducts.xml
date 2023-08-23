@@ -12,7 +12,7 @@
 	   
 	  <class name="com.providio.payments.tc__PaypalFromViewCartPage_GuestUser"/>
 	  <class name="com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser"/> 
-	  <!-- <class name="com.providio.payments.tc__PaypalFromPDPpage_GuestUser"/>  --> 
+	   <class name="com.providio.payments.tc__PaypalFromPDPpage_GuestUser"/> 
 	   <class name="com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser"/> 
 	  
 	   <class name="com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser"/> 
@@ -23,12 +23,12 @@
 	   <class name="com.providio.payments.tc__PaypalFromViewCartPage_RegUser"/> 
 	   <class name="com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser"/> 
 	   <class name="com.providio.payments.tc__PaypalFromCheckoutPage_RegUser"/>
-	   <class name="com.providio.payments.tc__PaypalFromPDPpage_RegUser"/> 
+	   <!--  <class name="com.providio.payments.tc__PaypalFromPDPpage_RegUser"/> -->
 	   <class name="com.providio.payments.tc__PaymentProccessByGCandCC_RegUser"/> 
 	    <class name="com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser"/> 
 	    <class name="com.providio.payments.tc__OrderByGc_RegUser"/> 
 	    
-	    <class name="com.providio.testcases.tc__LogOut" /> 
+	    <class name="com.providio.testcases.tc__LogOut" />  
 	     
 	    
 	     

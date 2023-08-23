@@ -181,6 +181,7 @@ public class baseClass {
 	   @AfterSuite
 	    public void tearDown() throws IOException, EmailException, InterruptedException {
 		  
+		  
 		   //Change the view  of the report
 		   reporter.viewConfigurer().viewOrder().as(new ViewName[]{ViewName.DASHBOARD, ViewName.TEST}).apply();
 		   report.flush();

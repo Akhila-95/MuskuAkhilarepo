@@ -326,6 +326,8 @@ WebDriver lDriver;
 	        Random random = new Random();
 	        List<WebElement> products = driver.findElements(By.xpath("//a[@class ='tile-img-contain']"));
 	        int totalProductcount = products.size();
+	        if(totalProductcount>0)
+	        {
 	        int randomselectProduct = random.nextInt(totalProductcount) + 1;
 //	        ScrollBarfuctions sbf = new ScrollBarfuctions();
 //	        sbf.scrollmedium(driver);
@@ -333,6 +335,7 @@ WebDriver lDriver;
 	        
 	        JavascriptExecutor js = (JavascriptExecutor)driver;
             js.executeScript("arguments[0].click();", RandomSelectProductFormPLP);
+	        }
 	        //RandomSelectProductFormPLP.click();
 	    }
 
