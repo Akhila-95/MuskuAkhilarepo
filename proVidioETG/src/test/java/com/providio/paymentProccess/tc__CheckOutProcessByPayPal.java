@@ -138,7 +138,7 @@ public class tc__CheckOutProcessByPayPal extends baseClass{
 								reviewOrderPage rop = new reviewOrderPage(driver);
 								Thread.sleep(3000);
 								rop.clickonplaceorderwithJsExuter(driver);
-								test.info("successfully click on the place order button");
+								//test.info("successfully click on the place order button");
 									Thread.sleep(10000);
 					    		
 								if(driver.getTitle().endsWith("Order Confirmation | Providio")) {

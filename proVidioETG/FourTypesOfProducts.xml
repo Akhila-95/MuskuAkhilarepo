@@ -9,8 +9,7 @@
 
     <classes>
 	  
-	  
-	   <class name="com.providio.Validations.CheckoutPage1_Validation"/>
+	 
 	  <class name="com.providio.payments.tc__PaypalFromViewCartPage_GuestUser"/>
 	  <class name="com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser"/> 
 	   <class name="com.providio.payments.tc__PaypalFromPDPpage_GuestUser"/> 
