@@ -136,15 +136,9 @@ public class tc__CreditCardPaymentProcess extends baseClass{
 		    		 checkout.validatePlacetheOrderPage();
 					
 		            //ordernumberandOrderdate
-		    		 checkout.ordernumberandOrderdat();
-				    
-				    
+		    		 checkout.ordernumberandOrderdat();    
 			}		
-			
-				     
-					
-						
-				
+	
 			}else {
 	                logger.info("The cart value is empty");
 	                test.fail("The cart value is empty");

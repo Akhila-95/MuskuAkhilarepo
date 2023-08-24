@@ -1,5 +1,7 @@
 package com.providio.payments;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -30,20 +32,26 @@ public class tc__PaypalFromPDPpage_RegUser extends baseClass{
 			
 		//minicart count
 			 //The cart value before adding the product to cart
-    		Thread.sleep(2000);
-    		WebElement minicartcount = driver.findElement(By.cssSelector(".minicart-quantity"));
-             String countOfMinicart = minicartcount.getText();
+			  Thread.sleep(2000);
+	    		 List<WebElement> minicartcountList = driver.findElements(By.cssSelector(".minicart-quantity"));
+	    		 if(minicartcountList.size()>0) {
+	    			 WebElement minicartcount = driver.findElement(By.cssSelector(".minicart-quantity"));
+	    			 String countOfMinicart = minicartcount.getText();
 
-             // Check if the string is not empty and contains only digits
-             if (!countOfMinicart.isEmpty() && countOfMinicart.matches("\\d+")) {
-                minicartCountValue = Integer.parseInt(countOfMinicart);
-                 System.out.println("The minicart count before adding the product is " + minicartCountValue);    		
-             }
+	             // Check if the string is not empty and contains only digits
+	             if (!countOfMinicart.isEmpty() && countOfMinicart.matches("\\d+")) {
+	                minicartCountValue = Integer.parseInt(countOfMinicart);
+	                 System.out.println("The minicart count before adding the product is " + minicartCountValue);    		
+	              }
+	    		 }
 
 	  //paypal buy now button
 	        
-	        size s = new size();
-			s.paypalBuyNowFromPDP(driver);
+	    		 List<WebElement> pdpPage = driver.findElements(By.xpath("//button[contains(@class,'add-to-cart btn btn-primary')]"));
+	    		 if( pdpPage.size()>0) {
+	    			    size s = new size();
+	    				s.paypalBuyNowFromPDP(driver);
+		    		 }
 		
 		//paypal checkout procces
 			tc__CheckOutProcessByPayPal paypal= new tc__CheckOutProcessByPayPal();

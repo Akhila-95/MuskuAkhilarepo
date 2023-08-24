@@ -34,36 +34,42 @@ public class tc__PaypalFromLoginPageGuestUser extends baseClass {
 
 
 			 //The cart value before adding the product to cart
-    		Thread.sleep(2000);
-    		 WebElement minicartcount = driver.findElement(By.xpath("//span[@class='minicart-quantity ml-1']"));
-             String countOfMinicart = minicartcount.getText();
+			  Thread.sleep(2000);
+	    		 List<WebElement> minicartcountList = driver.findElements(By.cssSelector(".minicart-quantity"));
+	    		 if(minicartcountList.size()>0) {
+	    			 WebElement minicartcount = driver.findElement(By.cssSelector(".minicart-quantity"));
+	    			 String countOfMinicart = minicartcount.getText();
 
-             // Check if the string is not empty and contains only digits
-             if (!countOfMinicart.isEmpty() && countOfMinicart.matches("\\d+")) {
-                minicartCountValue = Integer.parseInt(countOfMinicart);
-                 System.out.println("The minicart count before adding the product is " + minicartCountValue);    		
-             }
-	          size s = new size();
-	          s.selectSize(driver);
-       
-
-	          WebElement minicartcountafteradding = driver.findElement(By.xpath("//span[@class ='minicart-quantity ml-1']"));
-	          String countOfMinicartafteradding = minicartcountafteradding.getText();
-	          int minicartCountValueafteradding = Integer.parseInt(countOfMinicartafteradding);
-	
-	          logger.info(minicartCountValueafteradding);
-
-	          Thread.sleep(3000);
-	     //validation for product add to cart
-	        test.info("Verifying the product is added to cart or not ");
-
-		        if( minicartCountValueafteradding!= minicartCountValue) {
-		            test.pass("Product added to cart");
-		            logger.info("Product is  added to cart");
-		        }else {
-		            test.fail("Product is not added to cart");
-		            logger.info("Product is not added to cart");
-		        }	
+	             // Check if the string is not empty and contains only digits
+	             if (!countOfMinicart.isEmpty() && countOfMinicart.matches("\\d+")) {
+	                minicartCountValue = Integer.parseInt(countOfMinicart);
+	                 System.out.println("The minicart count before adding the product is " + minicartCountValue);    		
+	              }
+	    		 }
+	    		 List<WebElement> pdpPage = driver.findElements(By.xpath("//button[contains(@class,'add-to-cart btn btn-primary')]"));
+	    		 if( pdpPage.size()>0) {
+			          size s = new size();
+			          s.selectSize(driver);
+		    		 }
+	    		 if(minicartcountList.size()>0) {
+			          WebElement minicartcountafteradding = driver.findElement(By.xpath("//span[@class ='minicart-quantity ml-1']"));
+			          String countOfMinicartafteradding = minicartcountafteradding.getText();
+			          int minicartCountValueafteradding = Integer.parseInt(countOfMinicartafteradding);
+		
+				          logger.info(minicartCountValueafteradding);
+			
+				       //validation for product add to cart
+				        test.info("Verifying the product is added to cart or not ");
+			
+					        if( minicartCountValueafteradding!= minicartCountValue) {
+					            test.pass("Product added to cart");
+					            logger.info("Product is  added to cart");
+					        }else {
+					            test.fail("Product is not added to cart");
+					            logger.info("Product is not added to cart");
+					        }
+		        
+		    		 }
 		       Thread.sleep(4000);
 		        List <WebElement> minicartcounts = driver.findElements(By.xpath("//span[contains(@class,'minicart')]"));	       
 		      

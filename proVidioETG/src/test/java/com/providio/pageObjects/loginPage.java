@@ -16,14 +16,14 @@ WebDriver lDriver;
 		PageFactory.initElements(rDriver, this);
 	}
 	
-		@FindBy(xpath="//span[contains(text(), 'Sign In')]")
+		@FindBy(xpath="(//span[@class='user-message'])[1]")
 		WebElement signIn;
 		public void clickSign() 
 		{
 			signIn.click();
 		}
 		
-		@FindBy(name="loginEmail")
+		@FindBy(id="login-form-email")
 		WebElement email;
 		public void setEmail(String name )
 		{
@@ -31,7 +31,7 @@ WebDriver lDriver;
 			email.sendKeys(name);
 		}
 		
-		@FindBy(name="loginPassword")
+		@FindBy(id="login-form-password")
 		WebElement Password;
 		public void setPassword(String password )
 		{

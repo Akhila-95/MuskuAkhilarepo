@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 6 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 8 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">24 methods, 6 failed,   18 passed</span>
+                    <span class="method-stats">24 methods, 8 failed,  1 skipped,  15 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -108,12 +108,17 @@
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-ProvidioTestcases" title="com.providio.testcases.tc__LogOut" class="method navigator-link" hash-for-method="Logout1">Logout1</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-ProvidioTestcases" title="com.providio.testcases.tc__LoginSc" class="method navigator-link" hash-for-method="openBrowserandClickSignInButton">openBrowserandClickSignInButton</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-ProvidioTestcases" title="com.providio.payments.tc__OrderByGc_RegUser" class="method navigator-link" hash-for-method="orderByGc_RegUser">orderByGc_RegUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ProvidioTestcases" title="com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser" class="method navigator-link" hash-for-method="paypalCheckout_MiniCart">paypalCheckout_MiniCart</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -128,10 +133,29 @@
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-ProvidioTestcases" title="com.providio.payments.tc__PaypalFromPDPpage_RegUser" class="method navigator-link" hash-for-method="paypalFromPDPpage">paypalFromPDPpage</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-ProvidioTestcases" title="com.providio.payments.tc__PaypalFromCheckoutPage_RegUser" class="method navigator-link" hash-for-method="paypalFromCheckoutPage">paypalFromCheckoutPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ProvidioTestcases" title="com.providio.payments.tc__PaypalFromViewCartPage_RegUser" class="method navigator-link" hash-for-method="paypalFromViewCartPage">paypalFromViewCartPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-ProvidioTestcases -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-ProvidioTestcases" class="hide-methods skipped suite-ProvidioTestcases"> (hide)</a> <!-- hide-methods skipped suite-ProvidioTestcases -->
+                      <a href="#" panel-name="suite-ProvidioTestcases" class="show-methods skipped suite-ProvidioTestcases"> (show)</a> <!-- show-methods skipped suite-ProvidioTestcases -->
+                    </span>
+                    <div class="method-list-content skipped suite-ProvidioTestcases">
+                      <span>
+                        <img src="skipped.png" width="3%"/>
+                        <a href="#" panel-name="suite-ProvidioTestcases" title="com.providio.testcases.tc__LoginSc" class="method navigator-link" hash-for-method="verifySuccessfulLogin">verifySuccessfulLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-ProvidioTestcases -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -142,7 +166,12 @@
                     <div class="method-list-content passed suite-ProvidioTestcases">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-ProvidioTestcases" title="com.providio.testcases.tc__LoginSc" class="method navigator-link" hash-for-method="openBrowserandClickSignInButton">openBrowserandClickSignInButton</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-ProvidioTestcases" title="com.providio.testcases.tc__LogOut" class="method navigator-link" hash-for-method="Logout1">Logout1</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-ProvidioTestcases" title="com.providio.Validations.CheckoutPage1_Validation" class="method navigator-link" hash-for-method="checkoutPage1Validation">checkoutPage1Validation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -157,27 +186,17 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-ProvidioTestcases" title="com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser" class="method navigator-link" hash-for-method="paypalCheckout_MiniCart">paypalCheckout_MiniCart</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-ProvidioTestcases" title="com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser" class="method navigator-link" hash-for-method="paypalFromCheckoutPage">paypalFromCheckoutPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-ProvidioTestcases" title="com.providio.payments.tc__PaypalFromCheckoutPage_RegUser" class="method navigator-link" hash-for-method="paypalFromCheckoutPage">paypalFromCheckoutPage</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-ProvidioTestcases" title="com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser" class="method navigator-link" hash-for-method="paypalFromCheckoutPage">paypalFromCheckoutPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-ProvidioTestcases" title="com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser" class="method navigator-link" hash-for-method="paypalFromCheckoutPage">paypalFromCheckoutPage</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-ProvidioTestcases" title="com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser" class="method navigator-link" hash-for-method="paypalFromCheckoutPage">paypalFromCheckoutPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -188,11 +207,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-ProvidioTestcases" title="com.providio.payments.tc__PaypalFromViewCartPage_GuestUser" class="method navigator-link" hash-for-method="paypalFromViewCartPage">paypalFromViewCartPage</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-ProvidioTestcases" title="com.providio.payments.tc__PaypalFromViewCartPage_RegUser" class="method navigator-link" hash-for-method="paypalFromViewCartPage">paypalFromViewCartPage</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -225,11 +239,6 @@
                         <a href="#" panel-name="suite-ProvidioTestcases" title="com.providio.testcases.tc__LoginSc" class="method navigator-link" hash-for-method="verifyLoginFailureWithInvalidEmailFormat">verifyLoginFailureWithInvalidEmailFormat</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-ProvidioTestcases" title="com.providio.testcases.tc__LoginSc" class="method navigator-link" hash-for-method="verifySuccessfulLogin">verifySuccessfulLogin</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                     </div> <!-- method-list-content passed suite-ProvidioTestcases -->
                   </li>
                 </ul>
@@ -253,29 +262,10 @@
                   <a name="paypalFromCheckoutPage">
                   </a> <!-- paypalFromCheckoutPage -->
                   <span class="method-name">paypalFromCheckoutPage</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[@class=&apos;minicart-quantity ml-1&apos;]&quot;}
-  (Session info: chrome=116.0.5845.111)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [08118664ae38fbb2a2424eabcb3b9890, findElement {using=xpath, value=//span[@class=&apos;minicart-quantity ml-1&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64962/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 08118664ae38fbb2a2424eabcb3b9890
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at com.providio.payments.tc__PaymentProccessByGCandCC_RegUser.paypalFromCheckoutPage(tc__PaymentProccessByGCandCC_RegUser.java:31)
+                  <div class="stack-trace">java.lang.AssertionError: User not logged in
+	at com.providio.payments.tc__PaymentProccessByGCandCC_RegUser.paypalFromCheckoutPage(tc__PaymentProccessByGCandCC_RegUser.java:85)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames
+... Removed 28 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -292,29 +282,10 @@ Session ID: 08118664ae38fbb2a2424eabcb3b9890
                   <a name="paypalFromCheckoutPage">
                   </a> <!-- paypalFromCheckoutPage -->
                   <span class="method-name">paypalFromCheckoutPage</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[@class=&apos;minicart-quantity ml-1&apos;]&quot;}
-  (Session info: chrome=116.0.5845.111)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [08118664ae38fbb2a2424eabcb3b9890, findElement {using=xpath, value=//span[@class=&apos;minicart-quantity ml-1&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64962/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 08118664ae38fbb2a2424eabcb3b9890
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser.paypalFromCheckoutPage(tc__PaymentProccessByGCandPaypalRegUser.java:31)
+                  <div class="stack-trace">java.lang.AssertionError: User not logged in
+	at com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser.paypalFromCheckoutPage(tc__PaymentProccessByGCandPaypalRegUser.java:85)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames
+... Removed 28 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -323,23 +294,63 @@ Session ID: 08118664ae38fbb2a2424eabcb3b9890
           <div class="suite-ProvidioTestcases-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.providio.payments.tc__PaypalFromPDPpage_RegUser</span>
+              <span class="class-name">com.providio.payments.tc__PaypalFromCheckoutPage_RegUser</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="paypalFromPDPpage">
-                  </a> <!-- paypalFromPDPpage -->
-                  <span class="method-name">paypalFromPDPpage</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.minicart-quantity&quot;}
+                  <a name="paypalFromCheckoutPage">
+                  </a> <!-- paypalFromCheckoutPage -->
+                  <span class="method-name">paypalFromCheckoutPage</span>
+                  <div class="stack-trace">java.lang.AssertionError: User not logged in
+	at com.providio.payments.tc__PaypalFromCheckoutPage_RegUser.paypalFromCheckoutPage(tc__PaypalFromCheckoutPage_RegUser.java:77)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ProvidioTestcases-class-failed -->
+          <div class="suite-ProvidioTestcases-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="paypalCheckout_MiniCart">
+                  </a> <!-- paypalCheckout_MiniCart -->
+                  <span class="method-name">paypalCheckout_MiniCart</span>
+                  <div class="stack-trace">java.lang.AssertionError: User not logged in
+	at com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser.paypalCheckout_MiniCart(tc__PaypalCheckout_MiniCart_RegUser.java:79)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ProvidioTestcases-class-failed -->
+          <div class="suite-ProvidioTestcases-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.providio.testcases.tc__LoginSc</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="openBrowserandClickSignInButton">
+                  </a> <!-- openBrowserandClickSignInButton -->
+                  <span class="method-name">openBrowserandClickSignInButton</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
   (Session info: chrome=116.0.5845.111)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [08118664ae38fbb2a2424eabcb3b9890, findElement {using=css selector, value=.minicart-quantity}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64962/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 08118664ae38fbb2a2424eabcb3b9890
+Command: [9b2c92c9a0f4a0618911f05a71549bcf, clickElement {id=A29EBD24038CA2F7A2C37F277DF5A80E_element_2421}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55443}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55443/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (9b2c92c9a0f4a0618911f05a71549bcf)] -&gt; xpath: (//span[@class=&apos;user-message&apos;])[1]]
+Session ID: 9b2c92c9a0f4a0618911f05a71549bcf
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
@@ -347,13 +358,14 @@ Session ID: 08118664ae38fbb2a2424eabcb3b9890
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at com.providio.payments.tc__PaypalFromPDPpage_RegUser.paypalFromPDPpage(tc__PaypalFromPDPpage_RegUser.java:34)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:242)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy19.click(Unknown Source)
+	at com.providio.pageObjects.loginPage.clickSign(loginPage.java:23)
+	at com.providio.testcases.tc__LoginSc.openBrowserandClickSignInButton(tc__LoginSc.java:23)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames
+... Removed 35 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -370,172 +382,10 @@ Session ID: 08118664ae38fbb2a2424eabcb3b9890
                   <a name="Logout">
                   </a> <!-- Logout -->
                   <span class="method-name">Logout</span>
-                  <div class="stack-trace">org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
-Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [08118664ae38fbb2a2424eabcb3b9890, actions {actions=[org.openqa.selenium.interactions.Sequence@36134323]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64962/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 08118664ae38fbb2a2424eabcb3b9890
-	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:395)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:165)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:322)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:185)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
-	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$23(JsonOutput.java:185)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:322)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:203)
-	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:68)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$25(JsonOutput.java:198)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:322)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:313)
-	at org.openqa.selenium.json.Json.toJson(Json.java:43)
-	at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:256)
-	at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:120)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:179)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
-	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:603)
-	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:585)
-	at org.openqa.selenium.interactions.Actions.perform(Actions.java:554)
-	at com.providio.pageObjects.profilePage.howeraccount(profilePage.java:26)
-	at com.providio.testcases.tc__LogOut.Logout(tc__LogOut.java:18)
+                  <div class="stack-trace">java.lang.AssertionError: User not logged out
+	at com.providio.testcases.tc__LogOut.Logout(tc__LogOut.java:38)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
-Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: driver.version: RemoteWebDriver
-		at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:338)
-		at org.openqa.selenium.json.Json.toJson(Json.java:41)
-		... 39 more
-	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:391)
-	... 60 more
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//a[@id=&apos;myaccount&apos; and @aria-label =&apos;My Account&apos;])[1]&quot;}
-  (Session info: chrome=116.0.5845.111)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [08118664ae38fbb2a2424eabcb3b9890, findElement {using=xpath, value=(//a[@id=&apos;myaccount&apos; and @aria-label =&apos;My Account&apos;])[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64962/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 08118664ae38fbb2a2424eabcb3b9890
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy19.getWrappedElement(Unknown Source)
-	at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:275)
-	at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:224)
-	at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:72)
-	at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:81)
-	... 65 more
-... Removed 37 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="Logout1">
-                  </a> <!-- Logout1 -->
-                  <span class="method-name">Logout1</span>
-                  <div class="stack-trace">org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
-Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [08118664ae38fbb2a2424eabcb3b9890, actions {actions=[org.openqa.selenium.interactions.Sequence@2cc9e43d]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64962/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 08118664ae38fbb2a2424eabcb3b9890
-	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:395)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:165)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:322)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:185)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
-	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
-	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
-	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
-	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$23(JsonOutput.java:185)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:322)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:203)
-	at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:68)
-	at org.openqa.selenium.json.JsonOutput.lambda$new$25(JsonOutput.java:198)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:322)
-	at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:313)
-	at org.openqa.selenium.json.Json.toJson(Json.java:43)
-	at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:256)
-	at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:120)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:179)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
-	at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:603)
-	at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:585)
-	at org.openqa.selenium.interactions.Actions.perform(Actions.java:554)
-	at com.providio.pageObjects.profilePage.howeraccount(profilePage.java:26)
-	at com.providio.testcases.tc__LogOut.Logout1(tc__LogOut.java:45)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
-Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: driver.version: RemoteWebDriver
-		at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:338)
-		at org.openqa.selenium.json.Json.toJson(Json.java:41)
-		... 39 more
-	at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:391)
-	... 60 more
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//a[@id=&apos;myaccount&apos; and @aria-label =&apos;My Account&apos;])[1]&quot;}
-  (Session info: chrome=116.0.5845.111)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [08118664ae38fbb2a2424eabcb3b9890, findElement {using=xpath, value=(//a[@id=&apos;myaccount&apos; and @aria-label =&apos;My Account&apos;])[1]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64962/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 08118664ae38fbb2a2424eabcb3b9890
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy19.getWrappedElement(Unknown Source)
-	at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:275)
-	at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:224)
-	at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:72)
-	at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:81)
-	... 65 more
-... Removed 37 stack frames
+... Removed 28 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -552,112 +402,18 @@ Session ID: 08118664ae38fbb2a2424eabcb3b9890
                   <a name="orderByGc_RegUser">
                   </a> <!-- orderByGc_RegUser -->
                   <span class="method-name">orderByGc_RegUser</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//span[@class=&apos;minicart-quantity ml-1&apos;]&quot;}
-  (Session info: chrome=116.0.5845.111)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: &apos;4.10.0&apos;, revision: &apos;c14d967899&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [08118664ae38fbb2a2424eabcb3b9890, findElement {using=xpath, value=//span[@class=&apos;minicart-quantity ml-1&apos;]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64962}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64962/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 08118664ae38fbb2a2424eabcb3b9890
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at com.providio.payments.tc__OrderByGc_RegUser.orderByGc_RegUser(tc__OrderByGc_RegUser.java:35)
+                  <div class="stack-trace">java.lang.AssertionError: User not logged in
+	at com.providio.payments.tc__OrderByGc_RegUser.orderByGc_RegUser(tc__OrderByGc_RegUser.java:84)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames
+... Removed 28 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-ProvidioTestcases-class-failed -->
-          <div class="suite-ProvidioTestcases-class-passed">
+          <div class="suite-ProvidioTestcases-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.providio.payments.tc__OrderByGc_GuestUser</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="paymentByGiftCardInGuestUser">
-                  </a> <!-- paymentByGiftCardInGuestUser -->
-                  <span class="method-name">paymentByGiftCardInGuestUser</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-ProvidioTestcases-class-passed -->
-          <div class="suite-ProvidioTestcases-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="paypalFromCheckoutPage">
-                  </a> <!-- paypalFromCheckoutPage -->
-                  <span class="method-name">paypalFromCheckoutPage</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-ProvidioTestcases-class-passed -->
-          <div class="suite-ProvidioTestcases-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.providio.payments.tc__PaypalFromViewCartPage_GuestUser</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="paypalFromViewCartPage">
-                  </a> <!-- paypalFromViewCartPage -->
-                  <span class="method-name">paypalFromViewCartPage</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-ProvidioTestcases-class-passed -->
-          <div class="suite-ProvidioTestcases-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.providio.payments.tc__PaypalFromCheckoutPage_RegUser</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="paypalFromCheckoutPage">
-                  </a> <!-- paypalFromCheckoutPage -->
-                  <span class="method-name">paypalFromCheckoutPage</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-ProvidioTestcases-class-passed -->
-          <div class="suite-ProvidioTestcases-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="paypalFromCheckoutPage">
-                  </a> <!-- paypalFromCheckoutPage -->
-                  <span class="method-name">paypalFromCheckoutPage</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-ProvidioTestcases-class-passed -->
-          <div class="suite-ProvidioTestcases-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">com.providio.payments.tc__PaypalFromViewCartPage_RegUser</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -666,10 +422,35 @@ Session ID: 08118664ae38fbb2a2424eabcb3b9890
                   <a name="paypalFromViewCartPage">
                   </a> <!-- paypalFromViewCartPage -->
                   <span class="method-name">paypalFromViewCartPage</span>
+                  <div class="stack-trace">java.lang.AssertionError: User not logged in
+	at com.providio.payments.tc__PaypalFromViewCartPage_RegUser.paypalFromViewCartPage(tc__PaypalFromViewCartPage_RegUser.java:81)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 28 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-ProvidioTestcases-class-passed -->
+          </div> <!-- suite-ProvidioTestcases-class-failed -->
+          <div class="suite-ProvidioTestcases-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.providio.testcases.tc__LoginSc</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifySuccessfulLogin">
+                  </a> <!-- verifySuccessfulLogin -->
+                  <span class="method-name">verifySuccessfulLogin</span>
+                  <div class="stack-trace">java.lang.Throwable: Method com.providio.testcases.tc__LoginSc.verifySuccessfulLogin() on instance com.providio.testcases.tc__LoginSc@37568ac9 depends on not successfully finished methods 
+[com.providio.testcases.tc__LoginSc.openBrowserandClickSignInButton() on instance com.providio.testcases.tc__LoginSc@37568ac9]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 18 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ProvidioTestcases-class-skipped -->
           <div class="suite-ProvidioTestcases-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -703,14 +484,29 @@ Session ID: 08118664ae38fbb2a2424eabcb3b9890
           <div class="suite-ProvidioTestcases-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser</span>
+              <span class="class-name">com.providio.Validations.CheckoutPage1_Validation</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="paypalCheckout_MiniCart">
-                  </a> <!-- paypalCheckout_MiniCart -->
-                  <span class="method-name">paypalCheckout_MiniCart</span>
+                  <a name="checkoutPage1Validation">
+                  </a> <!-- checkoutPage1Validation -->
+                  <span class="method-name">checkoutPage1Validation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ProvidioTestcases-class-passed -->
+          <div class="suite-ProvidioTestcases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="paypalFromCheckoutPage">
+                  </a> <!-- paypalFromCheckoutPage -->
+                  <span class="method-name">paypalFromCheckoutPage</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -721,13 +517,6 @@ Session ID: 08118664ae38fbb2a2424eabcb3b9890
               <span class="class-name">com.providio.testcases.tc__LoginSc</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="openBrowserandClickSignInButton">
-                  </a> <!-- openBrowserandClickSignInButton -->
-                  <span class="method-name">openBrowserandClickSignInButton</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="verifyLoginFailureWithEmptyEmail">
@@ -770,11 +559,19 @@ Session ID: 08118664ae38fbb2a2424eabcb3b9890
                   <span class="method-name">verifyLoginFailureWithInvalidEmailFormat</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ProvidioTestcases-class-passed -->
+          <div class="suite-ProvidioTestcases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="verifySuccessfulLogin">
-                  </a> <!-- verifySuccessfulLogin -->
-                  <span class="method-name">verifySuccessfulLogin</span>
+                  <a name="paypalFromCheckoutPage">
+                  </a> <!-- paypalFromCheckoutPage -->
+                  <span class="method-name">paypalFromCheckoutPage</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -782,7 +579,37 @@ Session ID: 08118664ae38fbb2a2424eabcb3b9890
           <div class="suite-ProvidioTestcases-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser</span>
+              <span class="class-name">com.providio.testcases.tc__LogOut</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Logout1">
+                  </a> <!-- Logout1 -->
+                  <span class="method-name">Logout1</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ProvidioTestcases-class-passed -->
+          <div class="suite-ProvidioTestcases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.providio.payments.tc__PaypalFromViewCartPage_GuestUser</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="paypalFromViewCartPage">
+                  </a> <!-- paypalFromViewCartPage -->
+                  <span class="method-name">paypalFromViewCartPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ProvidioTestcases-class-passed -->
+          <div class="suite-ProvidioTestcases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -790,6 +617,21 @@ Session ID: 08118664ae38fbb2a2424eabcb3b9890
                   <a name="paypalCheckout_MiniCart">
                   </a> <!-- paypalCheckout_MiniCart -->
                   <span class="method-name">paypalCheckout_MiniCart</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-ProvidioTestcases-class-passed -->
+          <div class="suite-ProvidioTestcases-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">com.providio.payments.tc__OrderByGc_GuestUser</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="paymentByGiftCardInGuestUser">
+                  </a> <!-- paymentByGiftCardInGuestUser -->
+                  <span class="method-name">paymentByGiftCardInGuestUser</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -806,6 +648,7 @@ Session ID: 08118664ae38fbb2a2424eabcb3b9890
 &lt;suite name=&quot;ProvidioTestcases&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Automation&quot;&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;com.providio.Validations.CheckoutPage1_Validation&quot;/&gt;
       &lt;class name=&quot;com.providio.payments.tc__PaypalFromViewCartPage_GuestUser&quot;/&gt;
       &lt;class name=&quot;com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser&quot;/&gt;
       &lt;class name=&quot;com.providio.payments.tc__PaypalFromPDPpage_GuestUser&quot;/&gt;
@@ -817,7 +660,6 @@ Session ID: 08118664ae38fbb2a2424eabcb3b9890
       &lt;class name=&quot;com.providio.payments.tc__PaypalFromViewCartPage_RegUser&quot;/&gt;
       &lt;class name=&quot;com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser&quot;/&gt;
       &lt;class name=&quot;com.providio.payments.tc__PaypalFromCheckoutPage_RegUser&quot;/&gt;
-      &lt;class name=&quot;com.providio.payments.tc__PaypalFromPDPpage_RegUser&quot;/&gt;
       &lt;class name=&quot;com.providio.payments.tc__PaymentProccessByGCandCC_RegUser&quot;/&gt;
       &lt;class name=&quot;com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser&quot;/&gt;
       &lt;class name=&quot;com.providio.payments.tc__OrderByGc_RegUser&quot;/&gt;
@@ -863,106 +705,106 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(24);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'paymentByGiftCardInGuestUser')
-data.setCell(0, 2, 'com.providio.payments.tc__OrderByGc_GuestUser')
-data.setCell(0, 3, 414455);
+data.setCell(0, 1, 'paypalFromCheckoutPage')
+data.setCell(0, 2, 'com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser')
+data.setCell(0, 3, 457535);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'paypalFromCheckoutPage')
 data.setCell(1, 2, 'com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser')
-data.setCell(1, 3, 392636);
+data.setCell(1, 3, 421124);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'paypalFromCheckoutPage')
-data.setCell(2, 2, 'com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser')
-data.setCell(2, 3, 334502);
+data.setCell(2, 1, 'paymentByGiftCardInGuestUser')
+data.setCell(2, 2, 'com.providio.payments.tc__OrderByGc_GuestUser')
+data.setCell(2, 3, 417209);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'paypalFromCheckoutPage')
-data.setCell(3, 2, 'com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser')
-data.setCell(3, 3, 192282);
+data.setCell(3, 1, 'checkoutPage1Validation')
+data.setCell(3, 2, 'com.providio.Validations.CheckoutPage1_Validation')
+data.setCell(3, 3, 407565);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'paypalCheckout_MiniCart')
-data.setCell(4, 2, 'com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser')
-data.setCell(4, 3, 149999);
+data.setCell(4, 1, 'paypalFromCheckoutPage')
+data.setCell(4, 2, 'com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser')
+data.setCell(4, 3, 129519);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'paypalFromCheckoutPage')
-data.setCell(5, 2, 'com.providio.payments.tc__PaypalFromCheckoutPage_RegUser')
-data.setCell(5, 3, 130409);
+data.setCell(5, 1, 'paypalFromViewCartPage')
+data.setCell(5, 2, 'com.providio.payments.tc__PaypalFromViewCartPage_GuestUser')
+data.setCell(5, 3, 111060);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'paypalFromViewCartPage')
-data.setCell(6, 2, 'com.providio.payments.tc__PaypalFromViewCartPage_GuestUser')
-data.setCell(6, 3, 118386);
+data.setCell(6, 1, 'paypalCheckout_MiniCart')
+data.setCell(6, 2, 'com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser')
+data.setCell(6, 3, 103175);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'paypalFromViewCartPage')
-data.setCell(7, 2, 'com.providio.payments.tc__PaypalFromViewCartPage_RegUser')
-data.setCell(7, 3, 112301);
+data.setCell(7, 1, 'paypalFromPDPpage')
+data.setCell(7, 2, 'com.providio.payments.tc__PaypalFromPDPpage_GuestUser')
+data.setCell(7, 3, 68788);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'paypalCheckout_MiniCart')
-data.setCell(8, 2, 'com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser')
-data.setCell(8, 3, 88402);
+data.setCell(8, 1, 'Logout1')
+data.setCell(8, 2, 'com.providio.testcases.tc__LogOut')
+data.setCell(8, 3, 15643);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'paypalFromPDPpage')
-data.setCell(9, 2, 'com.providio.payments.tc__PaypalFromPDPpage_GuestUser')
-data.setCell(9, 3, 70100);
+data.setCell(9, 1, 'openBrowserandClickSignInButton')
+data.setCell(9, 2, 'com.providio.testcases.tc__LoginSc')
+data.setCell(9, 3, 8845);
 data.setCell(10, 0, 10)
-data.setCell(10, 1, 'verifyLoginFailureWithEmptyEmail')
-data.setCell(10, 2, 'com.providio.testcases.tc__LoginSc')
-data.setCell(10, 3, 26435);
+data.setCell(10, 1, 'paypalFromViewCartPage')
+data.setCell(10, 2, 'com.providio.payments.tc__PaypalFromViewCartPage_RegUser')
+data.setCell(10, 3, 29);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'verifyLoginFailureWithEmptyEmailAndPassword')
+data.setCell(11, 1, 'verifyLoginFailureWithIncorrectCredentials')
 data.setCell(11, 2, 'com.providio.testcases.tc__LoginSc')
-data.setCell(11, 3, 24338);
+data.setCell(11, 3, 14);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'verifySuccessfulLogin')
-data.setCell(12, 2, 'com.providio.testcases.tc__LoginSc')
-data.setCell(12, 3, 21492);
+data.setCell(12, 1, 'paypalFromCheckoutPage')
+data.setCell(12, 2, 'com.providio.payments.tc__PaypalFromCheckoutPage_RegUser')
+data.setCell(12, 3, 6);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'verifyLoginFailureWithEmptyPassword')
+data.setCell(13, 1, 'verifyLoginFailureWithEmptyEmail')
 data.setCell(13, 2, 'com.providio.testcases.tc__LoginSc')
-data.setCell(13, 3, 21414);
+data.setCell(13, 3, 1);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'verifyLoginFailureWithIncorrectCredentials')
+data.setCell(14, 1, 'verifyLoginFailureWithInvalidEmailFormat')
 data.setCell(14, 2, 'com.providio.testcases.tc__LoginSc')
-data.setCell(14, 3, 21403);
+data.setCell(14, 3, 1);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'verifyLoginFailureWithInvalidEmailFormat')
-data.setCell(15, 2, 'com.providio.testcases.tc__LoginSc')
-data.setCell(15, 3, 21341);
+data.setCell(15, 1, 'paypalFromCheckoutPage')
+data.setCell(15, 2, 'com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser')
+data.setCell(15, 3, 1);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'verifyLoginFailureWithIncorrectPassword')
-data.setCell(16, 2, 'com.providio.testcases.tc__LoginSc')
-data.setCell(16, 3, 20351);
+data.setCell(16, 1, 'Logout')
+data.setCell(16, 2, 'com.providio.testcases.tc__LogOut')
+data.setCell(16, 3, 1);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'openBrowserandClickSignInButton')
-data.setCell(17, 2, 'com.providio.testcases.tc__LoginSc')
-data.setCell(17, 3, 6961);
+data.setCell(17, 1, 'paypalCheckout_MiniCart')
+data.setCell(17, 2, 'com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser')
+data.setCell(17, 3, 1);
 data.setCell(18, 0, 18)
-data.setCell(18, 1, 'paypalFromPDPpage')
-data.setCell(18, 2, 'com.providio.payments.tc__PaypalFromPDPpage_RegUser')
-data.setCell(18, 3, 2069);
+data.setCell(18, 1, 'verifyLoginFailureWithEmptyPassword')
+data.setCell(18, 2, 'com.providio.testcases.tc__LoginSc')
+data.setCell(18, 3, 0);
 data.setCell(19, 0, 19)
-data.setCell(19, 1, 'paypalFromCheckoutPage')
-data.setCell(19, 2, 'com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser')
-data.setCell(19, 3, 2053);
+data.setCell(19, 1, 'verifyLoginFailureWithIncorrectPassword')
+data.setCell(19, 2, 'com.providio.testcases.tc__LoginSc')
+data.setCell(19, 3, 0);
 data.setCell(20, 0, 20)
-data.setCell(20, 1, 'paypalFromCheckoutPage')
-data.setCell(20, 2, 'com.providio.payments.tc__PaymentProccessByGCandCC_RegUser')
-data.setCell(20, 3, 2052);
+data.setCell(20, 1, 'verifyLoginFailureWithEmptyEmailAndPassword')
+data.setCell(20, 2, 'com.providio.testcases.tc__LoginSc')
+data.setCell(20, 3, 0);
 data.setCell(21, 0, 21)
 data.setCell(21, 1, 'orderByGc_RegUser')
 data.setCell(21, 2, 'com.providio.payments.tc__OrderByGc_RegUser')
-data.setCell(21, 3, 2050);
+data.setCell(21, 3, 0);
 data.setCell(22, 0, 22)
-data.setCell(22, 1, 'Logout')
-data.setCell(22, 2, 'com.providio.testcases.tc__LogOut')
-data.setCell(22, 3, 22);
+data.setCell(22, 1, 'paypalFromCheckoutPage')
+data.setCell(22, 2, 'com.providio.payments.tc__PaymentProccessByGCandCC_RegUser')
+data.setCell(22, 3, 0);
 data.setCell(23, 0, 23)
-data.setCell(23, 1, 'Logout1')
-data.setCell(23, 2, 'com.providio.testcases.tc__LogOut')
-data.setCell(23, 3, 13);
+data.setCell(23, 1, 'verifySuccessfulLogin')
+data.setCell(23, 2, 'com.providio.testcases.tc__LoginSc')
+data.setCell(23, 3, 0);
 window.suiteTableData['ProvidioTestcases']= { tableData: data, tableDiv: 'times-div-ProvidioTestcases'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 36 minutes</span>
+              <span class="suite-total-time">Total running time: 35 minutes</span>
               <div id="times-div-ProvidioTestcases">
               </div> <!-- times-div-ProvidioTestcases -->
             </div> <!-- times-div -->
@@ -990,25 +832,25 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.providio.payments.tc__PaypalFromCheckoutPage_RegUser</span>
+              <span class="ignored-class-name">com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">tearDown</span>
                 <br/>
                 <span class="ignored-method-name">setUpforReport</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setUpforReport</span>
+                <br/>
+                <span class="ignored-method-name">tearDown</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-                <span class="ignored-method-name">setUpforReport</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">setUpforReport</span>
                 <br/>
@@ -1026,61 +868,7 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.providio.payments.tc__OrderByGc_GuestUser</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">setUpforReport</span>
-                <br/>
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">setUpforReport</span>
-                <br/>
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">setUpforReport</span>
-                <br/>
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.providio.payments.tc__PaypalFromPDPpage_RegUser</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">setUpforReport</span>
-                <br/>
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.providio.payments.tc__PaypalFromViewCartPage_RegUser</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-                <span class="ignored-method-name">setUpforReport</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.providio.testcases.tc__LogOut</span>
-              <div class="ignored-methods-div">
-                <span class="ignored-method-name">setUpforReport</span>
-                <br/>
-                <span class="ignored-method-name">tearDown</span>
-                <br/>
-              </div> <!-- ignored-methods-div -->
-            </div> <!-- ignored-class-div -->
-            <div class="ignored-class-div">
-              <span class="ignored-class-name">com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser</span>
+              <span class="ignored-class-name">com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">setUpforReport</span>
                 <br/>
@@ -1090,6 +878,24 @@ return data;
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
               <span class="ignored-class-name">com.providio.payments.tc__PaypalFromPDPpage_GuestUser</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+                <span class="ignored-method-name">setUpforReport</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+                <span class="ignored-method-name">setUpforReport</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.providio.payments.tc__PaypalFromCheckoutPage_RegUser</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">setUpforReport</span>
                 <br/>
@@ -1107,11 +913,47 @@ return data;
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
             <div class="ignored-class-div">
-              <span class="ignored-class-name">com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser</span>
+              <span class="ignored-class-name">com.providio.testcases.tc__LogOut</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+                <span class="ignored-method-name">setUpforReport</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+                <span class="ignored-method-name">setUpforReport</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.providio.payments.tc__PaypalFromViewCartPage_GuestUser</span>
               <div class="ignored-methods-div">
                 <span class="ignored-method-name">setUpforReport</span>
                 <br/>
                 <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.providio.payments.tc__OrderByGc_GuestUser</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">setUpforReport</span>
+                <br/>
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.providio.payments.tc__PaypalFromViewCartPage_RegUser</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tearDown</span>
+                <br/>
+                <span class="ignored-method-name">setUpforReport</span>
                 <br/>
               </div> <!-- ignored-methods-div -->
             </div> <!-- ignored-class-div -->
@@ -1123,330 +965,330 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.providio.payments.tc__PaypalFromViewCartPage_GuestUser</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.providio.Validations.CheckoutPage1_Validation</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
                 <span class="method-name">setUpforReport</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">6566 ms</span>
+                <span class="method-start">5719 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">checkoutPage1Validation</span>
+                <span class="method-start">7778 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod([TestResult name=checkoutPage1Validation status=SUCCESS method=CheckoutPage1_Validation.checkoutPage...)</span>
+                <span class="method-start">415347 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.providio.payments.tc__PaypalFromViewCartPage_GuestUser</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">415382 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">paypalFromViewCartPage</span>
-                <span class="method-start">8723 ms</span>
+                <span class="method-start">417583 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=paypalFromViewCartPage status=SUCCESS method=tc__PaypalFromViewCartPage_GuestUser.p...)</span>
-                <span class="method-start">127111 ms</span>
+                <span class="method-start">528644 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">127124 ms</span>
+                <span class="method-start">528654 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">paypalCheckout_MiniCart</span>
-                <span class="method-start">129146 ms</span>
+                <span class="method-start">530720 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=paypalCheckout_MiniCart status=SUCCESS method=tc__PaypalCheckout_MiniCart_GuestUser...)</span>
-                <span class="method-start">279146 ms</span>
+                <span class="method-start">633895 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.providio.payments.tc__PaypalFromPDPpage_GuestUser</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">279155 ms</span>
+                <span class="method-start">633900 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">paypalFromPDPpage</span>
-                <span class="method-start">281173 ms</span>
+                <span class="method-start">635932 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=paypalFromPDPpage status=SUCCESS method=tc__PaypalFromPDPpage_GuestUser.paypalFromP...)</span>
-                <span class="method-start">351274 ms</span>
+                <span class="method-start">704722 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">351286 ms</span>
+                <span class="method-start">704735 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">paypalFromCheckoutPage</span>
-                <span class="method-start">353306 ms</span>
+                <span class="method-start">706815 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=paypalFromCheckoutPage status=SUCCESS method=tc__PaypalFromCheckoutPage_GuestUser.p...)</span>
-                <span class="method-start">545589 ms</span>
+                <span class="method-start">836335 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">545599 ms</span>
+                <span class="method-start">836346 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">paypalFromCheckoutPage</span>
-                <span class="method-start">547608 ms</span>
+                <span class="method-start">838352 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=paypalFromCheckoutPage status=SUCCESS method=tc__PaymentProccessByGCandCC_GuestUser...)</span>
-                <span class="method-start">882111 ms</span>
+                <span class="method-start">1295888 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">882119 ms</span>
+                <span class="method-start">1295897 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">paypalFromCheckoutPage</span>
-                <span class="method-start">884131 ms</span>
+                <span class="method-start">1297911 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=paypalFromCheckoutPage status=SUCCESS method=tc__PaymentProccessByGCandPaypalGuestU...)</span>
-                <span class="method-start">1276768 ms</span>
+                <span class="method-start">1719036 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.providio.payments.tc__OrderByGc_GuestUser</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">1276776 ms</span>
+                <span class="method-start">1719061 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">paymentByGiftCardInGuestUser</span>
-                <span class="method-start">1278790 ms</span>
+                <span class="method-start">1723003 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=paymentByGiftCardInGuestUser status=SUCCESS method=tc__OrderByGc_GuestUser.paymentB...)</span>
-                <span class="method-start">1693246 ms</span>
+                <span class="method-start">2140213 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.providio.testcases.tc__LoginSc</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">1693253 ms</span>
+                <span class="method-start">2140221 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">openBrowserandClickSignInButton</span>
-                <span class="method-start">1695276 ms</span>
+                <span class="method-start">2142269 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=openBrowserandClickSignInButton status=SUCCESS method=tc__LoginSc.openBrowserandCli...)</span>
-                <span class="method-start">1702240 ms</span>
+                <span class="method-name">afterMethod([TestResult name=openBrowserandClickSignInButton status=FAILURE method=tc__LoginSc.openBrowserandCli...)</span>
+                <span class="method-start">2151126 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">verifyLoginFailureWithEmptyEmail</span>
-                <span class="method-start">1702265 ms</span>
+                <span class="method-start">2152270 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=verifyLoginFailureWithEmptyEmail status=SUCCESS method=tc__LoginSc.verifyLoginFailu...)</span>
-                <span class="method-start">1728702 ms</span>
+                <span class="method-start">2152271 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">verifyLoginFailureWithEmptyEmailAndPassword</span>
-                <span class="method-start">1728709 ms</span>
+                <span class="method-start">2152279 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=verifyLoginFailureWithEmptyEmailAndPassword status=SUCCESS method=tc__LoginSc.verif...)</span>
-                <span class="method-start">1753048 ms</span>
+                <span class="method-start">2152280 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">verifyLoginFailureWithEmptyPassword</span>
-                <span class="method-start">1753054 ms</span>
+                <span class="method-start">2152286 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=verifyLoginFailureWithEmptyPassword status=SUCCESS method=tc__LoginSc.verifyLoginFa...)</span>
-                <span class="method-start">1774470 ms</span>
+                <span class="method-start">2152287 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">verifyLoginFailureWithIncorrectCredentials</span>
-                <span class="method-start">1774484 ms</span>
+                <span class="method-start">2152298 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=verifyLoginFailureWithIncorrectCredentials status=SUCCESS method=tc__LoginSc.verify...)</span>
-                <span class="method-start">1795888 ms</span>
+                <span class="method-start">2152314 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">verifyLoginFailureWithIncorrectPassword</span>
-                <span class="method-start">1795895 ms</span>
+                <span class="method-start">2152322 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=verifyLoginFailureWithIncorrectPassword status=SUCCESS method=tc__LoginSc.verifyLog...)</span>
-                <span class="method-start">1816247 ms</span>
+                <span class="method-start">2152324 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">verifyLoginFailureWithInvalidEmailFormat</span>
-                <span class="method-start">1816252 ms</span>
+                <span class="method-start">2152332 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=verifyLoginFailureWithInvalidEmailFormat status=SUCCESS method=tc__LoginSc.verifyLo...)</span>
-                <span class="method-start">1837594 ms</span>
+                <span class="method-start">2152333 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">verifySuccessfulLogin</span>
-                <span class="method-start">1837602 ms</span>
+                <span class="method-start">2152349 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=verifySuccessfulLogin status=SUCCESS method=tc__LoginSc.verifySuccessfulLogin()[pri...)</span>
-                <span class="method-start">1859095 ms</span>
-              </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.providio.payments.tc__PaypalFromViewCartPage_RegUser</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">1859102 ms</span>
+                <span class="method-start">2152351 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">paypalFromViewCartPage</span>
-                <span class="method-start">1861123 ms</span>
+                <span class="method-start">2154361 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=paypalFromViewCartPage status=SUCCESS method=tc__PaypalFromViewCartPage_RegUser.pay...)</span>
-                <span class="method-start">1973425 ms</span>
+                <span class="method-name">afterMethod([TestResult name=paypalFromViewCartPage status=FAILURE method=tc__PaypalFromViewCartPage_RegUser.pay...)</span>
+                <span class="method-start">2154391 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">1973432 ms</span>
+                <span class="method-start">2155284 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">paypalCheckout_MiniCart</span>
-                <span class="method-start">1975458 ms</span>
+                <span class="method-start">2157286 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=paypalCheckout_MiniCart status=SUCCESS method=tc__PaypalCheckout_MiniCart_RegUser.p...)</span>
-                <span class="method-start">2063861 ms</span>
+                <span class="method-name">afterMethod([TestResult name=paypalCheckout_MiniCart status=FAILURE method=tc__PaypalCheckout_MiniCart_RegUser.p...)</span>
+                <span class="method-start">2157288 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.providio.payments.tc__PaypalFromCheckoutPage_RegUser</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">2063868 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="test-method">
-                <span class="method-name">paypalFromCheckoutPage</span>
-                <span class="method-start">2065898 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=paypalFromCheckoutPage status=SUCCESS method=tc__PaypalFromCheckoutPage_RegUser.pay...)</span>
-                <span class="method-start">2196309 ms</span>
-              </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.providio.payments.tc__PaypalFromPDPpage_RegUser</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setUp</span>
-                <span class="method-start">2196319 ms</span>
+                <span class="method-start">2158156 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">paypalFromPDPpage</span>
-                <span class="method-start">2198333 ms</span>
+                <span class="method-name">paypalFromCheckoutPage</span>
+                <span class="method-start">2160176 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=paypalFromPDPpage status=FAILURE method=tc__PaypalFromPDPpage_RegUser.paypalFromPDP...)</span>
-                <span class="method-start">2200406 ms</span>
+                <span class="method-name">afterMethod([TestResult name=paypalFromCheckoutPage status=FAILURE method=tc__PaypalFromCheckoutPage_RegUser.pay...)</span>
+                <span class="method-start">2160183 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.providio.payments.tc__PaymentProccessByGCandCC_RegUser</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">2200784 ms</span>
+                <span class="method-start">2161043 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">paypalFromCheckoutPage</span>
-                <span class="method-start">2202793 ms</span>
+                <span class="method-start">2163054 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=paypalFromCheckoutPage status=FAILURE method=tc__PaymentProccessByGCandCC_RegUser.p...)</span>
-                <span class="method-start">2204845 ms</span>
+                <span class="method-start">2163055 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">2205007 ms</span>
+                <span class="method-start">2163901 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">paypalFromCheckoutPage</span>
-                <span class="method-start">2207018 ms</span>
+                <span class="method-start">2165912 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=paypalFromCheckoutPage status=FAILURE method=tc__PaymentProccessByGCandPaypalRegUse...)</span>
-                <span class="method-start">2209073 ms</span>
+                <span class="method-start">2165913 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.providio.payments.tc__OrderByGc_RegUser</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">2209248 ms</span>
+                <span class="method-start">2166718 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">orderByGc_RegUser</span>
-                <span class="method-start">2211261 ms</span>
+                <span class="method-start">2168731 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=orderByGc_RegUser status=FAILURE method=tc__OrderByGc_RegUser.orderByGc_RegUser()[p...)</span>
-                <span class="method-start">2213312 ms</span>
+                <span class="method-start">2168732 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.providio.testcases.tc__LogOut</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">2213477 ms</span>
+                <span class="method-start">2169555 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">Logout</span>
-                <span class="method-start">2215490 ms</span>
+                <span class="method-start">2171573 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod([TestResult name=Logout status=FAILURE method=tc__LogOut.Logout()[pri:0, instance:com.providio.testc...)</span>
-                <span class="method-start">2215514 ms</span>
+                <span class="method-start">2171575 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">Logout1</span>
-                <span class="method-start">2215671 ms</span>
+                <span class="method-start">2172392 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
-                <span class="method-name">afterMethod([TestResult name=Logout1 status=FAILURE method=tc__LogOut.Logout1()[pri:0, instance:com.providio.tes...)</span>
-                <span class="method-start">2215686 ms</span>
+                <span class="method-name">afterMethod([TestResult name=Logout1 status=SUCCESS method=tc__LogOut.Logout1()[pri:0, instance:com.providio.tes...)</span>
+                <span class="method-start">2188036 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">com.providio.payments.tc__PaypalFromViewCartPage_GuestUser</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.providio.Validations.CheckoutPage1_Validation</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">2215933 ms</span>
+                <span class="method-start">2188540 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

@@ -9,7 +9,8 @@
 
     <classes>
 	  
-	   
+	  
+	   <class name="com.providio.Validations.CheckoutPage1_Validation"/>
 	  <class name="com.providio.payments.tc__PaypalFromViewCartPage_GuestUser"/>
 	  <class name="com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser"/> 
 	   <class name="com.providio.payments.tc__PaypalFromPDPpage_GuestUser"/> 
@@ -18,6 +19,7 @@
 	   <class name="com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser"/> 
 	   <class name="com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser"/> 
 	   <class name="com.providio.payments.tc__OrderByGc_GuestUser"/>
+	   
 	   <class name="com.providio.testcases.tc__LoginSc"/>
 	   
 	   <class name="com.providio.payments.tc__PaypalFromViewCartPage_RegUser"/> 
