@@ -535,6 +535,9 @@ public void clickOnProduct1() throws InterruptedException{
 			 	        WebElement selectedColorButton = colorButtons.get(randomIndex);
 
 			 	        // Click the selected color button
+			 	       JavascriptExecutor js = (JavascriptExecutor) driver;
+
+			 	        js.executeScript("arguments[0].click();", selectedColorButton);
 			 	        selectedColorButton.click();
 			 		}else {
 			 		// Create a Select object and select the first enabled size

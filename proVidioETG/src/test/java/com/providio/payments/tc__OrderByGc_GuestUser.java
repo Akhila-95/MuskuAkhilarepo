@@ -18,13 +18,14 @@ public class tc__OrderByGc_GuestUser extends baseClass {
 	@Test
 	public void paymentByGiftCardInGuestUser() throws InterruptedException  {
 	
-		      driver.get(this.baseURL);
-	          logger.info("enterd into url");	       
+		      driver.get(baseURL);
+	          logger.info("enterd into url");	 
 	          navigationPage navPage =new navigationPage(driver);
 	    	  navPage.selectRandomMenu(driver);
 	    	 
 	    	  productListingPage plp = new productListingPage(driver);
 	    	  plp.selectProductRandom(driver);
+	    	  
 	    	  //The cart value before adding the product to cart
 	    	  Thread.sleep(2000);
 	    		 List<WebElement> minicartcountList = driver.findElements(By.cssSelector(".minicart-quantity"));
@@ -40,7 +41,9 @@ public class tc__OrderByGc_GuestUser extends baseClass {
 	    		 }
 	    		 List<WebElement> pdpPage = driver.findElements(By.xpath("//button[contains(@class,'add-to-cart btn btn-primary')]"));
 	    		 if( pdpPage.size()>0) {
+	    			 
 			          size s = new size();
+			          s.outfitsCategory();
 			          s.selectSize(driver);
 		    		 }
 	          

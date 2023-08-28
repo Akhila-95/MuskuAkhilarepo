@@ -463,10 +463,10 @@ WebDriver lDriver;
                  JavascriptExecutor js = (JavascriptExecutor) driver;  
                  WebElement regPaypalCheckout=parentDiv.findElement(By.xpath("//label[contains(text(),'Select a PayPal account')]"));
                  if(!regPaypalCheckout.isDisplayed()) {
-                	 paypalCheckout.click();
+                	 js.executeScript("arguments[0].click();", paypalCheckout);                	
                      Thread.sleep(3000);
                      if(!regPaypalCheckout.isDisplayed()) {
-                    	 js.executeScript("arguments[0].click();", paypalCheckout);
+                    	 paypalCheckout.click();
                      }
                  }
                  

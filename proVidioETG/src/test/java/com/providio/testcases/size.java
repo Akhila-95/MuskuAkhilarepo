@@ -15,8 +15,10 @@ public class size extends baseClass{
 
 	public void selectSize(WebDriver driver) throws InterruptedException {
 		
+		 
 		//selecting attributes
 			allElements(driver);
+			
 			
 	     productDescriptionPage pdp = new productDescriptionPage(driver);
 	     WebElement cartEnabled =driver.findElement(By.xpath("//button[contains(@class,'add-to-cart')]"));
@@ -46,8 +48,12 @@ public class size extends baseClass{
 	    	
 	    	 productListingPage plp = new productListingPage(driver);
 	    	 plp.selectProductRandom(driver);
+	
 	    	
 	    	 selectSize(driver);
+	    	 outfitsCategory();
+	    	 
+	    	 
 	    	 
 	    	 WebElement minicartcountafteradding = driver.findElement(By.xpath("//span[@class ='minicart-quantity ml-1']"));
              String countOfMinicartafteradding = minicartcountafteradding.getText();
@@ -239,4 +245,21 @@ public class size extends baseClass{
 				System.out.println("No paypal buy now button");
 			}
 		}
+		
+		public void outfitsCategory() throws InterruptedException {
+			 List<WebElement> outfits = driver.findElements(By.xpath("(//a[contains(text(),' Outfits')])[2]"));
+	    	 if(outfits.size()>0) {
+	    			 navigationPage navPage =new navigationPage(driver);
+			    	 navPage.selectRandomMenu(driver);	
+			    	 productListingPage plp = new productListingPage(driver);
+			    	 plp.selectProductRandom(driver);  	 
+	    	
+		}else {
+					 navigationPage navPage =new navigationPage(driver);
+			    	 navPage.selectRandomMenu(driver);	
+			    	 productListingPage plp = new productListingPage(driver);
+			    	 plp.selectProductRandom(driver);
+			    	 selectSize(driver);
+			}
+  }
 }

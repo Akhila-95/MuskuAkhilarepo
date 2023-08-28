@@ -3,24 +3,42 @@
 <suite name="Failed suite [ProvidioTestcases]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Automation(failed)">
     <classes>
-      <class name="com.providio.payments.tc__PaymentProccessByGCandCC_RegUser">
+      <class name="com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser">
         <methods>
+          <include name="setUpforReport"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
           <include name="paypalFromCheckoutPage"/>
-          <include name="setUpforReport"/>
-          <include name="afterMethod"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.providio.payments.tc__PaymentProccessByGCandCC_RegUser -->
-      <class name="com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser">
+      </class> <!-- com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser -->
+      <class name="com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser">
         <methods>
           <include name="setUpforReport"/>
-          <include name="paypalCheckout_MiniCart"/>
-          <include name="setUp"/>
+          <include name="paypalFromCheckoutPage"/>
           <include name="afterMethod"/>
+          <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser -->
+      </class> <!-- com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser -->
+      <class name="com.providio.payments.tc__PaypalFromCheckoutPage_RegUser">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="paypalFromCheckoutPage"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.payments.tc__PaypalFromCheckoutPage_RegUser -->
+      <class name="com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="paypalFromCheckoutPage"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser -->
       <class name="com.providio.testcases.tc__LogOut">
         <methods>
           <include name="setUpforReport"/>
@@ -31,12 +49,82 @@
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.providio.testcases.tc__LogOut -->
-      <class name="com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser">
+      <class name="com.providio.payments.tc__OrderByGc_GuestUser">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="paymentByGiftCardInGuestUser"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.payments.tc__OrderByGc_GuestUser -->
+      <class name="com.providio.payments.tc__OrderByGc_RegUser">
+        <methods>
+          <include name="orderByGc_RegUser"/>
+          <include name="setUpforReport"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.payments.tc__OrderByGc_RegUser -->
+      <class name="com.providio.payments.tc__PaypalFromViewCartPage_GuestUser">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="paypalFromViewCartPage"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.payments.tc__PaypalFromViewCartPage_GuestUser -->
+      <class name="com.providio.payments.tc__PaymentProccessByGCandCC_RegUser">
+        <methods>
+          <include name="paypalFromCheckoutPage"/>
+          <include name="setUpforReport"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.payments.tc__PaymentProccessByGCandCC_RegUser -->
+      <class name="com.providio.payments.tc__PaypalFromViewCartPage_RegUser">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="paypalFromViewCartPage"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.payments.tc__PaypalFromViewCartPage_RegUser -->
+      <class name="com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser">
         <methods>
           <include name="setUpforReport"/>
           <include name="paypalCheckout_MiniCart"/>
           <include name="setUp"/>
           <include name="afterMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser -->
+      <class name="com.providio.testcases.tc__LoginSc">
+        <methods>
+          <include name="verifyLoginFailureWithIncorrectCredentials"/>
+          <include name="setUpforReport"/>
+          <include name="verifyLoginFailureWithIncorrectPassword"/>
+          <include name="verifySuccessfulLogin"/>
+          <include name="openBrowserandClickSignInButton"/>
+          <include name="verifyLoginFailureWithEmptyEmailAndPassword"/>
+          <include name="verifyLoginFailureWithEmptyEmail"/>
+          <include name="verifyLoginFailureWithEmptyPassword"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+          <include name="verifyLoginFailureWithInvalidEmailFormat"/>
+        </methods>
+      </class> <!-- com.providio.testcases.tc__LoginSc -->
+      <class name="com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="paypalCheckout_MiniCart"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser -->

@@ -44,6 +44,7 @@ public class tc__PaymentProccessByGCandCC_RegUser extends baseClass {
 	    		 List<WebElement> pdpPage = driver.findElements(By.xpath("//button[contains(@class,'add-to-cart btn btn-primary')]"));
 	    		 if( pdpPage.size()>0) {
 			          size s = new size();
+			          s.outfitsCategory();
 			          s.selectSize(driver);
 		    		 }
 	          
@@ -70,16 +71,32 @@ public class tc__PaymentProccessByGCandCC_RegUser extends baseClass {
 				tc__CheckOutProcess cp = new tc__CheckOutProcess();         
 				cp.checkoutprocess();
 				//semi gc 
-				 List<WebElement> giftCertificate = driver.findElements(By.xpath("//input[@id='giftCert']"));
-				 if(giftCertificate.size()>0) {
-					tc__PaymentProccessByGC code= new tc__PaymentProccessByGC();				
-					code.paymentBySemiGC();					
-					logger.info("applied gift card code ");
+				List<WebElement> creditcardsBraintree = driver.findElements(By.xpath("//a[@class ='nav-link creditcard-tab active']"));
+				List<WebElement> creditcardsSalesForce = driver.findElements(By.xpath("//div[@class='sfpp-payment-method-header sfpp-payment-method-header-card']"));
+				 if(creditcardsBraintree.size()>0) {
+						 test.info("brain tree payment is activated");
+						 tc__PaymentProccessByGC code= new tc__PaymentProccessByGC();				
+						 code.paymentBySemiGC();					
+						 logger.info("applied gift card code ");
+				 } else if(creditcardsSalesForce.size()>0) {
+						 test.info("salesforce payment is activated");					 
+						 tc__PaymentProccessByGC code= new tc__PaymentProccessByGC();				
+						 code.paymentBySemiGC();					
+						 logger.info("applied gift card code ");
+				 }else {
+					 	 test.info("Cyber source payment is activated");
+					 	 test.pass("No configuration for cybersource");
 				 }
-			//CC  process from chechout
-			     //checkoutProcess			
-			     tc__CreditCardPaymentProcess cc = new tc__CreditCardPaymentProcess();			     
-			     cc.paymentByCreditCard();
+				//credit card process from chechout		
+				 List<WebElement> gcText= driver.findElements(By.xpath("//div[@class='success giftcert-pi']")); 
+				 if(gcText.size()>0) {
+					 test.info("GC  is redemeed");
+				     tc__CreditCardPaymentProcess cc = new tc__CreditCardPaymentProcess();			     
+				     cc.paymentByCreditCard();
+				 }else {
+					 test.info("No GC code is redemeed");
+					 test.pass("No GC code is redemeed because of insufficient balnce or Gc belongs to different customer");
+				 }
 		        
 	    }else {
 	        Assert.fail("User not logged in");

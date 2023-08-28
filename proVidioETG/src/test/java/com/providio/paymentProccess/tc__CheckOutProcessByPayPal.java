@@ -38,7 +38,7 @@ public class tc__CheckOutProcessByPayPal extends baseClass{
 				//paypal checkout process
 
 				List<WebElement> salesforceButton= driver.findElements(By.xpath("//div[contains(@class,'salesforce')]"));
-				
+				List<WebElement> brainPayPalButton = driver.findElements(By.xpath("//div[contains(@class,'js_braintree_paypal_cart_button')]"));
 				if(salesforceButton.size()>0) {
 					logger.info("Salesforce paypal integration activated");
 					mc.clickSalesforcePaypalButton();	
@@ -50,7 +50,7 @@ public class tc__CheckOutProcessByPayPal extends baseClass{
 					//paypal window
 		
 					
-				}else {
+				}else if( brainPayPalButton.size()>0){
 					logger.info("Brain tree activated");
 					mc.clickBrainTreePaypalButton();
 					logger.info("Clicked on  brain tree paypal button");
@@ -59,9 +59,10 @@ public class tc__CheckOutProcessByPayPal extends baseClass{
 					//checkout.validatePaypalClick();
 					pp.paypalPopup(driver);
 					logger.info("Entered into paypal window and entered the paypal details");
-				}	
-					
-
+				}else {
+					test.info("Cybersouce payment integration is activated so, No paypal for cybersouce");
+	            	test.pass("No paypal integration for cybersource, choose another integration to do the payment with payment");
+				}
 				       //review order page
 					        reviewOrderPage rop = new reviewOrderPage(driver);
 							Thread.sleep(10000);
@@ -82,8 +83,6 @@ public class tc__CheckOutProcessByPayPal extends baseClass{
 				    			 checkout.ordernumberandOrderdat();
 				    			}
 	        }
-	        	
-
 	 }
 	 
 	 //checkout from viewcart paypal button
@@ -127,7 +126,7 @@ public class tc__CheckOutProcessByPayPal extends baseClass{
 				            	
 				            }else {
 				            	test.info("Cybersouce payment integration is activated so, No paypal for cybersouce");
-				            	test.pass("No paypal integration for cybersource, choose another integration to do the payment with salesforce");
+				            	test.pass("No paypal integration for cybersource, choose another integration to do the payment with payment");
 				            }
 					        	paymentpPage pp =new paymentpPage(driver);
 					        	Thread.sleep(2000);
