@@ -49,18 +49,23 @@ public class tc__PaypalFromPDPpage_GuestUser  extends baseClass{
 	    		 }
 	  //paypal buy now button
 	        
-	    		 List<WebElement> pdpPage = driver.findElements(By.xpath("//button[contains(@class,'add-to-cart btn btn-primary')]"));
-	    		 if( pdpPage.size()>0) {
-	    			    size s = new size();
-	    			    s.outfitsCategory();
+	    		 List<WebElement> paypalbuyNowPdp =driver.findElements(By.xpath("//div[contains(@class,'salesforce-buynow-element ')]"));
+	    		 if( paypalbuyNowPdp.size()>0) {
+	    			 
+	    			    size s = new size();	    			    
 	    				s.paypalBuyNowFromPDP(driver);
+	    				
+
+    				//paypal checkout procces
+    					tc__CheckOutProcessByPayPal paypal= new tc__CheckOutProcessByPayPal();
+    			        Thread.sleep(5000);
+    			        paypal.paypalCheckoutFromPDP();
 		    		 }
+	    		 else {
+	    			 test.pass("Paypal buy now is only in salsforce payment not in cybersource and brain tree");
+	    		 }
 	       
 		
-		//paypal checkout procces
-			tc__CheckOutProcessByPayPal paypal= new tc__CheckOutProcessByPayPal();
-	        Thread.sleep(5000);
-	        paypal.paypalCheckoutFromPDP();
 	      
 
 		

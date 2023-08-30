@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import com.providio.commonfunctionality.Gc__CC_Paypal;
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productListingPage;
 import com.providio.paymentProccess.tc__CheckOutProcess;
@@ -19,6 +20,7 @@ public class tc__OrderByGc_GuestUser extends baseClass {
 	public void paymentByGiftCardInGuestUser() throws InterruptedException  {
 	
 		      driver.get(baseURL);
+		      
 	          logger.info("enterd into url");	 
 	          navigationPage navPage =new navigationPage(driver);
 	    	  navPage.selectRandomMenu(driver);
@@ -43,7 +45,7 @@ public class tc__OrderByGc_GuestUser extends baseClass {
 	    		 if( pdpPage.size()>0) {
 	    			 
 			          size s = new size();
-			          s.outfitsCategory();
+			          
 			          s.selectSize(driver);
 		    		 }
 	          
@@ -70,14 +72,10 @@ public class tc__OrderByGc_GuestUser extends baseClass {
 		    //checkoutProcess				        
 			     tc__CheckOutProcess cp = new tc__CheckOutProcess();				     
 			     cp.checkoutprocess();
- 
-		     //payment by GC 				     
-			     tc__PaymentProccessByGC code= new tc__PaymentProccessByGC();
-			     //code.performRandomOperations(driver);				     
-				 code.performSequentialOperations(driver);						
-				 logger.info("applied gift card code");
-				 test.info("Gc code applied");
-			 
-		     
+			     
+			  //gc payment 
+			     Gc__CC_Paypal gc = new Gc__CC_Paypal ();
+			     gc.paymentByGiftCard();
+				
 		}
 }

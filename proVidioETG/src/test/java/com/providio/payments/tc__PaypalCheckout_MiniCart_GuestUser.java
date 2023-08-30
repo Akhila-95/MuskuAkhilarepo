@@ -50,7 +50,7 @@ public class tc__PaypalCheckout_MiniCart_GuestUser extends baseClass {
 	    		 List<WebElement> pdpPage = driver.findElements(By.xpath("//button[contains(@class,'add-to-cart btn btn-primary')]"));
 	    		 if( pdpPage.size()>0) {
 			          size s = new size();
-			          s.outfitsCategory();
+			          
 			          s.selectSize(driver);
 		    		 }
 
@@ -74,16 +74,7 @@ public class tc__PaypalCheckout_MiniCart_GuestUser extends baseClass {
 	      //checkout from mini cart by paypal
 	        
 	        tc__CheckOutProcessByPayPal checkOutProcessByPayPal= new tc__CheckOutProcessByPayPal();
-	        checkOutProcessByPayPal. checkoutprocessFromMiniCart() ;
-	
-	        
-	        
-	        
-	        
-	        
-	        
+	        checkOutProcessByPayPal. checkoutprocessFromMiniCart();
 	}
-	
-	
-	
+
 }

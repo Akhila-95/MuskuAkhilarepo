@@ -32,7 +32,7 @@ public class size extends baseClass{
 		     }else {
 		    	 test.fail("Not clicked on add to cart button");
 		     }
-		     
+		      
 	     }else {
 	    	 System.out.println("Product is out of stock so searching for new product");
 	    	 
@@ -51,9 +51,6 @@ public class size extends baseClass{
 	
 	    	
 	    	 selectSize(driver);
-	    	 outfitsCategory();
-	    	 
-	    	 
 	    	 
 	    	 WebElement minicartcountafteradding = driver.findElement(By.xpath("//span[@class ='minicart-quantity ml-1']"));
              String countOfMinicartafteradding = minicartcountafteradding.getText();
@@ -244,22 +241,5 @@ public class size extends baseClass{
 			}else {
 				System.out.println("No paypal buy now button");
 			}
-		}
-		
-		public void outfitsCategory() throws InterruptedException {
-			 List<WebElement> outfits = driver.findElements(By.xpath("(//a[contains(text(),' Outfits')])[2]"));
-	    	 if(outfits.size()>0) {
-	    			 navigationPage navPage =new navigationPage(driver);
-			    	 navPage.selectRandomMenu(driver);	
-			    	 productListingPage plp = new productListingPage(driver);
-			    	 plp.selectProductRandom(driver);  	 
-	    	
-		}else {
-					 navigationPage navPage =new navigationPage(driver);
-			    	 navPage.selectRandomMenu(driver);	
-			    	 productListingPage plp = new productListingPage(driver);
-			    	 plp.selectProductRandom(driver);
-			    	 selectSize(driver);
-			}
-  }
+		}	
 }

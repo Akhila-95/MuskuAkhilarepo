@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import com.providio.commonfunctionality.Gc__CC_Paypal;
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productListingPage;
 import com.providio.paymentProccess.tc__CheckOutProcess;
@@ -48,7 +49,7 @@ public class tc__OrderByGc_RegUser extends baseClass {
 		    		 List<WebElement> pdpPage = driver.findElements(By.xpath("//button[contains(@class,'add-to-cart btn btn-primary')]"));
 		    		 if( pdpPage.size()>0) {
 				          size s = new size();
-				          s.outfitsCategory();
+				         
 				          s.selectSize(driver);
 			    		 }
 	          
@@ -76,11 +77,10 @@ public class tc__OrderByGc_RegUser extends baseClass {
 			     tc__CheckOutProcess cp = new tc__CheckOutProcess();				     
 			     cp.checkoutprocess();
 
-		     //payment by GC 				     
-			     tc__PaymentProccessByGC code= new tc__PaymentProccessByGC();
-			     //code.performRandomOperations(driver);				     
-				 code.performSequentialOperations(driver);						
-				 logger.info("applied gift card code"); 
+			     //gc payment 
+			     Gc__CC_Paypal gc = new Gc__CC_Paypal ();
+			     gc.paymentByGiftCard(); 
+			     
 		    }else {
 		    	 Assert.fail("User not logged in");
 		    }

@@ -522,23 +522,25 @@ public void clickOnProduct1() throws InterruptedException{
 			 		
 			 		List<WebElement> colorBox= driver.findElements(By.xpath("//button[contains(@class,'color-attribute')]"));
 			 		if(colorBox.size()>0) {
-			 			 // Find all the color buttons that are selectable
-			 	        List<WebElement> colorButtons = driver.findElements(By.cssSelector(".color-attribute.selectable"));
+			 			if (!colorBox.isEmpty()) {
+			 			    // Find all the color buttons that are selectable
+			 			    List<WebElement> colorButtons = driver.findElements(By.cssSelector(".color-attribute.selectable"));
 
-			 	        // Create a random instance
-			 	        Random random = new Random();
+			 			    if (!colorButtons.isEmpty()) {
+			 			        // Create a random instance
+			 			        Random random = new Random();
 
-			 	        // Choose a random index
-			 	        int randomIndex = random.nextInt(colorButtons.size());
+			 			        // Choose a random index
+			 			        int randomIndex = random.nextInt(colorButtons.size());
 
-			 	        // Get the randomly selected color button
-			 	        WebElement selectedColorButton = colorButtons.get(randomIndex);
+			 			        // Get the randomly selected color button
+			 			        WebElement selectedColorButton = colorButtons.get(randomIndex);
 
-			 	        // Click the selected color button
-			 	       JavascriptExecutor js = (JavascriptExecutor) driver;
-
-			 	        js.executeScript("arguments[0].click();", selectedColorButton);
-			 	        selectedColorButton.click();
+			 			        // Click the selected color button
+			 			        JavascriptExecutor js = (JavascriptExecutor) driver;
+			 			        js.executeScript("arguments[0].click();", selectedColorButton);
+			 			    }
+			 			}
 			 		}else {
 			 		// Create a Select object and select the first enabled size
 					WebElement color = driver.findElement(By.xpath("//select[contains(@class,'select-color-swatch')]"));
@@ -570,13 +572,24 @@ public void clickOnProduct1() throws InterruptedException{
 				    }
 			   
 			    }
-			}
-				 	
+			}				 	
 				 	//select width
 				 	public void selectWidth(WebDriver driver) throws InterruptedException {
 				 		 List<WebElement> widthBox = driver.findElements(By.xpath("//div[@class='select-width size-change d-flex flex-wrap']"));
 				 		
 				 		if(widthBox.size()>0) {
+				 			
+				 			List<WebElement> options = driver.findElements(By.cssSelector("#width-null span.text-center:not([disabled='disabled'])"));
+				 	        
+				 	        if (!options.isEmpty()) {
+				 	            WebElement enabledOption = options.get(0);  // You can change the index to select a different option
+				 	            enabledOption.click();
+				 	            System.out.println("Clicked on: " + enabledOption.getText());
+				 	        } else {
+				 	            System.out.println("No enabled options found.");
+				 	        }
+				 			
+				 			/*
 				 			  WebElement parentDiv = driver.findElement(By.id("width-null"));
 
 				 	            // Find all width option elements
@@ -595,15 +608,15 @@ public void clickOnProduct1() throws InterruptedException{
 				 	                Random random = new Random();
 				 	                int randomIndex = random.nextInt(enabledWidthOptions.size());
 				 	               enabledWidthOptions.get(randomIndex).click();
-				 	               /*
+				 	               
+				 	              
 				 	                // Get the randomly selected width element
 				 	                WebElement selectedWidthElement = enabledWidthOptions.get(randomIndex);
 
 				 	                // Click the selected width element
-				 	                selectedWidthElement.click();
-		 	               	*/
+				 	                selectedWidthElement.click();		 	               	
 				 	            }
-				 		
+				 		*/
 				 		}else {
 				 		List<WebElement> widthElementsDropDown = driver.findElements(By.xpath(".//select[@id='width-null']"));
 			    	    System.out.println(widthElementsDropDown.size());

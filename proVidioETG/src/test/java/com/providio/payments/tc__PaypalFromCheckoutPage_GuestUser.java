@@ -42,7 +42,7 @@ public class tc__PaypalFromCheckoutPage_GuestUser extends baseClass {
 	    		 List<WebElement> pdpPage = driver.findElements(By.xpath("//button[contains(@class,'add-to-cart btn btn-primary')]"));
 	    		 if( pdpPage.size()>0) {
 			          size s = new size();
-			          s.outfitsCategory();
+			        
 			          s.selectSize(driver);
 		    		 }
           

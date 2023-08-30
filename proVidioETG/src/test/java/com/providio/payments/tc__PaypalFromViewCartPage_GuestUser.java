@@ -57,7 +57,7 @@ public class tc__PaypalFromViewCartPage_GuestUser extends baseClass {
 	    		 List<WebElement> pdpPage = driver.findElements(By.xpath("//button[contains(@class,'add-to-cart btn btn-primary')]"));
 	    		 if( pdpPage.size()>0) {
 			          size s = new size();
-			          s.outfitsCategory();
+			         
 			          s.selectSize(driver);
 		    		 }
 	      
@@ -85,7 +85,7 @@ public class tc__PaypalFromViewCartPage_GuestUser extends baseClass {
 		 	        tc__CheckOutProcessByPayPal paypal= new tc__CheckOutProcessByPayPal();
 		 	        Thread.sleep(3000);
 		 	        paypal.checkoutprocessFromViewCart();
-		 	        logger.info("clicked on viewcart paypal button");
+		 	       
 		 	        
 		        }
 

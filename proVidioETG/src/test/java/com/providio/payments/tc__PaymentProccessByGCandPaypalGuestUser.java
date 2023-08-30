@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import com.providio.commonfunctionality.Gc__CC_Paypal;
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productListingPage;
 import com.providio.paymentProccess.tc__CheckOutProcess;
@@ -19,15 +20,17 @@ public class tc__PaymentProccessByGCandPaypalGuestUser extends baseClass {
 	@Test
 	public void paypalFromCheckoutPage() throws InterruptedException {	
 	       
-			driver.get(baseURL);
-	       
-	        navigationPage navPage =new navigationPage(driver);
+			driver.get("https://zzqi-002.dx.commercecloud.salesforce.com/s/RefArch/pink-quartz-hoop-earring/013742002577M.html?lang=en_US");
+	       /*
+	         navigationPage navPage =new navigationPage(driver);
 	    	 navPage.selectRandomMenu(driver);
+	    	 test.info("Navigated to random menu");
 	    	 
 	    	 productListingPage plp = new productListingPage(driver);
 	    	 plp.selectProductRandom(driver);
+	    	 test.info("Navigated to random product ");
  
-    
+    */
 	    	 //The cart value before adding the product to cart
 	    	  Thread.sleep(2000);
 	    		 List<WebElement> minicartcountList = driver.findElements(By.cssSelector(".minicart-quantity"));
@@ -44,8 +47,7 @@ public class tc__PaymentProccessByGCandPaypalGuestUser extends baseClass {
           
 	    		 List<WebElement> pdpPage = driver.findElements(By.xpath("//button[contains(@class,'add-to-cart btn btn-primary')]"));
 	    		 if( pdpPage.size()>0) {
-			          size s = new size();
-			          s.outfitsCategory();
+			          size s = new size();			        
 			          s.selectSize(driver);
 		    		 }
 
@@ -72,32 +74,9 @@ public class tc__PaymentProccessByGCandPaypalGuestUser extends baseClass {
 		    // common checkoutProcess	         
 				tc__CheckOutProcess cp = new tc__CheckOutProcess();         
 				cp.checkoutprocess();
-				//semi gc 
-				List<WebElement> creditcardsBraintree = driver.findElements(By.xpath("//a[@class ='nav-link creditcard-tab active']"));
-				List<WebElement> creditcardsSalesForce = driver.findElements(By.xpath("//div[@class='sfpp-payment-method-header sfpp-payment-method-header-card']"));
-				 if(creditcardsBraintree.size()>0) {
-						 test.info("brain tree payment is activated");
-						 tc__PaymentProccessByGC code= new tc__PaymentProccessByGC();				
-						 code.paymentBySemiGC();					
-						 logger.info("applied gift card code ");
-				 } else if(creditcardsSalesForce.size()>0) {
-						 test.info("salesforce payment is activated");					 
-						 tc__PaymentProccessByGC code= new tc__PaymentProccessByGC();				
-						 code.paymentBySemiGC();					
-						 logger.info("applied gift card code ");
-				 }else {
-					 	 test.info("Cyber source payment is activated");
-					 	 test.pass("No configuration for cybersource");
-				 }
-				//paypal process from chechout			
-				 List<WebElement> gcText= driver.findElements(By.xpath("//div[@class='success giftcert-pi']")); 
-				 if(gcText.size()>0) {
-					 	test.info("GC  is redemeed");
-						tc__CheckOutProcessByPayPal cpp = new tc__CheckOutProcessByPayPal();
-						cpp.checkoutprocessFromCheckout();
-				 }else {
-					 test.info("No GC code is redemeed");
-					 test.pass("No GC code is redemeed because of insufficient balnce or Gc belongs to different customer");
-				 }
+				
+			//gc and paypal
+				Gc__CC_Paypal gcAndPaypal = new Gc__CC_Paypal();
+				gcAndPaypal.paymentProccessByGCandPaypal();
 	}
 }

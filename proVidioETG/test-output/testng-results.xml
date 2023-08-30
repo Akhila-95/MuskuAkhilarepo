@@ -1,40 +1,568 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="28" total="50" passed="21" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-08-28T20:31:15 IST" name="Default suite" finished-at="2023-08-28T20:37:33 IST" duration-ms="378136">
+  <suite started-at="2023-08-30T15:44:03 IST" name="ProvidioTestcases" finished-at="2023-08-30T16:03:33 IST" duration-ms="1170097">
     <groups>
     </groups>
-    <test started-at="2023-08-28T20:31:15 IST" name="Default test" finished-at="2023-08-28T20:37:33 IST" duration-ms="378136">
-      <class name="com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser">
-        <test-method is-config="true" signature="setUpforReport()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser@1ddc6db2]" started-at="2023-08-28T20:31:12 IST" name="setUpforReport" finished-at="2023-08-28T20:31:15 IST" duration-ms="3568" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpforReport -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser@1ddc6db2]" started-at="2023-08-28T20:31:15 IST" name="setUp" finished-at="2023-08-28T20:31:17 IST" duration-ms="2053" status="PASS">
+    <test started-at="2023-08-30T15:44:03 IST" name="Automation" finished-at="2023-08-30T16:03:33 IST" duration-ms="1170097">
+      <class name="com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser@4b6f196c]" started-at="2023-08-30T15:49:31 IST" name="setUp" finished-at="2023-08-30T15:49:33 IST" duration-ms="2006" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser@1ddc6db2]" started-at="2023-08-28T20:31:17 IST" name="paypalFromCheckoutPage" finished-at="2023-08-28T20:37:33 IST" duration-ms="376027" status="PASS">
+        <test-method signature="paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser@4b6f196c]" started-at="2023-08-30T15:49:33 IST" name="paypalFromCheckoutPage" finished-at="2023-08-30T15:51:30 IST" duration-ms="116781" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- paypalFromCheckoutPage -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser@1ddc6db2]" started-at="2023-08-28T20:37:33 IST" name="afterMethod" finished-at="2023-08-28T20:37:33 IST" duration-ms="9" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser@4b6f196c]" started-at="2023-08-30T15:51:30 IST" name="afterMethod" finished-at="2023-08-30T15:51:30 IST" duration-ms="8" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=paypalFromCheckoutPage status=SUCCESS method=tc__PaymentProccessByGCandPaypalGuestUser.paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser@1ddc6db2] output={null}]]]>
+                <![CDATA[[TestResult name=paypalFromCheckoutPage status=SUCCESS method=tc__PaymentProccessByGCandCC_GuestUser.paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser@4b6f196c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser@1ddc6db2]" started-at="2023-08-28T20:37:33 IST" name="tearDown" finished-at="2023-08-28T20:37:46 IST" duration-ms="12613" status="PASS">
+      </class> <!-- com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser -->
+      <class name="com.providio.payments.tc__PaypalFromViewCartPage_GuestUser">
+        <test-method is-config="true" signature="setUpforReport()[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_GuestUser@29050de5]" started-at="2023-08-30T15:43:59 IST" name="setUpforReport" finished-at="2023-08-30T15:44:03 IST" duration-ms="4041" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpforReport -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_GuestUser@29050de5]" started-at="2023-08-30T15:44:03 IST" name="setUp" finished-at="2023-08-30T15:44:05 IST" duration-ms="2045" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="paypalFromViewCartPage()[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_GuestUser@29050de5]" started-at="2023-08-30T15:44:05 IST" name="paypalFromViewCartPage" finished-at="2023-08-30T15:45:37 IST" duration-ms="92382" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- paypalFromViewCartPage -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_GuestUser@29050de5]" started-at="2023-08-30T15:45:37 IST" name="afterMethod" finished-at="2023-08-30T15:45:37 IST" duration-ms="9" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=paypalFromViewCartPage status=SUCCESS method=tc__PaypalFromViewCartPage_GuestUser.paypalFromViewCartPage()[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_GuestUser@29050de5] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_GuestUser@29050de5]" started-at="2023-08-30T16:03:33 IST" name="tearDown" finished-at="2023-08-30T16:03:45 IST" duration-ms="12084" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
+      </class> <!-- com.providio.payments.tc__PaypalFromViewCartPage_GuestUser -->
+      <class name="com.providio.payments.tc__OrderByGc_GuestUser">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__OrderByGc_GuestUser@66f540c8]" started-at="2023-08-30T15:53:36 IST" name="setUp" finished-at="2023-08-30T15:53:38 IST" duration-ms="2002" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="paymentByGiftCardInGuestUser()[pri:0, instance:com.providio.payments.tc__OrderByGc_GuestUser@66f540c8]" started-at="2023-08-30T15:53:38 IST" name="paymentByGiftCardInGuestUser" finished-at="2023-08-30T15:55:33 IST" duration-ms="115686" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- paymentByGiftCardInGuestUser -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__OrderByGc_GuestUser@66f540c8]" started-at="2023-08-30T15:55:33 IST" name="afterMethod" finished-at="2023-08-30T15:55:33 IST" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=paymentByGiftCardInGuestUser status=SUCCESS method=tc__OrderByGc_GuestUser.paymentByGiftCardInGuestUser()[pri:0, instance:com.providio.payments.tc__OrderByGc_GuestUser@66f540c8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.providio.payments.tc__OrderByGc_GuestUser -->
+      <class name="com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser@496d7bd9]" started-at="2023-08-30T15:51:30 IST" name="setUp" finished-at="2023-08-30T15:51:32 IST" duration-ms="2011" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser@496d7bd9]" started-at="2023-08-30T15:51:32 IST" name="paypalFromCheckoutPage" finished-at="2023-08-30T15:53:36 IST" duration-ms="123420" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- paypalFromCheckoutPage -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser@496d7bd9]" started-at="2023-08-30T15:53:36 IST" name="afterMethod" finished-at="2023-08-30T15:53:36 IST" duration-ms="9" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=paypalFromCheckoutPage status=SUCCESS method=tc__PaymentProccessByGCandPaypalGuestUser.paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser@496d7bd9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
       </class> <!-- com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="com.providio.payments.tc__PaymentProccessByGCandCC_RegUser">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandCC_RegUser@29d72ce1]" started-at="2023-08-30T16:02:48 IST" name="setUp" finished-at="2023-08-30T16:02:50 IST" duration-ms="2021" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandCC_RegUser@29d72ce1]" started-at="2023-08-30T16:02:50 IST" name="paypalFromCheckoutPage" finished-at="2023-08-30T16:03:02 IST" depends-on-methods="com.providio.testcases.tc__LoginSc.verifySuccessfulLogin" duration-ms="12218" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- paypalFromCheckoutPage -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandCC_RegUser@29d72ce1]" started-at="2023-08-30T16:03:02 IST" name="afterMethod" finished-at="2023-08-30T16:03:02 IST" duration-ms="7" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=paypalFromCheckoutPage status=SUCCESS method=tc__PaymentProccessByGCandCC_RegUser.paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandCC_RegUser@29d72ce1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.providio.payments.tc__PaymentProccessByGCandCC_RegUser -->
+      <class name="com.providio.payments.tc__PaypalFromPDPpage_GuestUser">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaypalFromPDPpage_GuestUser@3338d29d]" started-at="2023-08-30T15:47:01 IST" name="setUp" finished-at="2023-08-30T15:47:03 IST" duration-ms="2023" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="paypalFromPDPpage()[pri:0, instance:com.providio.payments.tc__PaypalFromPDPpage_GuestUser@3338d29d]" started-at="2023-08-30T15:47:03 IST" name="paypalFromPDPpage" finished-at="2023-08-30T15:47:31 IST" duration-ms="27357" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- paypalFromPDPpage -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaypalFromPDPpage_GuestUser@3338d29d]" started-at="2023-08-30T15:47:31 IST" name="afterMethod" finished-at="2023-08-30T15:47:31 IST" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=paypalFromPDPpage status=SUCCESS method=tc__PaypalFromPDPpage_GuestUser.paypalFromPDPpage()[pri:0, instance:com.providio.payments.tc__PaypalFromPDPpage_GuestUser@3338d29d] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.providio.payments.tc__PaypalFromPDPpage_GuestUser -->
+      <class name="com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser@4e29ec7]" started-at="2023-08-30T15:59:57 IST" name="setUp" finished-at="2023-08-30T15:59:59 IST" duration-ms="2007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="paypalCheckout_MiniCart()[pri:0, instance:com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser@4e29ec7]" started-at="2023-08-30T15:59:59 IST" name="paypalCheckout_MiniCart" finished-at="2023-08-30T16:01:00 IST" depends-on-methods="com.providio.testcases.tc__LoginSc.verifySuccessfulLogin" duration-ms="60939" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- paypalCheckout_MiniCart -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser@4e29ec7]" started-at="2023-08-30T16:01:00 IST" name="afterMethod" finished-at="2023-08-30T16:01:00 IST" duration-ms="17" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=paypalCheckout_MiniCart status=SUCCESS method=tc__PaypalCheckout_MiniCart_RegUser.paypalCheckout_MiniCart()[pri:0, instance:com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser@4e29ec7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser -->
+      <class name="com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser@65d23aa3]" started-at="2023-08-30T15:45:37 IST" name="setUp" finished-at="2023-08-30T15:45:39 IST" duration-ms="2014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="paypalCheckout_MiniCart()[pri:0, instance:com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser@65d23aa3]" started-at="2023-08-30T15:45:39 IST" name="paypalCheckout_MiniCart" finished-at="2023-08-30T15:47:01 IST" duration-ms="81769" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- paypalCheckout_MiniCart -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser@65d23aa3]" started-at="2023-08-30T15:47:01 IST" name="afterMethod" finished-at="2023-08-30T15:47:01 IST" duration-ms="9" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=paypalCheckout_MiniCart status=SUCCESS method=tc__PaypalCheckout_MiniCart_GuestUser.paypalCheckout_MiniCart()[pri:0, instance:com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser@65d23aa3] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser -->
+      <class name="com.providio.payments.tc__PaypalFromViewCartPage_RegUser">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_RegUser@22057f80]" started-at="2023-08-30T15:58:20 IST" name="setUp" finished-at="2023-08-30T15:58:22 IST" duration-ms="2017" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="paypalFromViewCartPage()[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_RegUser@22057f80]" started-at="2023-08-30T15:58:22 IST" name="paypalFromViewCartPage" finished-at="2023-08-30T15:59:57 IST" depends-on-methods="com.providio.testcases.tc__LoginSc.verifySuccessfulLogin" duration-ms="94479" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- paypalFromViewCartPage -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_RegUser@22057f80]" started-at="2023-08-30T15:59:57 IST" name="afterMethod" finished-at="2023-08-30T15:59:57 IST" duration-ms="18" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=paypalFromViewCartPage status=SUCCESS method=tc__PaypalFromViewCartPage_RegUser.paypalFromViewCartPage()[pri:0, instance:com.providio.payments.tc__PaypalFromViewCartPage_RegUser@22057f80] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.providio.payments.tc__PaypalFromViewCartPage_RegUser -->
+      <class name="com.providio.testcases.tc__LoginSc">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.testcases.tc__LoginSc@607624b7]" started-at="2023-08-30T15:55:33 IST" name="setUp" finished-at="2023-08-30T15:55:35 IST" duration-ms="2007" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="openBrowserandClickSignInButton()[pri:0, instance:com.providio.testcases.tc__LoginSc@607624b7]" started-at="2023-08-30T15:55:35 IST" name="openBrowserandClickSignInButton" finished-at="2023-08-30T15:55:44 IST" duration-ms="8479" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowserandClickSignInButton -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LoginSc@607624b7]" started-at="2023-08-30T15:55:44 IST" name="afterMethod" finished-at="2023-08-30T15:55:44 IST" duration-ms="11" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=openBrowserandClickSignInButton status=SUCCESS method=tc__LoginSc.openBrowserandClickSignInButton()[pri:0, instance:com.providio.testcases.tc__LoginSc@607624b7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifyLoginFailureWithEmptyEmail()[pri:0, instance:com.providio.testcases.tc__LoginSc@607624b7]" started-at="2023-08-30T15:55:44 IST" name="verifyLoginFailureWithEmptyEmail" finished-at="2023-08-30T15:56:10 IST" duration-ms="26338" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginFailureWithEmptyEmail -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LoginSc@607624b7]" started-at="2023-08-30T15:56:10 IST" name="afterMethod" finished-at="2023-08-30T15:56:10 IST" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginFailureWithEmptyEmail status=SUCCESS method=tc__LoginSc.verifyLoginFailureWithEmptyEmail()[pri:0, instance:com.providio.testcases.tc__LoginSc@607624b7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifyLoginFailureWithEmptyEmailAndPassword()[pri:0, instance:com.providio.testcases.tc__LoginSc@607624b7]" started-at="2023-08-30T15:56:10 IST" name="verifyLoginFailureWithEmptyEmailAndPassword" finished-at="2023-08-30T15:56:35 IST" duration-ms="24476" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginFailureWithEmptyEmailAndPassword -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LoginSc@607624b7]" started-at="2023-08-30T15:56:35 IST" name="afterMethod" finished-at="2023-08-30T15:56:35 IST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginFailureWithEmptyEmailAndPassword status=SUCCESS method=tc__LoginSc.verifyLoginFailureWithEmptyEmailAndPassword()[pri:0, instance:com.providio.testcases.tc__LoginSc@607624b7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifyLoginFailureWithEmptyPassword()[pri:0, instance:com.providio.testcases.tc__LoginSc@607624b7]" started-at="2023-08-30T15:56:35 IST" name="verifyLoginFailureWithEmptyPassword" finished-at="2023-08-30T15:56:56 IST" duration-ms="21437" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginFailureWithEmptyPassword -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LoginSc@607624b7]" started-at="2023-08-30T15:56:56 IST" name="afterMethod" finished-at="2023-08-30T15:56:56 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginFailureWithEmptyPassword status=SUCCESS method=tc__LoginSc.verifyLoginFailureWithEmptyPassword()[pri:0, instance:com.providio.testcases.tc__LoginSc@607624b7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifyLoginFailureWithIncorrectCredentials()[pri:0, instance:com.providio.testcases.tc__LoginSc@607624b7]" started-at="2023-08-30T15:56:56 IST" name="verifyLoginFailureWithIncorrectCredentials" finished-at="2023-08-30T15:57:18 IST" duration-ms="21482" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginFailureWithIncorrectCredentials -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LoginSc@607624b7]" started-at="2023-08-30T15:57:18 IST" name="afterMethod" finished-at="2023-08-30T15:57:18 IST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginFailureWithIncorrectCredentials status=SUCCESS method=tc__LoginSc.verifyLoginFailureWithIncorrectCredentials()[pri:0, instance:com.providio.testcases.tc__LoginSc@607624b7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifyLoginFailureWithIncorrectPassword()[pri:0, instance:com.providio.testcases.tc__LoginSc@607624b7]" started-at="2023-08-30T15:57:18 IST" name="verifyLoginFailureWithIncorrectPassword" finished-at="2023-08-30T15:57:38 IST" duration-ms="19956" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginFailureWithIncorrectPassword -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LoginSc@607624b7]" started-at="2023-08-30T15:57:38 IST" name="afterMethod" finished-at="2023-08-30T15:57:38 IST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginFailureWithIncorrectPassword status=SUCCESS method=tc__LoginSc.verifyLoginFailureWithIncorrectPassword()[pri:0, instance:com.providio.testcases.tc__LoginSc@607624b7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifyLoginFailureWithInvalidEmailFormat()[pri:0, instance:com.providio.testcases.tc__LoginSc@607624b7]" started-at="2023-08-30T15:57:38 IST" name="verifyLoginFailureWithInvalidEmailFormat" finished-at="2023-08-30T15:57:59 IST" duration-ms="21428" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLoginFailureWithInvalidEmailFormat -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LoginSc@607624b7]" started-at="2023-08-30T15:57:59 IST" name="afterMethod" finished-at="2023-08-30T15:57:59 IST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLoginFailureWithInvalidEmailFormat status=SUCCESS method=tc__LoginSc.verifyLoginFailureWithInvalidEmailFormat()[pri:0, instance:com.providio.testcases.tc__LoginSc@607624b7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="verifySuccessfulLogin()[pri:0, instance:com.providio.testcases.tc__LoginSc@607624b7]" started-at="2023-08-30T15:57:59 IST" name="verifySuccessfulLogin" finished-at="2023-08-30T15:58:20 IST" depends-on-methods="com.providio.testcases.testlogin.openBrowserandClickSignInButton" duration-ms="21465" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifySuccessfulLogin -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LoginSc@607624b7]" started-at="2023-08-30T15:58:20 IST" name="afterMethod" finished-at="2023-08-30T15:58:20 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifySuccessfulLogin status=SUCCESS method=tc__LoginSc.verifySuccessfulLogin()[pri:0, instance:com.providio.testcases.tc__LoginSc@607624b7] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.providio.testcases.tc__LoginSc -->
+      <class name="com.providio.testcases.tc__LogOut">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.testcases.tc__LogOut@745eb563]" started-at="2023-08-30T16:03:31 IST" name="setUp" finished-at="2023-08-30T16:03:33 IST" duration-ms="2005" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Logout()[pri:0, instance:com.providio.testcases.tc__LogOut@745eb563]" started-at="2023-08-30T16:03:33 IST" name="Logout" finished-at="2023-08-30T16:03:33 IST" depends-on-methods="com.providio.testcases.tc__LoginSc.verifySuccessfulLogin" duration-ms="62" status="FAIL">
+          <exception class="org.openqa.selenium.json.JsonException">
+            <message>
+              <![CDATA[java.lang.reflect.InvocationTargetException
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9f211439c8ef4f6b849c7991cdbc5593, actions {actions=[org.openqa.selenium.interactions.Sequence@5defbcec]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51949}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51949/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9f211439c8ef4f6b849c7991cdbc5593]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.json.JsonException: java.lang.reflect.InvocationTargetException
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9f211439c8ef4f6b849c7991cdbc5593, actions {actions=[org.openqa.selenium.interactions.Sequence@5defbcec]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51949}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51949/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9f211439c8ef4f6b849c7991cdbc5593
+at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:395)
+at org.openqa.selenium.json.JsonOutput.lambda$new$16(JsonOutput.java:165)
+at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:322)
+at org.openqa.selenium.json.JsonOutput.lambda$new$22(JsonOutput.java:185)
+at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1845)
+at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+at org.openqa.selenium.json.JsonOutput.lambda$new$23(JsonOutput.java:185)
+at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:322)
+at org.openqa.selenium.json.JsonOutput.lambda$new$24(JsonOutput.java:203)
+at com.google.common.collect.SingletonImmutableBiMap.forEach(SingletonImmutableBiMap.java:68)
+at org.openqa.selenium.json.JsonOutput.lambda$new$25(JsonOutput.java:198)
+at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:322)
+at org.openqa.selenium.json.JsonOutput.write(JsonOutput.java:313)
+at org.openqa.selenium.json.Json.toJson(Json.java:43)
+at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:256)
+at org.openqa.selenium.remote.codec.AbstractHttpCommandCodec.encode(AbstractHttpCommandCodec.java:120)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:179)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+at org.openqa.selenium.remote.RemoteWebDriver.perform(RemoteWebDriver.java:603)
+at org.openqa.selenium.interactions.Actions$BuiltAction.perform(Actions.java:585)
+at org.openqa.selenium.interactions.Actions.perform(Actions.java:554)
+at com.providio.pageObjects.profilePage.howeraccount(profilePage.java:26)
+at com.providio.testcases.tc__LogOut.Logout(tc__LogOut.java:18)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:431)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:391)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Suppressed: org.openqa.selenium.json.JsonException: Attempting to close incomplete json stream
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: driver.version: RemoteWebDriver
+at org.openqa.selenium.json.JsonOutput.close(JsonOutput.java:338)
+at org.openqa.selenium.json.Json.toJson(Json.java:41)
+... 39 more
+Caused by: java.lang.reflect.InvocationTargetException
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.openqa.selenium.json.JsonOutput.convertUsingMethod(JsonOutput.java:391)
+... 60 more
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//a[@id='myaccount' and @aria-label ='My Account'])[1]"}
+  (Session info: chrome=116.0.5845.111)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9f211439c8ef4f6b849c7991cdbc5593, findElement {using=xpath, value=(//a[@id='myaccount' and @aria-label ='My Account'])[1]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 116.0.5845.111, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:51949}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:51949/devtoo..., se:cdpVersion: 116.0.5845.111, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9f211439c8ef4f6b849c7991cdbc5593
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:199)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:132)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:51)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:531)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy19.getWrappedElement(Unknown Source)
+at org.openqa.selenium.interactions.PointerInput$Origin.asArg(PointerInput.java:275)
+at org.openqa.selenium.interactions.PointerInput$Move.encode(PointerInput.java:224)
+at org.openqa.selenium.interactions.Sequence.encode(Sequence.java:72)
+at org.openqa.selenium.interactions.Sequence.toJson(Sequence.java:81)
+... 65 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.json.JsonException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Logout -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.testcases.tc__LogOut@745eb563]" started-at="2023-08-30T16:03:33 IST" name="afterMethod" finished-at="2023-08-30T16:03:33 IST" duration-ms="192" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Logout status=FAILURE method=tc__LogOut.Logout()[pri:0, instance:com.providio.testcases.tc__LogOut@745eb563] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.providio.testcases.tc__LogOut -->
+      <class name="com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser@42a940dc]" started-at="2023-08-30T15:47:31 IST" name="setUp" finished-at="2023-08-30T15:47:33 IST" duration-ms="2014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser@42a940dc]" started-at="2023-08-30T15:47:33 IST" name="paypalFromCheckoutPage" finished-at="2023-08-30T15:49:31 IST" duration-ms="118842" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- paypalFromCheckoutPage -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser@42a940dc]" started-at="2023-08-30T15:49:31 IST" name="afterMethod" finished-at="2023-08-30T15:49:31 IST" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=paypalFromCheckoutPage status=SUCCESS method=tc__PaypalFromCheckoutPage_GuestUser.paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser@42a940dc] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser -->
+      <class name="com.providio.payments.tc__OrderByGc_RegUser">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__OrderByGc_RegUser@793de73f]" started-at="2023-08-30T16:03:16 IST" name="setUp" finished-at="2023-08-30T16:03:18 IST" duration-ms="2017" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="orderByGc_RegUser()[pri:0, instance:com.providio.payments.tc__OrderByGc_RegUser@793de73f]" started-at="2023-08-30T16:03:18 IST" name="orderByGc_RegUser" finished-at="2023-08-30T16:03:31 IST" depends-on-methods="com.providio.testcases.tc__LoginSc.verifySuccessfulLogin" duration-ms="12204" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- orderByGc_RegUser -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__OrderByGc_RegUser@793de73f]" started-at="2023-08-30T16:03:31 IST" name="afterMethod" finished-at="2023-08-30T16:03:31 IST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=orderByGc_RegUser status=SUCCESS method=tc__OrderByGc_RegUser.orderByGc_RegUser()[pri:0, instance:com.providio.payments.tc__OrderByGc_RegUser@793de73f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.providio.payments.tc__OrderByGc_RegUser -->
+      <class name="com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser@62514f38]" started-at="2023-08-30T16:03:02 IST" name="setUp" finished-at="2023-08-30T16:03:04 IST" duration-ms="2014" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser@62514f38]" started-at="2023-08-30T16:03:04 IST" name="paypalFromCheckoutPage" finished-at="2023-08-30T16:03:16 IST" depends-on-methods="com.providio.testcases.tc__LoginSc.verifySuccessfulLogin" duration-ms="12212" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- paypalFromCheckoutPage -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser@62514f38]" started-at="2023-08-30T16:03:16 IST" name="afterMethod" finished-at="2023-08-30T16:03:16 IST" duration-ms="5" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=paypalFromCheckoutPage status=SUCCESS method=tc__PaymentProccessByGCandPaypalRegUser.paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser@62514f38] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser -->
+      <class name="com.providio.payments.tc__PaypalFromCheckoutPage_RegUser">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.providio.payments.tc__PaypalFromCheckoutPage_RegUser@1aa42c5c]" started-at="2023-08-30T16:01:00 IST" name="setUp" finished-at="2023-08-30T16:01:02 IST" duration-ms="2013" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaypalFromCheckoutPage_RegUser@1aa42c5c]" started-at="2023-08-30T16:01:02 IST" name="paypalFromCheckoutPage" finished-at="2023-08-30T16:02:48 IST" depends-on-methods="com.providio.testcases.tc__LoginSc.verifySuccessfulLogin" duration-ms="105938" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- paypalFromCheckoutPage -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.providio.payments.tc__PaypalFromCheckoutPage_RegUser@1aa42c5c]" started-at="2023-08-30T16:02:48 IST" name="afterMethod" finished-at="2023-08-30T16:02:48 IST" duration-ms="34" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=paypalFromCheckoutPage status=SUCCESS method=tc__PaypalFromCheckoutPage_RegUser.paypalFromCheckoutPage()[pri:0, instance:com.providio.payments.tc__PaypalFromCheckoutPage_RegUser@1aa42c5c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.providio.payments.tc__PaypalFromCheckoutPage_RegUser -->
+    </test> <!-- Automation -->
+  </suite> <!-- ProvidioTestcases -->
 </testng-results>
