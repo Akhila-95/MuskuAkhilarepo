@@ -335,6 +335,8 @@ WebDriver lDriver;
 	        
 	        JavascriptExecutor js = (JavascriptExecutor)driver;
             js.executeScript("arguments[0].click();", RandomSelectProductFormPLP);
+            
+            
 	        }
 	        //RandomSelectProductFormPLP.click();
 	    }

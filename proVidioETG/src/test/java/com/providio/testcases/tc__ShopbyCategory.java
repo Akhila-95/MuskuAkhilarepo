@@ -38,7 +38,7 @@ public class tc__ShopbyCategory extends baseClass {
         if (isLoggedIn) {
         	
             homePage homepage = new homePage(driver);
-            
+            homepage.clickOnLogo(); 
             homepage.clickOnMens();
             logger.info("clicked on memns category in shop by category");
             

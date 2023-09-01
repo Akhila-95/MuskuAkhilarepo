@@ -72,15 +72,7 @@ public class tc__CheckOutProcess extends baseClass {
 			            selectShippingAddress(cp);
 			            selectPaymentMethod(cp);
 		            }
-		          /*  
-		            List<WebElement> phonNumError = driver.findElements(By.xpath("//div[contains(text(),'Please enter a valid Phone Number.')]"));
-		            List<WebElement> cityError = driver.findElements(By.xpath("//div[contains(text(),'Please enter a City')]"));
-		           if(phonNumError.size()>0 || cityError.size()>0) {
-		        	    selectShippingAddress(cp);
-			            selectPaymentMethod(cp);
-		           }
-		        */
-		           
+		          
 		        } else {
 		            logger.info("The cart value is empty");
 		            test.fail("The cart value is empty");
@@ -162,6 +154,7 @@ public class tc__CheckOutProcess extends baseClass {
     }
 
    public void selectPaymentMethod(checkOutPage cp) throws InterruptedException {
+	   
         cp.clickpaymentbutton(driver);
         logger.info("Clicked on the payment button");
         Thread.sleep(5000);

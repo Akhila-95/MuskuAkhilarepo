@@ -46,6 +46,12 @@ public class tc__BySearchingProduct extends baseClass {
 			        System.out.println("The minicart count before adding the product is " + minicartCountValue);    		
 			      }
 			 }
+			
+			 List<WebElement> pdpPage = driver.findElements(By.xpath("//button[contains(@class,'add-to-cart btn btn-primary')]"));
+    		 if( pdpPage.size()>0) {
+		          size s = new size();
+		          s.selectSize(driver);
+	    		 }
            // cart count after adding the product		 
             WebElement minicartcountafteradding =driver.findElement(By.cssSelector(".minicart-quantity"));
             String countOfMinicartafteradding = minicartcountafteradding.getText();

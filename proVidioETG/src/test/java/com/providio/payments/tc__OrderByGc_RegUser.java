@@ -77,9 +77,14 @@ public class tc__OrderByGc_RegUser extends baseClass {
 			     tc__CheckOutProcess cp = new tc__CheckOutProcess();				     
 			     cp.checkoutprocess();
 
-			     //gc payment 
-			     Gc__CC_Paypal gc = new Gc__CC_Paypal ();
-			     gc.paymentByGiftCard(); 
+			     List<WebElement> giftCertificate = driver.findElements(By.id("giftCert"));
+				 if(giftCertificate.size()>0) {
+					 tc__PaymentProccessByGC code= new tc__PaymentProccessByGC();
+					 code.performSequentialOperations(driver);						
+					 logger.info("applied gift card code");
+					 test.info("Gc code applied");
+				 }
+					 
 			     
 		    }else {
 		    	 Assert.fail("User not logged in");

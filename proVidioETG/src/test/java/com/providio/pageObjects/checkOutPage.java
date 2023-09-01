@@ -114,10 +114,13 @@ WebDriver lDriver;
 	@FindBy(xpath ="//button[@name ='submit' and @class ='btn btn-primary btn-block submit-shipping']")
 	WebElement paymentbutton;
     public void clickpaymentbutton(WebDriver driver) throws InterruptedException {
-    	
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].click();", paymentbutton);
-        Thread.sleep(5000);
+    	if(paymentbutton.isDisplayed()) {
+	        JavascriptExecutor js = (JavascriptExecutor) driver;
+	        js.executeScript("arguments[0].click();", paymentbutton);
+	        Thread.sleep(5000);
+    	}if(paymentbutton.isDisplayed()) {
+    		paymentbutton.click();
+    	}
     }
     
     //add to my address

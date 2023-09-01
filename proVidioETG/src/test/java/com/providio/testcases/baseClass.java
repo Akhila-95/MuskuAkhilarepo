@@ -128,7 +128,7 @@ public class baseClass {
 		if (!isBrowserRunning()) {
 			
 			logger.info("Relauching the browsesr");
-			//testsuitRunner();    
+			testsuitRunner();    
         }
 
 		
@@ -248,7 +248,7 @@ public class baseClass {
 			if (!isBrowserRunning()) {
 				
 				 String[] suiteFiles = {
-				            "C:\\Users\\upendra\\git\\AutomationsScripts-Etg\\proVidioETG\\Excutingalltestcases.xml",
+				            "C:\\Users\\user\\git\\MuskuAkhilaRepo16\\proVidioETG\\Excutingalltestcases.xml",
 
 				            // Add more suite file paths if needed
 				        };

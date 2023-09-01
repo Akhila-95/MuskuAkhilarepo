@@ -3,6 +3,7 @@
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
@@ -19,9 +20,9 @@ public class tc__OrderByGc_GuestUser extends baseClass {
 	@Test
 	public void paymentByGiftCardInGuestUser() throws InterruptedException  {
 	
-		      driver.get(baseURL);
-		      
-	          logger.info("enterd into url");	 
+		      driver.get(baseURL);		      
+	          logger.info("enterd into url");	
+	          
 	          navigationPage navPage =new navigationPage(driver);
 	    	  navPage.selectRandomMenu(driver);
 	    	 
@@ -42,10 +43,8 @@ public class tc__OrderByGc_GuestUser extends baseClass {
 	              }
 	    		 }
 	    		 List<WebElement> pdpPage = driver.findElements(By.xpath("//button[contains(@class,'add-to-cart btn btn-primary')]"));
-	    		 if( pdpPage.size()>0) {
-	    			 
-			          size s = new size();
-			          
+	    		 if( pdpPage.size()>0) {	    			 
+			          size s = new size();			          
 			          s.selectSize(driver);
 		    		 }
 	          
@@ -76,6 +75,6 @@ public class tc__OrderByGc_GuestUser extends baseClass {
 			  //gc payment 
 			     Gc__CC_Paypal gc = new Gc__CC_Paypal ();
 			     gc.paymentByGiftCard();
-				
+			   
 		}
 }

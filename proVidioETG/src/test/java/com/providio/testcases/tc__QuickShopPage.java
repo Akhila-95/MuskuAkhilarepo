@@ -29,7 +29,7 @@ public class tc__QuickShopPage extends baseClass{
 	    logger.info("Howered womens menu");
 	    Thread.sleep(5000);
 	  //clothing
-	    NM.ClickwoMensofOutfits(driver);
+	    NM.ClickwoMensofOutfits();
 	    logger.info("Clicked womens of outfits");
 	    Thread.sleep(5000);
 	    

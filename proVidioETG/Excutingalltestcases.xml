@@ -27,33 +27,29 @@
 	  
 	   
 	   <class name="com.providio.testcases.tc__By_BuyNow_Button"/>
-	  
-	   	<class name="com.providio.Validations.CheckoutPage1_Validation"/> 
-	   	<class name="com.providio.Validations.CheckoutPage2_Validation"/>
-  
-	  <class name="com.providio.testcases.tc__createAccount"/>
+
 	  <class name="com.providio.testcases.tc__LoginSc"/>
-	 
-      <class name="com.providio.testcases.tc__CustomerSupport" /> 
-       
       <class name="com.providio.testcases.tc__NavigationEachMenuOneItem" /> 
       <class name="com.providio.testcases.tc__BundleProductRegUser"/>     
       <class name="com.providio.testcases.tc__SimpleProductRegUser" />   
       <class name="com.providio.testcases.tc__VariationProductRegUser" />  
       <class name="com.providio.testcases.tc__ProductSetRegUser" />  
-      <class name="com.providio.testcases.tc__PlpPage" />
+    <!--   <class name="com.providio.testcases.tc__PlpPage" /> -->
       <class name="com.providio.testcases.tc__PdpPage" /> 
-      <class name="com.providio.testcases.tc__ProfilePage" />
+     <!--  <class name="com.providio.testcases.tc__ProfilePage" /> -->
       <class name="com.providio.testcases.tc__BySearchingProduct"/>
-      <class name="com.providio.testcases.tc__WishListtoAddtoCart"/>
-
-	     
+     <!--  <class name="com.providio.testcases.tc__WishListtoAddtoCart"/>  --> 
 	  <class name="com.providio.payments.tc__PaypalFromViewCartPage_RegUser"/> 
 	  <class name="com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser"/> 
 	  <class name="com.providio.payments.tc__PaypalFromCheckoutPage_RegUser"/>
 	  <class name="com.providio.payments.tc__PaymentProccessByGCandCC_RegUser"/> 
 	  <class name="com.providio.payments.tc__PaymentProccessByGCandPaypalRegUser"/>
-     <class name="com.providio.testcases.tc__LogOut" />
+      <class name="com.providio.testcases.tc__LogOut" />
+      
+      <class name="com.providio.Validations.CheckoutPage1_Validation"/> 
+	  <class name="com.providio.Validations.CheckoutPage2_Validation"/>
+	  <class name="com.providio.testcases.tc__createAccount"/>
+	  <class name="com.providio.testcases.tc__CustomerSupport" /> 
     </classes>
   </test> <!-- Automation -->
 </suite> <!-- ProvidioTestcases -->

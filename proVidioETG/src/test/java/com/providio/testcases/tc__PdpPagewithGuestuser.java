@@ -11,6 +11,8 @@ import com.providio.pageObjects.productListingPage;
 import com.providio.paymentProccess.tc__CheckOutProcess;
 import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
@@ -30,11 +32,8 @@ public class tc__PdpPagewithGuestuser extends baseClass {
 	    // Validate if the user is logged in or not
 	 
 	        // Step 1: Navigate to Women's New Arrivals
-	        navigateToWomensNewArrivals();
-	        
-	        //validationofwomesNewarrivals
-	        validatiionNewArrivalWomens();
-
+        	navigateRandomMenu();
+        	
 	        // Step 2: Select a Product from the Listing Page
 	        selectProductFromListingPage();
 
@@ -52,8 +51,7 @@ public class tc__PdpPagewithGuestuser extends baseClass {
 	        cp.checkoutprocess();
             //payment process
             
-            tc__CreditCardPaymentProcess cc = new tc__CreditCardPaymentProcess();
-            
+            tc__CreditCardPaymentProcess cc = new tc__CreditCardPaymentProcess();          
             cc.paymentByCreditCard(); 
 
 	    // Assert all the soft assertions
@@ -61,14 +59,13 @@ public class tc__PdpPagewithGuestuser extends baseClass {
 	}
 
 	// Step 1: Navigate to Women's New Arrivals
-	private void navigateToWomensNewArrivals() throws InterruptedException {
-	    navigationPage navMenu = new navigationPage(driver);
-	    navMenu.clicknewarrivalssMenu(driver);
-	    logger.info("Hovered on the New Arrivals menu");
-	    Thread.sleep(2000);
-	    navMenu.ClicknewarrivalofWomens();
-	    logger.info("Clicked on the Women's category from New Arrivals");
-	    Thread.sleep(5000);
+	private void navigateRandomMenu() throws InterruptedException {
+		navigationPage navPage =new navigationPage(driver);
+  	  	navPage.selectRandomMenu(driver);
+  	 
+  	  	productListingPage plp = new productListingPage(driver);
+  	  	plp.selectProductRandom(driver);
+  	  
 	}
 
 	// Step 2: Select a Product from the Listing Page
@@ -95,42 +92,49 @@ public class tc__PdpPagewithGuestuser extends baseClass {
 
 	// Step 4: Write a Review for the Product
 	private void writeReviewForProduct() throws InterruptedException {
-	    productDescriptionPage pdp = new productDescriptionPage(driver);
-	    pdp.clickOnWriteAReviewAtTop();
-	    logger.info("Clicked on Write a Review at the top");
-	    pdp.clickOnRating(driver);
-	    logger.info("Clicked on Rating");
-	    pdp.clickOnReviewHeadline(driver, headline);
-	    logger.info("Entered Review Headline");
-	    pdp.clickOnComments(comment);
-	    logger.info("Entered Comments");
-	    pdp.clickOnYes();
-	    logger.info("Clicked on Yes");
-	    pdp.clicknickName(nickName);
-	    logger.info("Entered Nickname");
-	    pdp.clickOnLoc(location);
-	    logger.info("Entered Location");
-	    pdp.clickOnSubmitReview(driver);
-	    logger.info("Clicked on Submit Review");
-	    // Add any additional steps for writing a review
-	    validateReviewProduct();
+		List<WebElement> bopis =driver.findElements(By.xpath("(//span[@class='write-question-review-button-text font-color-gray-darker'])[1]"));
+		productDescriptionPage pdp = new productDescriptionPage(driver);
+		if(!(bopis.size()>0)) {
+		    
+		    pdp.clickOnWriteAReviewAtTop(driver);
+		    logger.info("Clicked on Write a Review at the top");
+		    pdp.clickOnRating(driver);
+		    logger.info("Clicked on Rating");
+		    pdp.clickOnReviewHeadline(driver, headline);
+		    logger.info("Entered Review Headline");
+		    pdp.clickOnComments(comment);
+		    logger.info("Entered Comments");
+		    pdp.clickOnYes();
+		    logger.info("Clicked on Yes");
+		    pdp.clicknickName(nickName);
+		    logger.info("Entered Nickname");
+		    pdp.clickOnLoc(location);
+		    logger.info("Entered Location");
+		    pdp.clickOnSubmitReview(driver);
+		    logger.info("Clicked on Submit Review");
+		    // Add any additional steps for writing a review
+		    validateReviewProduct();
+		    pdp.clickOncontinueShoping(driver);
+		    logger.info("clicked on the clickOncontinueShoping button");
+		}else {
+			logger.info("Another review is activated");
+			test.info("Another review is activated");
+		}
 	    
-	    pdp.clickOncontinueShoping(driver);
-	    logger.info("clicked on the clickOncontinueShoping button");
+	    
 	}
 
 	// Step 5: Add the Product to Cart
 	private void addProductToCart() throws InterruptedException {
-	    productDescriptionPage pdp = new productDescriptionPage(driver);
-	    pdp.clickOnSize(driver);
-	    logger.info("Clicked on Size");
-	    pdp.clickcartbutton(driver);
-	    logger.info("Clicked on Add to Cart");
-	    Thread.sleep(5000);
+	     List<WebElement> pdpPage = driver.findElements(By.xpath("//button[contains(@class,'add-to-cart btn btn-primary')]"));
+   		 if( pdpPage.size()>0) {	    			 
+		          size s = new size();			          
+		          s.selectSize(driver);
+	    		 };
 	    // Add any additional steps for adding the product to the cart
 	}
 	
-	//validation for the new arrivals of womens
+	/*//validation for the new arrivals of womens
 	private void validatiionNewArrivalWomens() {
 		//validate new arrival womens
 		test.info("verify that menu is selected");
@@ -146,7 +150,7 @@ public class tc__PdpPagewithGuestuser extends baseClass {
             logger.info("Click failed");
         }
         
-	}
+	}*/
 	
 	private void validateproductselect() {
 		

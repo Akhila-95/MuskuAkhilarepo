@@ -491,19 +491,15 @@ WebDriver lDriver;
                 List<WebElement> salesforcePaypalCheckout=parentDiv.findElements(By.xpath("//div[contains(@class,'paypal-buttons-context-iframe paypal-buttons-label-paypal')]"));  
                 if(salesforcePaypalCheckout.size()>0) {
 	                WebElement salesforcePaypalCheckout1=parentDiv.findElement(By.xpath("(//iframe[@title='PayPal'])[2]"));
-	                //div[contains(@class,'paypal-buttons-context-iframe paypal-buttons-label-paypal')]      
-	              
-	                	
-	                	 Thread.sleep(3000);
+	              if(salesforcePaypalCheckout1.isDisplayed()) {
+	            	  	 Thread.sleep(3000);
 	                	 salesforcePaypalCheckout1.click();
 	                	 System.out.println("First click");
-	                	/* 
-	                	 if(salesforcePaypalCheckout.size()>0) {
-	                		 Thread.sleep(1000);
-	                		 salesforcePaypalCheckout1.click();
-	                		 System.out.println("Second click");
+	              }if(salesforcePaypalCheckout1.isDisplayed()) {    
+	                  js.executeScript("arguments[0].click();", salesforcePaypalCheckout1);
+	                 
+	              }
 	                	
-	                }*/
                 }
             }
             

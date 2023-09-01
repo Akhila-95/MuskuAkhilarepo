@@ -8,6 +8,8 @@ import com.providio.pageObjects.productListingPage;
 import com.providio.paymentProccess.tc__CheckOutProcess;
 import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
@@ -15,56 +17,59 @@ import org.testng.asserts.SoftAssert;
 
 public class tc__GuestUser extends baseClass {
 	SoftAssert softAssert = new SoftAssert();
-
+	int  minicartCountValue;
 
     @Test
     public void guestlogin() throws InterruptedException {
     	
         driver.get(this.baseURL);
         logger.info("enterd into url");
-        
-        navigationPage navMenu = new navigationPage(driver);
-        navMenu.clickelectronicsMenu(driver);
-        logger.info("hovered on electronics");
-        
-        navMenu.ClickelectronicsofTelevisions(driver);
-        logger.info("clicked on television sub menu");
-        
-        //validate the Television
-        WebElement Televisions = driver.findElement(By.xpath("//h1[@class ='header page-title text-uppercase m-0 p-0']"));
-        String ActualTitleofTelevisions = Televisions.getText();
-        String ExpectedTitleofTelevisions = "TELEVISIONS";
-        logger.info(Televisions.getText());
-        if (ActualTitleofTelevisions.equals(ExpectedTitleofTelevisions)) {
-            test.pass( "Successfully clicked on the electronics of  " + ActualTitleofTelevisions + " ");
-            logger.info("Successfully clicked on the electronics of  " + ActualTitleofTelevisions + " ");
-        } else {
-            test.fail( "The page Title does not match expected " + ExpectedTitleofTelevisions + " " + "  but found" + " " + ActualTitleofTelevisions + " ");
-            logger.info( "The page Title does not match expected " + ExpectedTitleofTelevisions + " " + "  but found" + " " + ActualTitleofTelevisions + " ");
-        }
+        navigationPage navPage =new navigationPage(driver);
+  	    navPage.selectRandomMenu(driver);
+  	 
+  	    productListingPage plp = new productListingPage(driver);
+  	    plp.selectProductRandom(driver);
+  	  
+  	  //The cart value before adding the product to cart
+  	  Thread.sleep(2000);
+  		 List<WebElement> minicartcountList = driver.findElements(By.cssSelector(".minicart-quantity"));
+  		 if(minicartcountList.size()>0) {
+  			 WebElement minicartcount = driver.findElement(By.cssSelector(".minicart-quantity"));
+  			 String countOfMinicart = minicartcount.getText();
 
-        productListingPage plp = new productListingPage(driver);
+           // Check if the string is not empty and contains only digits
+           if (!countOfMinicart.isEmpty() && countOfMinicart.matches("\\d+")) {
+              minicartCountValue = Integer.parseInt(countOfMinicart);
+               System.out.println("The minicart count before adding the product is " + minicartCountValue);    		
+            }
+  		 }
+  		 List<WebElement> pdpPage = driver.findElements(By.xpath("//button[contains(@class,'add-to-cart btn btn-primary')]"));
+  		 if( pdpPage.size()>0) {
+  			 
+		          size s = new size();
+		          
+		          s.selectSize(driver);
+	    		 }
         
-        plp.selectProductRandom(driver);
-        logger.info("clicked on television product");
-        
-        productDescriptionPage pdp = new productDescriptionPage(driver);
-        pdp.clickcartbutton(driver);
-        logger.info("click on the add to cart button");
-        
-        //validate the productname
-        String actualProductName = driver.getTitle();
-        String expectedProductName = driver.getTitle();
-        if (actualProductName.equals(expectedProductName)) {
-            test.pass( "Successfully clicked on the electronics of  " + actualProductName + " ");
-            logger.info("click Success Womens of Dresses");
-        } else {
-            test.fail( "The page Title does not match expected " + expectedProductName + " " + "  but found" + " " + actualProductName + " ");
-            logger.info("Click failed");
-        }
-
-        		Thread.sleep(5000);
-			     //checkoutProcess
+  		 if(minicartcountList.size()>0) {
+		          WebElement minicartcountafteradding = driver.findElement(By.xpath("//span[@class ='minicart-quantity ml-1']"));
+		          String countOfMinicartafteradding = minicartcountafteradding.getText();
+		          int minicartCountValueafteradding = Integer.parseInt(countOfMinicartafteradding);
+	
+			          logger.info(minicartCountValueafteradding);
+		
+			       //validation for product add to cart
+			        test.info("Verifying the product is added to cart or not ");
+		
+				        if( minicartCountValueafteradding!= minicartCountValue) {
+				            test.pass("Product added to cart");
+				            logger.info("Product is  added to cart");
+				        }else {
+				            test.fail("Product is not added to cart");
+				            logger.info("Product is not added to cart");
+				        }
+	        
+	    		 }
 			        
 			     tc__CheckOutProcess cp = new tc__CheckOutProcess();			     
 			     cp.checkoutprocess();

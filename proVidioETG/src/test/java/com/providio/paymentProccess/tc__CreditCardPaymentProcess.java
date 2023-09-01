@@ -116,12 +116,12 @@ public class tc__CreditCardPaymentProcess extends baseClass{
 				    	logger.info("executing another way of clicking  place the order");
 				    	
 				    	pp.clickonrevieworder(driver);
-						logger.info("ckicked on the review oreder");
+						logger.info("clicked on the review oreder");
 						
 						//revieworderpage
 						
 						reviewOrderPage rop = new reviewOrderPage(driver);
-						Thread.sleep(10000);
+						Thread.sleep(1000);
 						
 						rop.clickonplaceorderwithJsExuter(driver);
 						logger.info("successfully click on the place order button");

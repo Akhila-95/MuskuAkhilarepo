@@ -69,7 +69,5 @@ public class tc__BundleProductForGuestUser  extends baseClass{
               //payment process
               tc__CreditCardPaymentProcess tc = new tc__CreditCardPaymentProcess();			              
               tc.paymentByCreditCard();
-				}
-
-		 
+				}	 
 }

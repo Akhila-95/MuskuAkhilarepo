@@ -145,12 +145,12 @@ public class size extends baseClass{
 			allElements(driver);
 			
 	     productDescriptionPage pdp = new productDescriptionPage(driver);
-	    List <WebElement> buyNowEnabled =driver.findElements(By.xpath("//button[contains(@class,'buy-now')]"));
+	    List <WebElement> buyNowEnabled =driver.findElements(By.xpath("//button[@class='buy-now btn btn-primary col-12 col-sm-6 d-none']"));
 	     List  <WebElement> inStock =driver.findElements(By.xpath("//div[contains(text(), 'In Stock')]"));
 	     if((buyNowEnabled.size()>0)&& inStock.size()>0) {
 	    	 
 	    	 Thread.sleep(3000);	    	 
-	    	 WebElement buyNowEnabled1 =driver.findElement(By.xpath("//button[contains(@class,'buy-now')]"));
+	    	 WebElement buyNowEnabled1 =driver.findElement(By.xpath("//button[@class='buy-now btn btn-primary col-12 col-sm-6 d-none']"));
 		     test.info("Verifying Buy now button in PDP");
 			     if(buyNowEnabled1.isDisplayed()) {
 			    	 test.pass("Successfully clicked on buy now button");
@@ -172,16 +172,7 @@ public class size extends baseClass{
 		    	 productListingPage plp = new productListingPage(driver);
 		    	 plp.selectProductRandom(driver);
 		    	 
-		    	 selectSize(driver);
-		    	 
-//		    	  List<WebElement> productsInCart = driver.findElements(By.xpath("//span[contains(@class,'order-receipt-label grand-total-label')]"));
-//			         if(productsInCart.size()>0) {
-//			        	 System.out.println("Product added to cart from buy now");
-//			            
-//			         }else {
-//			        	 System.out.println("Product is not added to cart");
-//			        	 
-//			         }	    	 
+		    	 selectSize(driver);    	 
 	     }
 	}
 	

@@ -40,7 +40,7 @@ public class tc__BundleProductRegUser extends baseClass{
 		//searching the bundle product from excel sheet
 		     BundleProductFromEXcel bundleProduct = new  BundleProductFromEXcel();		 
 			 bundleProduct.performRandomOperations(driver);
-			 logger.info("Searched a product");
+			 test.info("Searched a bundle product");
 
 		// minicart count
 	 	 	if(minicartcountList.size()>0) {

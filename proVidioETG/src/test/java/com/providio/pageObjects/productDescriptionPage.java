@@ -13,6 +13,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import freemarker.log.Logger;
+
 public class productDescriptionPage {
 
 	WebDriver ldriver;
@@ -101,21 +103,26 @@ public void clickOnProduct1() throws InterruptedException{
 			}
      //write a review at top
 			@FindBy(xpath = "(//a[@class='pr-snippet-write-review-link pr-underline'])[1]")
-			WebElement writeAReviewAtTop;
-			public void clickOnWriteAReviewAtTop() throws InterruptedException {
-				
-				writeAReviewAtTop.click();
-				Thread.sleep(3000);
+			List<WebElement> writeAReviewAtTop;
+			public void clickOnWriteAReviewAtTop(WebDriver driver) throws InterruptedException {
+				if(writeAReviewAtTop.size()>0) {
+					WebElement writeAReview= driver.findElement(By.xpath("(//a[@class='pr-snippet-write-review-link pr-underline'])[1]"));
+					writeAReview.click();
+					Thread.sleep(3000);
+				}else {
+					System.out.println("Write A Review is not found");
+				}
 			}
 //in write a rwview page
 			//for rating
 			@FindBy(xpath = "//span[contains(@class, 'pr-accessible-text')]")
-			WebElement rating1;
+			List<WebElement> rating1;
 			public void clickOnRating(WebDriver driver) throws InterruptedException {
-				
-				if (rating1.isEnabled()) {
+			
+				if (rating1.size()>0) {
+					WebElement rating =driver.findElement(By.xpath("//span[contains(@class, 'pr-accessible-text')]"));
 					JavascriptExecutor js = (JavascriptExecutor)driver;
-					 js.executeScript("arguments[0].click();", rating1);
+					 js.executeScript("arguments[0].click();", rating);
 					
 				} else {
 				    System.out.println("Element is disabled");
@@ -125,14 +132,16 @@ public void clickOnProduct1() throws InterruptedException{
 			}
 			//for review headline
 			@FindBy(xpath = "//input[@name='Review Headline']")
-			WebElement reviewHeadline;
+			List<WebElement> reviewHeadline;
 			
 			public void clickOnReviewHeadline(WebDriver driver, String headline) throws InterruptedException {
-				
-				 JavascriptExecutor js = (JavascriptExecutor)driver;
-				 js.executeScript("arguments[0].click();", reviewHeadline);
-				 reviewHeadline.sendKeys( headline);
-				 Thread.sleep(3000);
+				if(reviewHeadline.size()>0) {
+					WebElement reviewHeadline =driver.findElement(By.xpath("//input[@name='Review Headline']"));
+					 JavascriptExecutor js = (JavascriptExecutor)driver;
+					 js.executeScript("arguments[0].click();", reviewHeadline);
+					 reviewHeadline.sendKeys( headline);
+					 Thread.sleep(3000);
+				}
 				
 			}
 			//for commemnts
@@ -509,7 +518,7 @@ public void clickOnProduct1() throws InterruptedException{
 				}
 				
 				//buy now button in pdp page
-				 	@FindBy(xpath = "//button[contains(@class,'buy-now')]")
+				 	@FindBy(xpath = "//button[@class='buy-now btn btn-primary col-12 col-sm-6 d-none']")
 				 	WebElement buyNowButton;
 				 	public void clickOnBuyNowButton(WebDriver driver) {
 				 		JavascriptExecutor js = (JavascriptExecutor)driver;

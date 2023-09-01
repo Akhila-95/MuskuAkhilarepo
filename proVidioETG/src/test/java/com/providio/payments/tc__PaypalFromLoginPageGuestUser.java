@@ -22,7 +22,7 @@ public class tc__PaypalFromLoginPageGuestUser extends baseClass {
 	public void PaypalFromLoginPage() throws InterruptedException {
 		
 			driver.get(baseURL);
-			   //naviagated into random menu
+			//naviagated into random menu
 			navigationPage navPage= new navigationPage(driver);
 			navPage.selectRandomMenu(driver);
 			logger.info("Entered into menu");

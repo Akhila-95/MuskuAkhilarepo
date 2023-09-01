@@ -375,7 +375,7 @@ public class tc__PaymentProccessByGC extends baseClass{
 		        while (iterator.hasNext()) {
 		            String value = iterator.next();
 		            JavascriptExecutor js = (JavascriptExecutor) driver;
-		            WebElement giftCertificate = driver.findElement(By.id("#giftCert"));
+		            WebElement giftCertificate = driver.findElement(By.id("giftCert"));
 		            js.executeScript("arguments[0].click();", giftCertificate);
 		            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",giftCertificate);
 		            giftCertificate.sendKeys(value);

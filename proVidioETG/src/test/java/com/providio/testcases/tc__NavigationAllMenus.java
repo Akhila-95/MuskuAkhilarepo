@@ -122,7 +122,7 @@ public class tc__NavigationAllMenus extends baseClass {
             logger.info("Howered womens menu");
             Thread.sleep(5000L);
             
-            NM.ClickwoMensofOutfits(driver);
+            NM.ClickwoMensofOutfits();
             logger.info("Clicked womens of outfits");
             Thread.sleep(5000L);
             
@@ -363,7 +363,7 @@ public class tc__NavigationAllMenus extends baseClass {
             NM.clickwoMensMenubaritems(driver);
             logger.info("Howered womens menu");
             
-            NM.ClickwoMensofBraceletss(driver);
+            NM.ClickwoMensofBraceletss();
             logger.info("Clicked womens of braceletss");
             Thread.sleep(5000L);
             
