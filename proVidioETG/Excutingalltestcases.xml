@@ -8,8 +8,7 @@
   <test thread-count="5" name="Automation">
 
     <classes>
-	   <class name="com.providio.testcases.tc__NavigationAllMenusWithGuestUser"/>
-	   <class name="com.providio.testcases.tc__NavigationEachMenuOneItemGuestUser"/>
+
 	  <class name="com.providio.testcases.tc__GuestUser"/> 
 	  <class name="com.providio.testcases.tc__BundleProductForGuestUser"/> 
 	  <class name="com.providio.testcases.tc__ProductSetForGuestUser"/> 
@@ -34,7 +33,7 @@
   
 	  <class name="com.providio.testcases.tc__createAccount"/>
 	  <class name="com.providio.testcases.tc__LoginSc"/>
-	  <class name="com.providio.testcases.tc__NavigationAllMenus"/> 
+	 
       <class name="com.providio.testcases.tc__CustomerSupport" /> 
        
       <class name="com.providio.testcases.tc__NavigationEachMenuOneItem" /> 

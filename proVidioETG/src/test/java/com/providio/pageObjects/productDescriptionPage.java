@@ -716,8 +716,11 @@ public void clickOnProduct1() throws InterruptedException{
 				 	@FindBy(xpath = "//div[contains(@class,'salesforce-buynow-element ')]")
 				 	WebElement paypalBuyNow;
 				 	public void clickOnPaypalBuyNow(WebDriver driver) {
-				 		paypalBuyNow.click();
-				    	 JavascriptExecutor js = (JavascriptExecutor) driver;
-				    	// js.executeScript("arguments[0].click();", paypalBuyNow);
+				 		if(paypalBuyNow.isDisplayed()) {
+				 			JavascriptExecutor js = (JavascriptExecutor) driver;
+					    	 js.executeScript("arguments[0].click();", paypalBuyNow);
+				 		}if(paypalBuyNow.isDisplayed()) {				    	 
+				 			paypalBuyNow.click();
+				 		}
 				 	}
 }

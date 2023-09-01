@@ -16,16 +16,16 @@ public class tc__By_BuyNow_Button extends baseClass{
 	public void byNowButton() throws InterruptedException {
 		
 	//step2 1: site url
-		driver.get("https://zzqi-002.dx.commercecloud.salesforce.com/s/RefArch/charcoal-flat-front-athletic-fit-shadow-striped-wool-suit/25686395M.html?lang=en_US");
-		//driver.get("https://zzqi-002.dx.commercecloud.salesforce.com/s/RefArch/cowl-neck-tweed-pullover-sweater/25502346M.html?lang=en_US");
+		driver.get(baseURL);
+		
 		
     //Home page 
-	/*	 navigationPage navPage =new navigationPage(driver);
+		 navigationPage navPage =new navigationPage(driver);
     	 navPage.selectRandomMenu(driver);
     	 
     	 productListingPage plp = new productListingPage(driver);
     	 plp.selectProductRandom(driver);
-    	*/ 
+    	 
     	 size s =new size();
     	 s.clickOnBuyNow(driver);
     	 //buy now validation

@@ -70,7 +70,7 @@ import com.providio.testcases.baseClass;
 		
 		public void performRandomOperations(WebDriver driver) throws InterruptedException {
 			
-			String filePath = "C:\\Users\\user\\eclipse-workspace\\Providio_25th\\AutomationsScripts-Etg-by-upendra-main\\proVidioETG_25th\\testDate\\Simple Products Skew.xlsx";
+			String filePath = "C:\\Users\\user\\git\\MuskuAkhilaRepo16\\proVidioETG\\testDate\\Simple Products Skew.xlsx";
 			String sheetName = "SkewId";
 
 			try {

@@ -3,15 +3,206 @@
 <suite name="Failed suite [ProvidioTestcases]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Automation(failed)">
     <classes>
-      <class name="com.providio.testcases.tc__LogOut">
+      <class name="com.providio.testcases.tc__ProfilePage">
         <methods>
           <include name="setUpforReport"/>
-          <include name="Logout"/>
+          <include name="profilePage"/>
           <include name="setUp"/>
           <include name="afterMethod"/>
           <include name="tearDown"/>
         </methods>
+      </class> <!-- com.providio.testcases.tc__ProfilePage -->
+      <class name="com.providio.testcases.tc__PdpPage">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="PDPpage"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.testcases.tc__PdpPage -->
+      <class name="com.providio.testcases.tc__LogOut">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="Logout"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
       </class> <!-- com.providio.testcases.tc__LogOut -->
+      <class name="com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="paypalCheckout_MiniCart"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.payments.tc__PaypalCheckout_MiniCart_RegUser -->
+      <class name="com.providio.testcases.tc__PdpPagewithGuestuser">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="PDPpage"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.testcases.tc__PdpPagewithGuestuser -->
+      <class name="com.providio.testcases.tc__PlpPage">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="PlpPage"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.testcases.tc__PlpPage -->
+      <class name="com.providio.Validations.CheckoutPage2_Validation">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="checkoutPage"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.Validations.CheckoutPage2_Validation -->
+      <class name="com.providio.testcases.tc__BundleProductRegUser">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="bundleProduct"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.testcases.tc__BundleProductRegUser -->
+      <class name="com.providio.testcases.tc__SimpleProductRegUser">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="simpleProduct"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.testcases.tc__SimpleProductRegUser -->
+      <class name="com.providio.payments.tc__PaypalFromViewCartPage_RegUser">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="paypalFromViewCartPage"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.payments.tc__PaypalFromViewCartPage_RegUser -->
+      <class name="com.providio.testcases.tc__NavigationAllMenus">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="Navigation"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.testcases.tc__NavigationAllMenus -->
+      <class name="com.providio.Validations.CheckoutPage1_Validation">
+        <methods>
+          <include name="checkoutPage1Validation"/>
+          <include name="setUpforReport"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.Validations.CheckoutPage1_Validation -->
+      <class name="com.providio.testcases.tc__GuestUser">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="guestlogin"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.testcases.tc__GuestUser -->
+      <class name="com.providio.testcases.tc__ProductSetRegUser">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="productSet"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.testcases.tc__ProductSetRegUser -->
+      <class name="com.providio.testcases.tc__VariationProductRegUser">
+        <methods>
+          <include name="variationProduct"/>
+          <include name="setUpforReport"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.testcases.tc__VariationProductRegUser -->
+      <class name="com.providio.testcases.tc__NavigationEachMenuOneItem">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="Navigation"/>
+        </methods>
+      </class> <!-- com.providio.testcases.tc__NavigationEachMenuOneItem -->
+      <class name="com.providio.testcases.tc__BySearchingProduct">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="bySearchingProduct"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.testcases.tc__BySearchingProduct -->
+      <class name="com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="paypalFromCheckoutPage"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.payments.tc__PaypalFromCheckoutPage_GuestUser -->
+      <class name="com.providio.testcases.tc__createAccount">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="ValidatingEmailformatError1"/>
+          <include name="createAccountWithValidCredientials"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="emptyText1"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.testcases.tc__createAccount -->
+      <class name="com.providio.testcases.tc__WishListtoAddtoCart">
+        <methods>
+          <include name="wishListtoCart"/>
+          <include name="setUpforReport"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.testcases.tc__WishListtoAddtoCart -->
+      <class name="com.providio.testcases.tc__ProductSetForGuestUser">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="productSet"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.testcases.tc__ProductSetForGuestUser -->
+      <class name="com.providio.testcases.tc__BundleProductForGuestUser">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+          <include name="bundleProduct"/>
+        </methods>
+      </class> <!-- com.providio.testcases.tc__BundleProductForGuestUser -->
     </classes>
   </test> <!-- Automation(failed) -->
 </suite> <!-- Failed suite [ProvidioTestcases] -->

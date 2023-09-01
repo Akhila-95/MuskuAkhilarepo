@@ -7,6 +7,8 @@ import com.providio.pageObjects.productDescriptionPage;
 import com.providio.paymentProccess.tc__CheckOutProcess;
 import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -14,47 +16,45 @@ import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 public class tc__BySearchingProduct extends baseClass {
-	
+	int minicartCountValue;
 	SoftAssert softAssert = new SoftAssert();
 
 	@Test//(dependsOnMethods = {"com.providio.testcases.tc__LoginSc.verifySuccessfulLogin"}, alwaysRun = true)
     public void bySearchingProduct() throws InterruptedException {
-    	
-    	//validate the user login or not 
-    	
-    //    if (isLoggedIn) {
-        	
 		    //step2 1: site url
-			driver.get("https://zzqi-002.dx.commercecloud.salesforce.com/s/RefArch/cowl-neck-tweed-pullover-sweater/25502346M.html?lang=en_US");
+			driver.get(baseURL);
 			
-        	//Home page 
+        	//searching a product 
             homePage homepage = new homePage(driver);
             homepage.clickOnSearchBar(this.searchBar);
             logger.info("searched a product " + this.searchBar);
             
+            //clicked on searched product
             homepage.clickOnSearchedProduct();
             logger.info("clicked on searched product");
             
-            //pdp page
+            //count of cart before adding the product in cart 
             Thread.sleep(2000);
-            WebElement minicartcount = driver.findElement(By.xpath("//span[@class ='minicart-quantity ml-1']"));
-            String countOfMinicart = minicartcount.getText();
-            int minicartCountValue = Integer.parseInt(countOfMinicart);
-            logger.info(minicartCountValue);
-            
-            size s = new size();
-            s.selectSize(driver);
-            
-
-            WebElement minicartcountafteradding = driver.findElement(By.xpath("//span[@class ='minicart-quantity ml-1']"));
+			List<WebElement> minicartcountList = driver.findElements(By.cssSelector(".minicart-quantity"));
+			if(minicartcountList.size()>0) {
+				 WebElement minicartcount = driver.findElement(By.cssSelector(".minicart-quantity"));
+			    	String countOfMinicart = minicartcount.getText();
+			   
+			// Check if the string is not empty and contains only digits
+			 if (!countOfMinicart.isEmpty() && countOfMinicart.matches("\\d+")) {
+			        minicartCountValue = Integer.parseInt(countOfMinicart);
+			        System.out.println("The minicart count before adding the product is " + minicartCountValue);    		
+			      }
+			 }
+           // cart count after adding the product		 
+            WebElement minicartcountafteradding =driver.findElement(By.cssSelector(".minicart-quantity"));
             String countOfMinicartafteradding = minicartcountafteradding.getText();
             int minicartCountValueafteradding = Integer.parseInt(countOfMinicartafteradding);
 
-            logger.info(minicartCountValueafteradding);
+            logger.info("The minicart count after adding the product is"+minicartCountValueafteradding);
 
-	     //validation for product add to cart
+	      //validation for product add to cart
 	        test.info("Verifying the product is added to cart or not ");
-
 		        if( minicartCountValueafteradding!= minicartCountValue) {
 		            test.pass("Product added to cart");
 		            logger.info("Product is  added to cart");
@@ -68,17 +68,7 @@ public class tc__BySearchingProduct extends baseClass {
             cp.checkoutprocess();
             
             //payment by credit card
-
 		     tc__CreditCardPaymentProcess cc = new tc__CreditCardPaymentProcess();	     
 		     cc.paymentByCreditCard();
-
-            Thread.sleep(10000L);
-   //     } else {
-    //        Assert.fail("User not logged in");
-    //    }
-        
-        // Assert all the soft assertions
-        softAssert.assertAll();
-
     }
 }

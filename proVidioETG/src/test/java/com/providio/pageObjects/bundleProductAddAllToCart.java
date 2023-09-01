@@ -15,7 +15,8 @@ public class bundleProductAddAllToCart {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 	
  		WebElement elementXPath = driver.findElement(By.xpath("//div[@class='col-12 col-sm-6 offset-sm-6 bundle-footer']"));
- 		List<WebElement>  inStock = elementXPath.findElements(By.xpath("//div[contains(text(), 'In Stock')]"));
+ 		WebElement elementCss = driver.findElement(By.cssSelector("div.bundle-footer"));
+ 		List<WebElement>  inStock =elementCss.findElements(By.xpath("//div[contains(text(), 'In Stock')]"));
 
  	    // Check if the element is present
  	    if (inStock.size()> 0 ) {
