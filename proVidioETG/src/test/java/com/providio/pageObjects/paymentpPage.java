@@ -17,8 +17,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.github.javafaker.Faker;
 import com.providio.Validations.Checkout_Validation;
+import com.providio.testcases.baseClass;
 
-public class paymentpPage {
+public class paymentpPage extends baseClass {
 	
 WebDriver lDriver;
 	
@@ -310,11 +311,13 @@ WebDriver lDriver;
 		    	js.executeScript("arguments[0].click();", savebutton);	
 		    }
 		    //clickonrevieworder
-		    @FindBy(xpath ="//button[contains(@class,'submit-payment')]")
+		    @FindBy(xpath ="//button[@class='btn btn-primary btn-block submit-payment'  and @value='submit-payment']")
 			WebElement revieworder;
+		    @FindBy(xpath ="//button[@class='btn btn-primary btn-block submit-payment'  and @value='submit-payment']")
+			List<WebElement> revieworderList;
 		    public void clickonrevieworder(WebDriver driver) throws InterruptedException {	
-		    	if(revieworder.isDisplayed()) {
-			    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", revieworder);			    	
+		    	if(revieworderList.size()>0) {
+			    	//((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", revieworder);			    	
 			    	Thread.sleep(5000);
 			    	JavascriptExecutor js = (JavascriptExecutor) driver;
 			    	js.executeScript("arguments[0].click();", revieworder);
@@ -506,25 +509,17 @@ WebDriver lDriver;
             @FindBy(xpath = "//img[@alt='PayPal Credit']")
             WebElement paypal;
 
- 
-
             @FindBy(xpath = "//div[@aria-label='PayPal Checkout']")
             WebElement  paypalCheckout;
 
- 
-
             @FindBy(xpath = "//input[@name='login_email']")
             List<WebElement> emailLogin;
-
- 
 
             @FindBy(css = "#btnNext")
             List<WebElement> nextButton;
 
             @FindBy(xpath = "//input[@id='password']")
             List<WebElement> password;
-
- 
 
             @FindBy(xpath = "//button[contains(text(), 'Log In')]")
             List<WebElement> loginbutton;
@@ -556,6 +551,7 @@ WebDriver lDriver;
                 	 WebElement  emailLogin1=driver.findElement(By.xpath("//input[@name='login_email']")); 
                 	 emailLogin1.clear();
                 	 emailLogin1.sendKeys("rahulnaik@etisbew.com");
+                	 test.info("Entered username");
                  }
                  Thread.sleep(3000);
                  if(nextButton.size()>0) {
@@ -567,6 +563,7 @@ WebDriver lDriver;
                 	 WebElement password1=driver.findElement(By.xpath("//input[@id='password']"));
                 	 password1.clear();
 	                 password1.sendKeys("Etgsfcc245@");
+	                 test.info("Entered password");
 	                 Thread.sleep(3000);
                  }
                  if(loginbutton.size()>0) {
@@ -589,6 +586,7 @@ WebDriver lDriver;
                 	Thread.sleep(6000);
                 	if(reviewOrder.isDisplayed()) {
                 		reviewOrder.click();
+                		
                 	}
                 	
                 	
@@ -644,6 +642,42 @@ WebDriver lDriver;
 		    	 cvc.sendKeys("123");
 		        Thread.sleep(2000);
 		        driver.switchTo().defaultContent();
+		    }
+		    
+		    
+		    //stripe  paymnet
+		    @FindBy(xpath="//input[@autocomplete='cc-number' and @inputmode='numeric']")
+		    WebElement newCardNumber;
+		    public void cardNum(WebDriver driver) {
+		    	
+		    	
+		    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure card payment input frame']")));
+		    	newCardNumber.sendKeys("4111111111111111");
+		    	 driver.switchTo().defaultContent();
+		    }
+		    
+		    @FindBy(xpath="//input[@autocomplete='cc-exp' and @inputmode='numeric']")
+		    WebElement expDate;
+		    public void expDate(WebDriver driver) {
+		    	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure card payment input frame']")));
+		    	newCardNumber.sendKeys("11 33");
+		    }
+		    
+		    @FindBy(xpath="//input[@autocomplete='cc-csc' and @inputmode='numeric']")
+		    WebElement cvv;
+		    public void cvv(WebDriver driver) {
+		    	
+		    	//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
+		        //wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure card payment input frame']")));
+		    	newCardNumber.sendKeys("556");
+		    }
+
+		    @FindBy(name="postal")
+		    WebElement postalCode;
+		    public void postalCode() {
+		    	newCardNumber.sendKeys("765439877");
 		    }
 		    
 		    

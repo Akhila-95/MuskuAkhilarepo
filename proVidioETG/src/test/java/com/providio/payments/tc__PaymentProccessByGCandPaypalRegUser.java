@@ -3,11 +3,13 @@ package com.providio.payments;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.providio.commonfunctionality.Gc__CC_Paypal;
+import com.providio.pageObjects.homePage;
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productListingPage;
 import com.providio.paymentProccess.tc__CheckOutProcess;
@@ -23,11 +25,15 @@ public class tc__PaymentProccessByGCandPaypalRegUser extends baseClass {
 	public void paypalFromCheckoutPage() throws InterruptedException {	
 
 	    if(isLoggedIn) {
-	         navigationPage navPage =new navigationPage(driver);
-	    	 navPage.selectRandomMenu(driver);
-	    	 
-	    	 productListingPage plp = new productListingPage(driver);
-	    	 plp.selectProductRandom(driver);
+	    
+	    	for(int i=0;i<=2; i++) {
+		         navigationPage navPage =new navigationPage(driver);
+		    	 navPage.selectRandomMenu(driver);
+		    	 
+		    	 productListingPage plp = new productListingPage(driver);
+	    	     plp.selectProductRandom(driver);
+	    	}
+
  
     
 	    	 //The cart value before adding the product to cart
@@ -80,5 +86,6 @@ public class tc__PaymentProccessByGCandPaypalRegUser extends baseClass {
 	    }else  {
 	        Assert.fail("User not logged in");
 	    }
+	    
 	}
 }

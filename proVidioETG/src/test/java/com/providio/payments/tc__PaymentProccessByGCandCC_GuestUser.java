@@ -23,11 +23,13 @@ public class tc__PaymentProccessByGCandCC_GuestUser extends baseClass {
 	public void paypalFromCheckoutPage() throws InterruptedException {	
 
 			 driver.get(baseURL);
-	         navigationPage navPage =new navigationPage(driver);
-	    	 navPage.selectRandomMenu(driver);
-	    	 
-	    	 productListingPage plp = new productListingPage(driver);
-	    	 plp.selectProductRandom(driver);
+			 for(int i=1; i<=1;i++) {
+		         navigationPage navPage =new navigationPage(driver);
+		    	 navPage.selectRandomMenu(driver);
+		    	 
+		    	 productListingPage plp = new productListingPage(driver);
+		    	 plp.selectProductRandom(driver);
+			 
  
     
 	    	 //The cart value before adding the product to cart
@@ -69,6 +71,7 @@ public class tc__PaymentProccessByGCandCC_GuestUser extends baseClass {
 					        }
 		        
 		    		 }
+			 }
 	        
 		    // common checkoutProcess	         
 				tc__CheckOutProcess cp = new tc__CheckOutProcess();         

@@ -273,7 +273,7 @@ public class tc__PaymentProccessByGC extends baseClass{
 		                WebElement applyGiftCard = driver.findElement(By.xpath("//button[@value='submit-gifrcert']"));
 		                Thread.sleep(3000);	              
 		                // Scroll down by 500 pixels
-		                js.executeScript("window.scrollBy(0, 500);");  
+		                js.executeScript("window.scrollBy(0, 200);");  
 		             
 		                // apply button validation
 		                test.info("Verifying apply button is selected");
@@ -349,6 +349,19 @@ public class tc__PaymentProccessByGC extends baseClass{
 	
 	//TO PLACE THE ORDER BY GC AND CC
 		public void paymentBySemiGC () throws InterruptedException {
+			double halfPrice1=0;
+            List<WebElement> gcText= driver.findElements(By.xpath("//div[@class='success giftcert-pi']"));
+            int sizeOfGc = gcText.size();
+            WebElement totalSum= driver.findElement(By.xpath("//span[@class='grand-total-sum']"));
+            String text = totalSum.getText();
+            double  totalPrice = Double.parseDouble(text.replace("$", ""));     
+            
+         // Calculate half of the total price
+            System.out.println("Total price is " + totalPrice);
+            for(int i=1;i<=1;i++) {
+                halfPrice1 = totalPrice / 2;
+                 System.out.println("The half price is " +halfPrice1);
+            }
 			String filePath = "C:\\Users\\user\\git\\MuskuAkhilaRepo16\\proVidioETG\\testDate\\GiftCertificateCodes.xlsx";
 		    String sheetName = "GC_Codes";
 
@@ -367,12 +380,14 @@ public class tc__PaymentProccessByGC extends baseClass{
 		        dataList.removeIf(String::isEmpty);
 
 		        // Concatenate the elements of the list without the comma
-		        String joinedData = String.join(", ", dataList);
+		      
 				logger.info(dataList);
 		        int operations = 0;
 		      	 Iterator<String> iterator = dataList.iterator();
 		      	 
 		        while (iterator.hasNext()) {
+
+	                
 		            String value = iterator.next();
 		            JavascriptExecutor js = (JavascriptExecutor) driver;
 		            WebElement giftCertificate = driver.findElement(By.id("giftCert"));
@@ -412,7 +427,7 @@ public class tc__PaymentProccessByGC extends baseClass{
 		                WebElement applyGiftCard = driver.findElement(By.xpath("//button[@value='submit-gifrcert']"));
 		                Thread.sleep(3000);	              
 		                // Scroll down by 500 pixels
-		                js.executeScript("window.scrollBy(0, 500);");
+		                js.executeScript("window.scrollBy(0, 200);");
 		             
 		                // apply button validation
 		                test.info("Verifying apply button is selected");
@@ -430,20 +445,28 @@ public class tc__PaymentProccessByGC extends baseClass{
 				                    giftCertificate.clear();
 				                }
 		
-			                
-			                List<WebElement> gcText= driver.findElements(By.xpath("//div[@class='success giftcert-pi']"));
-			                int sizeOfGc = gcText.size();
-			                if (sizeOfGc==1) {
-			                    logger.info("Gift certificate codes are applied");
-			                    test.info("Gift certificate codes are applied");
-			                   // giftCertificate.clear();
-			                    break;
-			                } else {
-			                    iterator.remove(); // Safely remove the element from the list
-			                    logger.info("After applying GC we have this in datalist: " + dataList);
-			                    Thread.sleep(5000);
-			                    operations++;
-			                }
+				          
+			               // if(sizeOfGc>0) {
+				                
+			                //price after code redeemtion
+				                WebElement halfTotal= driver.findElement(By.xpath("//span[@class='gift-certificate-total']"));
+				                String text1 = halfTotal.getText();
+				                double halfTotal1 = Double.parseDouble(text1.replace("$", ""));     
+				                System.out.println("Price after redeemtion "+halfTotal1);
+	
+				           
+				                if(halfPrice1==halfTotal1) {
+				                    logger.info("Gift certificate codes are applied");
+				                    test.info("Gift certificate codes are applied");
+				                   // giftCertificate.clear();
+				                    break;
+				                } else {
+				                    iterator.remove(); // Safely remove the element from the list
+				                    logger.info("After applying GC we have this in datalist: " + dataList);
+				                    Thread.sleep(5000);
+				                    operations++;				                    
+			                  }
+			              //  }
 	           
 		                }else {
 		                	test.fail("Apply button is not  selected");

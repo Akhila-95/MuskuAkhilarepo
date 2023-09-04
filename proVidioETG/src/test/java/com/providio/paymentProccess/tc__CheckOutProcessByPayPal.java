@@ -133,7 +133,7 @@ public class tc__CheckOutProcessByPayPal extends baseClass{
 					        	//validate paypal window
 					        	// checkout.validatePaypalClick();
 								pp.paypalPopup(driver);
-								logger.info("Entered into paypal window and entered the paypal details");
+								test.info("Entered into paypal window and entered the paypal details");
 								reviewOrderPage rop = new reviewOrderPage(driver);
 								Thread.sleep(3000);
 								rop.clickonplaceorderwithJsExuter(driver);
@@ -184,10 +184,9 @@ public class tc__CheckOutProcessByPayPal extends baseClass{
 
 			    	// review order page
 			    		reviewOrderPage rop = new reviewOrderPage(driver);
-			    		Thread.sleep(4000);
+			    		Thread.sleep(4000);			    		
 			    		
-			    		
-			    		List<WebElement> reviewOrderList= driver.findElements(By.xpath("//button[contains(text(), 'Next: Review Order')]"));
+			    		//List<WebElement> reviewOrderList= driver.findElements(By.xpath("//button[contains(text(), 'Next: Review Order')]"));
 			    		WebElement reviewOrder= driver.findElement(By.xpath("//button[contains(text(), 'Next: Review Order')]"));	
 			    		
 			    		if(reviewOrder.isDisplayed()) {

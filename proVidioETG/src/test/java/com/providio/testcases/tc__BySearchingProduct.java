@@ -27,11 +27,11 @@ public class tc__BySearchingProduct extends baseClass {
         	//searching a product 
             homePage homepage = new homePage(driver);
             homepage.clickOnSearchBar(this.searchBar);
-            logger.info("searched a product " + this.searchBar);
+           test.info("searched a product " + this.searchBar);
             
             //clicked on searched product
             homepage.clickOnSearchedProduct();
-            logger.info("clicked on searched product");
+            test.info("clicked on searched product");
             
             //count of cart before adding the product in cart 
             Thread.sleep(2000);

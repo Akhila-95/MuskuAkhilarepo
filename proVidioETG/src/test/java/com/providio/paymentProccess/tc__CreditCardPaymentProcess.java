@@ -33,26 +33,30 @@ public class tc__CreditCardPaymentProcess extends baseClass{
 					logger.info("Gift certificate is not redeemed");
 				}
 				
-			}
-			 Thread.sleep(5000);
-			 
+			}			 
 			List<WebElement> minicartcount = driver.findElements(By.xpath("//span[@class ='minicart-quantity ml-1']"));		
 			if(minicartcount.size()==0) {
 				
+				JavascriptExecutor js = (JavascriptExecutor) driver;
+	            js.executeScript("window.scrollBy(0,700)", "");
+
+	 
 		        List<WebElement> continueasAGuest = driver.findElements(By.xpath("//button[contains(text(),'Guest Checkout')]"));
-		        logger.info(continueasAGuest.size());
+		        logger.info("Continued as Guest "+continueasAGuest.size());
 		        
 		        paymentpPage pp = new paymentpPage(driver);
 		        
 				//brain tree
 				List<WebElement> creditcardscheck = driver.findElements(By.xpath("//a[@class ='nav-link creditcard-tab active']"));
-			    System.out.println(creditcardscheck.size());
+			    System.out.println("Brain tree payment"+creditcardscheck.size());
 			    
 			    //creditcard salesfornce
 	
 				List<WebElement> creditcardsSalesForce = driver.findElements(By.xpath("//div[@class='sfpp-payment-method-header sfpp-payment-method-header-card']"));
-			    System.out.println(creditcardsSalesForce.size());
+			    System.out.println("Salesforce payment"+creditcardsSalesForce.size());
 			    
+			    //new payment
+				List<WebElement> newPayment = driver.findElements(By.cssSelector("li.nav-item[data-method-id=\"CREDIT_CARD\"]"));
 				    if(creditcardscheck.size()>0) {
 				    	
 				    	List<WebElement> savedCardsBrainTree = driver.findElements(By.xpath("//option[@class ='js_stored_card']"));
@@ -81,10 +85,16 @@ public class tc__CreditCardPaymentProcess extends baseClass{
 				    	
 				    	
 				    	
+				    }else if(newPayment.size()>0) {
+				    	test.info("Stripe payment activated");
+				    	newPayment();
+				    	
+					    	
+				    	
 				    }else {
 			
 				    	List<WebElement> savedCardsCyberSourece = driver.findElements(By.xpath("//option[@class ='js_stored_card']"));
-				    	System.out.println(savedCardsCyberSourece.size());
+				    	System.out.println("Cybersource paymnet"+savedCardsCyberSourece.size());
 				    	
 				    	if(savedCardsCyberSourece.size()>0) {
 				    		//select one and send the cvv number of that card
@@ -92,18 +102,13 @@ public class tc__CreditCardPaymentProcess extends baseClass{
 				    		
 				    	}else {
 				             // cyber source new card
-				    		cyberSourceNewcard();
-				    		
+				    		cyberSourceNewcard();				    		
 				    	}
-	
 				    }
-				    
-				    
+    
 				    //Salesforce payment integration place the order
 				    if(creditcardsSalesForce.size()>0) {
-				    	
-				    	Thread.sleep(4000);
-				    	 JavascriptExecutor js = (JavascriptExecutor) driver;
+		
 			            js.executeScript("window.scrollBy(0,300)", "");
 				    	pp.placetheOrder(driver);
 				    	logger.info("clicking the salesforce place the order");
@@ -111,21 +116,30 @@ public class tc__CreditCardPaymentProcess extends baseClass{
 				    	//click the place order button
 				    	
 				    	
-				    }else {
+				    }else {	
 				    	
-				    	logger.info("executing another way of clicking  place the order");
+				    	try {
+				    		//WebElement buttonElement = driver.findElement(By.xpath("//button[@class='btn btn-primary btn-block submit-payment' and @name='submit' and @value='submit-payment']"));
+
+				    	//List<WebElement> review1=  driver.findElements(By.xpath("//button[@value='submit-payment']"));
+				    		List<WebElement> review1=  driver.findElements(By.cssSelector("button.submit-payment"));
+				    	System.out.println("Review order button "+review1.size());
 				    	
-				    	pp.clickonrevieworder(driver);
+				    	WebElement review=  driver.findElement(By.cssSelector("button.submit-payment"));				    	
+				    	review.click();
+				    	//pp.clickonrevieworder(driver);
 						logger.info("clicked on the review oreder");
-						
+				    	} catch(Exception e) {
+				    		System.out.println(e);
+				    	}
 						//revieworderpage
 						
 						reviewOrderPage rop = new reviewOrderPage(driver);
 						Thread.sleep(1000);
-						
-						rop.clickonplaceorderwithJsExuter(driver);
-						logger.info("successfully click on the place order button");
-						
+						 if(driver.findElements(By.xpath("//button[contains(@class,'place-order')]")).size()!=0) {
+							rop.clickonplaceorderwithJsExuter(driver);
+							test.info("successfully click on the place order button");
+						 }
 						
 				    }
 				    
@@ -217,6 +231,18 @@ public class tc__CreditCardPaymentProcess extends baseClass{
 		
 	}
 
+	public void newPayment() {
+		paymentpPage pp = new paymentpPage(driver);
+		
+		pp.cardNum(driver);
+		test.info("entered card number");
+		pp. expDate(driver);
+		test.info("entered exp date");		
+		pp.cvv(driver);
+		test.info("entered cvv");
+		pp.postalCode();
+		test.info("entered postal code");
+	}
 	    
 	//  //soft assertions payment page
 	//  

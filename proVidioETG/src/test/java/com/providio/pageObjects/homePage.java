@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 public class homePage {
 WebDriver lDriver;
@@ -213,4 +214,64 @@ WebDriver lDriver;
 			Thread.sleep(2000);
 			luggage.click();
 		}
+		
+		//to find the store icon
+		@FindBy(xpath="//span[@class='header-store-name']")
+		WebElement clickOnFindAStore;
+		public void findastore(WebDriver driver) throws InterruptedException {
+			JavascriptExecutor js = (JavascriptExecutor)driver;
+			 js.executeScript("arguments[0].click();", clickOnFindAStore);
+			 Thread.sleep(2000);
+			
+		}		
+		//to find the store button
+			@FindBy(xpath="//button[contains(@class,' storelocator-search')]")
+			WebElement findStores;
+			public void findStore(WebDriver driver) throws InterruptedException {
+				JavascriptExecutor js = (JavascriptExecutor)driver;
+				 js.executeScript("arguments[0].click();", findStores);
+				 Thread.sleep(2000);
+				
+			}
+			
+			//selected commerce cloud store
+			@FindBy(xpath="(//button[contains(@class,' select-store')])[5]")
+			WebElement commerceCloud;
+			public void clickCommerceCloud(WebDriver driver) throws InterruptedException {
+				JavascriptExecutor js = (JavascriptExecutor)driver;
+				 js.executeScript("arguments[0].click();", commerceCloud);
+				 Thread.sleep(2000);				
+			}
+			
+		//zip code or postal code
+			@FindBy(id = "store-postal-code")
+			WebElement zipCodeInStore;
+			public void clickOnZipCode(String zipcodeStore) {
+				zipCodeInStore.sendKeys(zipcodeStore);
+			}
+			
+		//radius in fina a store
+			@FindBy(id="radius")
+			WebElement radius;
+			public void clickOnRadius() {
+				Select selectRadius = new Select(radius);
+				selectRadius.selectByIndex(1);
+			}
+
+		//close the find stores
+		/*	@FindBy(xpath="(//span[@aria-hidden='true' and text()='×'])[1]")
+			WebElement closeFindStore;
+			public void clickOnCloseFindStore(WebDriver driver ) throws InterruptedException {
+				Thread.sleep(2000);
+				JavascriptExecutor js = (JavascriptExecutor)driver;
+				 js.executeScript("arguments[0].click();",  closeFindStore);
+				
+			}*/
+			@FindBy(xpath = "//div[@id='findInStoreModal']")
+			WebElement closeFindStore;
+			
+			public void clickOnCloseFindStore(WebDriver driver ) throws InterruptedException {
+				Thread.sleep(2000);
+				closeFindStore.click();
+			}
 }

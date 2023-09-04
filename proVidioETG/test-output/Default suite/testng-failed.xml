@@ -3,7 +3,7 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser">
+      <class name="com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser">
         <methods>
           <include name="setUpforReport"/>
           <include name="paypalFromCheckoutPage"/>
@@ -11,7 +11,7 @@
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.providio.payments.tc__PaymentProccessByGCandPaypalGuestUser -->
+      </class> <!-- com.providio.payments.tc__PaymentProccessByGCandCC_GuestUser -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

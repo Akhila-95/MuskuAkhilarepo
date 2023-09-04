@@ -67,12 +67,12 @@ public class tc__PdpPage extends baseClass {
 	   //naviagated into random menu
 			navigationPage navPage= new navigationPage(driver);
 			navPage.selectRandomMenu(driver);
-			logger.info("Entered into menu");
+			test.info("Entered into menu");
 		
 			//plp page	
 			productListingPage plp = new productListingPage(driver);
 			plp.selectProductRandom(driver);
-			logger.info("Entered into plp page");
+			test.info("Entered into plp page");
 	}
 
 	// Step 2: Select a Product from the Listing Page

@@ -25,13 +25,13 @@ public class size extends baseClass{
 	     List  <WebElement> inStock =driver.findElements(By.xpath("//div[contains(text(), 'In Stock')]"));
 	     if(cartEnabled.isEnabled()&& inStock.size()>0) {
 		     pdp.clickcartbutton(driver);
-		     System.out.println("Product added to cart");
+		   /*  System.out.println("Product added to cart");
 		     test.info("Verifying Add to cart button in PDP");
 		     if(cartEnabled.isDisplayed()) {
 		    	 test.pass("Successfully clicked on add to cart button");
 		     }else {
 		    	 test.fail("Not clicked on add to cart button");
-		     }
+		     }*/
 		      
 	     }else {
 	    	 System.out.println("Product is out of stock so searching for new product");

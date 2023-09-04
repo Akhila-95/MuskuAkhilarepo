@@ -36,26 +36,26 @@ public class tc__CheckOutProcess extends baseClass {
 		               
 		            //click on the cart button
 		            mc.clickcartbutton(driver);
-		            Thread.sleep(2000);
+		            Thread.sleep(1000);
 		            
 		            //validate the button click 
 		            miniCartAndCartValidation validation= new miniCartAndCartValidation();
 		            validation.validateMiniCartClick();
          
-		            Thread.sleep(5000);
+		            Thread.sleep(1000);
 		            //click review order
 		            mc.clickviewCartButton(driver);
 					logger.info("clicked the view cart button in the minicart");
 					
 					//validate the view cart button click
 					validation.validateViewCartClick();
-					Thread.sleep(5000);
+					Thread.sleep(1000);
 
 		
 		            viewCartPage vcp = new viewCartPage(driver);
 		            //click the checkout button
 		            vcp.clickCheckout(driver);
-		            Thread.sleep(5000);
+		            Thread.sleep(1000);
 		
 		            //Taxcalculation
 		            
@@ -69,8 +69,20 @@ public class tc__CheckOutProcess extends baseClass {
 		            if(checkoutPage1.isDisplayed()) {
 		            checkOutPage cp = new checkOutPage(driver);
 			          //selecting shipping address
-			            selectShippingAddress(cp);
+			            selectShippingAddress(cp);	
+			            
+			            if(driver.findElements(By.xpath("//div[contains(text(),'Please enter a City')]")).size()>0 ) {
+			            	 
+			            	 WebElement addresss= driver.findElement(By.id("#shippingAddressOnedefault"));		            	 
+			            	 addresss.clear();		
+			            	 selectShippingAddress(cp);
+			            	 selectPaymentMethod(cp);
+			            }if(driver.findElements(By.xpath("//div[contains(text(),'Please enter a valid Phone Number.')]")).size()>0 ) {
+			            	 cp.setPhone(phonenumber);
+			                 logger.info("Entered phone number");
+			            }
 			            selectPaymentMethod(cp);
+			            
 		            }
 		          
 		        } else {
@@ -95,7 +107,21 @@ public class tc__CheckOutProcess extends baseClass {
 		            selectShippingAddress(cp);
 		            selectPaymentMethod(cp);
 		            
-		         
+		            if(driver.findElements(By.xpath("//div[contains(text(),'Please enter a City')]")).size()>0 ) {
+		            	 
+		            	 WebElement addresss= driver.findElement(By.id("#shippingAddressOnedefault"));		            	 
+		            	 addresss.clear();		
+		            	 selectShippingAddress(cp);
+		            	 selectPaymentMethod(cp);
+		            }if(driver.findElements(By.xpath("//div[contains(text(),'Please enter a valid Phone Number.')]")).size()>0 ) {
+		            	 cp.setPhone(phonenumber);
+		                 logger.info("Entered phone number");
+		                 
+		            }
+		            if(driver.findElements(By.xpath("//button[@name ='submit' and @class ='btn btn-primary btn-block submit-shipping']")).size()>0 ) {
+		            	selectPaymentMethod(cp);
+		            }
+		            
 		            
 	       }
     }
@@ -149,7 +175,9 @@ public class tc__CheckOutProcess extends baseClass {
             Thread.sleep(2000);
             cp.setPhone(phonenumber);
             logger.info("Entered phone number");
-            Thread.sleep(10000L);
+            Thread.sleep(1000L);
+            
+            
         }
     }
 

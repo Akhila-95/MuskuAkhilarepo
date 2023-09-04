@@ -7,7 +7,9 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class bundleProductAddAllToCart {
+import com.providio.testcases.baseClass;
+
+public class bundleProductAddAllToCart extends baseClass{
 
 	
 	public void addAllToCart(WebDriver driver) throws InterruptedException {
@@ -24,7 +26,7 @@ public class bundleProductAddAllToCart {
 	 	       	WebElement addAllToCartElement = driver.findElement(By.xpath("//button[@class='add-to-cart-global btn btn-primary' ]"));				
 				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", addAllToCartElement);
 				if(!addAllToCartElement.isEnabled()) {
-					System.out.println("product is out of stock searching for new product");
+					test.info("product is out of stock searching for new product");
 //					BundleProductFromEXcel bundleProduct = new  BundleProductFromEXcel();
 //					bundleProduct.performRandomOperations(driver);
 //					addAllToCart(driver);

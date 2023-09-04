@@ -191,56 +191,7 @@ public void clickOnProduct1() throws InterruptedException{
 				 Thread.sleep(4000);
 				 //driver.navigate().back();
 			}
-			
-		/*//to select color
-			
-			@FindBy(xpath = "//select[contains(@class,'select-color-swatch')]")
-			List<WebElement colorElement;
-			public void clickOnColor() {
-				//size
-  			  WebElement sizeElement = colorElement.get(0);
-  			  System.out.println("Size element is present on the page.");
-  			  
-  				Select colorElement = new Select(sizeElement);
-  			    List<WebElement> options = colorElement.getOptions();
-  			    
-  			    List<String> enabledSizes = new ArrayList<>();
-  			    
-  			    int optionIndex = 0;
-  			    
-  			    System.out.println(options.size());
 
-  			    for (WebElement option : options) {
-
-  			    	if (optionIndex > 0 && option.isEnabled()) {
-  			    		
-  			    		String text = option.getText();
-  			    		  //System.out.println(text);
-
-  			            if (!text.isEmpty()) {      	
-  			            	String value = option.getAttribute("data-attr-value");
-  			                enabledSizes.add(value);
-  			                //System.out.println(value);
-  			                option.click();
-  			                break; 
-  			                // Select the first enabled size and exit the loop
-  			            }
-  			        }
-  			    	else {
-  			    		System.out.println("This size is not avaliable");
-  			    	}
-  			    	
-  			    	 optionIndex++;
-  			  
-  			    }
-				
-				   Select  colorSelect = new Select(color);
-				    List<WebElement> colorOptions =  colorSelect.getOptions();
-				    Random random = new Random();
-			        int randomIndex = random.nextInt(colorOptions.size() - 1) + 1;
-			        colorSelect.selectByIndex(randomIndex);
-			}
-			*/
 		
 			//decrease the qunatity
 			@FindBy (xpath="//span[@class='qty-minus']")

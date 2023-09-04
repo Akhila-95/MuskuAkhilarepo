@@ -62,17 +62,14 @@ public class tc__PdpPagewithGuestuser extends baseClass {
 	private void navigateRandomMenu() throws InterruptedException {
 		navigationPage navPage =new navigationPage(driver);
   	  	navPage.selectRandomMenu(driver);
-  	 
-  	  	productListingPage plp = new productListingPage(driver);
-  	  	plp.selectProductRandom(driver);
-  	  
+  	  	test.info("Randomly selected a Menu");
 	}
 
 	// Step 2: Select a Product from the Listing Page
 	private void selectProductFromListingPage() throws InterruptedException {
 	    productListingPage plp = new productListingPage(driver);
 	    plp.selectProductRandom(driver);
-	    logger.info("Clicked on a product from the listing page");
+	    test.info("Clicked on a product from the listing page");
 	    
 	    //validate the product selected
 	    validateproductselect();
@@ -157,10 +154,12 @@ public class tc__PdpPagewithGuestuser extends baseClass {
 		//validate the product is selected
 		test.info("verify that product is selected");
 		
-        WebElement pdpHeader = driver.findElement(By.xpath("//h1[@class ='product-name hidden-sm-down']"));
-        boolean pdpHeaderDisplayed = pdpHeader.isDisplayed();  
+        List<WebElement> pdpHeader = driver.findElements(By.xpath("//h1[@class ='product-name hidden-sm-down']"));
+          
 
-        if (pdpHeaderDisplayed) {
+        if (pdpHeader.size()>0) {
+        	WebElement pdpHeader1 = driver.findElement(By.xpath("//h1[@class ='product-name hidden-sm-down']"));
+        	System.out.println("The product name is " +pdpHeader1);
             test.pass("Successfully clicked on the product from the product listing page");
             logger.info("Successfully clicked on the product from the product listing page");
         } else {

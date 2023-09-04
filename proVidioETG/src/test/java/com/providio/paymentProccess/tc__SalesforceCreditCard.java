@@ -48,13 +48,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  
 
 public class tc__SalesforceCreditCard {
-
- 
-
     static WebDriver ldriver;
-
- 
-
     public  tc__SalesforceCreditCard(WebDriver rdriver) {
 
         ldriver = rdriver;
@@ -66,14 +60,9 @@ public class tc__SalesforceCreditCard {
     //from excel
 
     public static  String selectedCardNumber ;
-
     public static String selectedCVV;
-
     public static String selectedExpiryDate;
-
     public static String  selectedYear; 
-
-
          public  static void paymentFromExcel (WebDriver driver) throws IOException, InterruptedException {
 
             // Path to your Excel file
@@ -82,20 +71,16 @@ public class tc__SalesforceCreditCard {
 
             // Sheet name in the Excel file
 
-            String sheetName = "Stripe";
+            String sheetName = "Salesforce Integration";
 
-
- 
 
             // Load the Excel file
 
-            FileInputStream file = new FileInputStream("C:\\Users\\USER\\Downloads\\etg-qa-automation-providio-MasterbyUpendra\\etg-qa-automation-providio-MasterbyUpendra\\proVidioETG\\CreditCard.xlsx");
+            FileInputStream file = new FileInputStream("C:\\Users\\user\\git\\MuskuAkhilaRepo16\\proVidioETG\\testDate\\CreditCardFromExcel.xlsx");
 
             Workbook workbook = new XSSFWorkbook(file);
 
             Sheet sheet = workbook.getSheet(sheetName);
-
- 
 
             // Get the card details from the Excel sheet
 
@@ -107,9 +92,6 @@ public class tc__SalesforceCreditCard {
 
            // List<String> years = new ArrayList<>();
 
- 
-
- 
 
             // Flag to skip the first row
 
@@ -127,8 +109,6 @@ public class tc__SalesforceCreditCard {
 
                 }
 
- 
-
                 Cell cardNumberCell = row.getCell(0);
 
                 Cell cvvCell = row.getCell(1);
@@ -136,18 +116,11 @@ public class tc__SalesforceCreditCard {
                 Cell expiryDateCell = row.getCell(2);
 
                 // Cell yearCell = row.getCell(3);
-
- 
-
                 String cardNumber = getCellValueAsString(cardNumberCell);
-
                 String cvv = getCellValueAsString(cvvCell);
-
                 String expiryDate = getMonthAndYearFromCellValue(expiryDateCell);
 
                 //String year = getCellValueAsString(yearCell);
-
- 
 
                 cardNumbers.add(cardNumber);
 
@@ -159,19 +132,6 @@ public class tc__SalesforceCreditCard {
 
             }
 
- 
-
-         /*   System.out.println(cardNumbers);
-
-            System.out.println(cvvList);
-
-            System.out.println(expiryDates);
-
-           // System.out.println(years);*/
-
- 
-
-            // Generate a random index to select a row
 
             Random random = new Random();
 
@@ -197,94 +157,44 @@ public class tc__SalesforceCreditCard {
              System.out.println(selectedExpiryDate );
 
 
- 
-
-             
-
-          // Assuming driver is your WebDriver instance
-
-
- 
-
              // Switch to the iframe for card number
 
 
              WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-
- 
-
              wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure card number input frame']")));
 
              Thread.sleep(2000);
-
              WebElement cardNumberInput = driver.findElement(By.xpath("//input[@autocomplete='cc-number' and @inputmode='numeric']"));
-
              cardNumberInput.sendKeys(selectedCardNumber);
-
              Thread.sleep(2000);
-
              // Switch back to the main content
-
              driver.switchTo().defaultContent();
-
- 
-
-           
-
- 
-
-            
-
-            wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure expiration date input frame']")));
-
-            WebElement expiryDate = driver.findElement(By.xpath("//input[@autocomplete='cc-exp' and @inputmode='numeric']"));
-
-            expiryDate.sendKeys(selectedExpiryDate);
-
-            Thread.sleep(2000);
-
+             
+             wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure expiration date input frame']")));
+             WebElement expiryDate = driver.findElement(By.xpath("//input[@autocomplete='cc-exp' and @inputmode='numeric']"));
+             expiryDate.sendKeys(selectedExpiryDate);
+             Thread.sleep(2000);
              // Switch back to the main content
-
              driver.switchTo().defaultContent();
-
- 
-
- 
-
+             
              wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure CVC input frame']")));
-
-            WebElement cvv = driver.findElement(By.xpath("//input[@autocomplete='cc-csc' and @inputmode='numeric']"));
-
-            cvv.sendKeys(selectedCVV);
-
-            Thread.sleep(2000);
-
+             WebElement cvv = driver.findElement(By.xpath("//input[@autocomplete='cc-csc' and @inputmode='numeric']"));
+             cvv.sendKeys(selectedCVV);
+             Thread.sleep(2000);
              // Switch back to the main content
-
              driver.switchTo().defaultContent();
 
- 
-
- 
 
             // Close the Excel file
-
             workbook.close();
-
             file.close();
-
             }
 
 
          private static String getMonthAndYearFromCellValue(Cell cell) {
-
              if (cell == null) {
-
                  return "";
-
              }
-
- 
 
              if (cell.getCellType() == CellType.NUMERIC && DateUtil.isCellDateFormatted(cell)) {
 
@@ -307,50 +217,27 @@ public class tc__SalesforceCreditCard {
              }
 
          }
-
- 
-
- 
-
         private static String getCellValueAsString(Cell cell) {
-
             if (cell == null) {
-
                 return "";
-
             }
-
- 
 
             switch (cell.getCellType()) {
-
                 case NUMERIC:
-
                     return String.valueOf((long) cell.getNumericCellValue());
-
                 case STRING:
-
                     return cell.getStringCellValue();
-
                 default:
-
                     return "";
-
             }
-
         }
 
-
-
-        public static void main(String[] args) throws IOException, InterruptedException {
-
-            Thread.sleep(2000);
-
-
-        }
-
-
+        public static void main(String[] args,WebDriver driver) throws IOException, InterruptedException {
+        	tc__SalesforceCreditCard paymentPage = new tc__SalesforceCreditCard(driver);
+        	tc__SalesforceCreditCard.paymentFromExcel(driver);
+		}
 }
+
 
  
 

@@ -23,12 +23,16 @@ public class tc__PaymentProccessByGCandCC_RegUser extends baseClass {
 	public void paypalFromCheckoutPage() throws InterruptedException {	
 
 	    if(isLoggedIn) {
-	         navigationPage navPage =new navigationPage(driver);
-	    	 navPage.selectRandomMenu(driver);
-	    	 
-	    	 productListingPage plp = new productListingPage(driver);
-	    	 plp.selectProductRandom(driver);
- 
+	    	for(int i=0;i<=2; i++) {
+		         navigationPage navPage =new navigationPage(driver);
+		    	 navPage.selectRandomMenu(driver);
+		    	 test.info("Selected random menu");
+		    	 
+		    	 productListingPage plp = new productListingPage(driver);
+	    	     plp.selectProductRandom(driver);
+	    	     test.info("Selected random product");
+	    	
+
 	    	 //The cart value before adding the product to cart
 	    	  Thread.sleep(2000);
 	    		 List<WebElement> minicartcountList = driver.findElements(By.cssSelector(".minicart-quantity"));
@@ -66,7 +70,7 @@ public class tc__PaymentProccessByGCandCC_RegUser extends baseClass {
 				            test.fail("Product is not added to cart");
 				            logger.info("Product is not added to cart");
 				        }
-	        
+	    		 }
 	    		 }
 		    // common checkoutProcess	         
 				tc__CheckOutProcess cp = new tc__CheckOutProcess();         

@@ -24,7 +24,7 @@ public class tc__By_BuyNow_Button extends baseClass{
    //naviagated into random menu
 		navigationPage navPage= new navigationPage(driver);
 		navPage.selectRandomMenu(driver);
-		logger.info("Entered into menu");
+		test.info("Entered into menu");
 	
 		//plp page	
 		productListingPage plp = new productListingPage(driver);

@@ -22,32 +22,7 @@ WebDriver lDriver;
 	WebElement CartButton;
 	public void clickcartbutton(WebDriver driver) throws InterruptedException{
 		
-		/*
-		 
-	            // Find the element using a CSS selector (change the selector to match your specific case)
-	            WebElement elementToClick = null;
-
-	            // Loop with a short sleep interval to check for the presence of the element
-	            int attempts = 0;
-	            while (elementToClick == null && attempts < 10) {
-	                try {
-	                    elementToClick = driver.findElement(By.xpath("//a[contains(@class,'minicart-link')]"));
-	                } catch (org.openqa.selenium.NoSuchElementException e) {
-	                    // Element not found yet, sleep for a short interval (e.g., 500ms) and try again
-	                    Thread.sleep(500);
-	                    attempts++;
-	                }
-	            }
-
-	            // If the element is found, click on it
-	            if (elementToClick != null) {
-	                elementToClick.click();
-	            } else {
-	                System.out.println("Element not found within the specified attempts.");
-	            }
-	        } */
 		
-			
 		CartButton.click();
 		Thread.sleep(2000);
 		

@@ -88,8 +88,6 @@ WebElement WomensMenu;
 
 public void clickwoMensMenubaritems(WebDriver driver) throws InterruptedException{
 
-    
-
     Actions action = new Actions(driver);
 
     action.moveToElement(WomensMenu).perform();

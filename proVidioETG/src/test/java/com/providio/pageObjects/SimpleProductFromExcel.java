@@ -15,6 +15,7 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -115,6 +116,8 @@ import com.providio.testcases.baseClass;
 							
 							
 						}catch (NoSuchElementException e) {
+							System.out.println("Element not found: " + e.getMessage());
+						}catch(StaleElementReferenceException e) {
 							System.out.println("Element not found: " + e.getMessage());
 						}
 						

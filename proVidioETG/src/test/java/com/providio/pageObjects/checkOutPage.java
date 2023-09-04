@@ -107,7 +107,7 @@ WebDriver lDriver;
 	@FindBy(css="#shippingPhoneNumberdefault")
 	WebElement Phone;
 	public void setPhone(String phonenumber ){		
-		 Phone.sendKeys(phonenumber);
+		 Phone.sendKeys("9876543212");
 	}
 	
 	//buttonforthepaymentpage

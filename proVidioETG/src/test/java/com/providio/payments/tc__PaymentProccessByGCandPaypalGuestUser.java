@@ -22,14 +22,14 @@ public class tc__PaymentProccessByGCandPaypalGuestUser extends baseClass {
 	       
 			driver.get("https://zzqi-002.dx.commercecloud.salesforce.com/s/RefArch/pink-quartz-hoop-earring/013742002577M.html?lang=en_US");
 	       /*
-	         navigationPage navPage =new navigationPage(driver);
-	    	 navPage.selectRandomMenu(driver);
-	    	 test.info("Navigated to random menu");
-	    	 
-	    	 productListingPage plp = new productListingPage(driver);
-	    	 plp.selectProductRandom(driver);
-	    	 test.info("Navigated to random product ");
- 
+	        	for(int i=0;i<=2; i++) {
+		         navigationPage navPage =new navigationPage(driver);
+		    	 navPage.selectRandomMenu(driver);
+		    	 
+		    	 productListingPage plp = new productListingPage(driver);
+	    	     plp.selectProductRandom(driver);
+	    	}
+
     */
 	    	 //The cart value before adding the product to cart
 	    	  Thread.sleep(2000);

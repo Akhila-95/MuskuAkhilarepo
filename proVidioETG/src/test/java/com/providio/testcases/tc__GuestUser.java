@@ -22,13 +22,16 @@ public class tc__GuestUser extends baseClass {
     @Test
     public void guestlogin() throws InterruptedException {
     	
-        driver.get(this.baseURL);
+        driver.get("https://zzqi-002.dx.commercecloud.salesforce.com/s/RefArch/striped-silk-tie/793775362380M.html?lang=en_US");
         logger.info("enterd into url");
+        /*
         navigationPage navPage =new navigationPage(driver);
   	    navPage.selectRandomMenu(driver);
+  	    test.info("Randomly selected a Menu");
   	 
   	    productListingPage plp = new productListingPage(driver);
   	    plp.selectProductRandom(driver);
+  	    test.info("Randomly selected a product");
   	  
   	  //The cart value before adding the product to cart
   	  Thread.sleep(2000);
@@ -42,15 +45,13 @@ public class tc__GuestUser extends baseClass {
               minicartCountValue = Integer.parseInt(countOfMinicart);
                System.out.println("The minicart count before adding the product is " + minicartCountValue);    		
             }
-  		 }
+  		 }*/
   		 List<WebElement> pdpPage = driver.findElements(By.xpath("//button[contains(@class,'add-to-cart btn btn-primary')]"));
-  		 if( pdpPage.size()>0) {
-  			 
-		          size s = new size();
-		          
+  		 if( pdpPage.size()>0) {			 
+		          size s = new size();		          
 		          s.selectSize(driver);
 	    		 }
-        
+        /*
   		 if(minicartcountList.size()>0) {
 		          WebElement minicartcountafteradding = driver.findElement(By.xpath("//span[@class ='minicart-quantity ml-1']"));
 		          String countOfMinicartafteradding = minicartcountafteradding.getText();
@@ -69,7 +70,7 @@ public class tc__GuestUser extends baseClass {
 				            logger.info("Product is not added to cart");
 				        }
 	        
-	    		 }
+	    		 }*/
 			        
 			     tc__CheckOutProcess cp = new tc__CheckOutProcess();			     
 			     cp.checkoutprocess();
