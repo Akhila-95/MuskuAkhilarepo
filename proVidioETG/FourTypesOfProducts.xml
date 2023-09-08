@@ -31,12 +31,12 @@
 	    
 	    <class name="com.providio.testcases.tc__LogOut" />  
 	     -->
-	    
-	     <
-	     
-	     
-	
+
     </classes>
+    
+   
   </test> <!-- Automation -->
+  
+ 
 </suite> <!-- ProvidioTestcases -->
 

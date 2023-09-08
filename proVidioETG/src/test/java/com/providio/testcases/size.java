@@ -20,6 +20,16 @@ public class size extends baseClass{
 			allElements(driver);
 			Thread.sleep(2000);
 			
+			//to pick the store
+		 List  <WebElement> pickUpStore =driver.findElements(By.id("delivery-options-store"));
+		 if(pickUpStore.size()>0) {
+			 WebElement pickUpStoreenabled =driver.findElement(By.id("delivery-options-store"));
+			 if(pickUpStoreenabled.isEnabled()) {
+				 pickUpStoreenabled.click();
+				 test.info("Selected the pickUp in Store");
+			 }	 
+		 }
+			
 	     productDescriptionPage pdp = new productDescriptionPage(driver);
 	     WebElement cartEnabled =driver.findElement(By.xpath("//button[contains(@class,'add-to-cart')]"));
 	     List  <WebElement> inStock =driver.findElements(By.xpath("//div[contains(text(), 'In Stock')]"));
@@ -94,10 +104,10 @@ public class size extends baseClass{
 	     	     	 	
 	     List<WebElement> colorBox= driver.findElements(By.xpath("//button[contains(@class,'color-attribute')]"));
 	     
-	     List<WebElement> memoryBox = driver.findElements(By.xpath("//div[@class='select-memorySize size-change d-flex flex-wrap']"));
+	     List<WebElement> memoryBox = driver.findElements(By.xpath("//div[contains(@class, 'select-memorySize')]"));
 	     
-		 List<WebElement> widthBox = driver.findElements(By.xpath("//div[@class='select-width size-change d-flex flex-wrap']"));
-		 
+		 List<WebElement> widthBox = driver.findElements(By.xpath("//div[contains(@class, 'select-width')]"));
+		
 		 List<WebElement> showNameBox= driver.findElements(By.cssSelector(".showName"));
 		 
 		 List<WebElement> extendedWarranty = driver.findElements(By.className("options-select"));

@@ -409,7 +409,7 @@ public void clickOnProduct1() throws InterruptedException{
 				@FindBy(id ="memorySize-null" )
 				WebElement memorySize;
 				public void selecttheMemorySize(WebDriver driver) throws InterruptedException {
-					 List<WebElement> memoryBox = driver.findElements(By.xpath("//div[@class='select-memorySize size-change d-flex flex-wrap']"));
+					 List<WebElement> memoryBox = driver.findElements(By.xpath(" //div[contains(@class, 'select-memorySize')]"));
 					if(memoryBox.size()>0) {
 						// Find all memory size elements
 				        List<WebElement> memorySizeElements = driver.findElements(By.cssSelector(".select-memorySize .text-center"));
@@ -535,7 +535,7 @@ public void clickOnProduct1() throws InterruptedException{
 			}				 	
 				 	//select width
 				 	public void selectWidth(WebDriver driver) throws InterruptedException {
-				 		 List<WebElement> widthBox = driver.findElements(By.xpath("//div[@class='select-width size-change d-flex flex-wrap']"));
+				 		 List<WebElement> widthBox =  driver.findElements(By.xpath("//div[contains(@class, 'select-width')]"));
 				 		
 				 		if(widthBox.size()>0) {
 				 			

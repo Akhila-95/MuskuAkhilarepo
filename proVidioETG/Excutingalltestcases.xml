@@ -54,14 +54,30 @@
     </classes>
     -->
      <packages>
-          <package name="com.GuestUserWith_Checkout_Paypal" />  
+            <package name="com.GuestUserWith_Checkout_Paypal" />  
             <package name="com.GuestUserWith_CreditCard" /> 
             <package name="com.GuestUserWith_GcAndCC" />        
             <package name="com.GuestUserWith_Minicart_Paypal" /> 
-            <package name="com.GuestUserWith_ViewCart_Paypal" /> 
+            <package name="com.GuestUserWith_ViewCart_Paypal" />
+            <package name="com.GuestUserWith_GiftCard" />  
+            
           
-        </packages>
-    
+     </packages>
+     
+    <classes>
+    		<class name="com.providio.testcases.tc__LoginSc"/>
+    </classes>
   </test> <!-- Automation -->
+ 
+    <packages>
+     		<package name="com.RegUserWith_Checkout_Paypal" />  
+            <package name="com.RegUserWith_CreditCard" /> 
+            <package name="com.RegUserWith_GcAndCC" />        
+            <package name="com.RegUserWith_Minicart_Paypal" /> 
+            <package name="com.RegUserWith_ViewCart_Paypal" /> 
+            <package name="com.RegUserWith_GiftCard" /> 
+            
+    
+   </packages>
 </suite> <!-- ProvidioTestcases -->
 

@@ -34,7 +34,7 @@ public class tc__OrderByGc_RegUser extends baseClass {
 
 			   //gc payment 
 			     Gc__CC_Paypal gc = new Gc__CC_Paypal ();
-			     gc.paymentByGiftCard();
+			     gc.paymentByGiftCard();     
 			     
 		    }else {
 		    	 Assert.fail("User not logged in");
