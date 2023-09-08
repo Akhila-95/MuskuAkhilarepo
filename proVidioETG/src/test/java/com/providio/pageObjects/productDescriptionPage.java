@@ -348,7 +348,7 @@ public void clickOnProduct1() throws InterruptedException{
 				WebElement Size;
 				public void clickOnSize(WebDriver driver) throws InterruptedException {
 					//sizes in boxess
-					List<WebElement> sizeBox= driver.findElements(By.xpath("//div[@class='select-size size-change d-flex flex-wrap']"));
+					List<WebElement> sizeBox= driver.findElements(By.xpath("//div[contains(@class, 'select-size')]"));
 					List<WebElement> sizeDropDown= driver.findElements(By.xpath("//select[@class='custom-select form-control select-size']"));
 					if(sizeBox.size()>0) {
 						
@@ -671,6 +671,27 @@ public void clickOnProduct1() throws InterruptedException{
 				 	        }
 				 		}
 				 	}
+				 	
+				 public void selectExtendedWarranty	(WebDriver driver) {
+					 
+					 // Locate the dropdown element.
+				       List<WebElement> dropdownElement = driver.findElements(By.className("options-select"));
+				       if(!dropdownElement.isEmpty()) {
+					        WebElement dropdownElements = driver.findElement(By.className("options-select"));
+	
+					        // Create a Select object from the dropdown element.
+					        Select select = new Select(dropdownElements);
+	
+					        // Get all available options in the dropdown.
+					        List<WebElement> options = select.getOptions();
+	
+					        // Generate a random index within the range of available options.
+					        int randomIndex = new Random().nextInt(options.size());
+	
+					        // Select the option at the random index.
+					        select.selectByIndex(randomIndex);
+				       }
+				 }
 				 	
 				//Paypal buynow button
 				 	@FindBy(xpath = "//div[contains(@class,'salesforce-buynow-element ')]")

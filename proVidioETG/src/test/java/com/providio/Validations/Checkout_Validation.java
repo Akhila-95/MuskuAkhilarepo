@@ -134,7 +134,7 @@ public class Checkout_Validation extends baseClass {
     }
     
 	//validate the order number and date of order
-	public void ordernumberandOrderdat() {
+	public void ordernumberandOrderdat() throws InterruptedException {
 		
 	      List<WebElement> orderConfirmationPage = driver.findElements(By.xpath("//h2[@class ='order-thank-you-msg']"));
 				 if(orderConfirmationPage.size()>0) {
@@ -154,7 +154,7 @@ public class Checkout_Validation extends baseClass {
 				    WebElement paymentDetailsElement = driver.findElement(By.xpath("//div[@class='payment-details']"));
 			        String paymentDetails = paymentDetailsElement.getText();
 			        test.pass("Successfully Order is Placed and payment is "+ paymentDetails);
-        
+			        Thread.sleep(5000);
 				 }
 	}
 	

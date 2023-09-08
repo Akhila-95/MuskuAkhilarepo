@@ -1,10 +1,14 @@
 package com.providio.paymentProccess;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.providio.Validations.Checkout_Validation;
 import com.providio.pageObjects.paymentpPage;
@@ -56,9 +60,10 @@ public class tc__CreditCardPaymentProcess extends baseClass{
 			    System.out.println("Salesforce payment"+creditcardsSalesForce.size());
 			    
 			    //new payment
-				List<WebElement> newPayment = driver.findElements(By.cssSelector("li.nav-item[data-method-id=\"CREDIT_CARD\"]"));
+				List<WebElement> stripePayment = driver.findElements(By.cssSelector("li.nav-item[data-method-id='CREDIT_CARD']"));
+				//a[@class='nav-link credit-card-tab active']
 				    if(creditcardscheck.size()>0) {
-				    	
+				    	test.info("Brain tree payment activated");
 				    	List<WebElement> savedCardsBrainTree = driver.findElements(By.xpath("//option[@class ='js_stored_card']"));
 				    	System.out.println(savedCardsBrainTree.size());
 				    	if(savedCardsBrainTree.size()>0) {
@@ -80,14 +85,16 @@ public class tc__CreditCardPaymentProcess extends baseClass{
 				    	}
 				   	
 				    }else if(creditcardsSalesForce.size()>0) {
+				    	
 				    	//new card salesforce
+				    	test.info("Salesforce payment activated");
 				    	salesforcePaymentProcess();
 				    	
 				    	
 				    	
-				    }else if(newPayment.size()>0) {
+				    }else if(stripePayment.size()>0) {
 				    	test.info("Stripe payment activated");
-				    	newPayment();
+				    	stripePayment();
 				    	
 					    	
 				    	
@@ -95,7 +102,7 @@ public class tc__CreditCardPaymentProcess extends baseClass{
 			
 				    	List<WebElement> savedCardsCyberSourece = driver.findElements(By.xpath("//option[@class ='js_stored_card']"));
 				    	System.out.println("Cybersource paymnet"+savedCardsCyberSourece.size());
-				    	
+				    	test.info("Cyber source payment activated");
 				    	if(savedCardsCyberSourece.size()>0) {
 				    		//select one and send the cvv number of that card
 				    		logger.info("Saved cards are there for cyber source");
@@ -119,31 +126,29 @@ public class tc__CreditCardPaymentProcess extends baseClass{
 				    }else {	
 				    	
 				    	try {
-				    		//WebElement buttonElement = driver.findElement(By.xpath("//button[@class='btn btn-primary btn-block submit-payment' and @name='submit' and @value='submit-payment']"));
-
-				    	//List<WebElement> review1=  driver.findElements(By.xpath("//button[@value='submit-payment']"));
-				    		List<WebElement> review1=  driver.findElements(By.cssSelector("button.submit-payment"));
-				    	System.out.println("Review order button "+review1.size());
-				    	
-				    	WebElement review=  driver.findElement(By.cssSelector("button.submit-payment"));				    	
-				    	review.click();
-				    	//pp.clickonrevieworder(driver);
-						logger.info("clicked on the review oreder");
+				    		//revieworderpage
+					    Thread.sleep(2000);		
+			    		List<WebElement> reviewOrderList  = driver.findElements(By.xpath("//button[@class='btn btn-primary btn-block submit-payment'  and @value='submit-payment']"));
+			    		System.out.println("Review order button"+ reviewOrderList.size());
+				    		if(reviewOrderList.size()>0) {	
+				    			pp.clickonrevieworder(driver);
+						    	//js.executeScript("arguments[0].click();", element);							     //pp.clickonrevieworder(driver);
+								logger.info("clicked on the review oreder");
+				    		}
 				    	} catch(Exception e) {
 				    		System.out.println(e);
 				    	}
-						//revieworderpage
 						
+						//placeorder
 						reviewOrderPage rop = new reviewOrderPage(driver);
 						Thread.sleep(1000);
 						 if(driver.findElements(By.xpath("//button[contains(@class,'place-order')]")).size()!=0) {
 							rop.clickonplaceorderwithJsExuter(driver);
 							test.info("successfully click on the place order button");
-						 }
-						
+						 }						
 				    }
 				    
-				    Thread.sleep(10000);
+				    Thread.sleep(7000);
 					
 					Checkout_Validation checkout= new Checkout_Validation();
 		    		//validate the final place the order page
@@ -231,7 +236,7 @@ public class tc__CreditCardPaymentProcess extends baseClass{
 		
 	}
 
-	public void newPayment() {
+	public void stripePayment() {
 		paymentpPage pp = new paymentpPage(driver);
 		
 		pp.cardNum(driver);

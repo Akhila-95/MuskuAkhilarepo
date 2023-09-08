@@ -2,12 +2,13 @@ package com.providio.testcases;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.annotations.Test;
 
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productListingPage;
 
 public class tc__shippingAndBillingAddressDiffer_GuestUser extends baseClass{
-
+@Test
 	public void shippingAndBillingAddressDiffer() throws InterruptedException {
 		 
 		driver.get(baseURL);

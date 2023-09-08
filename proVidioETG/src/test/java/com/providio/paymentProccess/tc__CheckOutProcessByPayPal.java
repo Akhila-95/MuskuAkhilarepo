@@ -21,14 +21,14 @@ public class tc__CheckOutProcessByPayPal extends baseClass{
 	    public void checkoutprocessFromMiniCart() throws InterruptedException {
 
 
-			WebElement minicartcount = driver.findElement(By.xpath("//span[contains(@class,'minicart')]"));
+			WebElement minicartcount =  driver.findElement(By.cssSelector(".minicart-quantity"));
 		    String countOfMinicart = minicartcount.getText();
 		    int minicartCountValue = Integer.parseInt(countOfMinicart);
 	        if (minicartCountValue > 0) {
 
 	            miniCartPage mc = new miniCartPage(driver);
 	            
-	            	Thread.sleep(5000);
+	            	Thread.sleep(3000);
 	                mc.clickcartbuttonjs(driver);
 	                Thread.sleep(2000);
 	  
@@ -36,11 +36,13 @@ public class tc__CheckOutProcessByPayPal extends baseClass{
 	                checkout.validateMiniCartClick();
 	                       
 				//paypal checkout process
-
+	            Thread.sleep(2000);
 				List<WebElement> salesforceButton= driver.findElements(By.xpath("//div[contains(@class,'salesforce')]"));
 				List<WebElement> brainPayPalButton = driver.findElements(By.xpath("//div[contains(@class,'js_braintree_paypal_cart_button')]"));
 				if(salesforceButton.size()>0) {
 					logger.info("Salesforce paypal integration activated");
+					WebElement salesforceButton1= driver.findElement(By.xpath("//div[contains(@class,'salesforce')]"));
+					((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", salesforceButton1);
 					mc.clickSalesforcePaypalButton();	
 					paymentpPage pp =new paymentpPage(driver);
 					Thread.sleep(3000);
@@ -52,6 +54,8 @@ public class tc__CheckOutProcessByPayPal extends baseClass{
 					
 				}else if( brainPayPalButton.size()>0){
 					logger.info("Brain tree activated");
+					WebElement brainPayPalButton1 = driver.findElement(By.xpath("//div[contains(@class,'js_braintree_paypal_cart_button')]"));
+					((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",  brainPayPalButton1);
 					mc.clickBrainTreePaypalButton();
 					logger.info("Clicked on  brain tree paypal button");
 					paymentpPage pp =new paymentpPage(driver);
@@ -60,16 +64,18 @@ public class tc__CheckOutProcessByPayPal extends baseClass{
 					pp.paypalPopup(driver);
 					logger.info("Entered into paypal window and entered the paypal details");
 				}else {
-					test.info("Cybersouce payment integration is activated so, No paypal for cybersouce");
-	            	test.pass("No paypal integration for cybersource, choose another integration to do the payment with payment");
+					test.info("Cybersouce payment OR stripe payment integration  is activated so, No paypal for cybersouce and stripe");
+	            	test.pass("No paypal integration for cybersource and stripe , choose another integration to do the payment with payment");
 				}
 				       //review order page
 					        reviewOrderPage rop = new reviewOrderPage(driver);
-							Thread.sleep(10000);
-						
-							rop.clickonplaceorderwithJsExuter(driver);
-							logger.info("successfully click on the place order button");
-							Thread.sleep(10000);
+							Thread.sleep(3000);
+
+							 if(driver.findElements(By.xpath("//button[contains(@class,'place-order')]")).size()!=0) {
+								rop.clickonplaceorderwithJsExuter(driver);
+								test.info("successfully click on the place order button");
+							 }
+							 Thread.sleep(8000);
 				    		System.out.println(driver.getTitle());
 						
 				    		 //Checkout_Validation checkout= new Checkout_Validation();
@@ -81,6 +87,7 @@ public class tc__CheckOutProcessByPayPal extends baseClass{
 				    		
 				    	     //ordernumberandOrderdate
 				    			 checkout.ordernumberandOrderdat();
+				    			 Thread.sleep(5000);
 				    			}
 	        }
 	 }
@@ -89,7 +96,7 @@ public class tc__CheckOutProcessByPayPal extends baseClass{
 	    
 	 		public void checkoutprocessFromViewCart() throws InterruptedException {
 
-	 			WebElement minicartcount = driver.findElement(By.xpath("//span[contains(@class,'minicart')]"));
+	 			WebElement minicartcount = driver.findElement(By.cssSelector(".minicart-quantity"));
 	 		    String countOfMinicart = minicartcount.getText();
 	 		    int minicartCountValue = Integer.parseInt(countOfMinicart);
 	 			//count of items in minicart 
@@ -114,6 +121,7 @@ public class tc__CheckOutProcessByPayPal extends baseClass{
 				            
 				            viewCartPage vcp = new viewCartPage(driver);
 			            
+				            Thread.sleep(2000);
 			            List<WebElement> brainPayPalButton = driver.findElements(By.xpath("//div[contains(@class,'js_braintree_paypal_cart_button')]"));
 			            List<WebElement> salesforcePayPalButton = driver.findElements(By.xpath("(//div[contains(@class, 'salesforce-paymentrequest-element')])[1]"));
 			            
@@ -125,29 +133,29 @@ public class tc__CheckOutProcessByPayPal extends baseClass{
 				            	vcp.salesforcePayPalButton(driver);
 				            	
 				            }else {
-				            	test.info("Cybersouce payment integration is activated so, No paypal for cybersouce");
-				            	test.pass("No paypal integration for cybersource, choose another integration to do the payment with payment");
+				            	test.info("Cybersouce payment OR stripe payment integration  is activated so, No paypal for cybersouce and stripe");
+				            	test.pass("No paypal integration for cybersource and stripe , choose another integration to do the payment with payment");
 				            }
 					        	paymentpPage pp =new paymentpPage(driver);
 					        	Thread.sleep(2000);
 					        	//validate paypal window
 					        	// checkout.validatePaypalClick();
 								pp.paypalPopup(driver);
-								test.info("Entered into paypal window and entered the paypal details");
-								reviewOrderPage rop = new reviewOrderPage(driver);
+								//test.info("Entered into paypal window and entered the paypal details");
+								reviewOrderPage rop = new reviewOrderPage(driver);							
 								Thread.sleep(3000);
-								rop.clickonplaceorderwithJsExuter(driver);
-								//test.info("successfully click on the place order button");
-									Thread.sleep(10000);
-					    		
-								if(driver.getTitle().endsWith("Order Confirmation | Providio")) {
-									
+								 if(driver.findElements(By.xpath("//button[contains(@class,'place-order')]")).size()!=0) {
+									rop.clickonplaceorderwithJsExuter(driver);
+									test.info("successfully click on the place order button");
+								 }
+					    		Thread.sleep(10000);
+								if(driver.getTitle().endsWith("Order Confirmation | Providio")) {								
 									 Checkout_Validation checkout= new Checkout_Validation();
 								 //validate the final place the order page
-									 checkout.validatePlacetheOrderPage();
-								
+									 checkout.validatePlacetheOrderPage();							
 							     //ordernumberandOrderdate
 									 checkout.ordernumberandOrderdat();
+									 Thread.sleep(3000);
 									}
 	 		   }
 		 		   
@@ -156,71 +164,77 @@ public class tc__CheckOutProcessByPayPal extends baseClass{
 	        
 	    public void checkoutprocessFromCheckout() throws InterruptedException {
 
-				//List<WebElement> brainPaypalAcc = driver.findElements(By.xpath("//option[@id ='braintreePaypalAccount']"));		    	
-		    	//System.out.println(brainPaypalAcc.size());
-	    	 
-	    	 	List<WebElement> brainPaypalAcc = driver.findElements(By.cssSelector("img[title='PayPal Credit']"));
-		    	List<WebElement> parentDivOfPaypal= driver.findElements(By.xpath("//div[@aria-label='PayPal Checkout']"));
-		    	List<WebElement> salesforcePaypal= driver.findElements(By.xpath("(//div[contains(@class, 'salesforce-paymentrequest-element')])[1]"));
-		    	JavascriptExecutor js = (JavascriptExecutor) driver;	    		  
-	    		js.executeScript("window.scrollBy(0,300)", "");
-
-	    	if(brainPaypalAcc.size()>0) {	    		
-	    		test.info("Brain tree payment integration is activated");
-	    		paymentpPage pp =new paymentpPage(driver);	   
-	    		Thread.sleep(2000);
-	    		pp.braintreePaypal(driver);
-	    		Thread.sleep(2000);
-	    		WebElement reviewOrderButton= driver.findElement(By.xpath("//button[contains(@class,'submit-payment')]"));
-	    		if (reviewOrderButton.isDisplayed()) {
-	    			WebElement reviewOrderButton1= driver.findElement(By.xpath("//button[contains(@class,'submit-payment')]"));	
-					js.executeScript("arguments[0].click();", reviewOrderButton1);
-         
-				}else  {
-					pp.brainTreeAfterClick(driver);
-					logger.info("A click to Enter into paypal");				
+	    	List<WebElement> billingAddress= driver.findElements(By.xpath("//label[contains(text(),'Billing Address')]"));
+		    	  if(billingAddress.size()>0) {
+					//List<WebElement> brainPaypalAcc = driver.findElements(By.xpath("//option[@id ='braintreePaypalAccount']"));		    	
+			    	//System.out.println(brainPaypalAcc.size());
+		    	 
+		    	 	List<WebElement> brainPaypalAcc = driver.findElements(By.cssSelector("img[title='PayPal Credit']"));
+			    	List<WebElement> parentDivOfPaypal= driver.findElements(By.xpath("//div[@aria-label='PayPal Checkout']"));
+			    	List<WebElement> salesforcePaypal= driver.findElements(By.xpath("(//div[contains(@class, 'salesforce-paymentrequest-element')])[1]"));
+			    	JavascriptExecutor js = (JavascriptExecutor) driver;	    		  
+		    		js.executeScript("window.scrollBy(0,500)", "");
+	
+		    	 if(brainPaypalAcc.size()>0) {	    		
+		    		test.info("Brain tree payment integration is activated");
+		    		WebElement brainPaypalAcc1 = driver.findElement(By.cssSelector("img[title='PayPal Credit']"));
+		    		//((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",brainPaypalAcc1);
+		    		paymentpPage pp =new paymentpPage(driver);	   
+		    		Thread.sleep(2000);
+		    		pp.braintreePaypal(driver);
+		    		Thread.sleep(2000);
+		    		WebElement reviewOrderButton= driver.findElement(By.xpath("//button[contains(@class,'submit-payment')]"));
+		    		if (reviewOrderButton.isDisplayed()) {
+		    			WebElement reviewOrderButton1= driver.findElement(By.xpath("//button[contains(@class,'submit-payment')]"));	
+						js.executeScript("arguments[0].click();", reviewOrderButton1);         
+					}else  {
+						pp.brainTreeAfterClick(driver);
+						logger.info("A click to Enter into paypal");				
+				    	pp.paypalPopup(driver);
+				    	logger.info("Clicked on paypal button");
+	
+				    	// review order page
+				    		reviewOrderPage rop = new reviewOrderPage(driver);
+				    		Thread.sleep(4000);			    		
+				    		
+				    		//List<WebElement> reviewOrderList= driver.findElements(By.xpath("//button[contains(text(), 'Next: Review Order')]"));
+				    		WebElement reviewOrder= driver.findElement(By.xpath("//button[contains(text(), 'Next: Review Order')]"));	
+				    		
+				    		if(reviewOrder.isDisplayed()) {
+					    		rop.clickonReviewOrder(driver);
+					    		logger.info("Clicked on review order button");
+					    		Thread.sleep(2000);
+				    		}
+				    		//placeorder
+				    		WebElement placeOrder= driver.findElement(By.cssSelector("button.place-order"));	
+				    		List<WebElement> placeOrderList= driver.findElements(By.cssSelector("button.place-order"));
+				    		if (placeOrder.isDisplayed()) { 
+				    			 js.executeScript("window.scrollBy(0,350)", "");
+				    			 Thread.sleep(3000);
+				    			 WebElement placeOrderButton= driver.findElement(By.cssSelector("button.place-order"));		    		
+				    				
+				    			 js.executeScript("arguments[0].click();", placeOrderButton);
+				    			 Thread.sleep(5000);
+					    		 logger.info("successfully click on the place order button by normal click");
+					    		
+					    		}					
+					}
+		    	}else if(salesforcePaypal.size()>0) {	 
+		    	
+		    		test.info("salesoforce payment integration is activated");
+		    		WebElement salesforcePaypal1= driver.findElement(By.xpath("(//div[contains(@class, 'salesforce-paymentrequest-element')])[1]"));
+		    		//((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", salesforcePaypal1);
+				    paymentpPage pp = new paymentpPage(driver);		   	         
+				    pp.salesforcePaypalCheckout(driver);	
+				    logger.info("Clicked on paypal button after clicking on paypal icon");
+				    Thread.sleep(2000);
 			    	pp.paypalPopup(driver);
 			    	logger.info("Clicked on paypal button");
-
-			    	// review order page
-			    		reviewOrderPage rop = new reviewOrderPage(driver);
-			    		Thread.sleep(4000);			    		
-			    		
-			    		//List<WebElement> reviewOrderList= driver.findElements(By.xpath("//button[contains(text(), 'Next: Review Order')]"));
-			    		WebElement reviewOrder= driver.findElement(By.xpath("//button[contains(text(), 'Next: Review Order')]"));	
-			    		
-			    		if(reviewOrder.isDisplayed()) {
-				    		rop.clickonReviewOrder(driver);
-				    		logger.info("Clicked on review order button");
-				    		Thread.sleep(2000);
-			    		}
-			    		//placeorder
-			    		WebElement placeOrder= driver.findElement(By.cssSelector("button.place-order"));	
-			    		List<WebElement> placeOrderList= driver.findElements(By.cssSelector("button.place-order"));
-			    		if (placeOrder.isDisplayed()) { 
-			    			 js.executeScript("window.scrollBy(0,350)", "");
-			    			 Thread.sleep(3000);
-			    			 WebElement placeOrderButton= driver.findElement(By.cssSelector("button.place-order"));		    		
-			    				
-			    			 js.executeScript("arguments[0].click();", placeOrderButton);
-			    			 Thread.sleep(5000);
-				    		 logger.info("successfully click on the place order button by normal click");
-				    		
-				    		}					
-				}
-	    	}else if( salesforcePaypal.size()>0) {	 
-	    	
-	    		test.info("salesoforce payment integration is activated");
-			    paymentpPage pp = new paymentpPage(driver);		   	         
-			    pp.salesforcePaypalCheckout(driver);	
-			    logger.info("Clicked on paypal button after clicking on paypal icon");
-			    Thread.sleep(2000);
-		    	pp.paypalPopup(driver);
-		    	logger.info("Clicked on paypal button");
-	    	}else {
-	    		test.info("Cybersouce payment integration is activated so, No paypal for cybersouce");
-            	test.pass("No paypal integration for cybersource, choose another integration to do the payment with salesforce");
-	    	}
+		    	}else {
+		    		test.info("Cybersouce payment OR stripe payment integration  is activated so, No paypal for cybersouce and stripe");
+	            	test.pass("No paypal integration for cybersource and stripe , choose another integration to do the payment with payment");
+		    	}
+	    	  }
 	    		Thread.sleep(10000);
 	    		if(driver.getTitle().endsWith("Order Confirmation | Providio")) {
 	    			
@@ -230,6 +244,7 @@ public class tc__CheckOutProcessByPayPal extends baseClass{
 	    		
 	    	     //ordernumberandOrderdate
 	    			 checkout.ordernumberandOrderdat();
+	    			 Thread.sleep(3000);
 	    			}
 	    }
 	    
@@ -241,10 +256,15 @@ public class tc__CheckOutProcessByPayPal extends baseClass{
 	 				pp.paypalPopup(driver);
 	 				
 	 				reviewOrderPage rop = new reviewOrderPage(driver);
-					Thread.sleep(10000);
-					rop.clickonplaceorderwithJsExuter(driver);
-					test.info("successfully click on the place order button");
-					Thread.sleep(5000);
+					Thread.sleep(2000);
+					
+					WebElement placeOrder= driver.findElement(By.cssSelector("button.place-order"));	
+		    		//List<WebElement> placeOrderList= driver.findElements(By.cssSelector("button.place-order"));
+			    		if (placeOrder.isDisplayed()) { 
+						rop.clickonplaceorderwithJsExuter(driver);
+						test.info("successfully click on the place order button");
+						Thread.sleep(8000);
+		    		}
 		    		
 					if(driver.getTitle().endsWith("Order Confirmation | Providio")) {
 						
@@ -260,6 +280,9 @@ public class tc__CheckOutProcessByPayPal extends baseClass{
 	    
 	    public void paypalFromLoginPage() throws InterruptedException {
 	    	
+		    	List<WebElement> paypalList= driver.findElements(By.xpath("(//div[contains(@class,'paypal-buttons-layout-horizontal')])[1]"));
+		    	if(paypalList.size()>0) {	
+		    		test.info("Paypal in login page");
 		    		WebElement paypal= driver.findElement(By.xpath("(//div[contains(@class,'paypal-buttons-layout-horizontal')])[1]"));
 		    		paypal.click();
 		    		Thread.sleep(4000);
@@ -272,13 +295,15 @@ public class tc__CheckOutProcessByPayPal extends baseClass{
 		            cop.selectShippingAddress(cp);
 		            cop.selectPaymentMethod(cp);
 		            
-		        	reviewOrderPage rop = new reviewOrderPage(driver);
-					Thread.sleep(10000);
-					rop.clickonplaceorderwithJsExuter(driver);
-					logger.info("successfully click on the place order button");
-					Thread.sleep(5000);
-		    		
-		    		
+		            WebElement placeOrder= driver.findElement(By.cssSelector("button.place-order"));	
+		    		//List<WebElement> placeOrderList= driver.findElements(By.cssSelector("button.place-order"));
+		    		if (placeOrder.isDisplayed()) { 
+			            reviewOrderPage rop = new reviewOrderPage(driver);
+						Thread.sleep(2000);
+						rop.clickonplaceorderwithJsExuter(driver);
+						logger.info("successfully click on the place order button");
+						Thread.sleep(5000);
+		    		}		    				    		
 					if(driver.getTitle().endsWith("Order Confirmation | Providio")) {
 						
 						 Checkout_Validation checkout= new Checkout_Validation();
@@ -288,7 +313,10 @@ public class tc__CheckOutProcessByPayPal extends baseClass{
 				     //ordernumberandOrderdate
 						 checkout.ordernumberandOrderdat();
 						}
-			           
+		    	}else {
+		    		test.info("No paypal button in login page");
+		    		
+		    	}
 	 			  
 	    }
 

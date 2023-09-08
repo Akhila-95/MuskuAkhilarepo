@@ -48,6 +48,8 @@ public class tc__LoginSc extends baseClass {
 		WebElement loginTitle = driver.findElement(By.xpath("//h1[@class='account-page-title']"));
 		String expectedTitle = "Dashboard";
 		String actualTitle = loginTitle.getText();
+		
+		//String actualTitle = "daha";
 
         
         if (actualTitle.equals(expectedTitle)) {
@@ -55,6 +57,12 @@ public class tc__LoginSc extends baseClass {
             logger.info("User logged in successfully");
             isLoggedIn = true;
         } else {
+        	
+        	WebElement continueShoping = driver.findElement(By.xpath("//a[contains(text(), 'Continue Shopping')]"));
+        	Thread.sleep(2000);
+        	continueShoping.click();
+        	Thread.sleep(4000);
+        	isLoggedIn = true;
         	test.fail("The page Title does not match expected " + expectedTitle + " but found " + actualTitle);
             logger.info("Click failed");
             

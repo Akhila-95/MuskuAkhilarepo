@@ -35,6 +35,7 @@ WebDriver lDriver;
 	    	try {
 	    	//((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", placetheorderwithJsExuter);
 	    	Thread.sleep(4000);
+	
 	    	JavascriptExecutor js = (JavascriptExecutor) driver;     
 	    	placetheorderwithJsExuter.click();
 	    

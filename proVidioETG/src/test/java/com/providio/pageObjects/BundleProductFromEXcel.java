@@ -126,6 +126,7 @@ import com.providio.testcases.baseClass;
 								//product add to cart 
 								 bundleProductAddAllToCart addToCart= new bundleProductAddAllToCart();
 								 addToCart.addAllToCart(driver);
+								 test.info("Bundle product added to cart");
 							}
 							else {
 								test.fail("Searched product and the product after search are not matching");

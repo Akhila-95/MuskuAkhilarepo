@@ -275,6 +275,7 @@ WebDriver lDriver;
 			WebElement entercname;
 		    public void setcardholdername(WebDriver driver) throws InterruptedException {	    	
 		    	driver.switchTo().frame("braintree-hosted-field-cardholderName");
+		    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", entercname);
 		    	entercname.sendKeys("Test123");
 		    	driver.switchTo().defaultContent();
 		    }
@@ -283,6 +284,7 @@ WebDriver lDriver;
 			WebElement entercnumber;
 		    public void setcardnumber(WebDriver driver) throws InterruptedException {	    	
 		    	driver.switchTo().frame("braintree-hosted-field-number");
+		    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", entercnumber);
 		    	entercnumber.sendKeys("4111 1111 1111 1111");
 		    	driver.switchTo().defaultContent();
 		    }
@@ -291,6 +293,7 @@ WebDriver lDriver;
 			WebElement entercvv;
 		    public void setcardcvv(WebDriver driver) throws InterruptedException {	    	
 		    	driver.switchTo().frame("braintree-hosted-field-cvv");
+		    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",  entercvv);
 		    	entercvv.sendKeys("789");
 		    	driver.switchTo().defaultContent();
 		    }
@@ -299,6 +302,7 @@ WebDriver lDriver;
 			WebElement enterexp;
 		    public void setcardexp(WebDriver driver) throws InterruptedException {	    	
 		    	driver.switchTo().frame("braintree-hosted-field-expirationDate");
+		    	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",enterexp);
 		    	enterexp.sendKeys("1230");
 		    	driver.switchTo().defaultContent();
 		    }
@@ -443,7 +447,7 @@ WebDriver lDriver;
 */
             //braintreee paypal
             public void braintreePaypal(WebDriver driver) throws InterruptedException {
-                Thread.sleep(3000);
+                //Thread.sleep(3000);
 
                 // Create an instance of Actions class
                 JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -451,7 +455,7 @@ WebDriver lDriver;
                               
                 js.executeScript("arguments[0].click();", paypal);
                 //paypal.click();
-                Thread.sleep(2000);
+               // Thread.sleep(2000);
             }
             public void brainTreeAfterClick(WebDriver driver) throws InterruptedException {
                  WebElement parentDiv= driver.findElement(By.xpath("//div[@class='tab-pane paypal-content js_braintree_paypalContent active']"));
@@ -469,6 +473,7 @@ WebDriver lDriver;
                 	 js.executeScript("arguments[0].click();", paypalCheckout);                	
                      Thread.sleep(3000);
                      if(!regPaypalCheckout.isDisplayed()) {
+                    	 //((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",  paypalCheckout);
                     	 paypalCheckout.click();
                      }
                  }
@@ -526,6 +531,9 @@ WebDriver lDriver;
 
             @FindBy(xpath = "(//div[@class='FundingInstrument_item_3lQ2z'])[3]")
             WebElement cardParentDiv;
+            
+            @FindBy(xpath = "changeShippingAddress")
+            List<WebElement> changeTheAddressList;
 
             @FindBy(xpath = "//div[contains(@class,'CheckoutButton')]")
             List<WebElement> reviewOrderButton;
@@ -544,8 +552,9 @@ WebDriver lDriver;
                         break;
                     }
                 }
-		
-                 Thread.sleep(4000);
+                 test.info("Entered into paypal window");
+                
+                 Thread.sleep(3000);
                  if(emailLogin.size()>0) {
                 	
                 	 WebElement  emailLogin1=driver.findElement(By.xpath("//input[@name='login_email']")); 
@@ -557,19 +566,19 @@ WebDriver lDriver;
                  if(nextButton.size()>0) {
                 	 WebElement nextButton1=driver.findElement(By.cssSelector("#btnNext"));
 	                 nextButton1.click();
-	                 Thread.sleep(4000);
+	                 Thread.sleep(1000);
                  }
                  if(password.size()>0) {
                 	 WebElement password1=driver.findElement(By.xpath("//input[@id='password']"));
-                	 password1.clear();
+                	// password1.clear();
 	                 password1.sendKeys("Etgsfcc245@");
 	                 test.info("Entered password");
-	                 Thread.sleep(3000);
+	                 Thread.sleep(1000);
                  }
                  if(loginbutton.size()>0) {
                 	 WebElement loginbutton1=driver.findElement(By.xpath("//button[contains(text(), 'Log In')]"));
 	                 loginbutton1.click();
-	                 Thread.sleep(2000);
+	                 Thread.sleep(1000);
                  }
                  /*
                  WebElement visaCard=cardParentDiv.findElement(By.xpath("(//input[@class='ppvx_radio__input___2-11-1'])[3]"));
@@ -579,6 +588,24 @@ WebDriver lDriver;
                  js.executeScript("arguments[0].click();", visaCard);
                  */
                  Thread.sleep(2000);
+                 /*
+                 if(changeTheAddressList.size()>0) {
+                	 WebElement changeTheAddress=driver.findElement(By.xpath("//button[@id='changeShippingAddress']"));
+                	 changeTheAddress.click();
+                	 
+                	// Find all the address list items
+                     List<WebElement> addressListItems = driver.findElements(By.cssSelector(".SelectShippingSidebar__sidebarListItem--7i3hP"));
+                     System.out.println("Total number of address in paypal "+ addressListItems);
+                     if(addressListItems.size()>0) {
+	                     // Generate a random index to select an address randomly
+	                     Random random = new Random();
+	                     int randomIndex = random.nextInt(addressListItems.size());
+	
+	                     // Click on the randomly selected address
+	                     WebElement randomAddressButton = addressListItems.get(randomIndex).findElement(By.tagName("button"));
+	                     randomAddressButton.click();
+                     }
+                 }*/
                  
                  if(reviewOrderButton.size()>0) {
                 	WebElement reviewOrder=driver.findElement(By.cssSelector("#payment-submit-btn"));
@@ -598,9 +625,9 @@ WebDriver lDriver;
                 		 saveAndContinue1.click();
                 	 }
                  }                 
-                 Thread.sleep(5000);
+                 Thread.sleep(3000);
                  driver.switchTo().window(mainWindowHandle);
-                 Thread.sleep(2000);
+                 Thread.sleep(1000);
               }
             
             //salesfoce creditcard
@@ -671,13 +698,14 @@ WebDriver lDriver;
 		    	
 		    	//WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		        //wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.cssSelector("iframe[title='Secure card payment input frame']")));
-		    	newCardNumber.sendKeys("556");
+		    	newCardNumber.sendKeys("987");
 		    }
 
 		    @FindBy(name="postal")
 		    WebElement postalCode;
 		    public void postalCode() {
 		    	newCardNumber.sendKeys("765439877");
+		    	driver.switchTo().defaultContent();
 		    }
 		    
 		    

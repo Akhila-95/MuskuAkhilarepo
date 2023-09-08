@@ -93,7 +93,7 @@ public class GiftCertificate {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
         js.executeScript("arguments[0].click();", 	giftCardElement);
         //amount
-    	Thread.sleep(3000);
+    	//Thread.sleep(1000);
     	amount.click();
     	//dropdown
         List<WebElement> dropdown= amountDropdown.findElements(By.tagName("li"));
@@ -101,28 +101,28 @@ public class GiftCertificate {
         dropdown.get(randomIndex).click();
         System.out.println("Selected from dropdown");
         
-        Thread.sleep(3000);
+        //Thread.sleep(1000);
         // friendsname
         String fakeName1 = faker.name().fullName();
         friendsNameElement.sendKeys(fakeName1);
 
-        Thread.sleep(3000);
+        //Thread.sleep(1000);
         //yours name
         String yoursFakeName = faker.name().fullName();
         fromName.sendKeys(yoursFakeName);
         
-        Thread.sleep(3000);
+       // Thread.sleep(1000);
         //friends mail
         String fakeEmail = faker.internet().emailAddress();
         friendsMail.sendKeys(fakeEmail);
 
-        Thread.sleep(3000);
+       // Thread.sleep(1000);
         confirmFriendsMail.sendKeys(fakeEmail);
 	
 
         addToCart.click();
-		
-		
+        Thread.sleep(3000);
+	
 	}
 	
 	public void giftCertificatePage(WebDriver driver) throws InterruptedException {

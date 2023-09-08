@@ -2,6 +2,7 @@ package com.providio.paymentProccess;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -22,6 +23,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.providio.Validations.Checkout_Validation;
 import com.providio.pageObjects.paymentpPage;
@@ -59,7 +61,7 @@ public class tc__PaymentProccessByGC extends baseClass{
 	public void performRandomOperations(WebDriver driver) throws InterruptedException {
 		//driver.get(baseURL);
 		//logger.info("enterd into url");
-		String filePath = "C:\\Users\\user\\eclipse-workspace\\Providio_25th\\AutomationsScripts-Etg-by-upendra-main\\proVidioETG_25th\\testDate\\GiftCertificateCodes.xlsx";
+		String filePath = "C:\\Users\\user\\git\\MuskuAkhilaRepo16\\proVidioETG\\testDate\\GiftCertificateCodesForGc.xlsx";
 		String sheetName = "GC_Codes";
 
 		try {
@@ -212,7 +214,7 @@ public class tc__PaymentProccessByGC extends baseClass{
 	// to pick the GC code sequentially
 	
 	public void performSequentialOperations(WebDriver driver) throws InterruptedException {
-	    String filePath = "C:\\Users\\user\\git\\MuskuAkhilaRepo16\\proVidioETG\\testDate\\GiftCertificateCodes.xlsx";
+	    String filePath = "C:\\Users\\user\\git\\MuskuAkhilaRepo16\\proVidioETG\\testDate\\GiftCertificateCodesForGc.xlsx";
 	    String sheetName = "GC_Codes";
 
 	    try {
@@ -321,7 +323,8 @@ public class tc__PaymentProccessByGC extends baseClass{
 	    
 	 //revieworder button  
 	    Thread.sleep(4000);
-	    if (driver.findElements(By.xpath("//div[contains(text(),'Your order has no balance, so no payment method is necessary to complete this order')]")).size() != 0) {
+	   List<WebElement> paidGc= driver.findElements(By.xpath("//div[contains(text(),'Your order has been paid using gift certificates.')]"));
+	    if (paidGc.size()>0) {
 			 //revieworder button  
 		    paymentpPage pp = new paymentpPage(driver);
 		    pp.clickonrevieworder(driver);
@@ -329,11 +332,13 @@ public class tc__PaymentProccessByGC extends baseClass{
 			
 		  //review order page
 	        reviewOrderPage rop = new reviewOrderPage(driver);
-			Thread.sleep(10000);
+	        
+			Thread.sleep(2000);
+	       
 		
 			rop.clickonplaceorderwithJsExuter(driver);
 			logger.info("successfully click on the place order button");
-			Thread.sleep(10000);
+			Thread.sleep(5000);
 			logger.info(driver.getTitle());
 		
 			 Checkout_Validation checkout= new Checkout_Validation();
@@ -346,22 +351,24 @@ public class tc__PaymentProccessByGC extends baseClass{
 		   test.pass("No sufficient balance in Gift certificate");
 	   }
 	}
-	
+/*	
 	//TO PLACE THE ORDER BY GC AND CC
 		public void paymentBySemiGC () throws InterruptedException {
-			double halfPrice1=0;
+			
+			double halfPrice=0;
             List<WebElement> gcText= driver.findElements(By.xpath("//div[@class='success giftcert-pi']"));
             int sizeOfGc = gcText.size();
-            WebElement totalSum= driver.findElement(By.xpath("//span[@class='grand-total-sum']"));
-            String text = totalSum.getText();
-            double  totalPrice = Double.parseDouble(text.replace("$", ""));     
+            //get the total price and removed the dallar and commas
+            WebElement totalPrice= driver.findElement(By.xpath("//span[@class='grand-total-sum']"));
+            String totalPriceText = totalPrice.getText().replace("$", "").replace(",", ""); // Remove "$" and commas
+            double totalPricAmount = Double.parseDouble(totalPriceText);
             
-         // Calculate half of the total price
-            System.out.println("Total price is " + totalPrice);
-            for(int i=1;i<=1;i++) {
-                halfPrice1 = totalPrice / 2;
-                 System.out.println("The half price is " +halfPrice1);
-            }
+            System.out.println("Total price is " + totalPricAmount);
+            // Calculate half of the total price
+            
+            halfPrice = totalPricAmount  / 2;
+            System.out.println("The half price is " +halfPrice);
+           
 			String filePath = "C:\\Users\\user\\git\\MuskuAkhilaRepo16\\proVidioETG\\testDate\\GiftCertificateCodes.xlsx";
 		    String sheetName = "GC_Codes";
 
@@ -445,28 +452,36 @@ public class tc__PaymentProccessByGC extends baseClass{
 				                    giftCertificate.clear();
 				                }
 		
-				          
-			               // if(sizeOfGc>0) {
 				                
-			                //price after code redeemtion
-				                WebElement halfTotal= driver.findElement(By.xpath("//span[@class='gift-certificate-total']"));
-				                String text1 = halfTotal.getText();
-				                double halfTotal1 = Double.parseDouble(text1.replace("$", ""));     
-				                System.out.println("Price after redeemtion "+halfTotal1);
-	
-				           
-				                if(halfPrice1==halfTotal1) {
-				                    logger.info("Gift certificate codes are applied");
-				                    test.info("Gift certificate codes are applied");
-				                   // giftCertificate.clear();
+				             // Check if a gift certificate can be applied
+				                WebElement giftCertificateBalance = driver.findElement(By.xpath("//span[@class='gift-certificate-total']"));
+				                String giftCertificateBalanceText = giftCertificateBalance.getText().replace("$", "").replace(",", ""); // Remove "$" and commas
+				                double giftCertificateBalanceAmount = Double.parseDouble(giftCertificateBalanceText);
+				                System.out.println("Gift certificate amount is "+giftCertificateBalanceAmount);
+
+				                if (giftCertificateBalanceAmount >= halfPrice) {
+				                    // Apply gift certificate for half of the total price
+				                    giftCertificateBalanceAmount -= halfPrice;
+				                    System.out.println("Gift certificate applied for $" + halfPrice);
+
+				                    // Calculate remaining payment (credit card)
+				                    double remainingPayment = halfPrice;
+				                    System.out.println("Remaining payment with credit card: $" + remainingPayment);
 				                    break;
+				                    
 				                } else {
-				                    iterator.remove(); // Safely remove the element from the list
-				                    logger.info("After applying GC we have this in datalist: " + dataList);
-				                    Thread.sleep(5000);
-				                    operations++;				                    
-			                  }
-			              //  }
+				                	 iterator.remove(); // Safely remove the element from the list
+					                    logger.info("After applying GC we have this in datalist: " + dataList);
+					                    Thread.sleep(5000);
+					                    operations++;
+				                }
+				                 /*   // Apply gift certificate for the available balance
+				                    System.out.println("Gift certificate applied for $" + giftCertificateBalanceAmount);
+
+				                    // Calculate remaining payment (credit card)
+				                    double remainingPayment = halfPrice - giftCertificateBalanceAmount;
+				                    System.out.println("Remaining payment with credit card: $" + remainingPayment);
+			               
 	           
 		                }else {
 		                	test.fail("Apply button is not  selected");
@@ -484,6 +499,6 @@ public class tc__PaymentProccessByGC extends baseClass{
 		    } catch (IOException e) {
 		        e.printStackTrace();
 		    }
-		}
+		}*/
 
 }

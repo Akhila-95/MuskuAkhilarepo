@@ -5,11 +5,13 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.mail.EmailException;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.NoSuchWindowException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -128,7 +130,7 @@ public class baseClass {
 		if (!isBrowserRunning()) {
 			
 			logger.info("Relauching the browsesr");
-			testsuitRunner();    
+			//testsuitRunner();    
         }
 
 		
@@ -208,9 +210,15 @@ public class baseClass {
 	    *  driver:- by creating this instance we creating connection with specific browser
 	    */
 	   private void initializeDriver() {
+		   
 	        WebDriverManager.chromedriver().setup();
 	        driver = new ChromeDriver();
 	        driver.manage().window().maximize();
+
+	        // Clear all cookies
+	      //  driver.manage().deleteAllCookies();
+	        //to delete the cookies before starting the suite
+	       
 	    }
 		
 	   
@@ -218,6 +226,9 @@ public class baseClass {
 	   private boolean isBrowserRunning() {
 		   try {
 		        driver.getTitle();
+
+		        // Clear all cookies
+		       // driver.manage().deleteAllCookies();
 		        return true;
 		    } catch (NoSuchWindowException e) {
 		        return false;

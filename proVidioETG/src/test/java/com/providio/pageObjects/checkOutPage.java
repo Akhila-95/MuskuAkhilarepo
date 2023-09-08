@@ -7,6 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import com.github.javafaker.Faker;
+
 public class checkOutPage {
 WebDriver lDriver;
 	
@@ -106,8 +108,39 @@ WebDriver lDriver;
 	//Phone
 	@FindBy(css="#shippingPhoneNumberdefault")
 	WebElement Phone;
-	public void setPhone(String phonenumber ){		
+	public void setPhone(String phonenumber ) throws InterruptedException{		
+		 Thread.sleep(1000);
 		 Phone.sendKeys("9876543212");
+	}
+	
+	Faker faker =new Faker();
+	//billing address when we add GC to cart
+	@FindBy(id="billingFirstName")
+	WebElement billingFName;
+	
+	public void setBillingFName() {
+	   String yoursFakeName = faker.name().firstName();
+	   billingFName.sendKeys(yoursFakeName);
+	}
+	
+	@FindBy(id="billingLastName")
+	WebElement billingLName;
+	
+	public void setBillingLName() {
+		   String yoursFakeName = faker.name().lastName();
+		   billingLName.sendKeys(yoursFakeName);
+	}
+		
+	@FindBy(id="billingAddressOne")
+	WebElement billingAddress;
+	
+	
+	@FindBy(id="phoneNumber")
+	WebElement phoneNumber;
+	
+	public void setBillingPhoneNum() {
+		   String phoneNum = "9876543212";
+		   phoneNumber.sendKeys(phoneNum);
 	}
 	
 	//buttonforthepaymentpage
