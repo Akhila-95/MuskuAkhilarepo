@@ -54,10 +54,9 @@
     </classes>
     -->
      <packages>
-          <!-- <package name="com.GuestUserWith_Checkout_Paypal" />  
+          <package name="com.GuestUserWith_Checkout_Paypal" />  
             <package name="com.GuestUserWith_CreditCard" /> 
-            <package name="com.GuestUserWith_GcAndCC" />            
-            <package name="com.GuestUserWith_GiftCard" />--> 
+            <package name="com.GuestUserWith_GcAndCC" />        
             <package name="com.GuestUserWith_Minicart_Paypal" /> 
             <package name="com.GuestUserWith_ViewCart_Paypal" /> 
           

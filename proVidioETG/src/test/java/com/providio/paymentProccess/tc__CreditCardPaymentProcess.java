@@ -59,8 +59,13 @@ public class tc__CreditCardPaymentProcess extends baseClass{
 				List<WebElement> creditcardsSalesForce = driver.findElements(By.xpath("//div[@class='sfpp-payment-method-header sfpp-payment-method-header-card']"));
 			    System.out.println("Salesforce payment"+creditcardsSalesForce.size());
 			    
-			    //new payment
+			    //stripe payment
 				List<WebElement> stripePayment = driver.findElements(By.cssSelector("li.nav-item[data-method-id='CREDIT_CARD']"));
+				
+				//cybersource
+				//List<WebElement>  cybersource= driver.findElements(By.cssSelector("li.nav-item[data-method-id='CREDIT_CARD']"));
+				List<WebElement> cybersourceNum = driver.findElements(By.xpath("//label[@for='expirationMonth']"));
+				
 				//a[@class='nav-link credit-card-tab active']
 				    if(creditcardscheck.size()>0) {
 				    	test.info("Brain tree payment activated");
@@ -90,15 +95,7 @@ public class tc__CreditCardPaymentProcess extends baseClass{
 				    	test.info("Salesforce payment activated");
 				    	salesforcePaymentProcess();
 				    	
-				    	
-				    	
-				    }else if(stripePayment.size()>0) {
-				    	test.info("Stripe payment activated");
-				    	stripePayment();
-				    	
-					    	
-				    	
-				    }else {
+				    }else if(cybersourceNum.size()>0) {
 			
 				    	List<WebElement> savedCardsCyberSourece = driver.findElements(By.xpath("//option[@class ='js_stored_card']"));
 				    	System.out.println("Cybersource paymnet"+savedCardsCyberSourece.size());
@@ -111,6 +108,12 @@ public class tc__CreditCardPaymentProcess extends baseClass{
 				             // cyber source new card
 				    		cyberSourceNewcard();				    		
 				    	}
+				    }else if(stripePayment.size()>0) {
+				    	test.info("Stripe payment activated");
+				    	stripePayment();
+				    	
+					    	
+				    	
 				    }
     
 				    //Salesforce payment integration place the order
