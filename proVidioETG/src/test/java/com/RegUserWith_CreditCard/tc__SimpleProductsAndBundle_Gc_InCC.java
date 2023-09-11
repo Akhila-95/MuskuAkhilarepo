@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.providio.pageObjects.BundleProductFromEXcel;
@@ -15,14 +16,11 @@ import com.providio.testcases.baseClass;
 
 public class tc__SimpleProductsAndBundle_Gc_InCC extends baseClass {
 	int minicartCountValue;
-	@Test
+	@Test(dependsOnMethods = {"com.providio.testcases.tc__LoginSc.verifySuccessfulLogin"}, alwaysRun = true)
 	public void simpleProducts_Bundle_Gc() throws InterruptedException {
 		
-		 // enters into url
-	      driver.get(baseURL);		      
-          logger.info("enterd into url");	
-		 
-        Thread.sleep(2000);
+		if(isLoggedIn) {
+         Thread.sleep(2000);
 		 List<WebElement> minicartcountList = driver.findElements(By.cssSelector(".minicart-quantity"));
 		 if(minicartcountList.size()>0) {
 	 			 WebElement minicartcount = driver.findElement(By.cssSelector(".minicart-quantity"));
@@ -78,5 +76,8 @@ public class tc__SimpleProductsAndBundle_Gc_InCC extends baseClass {
 	     //credit card
 		 tc__CreditCardPaymentProcess cc = new tc__CreditCardPaymentProcess();			     
 		 cc.paymentByCreditCard();
-}
+		}else {
+		        Assert.fail("User not logged in");
+		    }
+		}
 }

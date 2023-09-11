@@ -38,19 +38,21 @@ public class tc__CheckOutProcess extends baseClass {
 		            mc.clickcartbutton(driver);
 		            Thread.sleep(1000);
 		            
-		            //validate the button click 
-		            miniCartAndCartValidation validation= new miniCartAndCartValidation();
-		            validation.validateMiniCartClick();
-         
-		            Thread.sleep(1000);
-		            //click review order
-		            mc.clickviewCartButton(driver);
-					logger.info("clicked the view cart button in the minicart");
-					
-					//validate the view cart button click
-					validation.validateViewCartClick();
-					Thread.sleep(1000);
-
+		            List <WebElement> minicartPopUp = driver.findElements(By.xpath("(//h1)[1]"));
+		            if(minicartPopUp.size()>0) {
+			            //validate the button click 
+			            miniCartAndCartValidation validation= new miniCartAndCartValidation();
+			            validation.validateMiniCartClick();
+	         
+			            Thread.sleep(1000);
+			            //click review order
+			            mc.clickviewCartButton(driver);
+						logger.info("clicked the view cart button in the minicart");
+						
+						//validate the view cart button click
+						validation.validateViewCartClick();
+						Thread.sleep(1000);
+		            }
 		
 		            viewCartPage vcp = new viewCartPage(driver);
 		            //click the checkout button

@@ -454,30 +454,28 @@ WebDriver lDriver;
                 js.executeScript("window.scrollBy(0,700)", "");
                               
                 js.executeScript("arguments[0].click();", paypal);
-                //paypal.click();
+                System.out.println("Clicked on paypal icon");
                // Thread.sleep(2000);
             }
             public void brainTreeAfterClick(WebDriver driver) throws InterruptedException {
-                 WebElement parentDiv= driver.findElement(By.xpath("//div[@class='tab-pane paypal-content js_braintree_paypalContent active']"));
-                 Thread.sleep(3000);
-                 WebElement paypalCheckout=parentDiv.findElement(By.xpath("//div[@class='js_braintree_paypal_billing_button']"));
-                // Thread.sleep(10000);
-                 /*
-                 JavascriptExecutor js = (JavascriptExecutor) driver;  
-                 js.executeScript("arguments[0].click();", paypalCheckout);
-                 Thread.sleep(3000);
-                 */
-                 JavascriptExecutor js = (JavascriptExecutor) driver;  
-                 WebElement regPaypalCheckout=parentDiv.findElement(By.xpath("//label[contains(text(),'Select a PayPal account')]"));
-                 if(!regPaypalCheckout.isDisplayed()) {
-                	 js.executeScript("arguments[0].click();", paypalCheckout);                	
-                     Thread.sleep(3000);
-                     if(!regPaypalCheckout.isDisplayed()) {
-                    	 //((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",  paypalCheckout);
-                    	 paypalCheckout.click();
-                     }
-                 }
-                 
+            	
+                 WebElement parentDiv= driver.findElement(By.xpath("//a[contains(@class, 'paypal-tab active')]"));               
+                 WebElement regPaypalCheckoutText=parentDiv.findElement(By.xpath("//label[contains(text(),'Select a PayPal account')]"));
+                 if(regPaypalCheckoutText.isDisplayed()) {                	 
+                	  
+                	 
+                 }else { 
+	                 JavascriptExecutor js = (JavascriptExecutor) driver;  
+	                 WebElement paypalCheckout=driver.findElement(By.xpath("//div[@class='js_braintree_paypal_billing_button']")); 
+	                 if(paypalCheckout.isDisplayed()) {
+	                	 js.executeScript("arguments[0].click();", paypalCheckout);                	
+	                     Thread.sleep(1000);
+	                     	if(paypalCheckout.isDisplayed()) {
+	                     		//((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",  paypalCheckout);
+	                     		paypalCheckout.click();
+	                     }
+	                 	}	                 
+	                 }                 
             }
                
           
@@ -542,6 +540,7 @@ WebDriver lDriver;
 
             @FindBy(xpath = "//button[contains(text(), 'Save and Continue')]")
             List<WebElement> saveAndContinue;
+            
             public void paypalPopup(WebDriver driver) throws InterruptedException {
             	
                 String mainWindowHandle = driver.getWindowHandle();
@@ -553,6 +552,8 @@ WebDriver lDriver;
                     }
                 }
                  test.info("Entered into paypal window");
+             	List<WebElement> paypalPage = driver.findElements(By.id("headerText"));
+            	System.out.println("The url for payapal is " + paypalPage.size());
                 
                  Thread.sleep(3000);
                  if(emailLogin.size()>0) {
@@ -610,7 +611,7 @@ WebDriver lDriver;
                  if(reviewOrderButton.size()>0) {
                 	WebElement reviewOrder=driver.findElement(By.cssSelector("#payment-submit-btn"));
                 	reviewOrder.click();
-                	Thread.sleep(6000);
+                	Thread.sleep(2000);
                 	if(reviewOrder.isDisplayed()) {
                 		reviewOrder.click();
                 		
@@ -625,9 +626,10 @@ WebDriver lDriver;
                 		 saveAndContinue1.click();
                 	 }
                  }                 
-                 Thread.sleep(3000);
+                 
                  driver.switchTo().window(mainWindowHandle);
                  Thread.sleep(1000);
+                 
               }
             
             //salesfoce creditcard

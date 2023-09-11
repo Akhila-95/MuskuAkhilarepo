@@ -87,7 +87,7 @@ public class size extends baseClass{
 		List<WebElement> colorElement = driver.findElements(By.xpath("//span[contains(@class,' non-input-label')]"));
 		System.out.println("The colordrop down count is " + colorElement.size());
 		
-		List<WebElement> sizeElement = driver.findElements(By.xpath("//select[@class='custom-select form-control select-size']"));
+		List<WebElement> sizeElement = driver.findElements(By.xpath("//select[contains(@class,'select-size')]"));
 		System.out.println("The size drop down count  is " +  sizeElement.size());
 		
 		List<WebElement> memoryElement = driver.findElements(By.id("memorySize-null"));

@@ -154,6 +154,7 @@ public class Checkout_Validation extends baseClass {
 				    WebElement paymentDetailsElement = driver.findElement(By.xpath("//div[@class='payment-details']"));
 			        String paymentDetails = paymentDetailsElement.getText();
 			        test.pass("Successfully Order is Placed and payment is "+ paymentDetails);
+			        logger.info("Successfully Order is Placed and the Order number is "+  paymentDetails);
 			        Thread.sleep(5000);
 				 }
 	}

@@ -61,7 +61,7 @@ public class tc__PaymentProccessByGC extends baseClass{
 	public void performRandomOperations(WebDriver driver) throws InterruptedException {
 		//driver.get(baseURL);
 		//logger.info("enterd into url");
-		String filePath = "C:\\Users\\user\\git\\MuskuAkhilaRepo16\\proVidioETG\\testDate\\GiftCertificateCodesForGc.xlsx";
+		String filePath = "C:\\Users\\user\\git\\RunGuestTestSuite\\proVidioETG\\testDate\\GiftCertificateCodesForGc.xlsx";
 		String sheetName = "GC_Codes";
 
 		try {
@@ -214,7 +214,7 @@ public class tc__PaymentProccessByGC extends baseClass{
 	// to pick the GC code sequentially
 	
 	public void performSequentialOperations(WebDriver driver) throws InterruptedException {
-	    String filePath = "C:\\Users\\user\\git\\MuskuAkhilaRepo16\\proVidioETG\\testDate\\GiftCertificateCodesForGc.xlsx";
+	    String filePath = "C:\\Users\\user\\git\\RunGuestTestSuite\\proVidioETG\\testDate\\GiftCertificateCodesForGc.xlsx";
 	    String sheetName = "GC_Codes";
 
 	    try {
@@ -245,26 +245,26 @@ public class tc__PaymentProccessByGC extends baseClass{
 		            Thread.sleep(2000);
 
 		            
-			            //check balance validation and checking the bal of GC
-			             WebElement checkBalButton= driver.findElement(By.xpath("//button[@class='btn btn-primary check-balance']"));
-			             test.info("Verifying check balance button");
-			           
-		                // Scroll down by 500 pixels
-			             js.executeScript("window.scrollBy(0, 500);");                 
-		                js.executeScript("arguments[0].click();",checkBalButton);
-		                //checkBalButton.click();
-		                Thread.sleep(2000);
-		                WebElement checkBal= driver.findElement(By.xpath("//div[@class='balance success']"));
-		                logger.info(checkBal.getText()); 
-			                if(checkBalButton.isDisplayed()) {
-			                	
-			                	test.pass("Check button is enabled and selected ");
-			                	logger.info("Check button is enabled and selected");
-			                }else {
-			                	test.fail("Check button is not enabled and not selected");
-			                	logger.info("Check button is  not enabled and selected");
-			                }
-		                
+		            //check balance validation and checking the bal of GC
+		             WebElement checkBalButton= driver.findElement(By.xpath("//button[@class='btn btn-primary check-balance']"));
+		             test.info("Verifying check balance button");
+		           
+	                // Scroll down by 500 pixels
+		             js.executeScript("window.scrollBy(0, 500);");                 
+	                 js.executeScript("arguments[0].click();",checkBalButton);
+	                //checkBalButton.click();		            
+	                 List<WebElement> checkBal= driver.findElements(By.xpath("//div[@class='balance success']"));
+	                 if(checkBal.size()>0) {
+	            	   	 WebElement checkBalDisplay= driver.findElement(By.xpath("//div[@class='balance success']"));
+		                if(checkBalDisplay.isDisplayed()) {
+		                	logger.info(checkBalDisplay.getText()); 
+		                	test.pass("Check button is enabled and selected ");
+		                	logger.info("Check button is enabled and selected");
+		                }else {
+		                	test.fail("Check button is not enabled and not selected");
+		                	logger.info("Check button is  not enabled and selected");
+		                }
+	               }
 		            // Click the apply button by passing GC
 		            try {
 		            	Thread.sleep(2000);

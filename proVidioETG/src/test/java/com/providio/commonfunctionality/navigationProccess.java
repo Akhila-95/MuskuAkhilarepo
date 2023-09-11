@@ -5,6 +5,7 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import com.providio.pageObjects.bundleProductAddAllToCart;
 import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productListingPage;
 import com.providio.testcases.baseClass;
@@ -33,7 +34,13 @@ public class navigationProccess extends baseClass {
 	   	     if(productName1.size()>0) {
 	   	    	 WebElement productName = driver.findElement(By.xpath("//h1[@class='product-name hidden-sm-down']"));
 	   	    	 test.info("productName is  [" + i + "] " +productName.getText());
-	   	     }	   
+	   	     }	
+	   	  //if selected product is bundle them
+	   	     List<WebElement> bundleProduct = driver.findElements(By.cssSelector(".bundle-item"));
+	   	     if(bundleProduct.size()>0){
+	   	    	bundleProductAddAllToCart bundle= new bundleProductAddAllToCart();
+	   	    	bundle.addAllToCart(driver);
+	   	     }    
 	   	//The cart value before adding the product to cart
 	   	     Thread.sleep(2000);
 	   		 List<WebElement> minicartcountList = driver.findElements(By.cssSelector(".minicart-quantity"));

@@ -349,7 +349,7 @@ public void clickOnProduct1() throws InterruptedException{
 				public void clickOnSize(WebDriver driver) throws InterruptedException {
 					//sizes in boxess
 					List<WebElement> sizeBox= driver.findElements(By.xpath("//div[contains(@class, 'select-size')]"));
-					List<WebElement> sizeDropDown= driver.findElements(By.xpath("//select[@class='custom-select form-control select-size']"));
+					List<WebElement> sizeDropDown= driver.findElements(By.xpath("//select[contains(@class,'select-size')]"));
 					if(sizeBox.size()>0) {
 						
 						 // Find the parent div containing size options

@@ -60,7 +60,7 @@ public class tc__PaymentProccessByGC_CC_Paypal extends baseClass{
         halfPrice = totalPricAmount/ 2;
         System.out.println("The half price is " +halfPrice);
        */
-		String filePath = "C:\\Users\\user\\git\\MuskuAkhilaRepo16\\proVidioETG\\testDate\\GiftCertificateCodesPaypal_CC.xlsx";
+		String filePath = "C:\\Users\\user\\git\\RunGuestTestSuite\\proVidioETG\\testDate\\GiftCertificateCodesPaypal_CC.xlsx";
 	    String sheetName = "GC_Codes";
 
 	    try {

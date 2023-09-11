@@ -34,8 +34,16 @@ public class miniCartAndCartValidation extends baseClass {
 	        }
 	        
 	        test.info("Verify the viewcart, checkout, paypal buttons and products are displayed");
-	        List<WebElement> productsinthecart = driver.findElements(By.xpath("//div[@class ='line-item-name']"));
-	        logger.info(productsinthecart.size());
+	        List<WebElement> productsinthecart = driver.findElements(By.cssSelector(".line-item-name"));
+	        logger.info("Products count in minicart are" + productsinthecart.size());
+	        
+	        //count of products and its name in minicart
+	        if(productsinthecart.size()>0) {
+	        	for(int i=1;i<=productsinthecart.size() ;i++) {
+	        		  WebElement productsName = driver.findElement(By.xpath("(//div[@class='line-item-name']) [" + i + "]"));
+	        		  test.info("The products name in cart are " + productsName.getText());
+	        	}
+	        }
 	        
 	        WebElement viewcarButton = driver.findElement(By.xpath("//a[contains(@class, 'checkout-btn') and contains(text(), 'View Cart')]"));
 	        boolean displaycartbutton = viewcarButton.isDisplayed();
@@ -53,6 +61,8 @@ public class miniCartAndCartValidation extends baseClass {
 	            test.fail(" Not displayed the viewcart, checkout, paypal buttons and products");
 	            logger.info("Not displayed the viewcart, checkout, paypal buttons and products");
 	        }
+	      
+	      
 	    }
 
 	    public void validateViewCartClick() {
@@ -67,9 +77,7 @@ public class miniCartAndCartValidation extends baseClass {
 	        } else {
 	            test.fail("Clicked failed on the view cart button");
 	            logger.info("Clicked failed on the view cart button");
-	        }
-	        
-	        
+	        }	        
 	    }
 
 	    public void reClickMiniCartButton() throws InterruptedException {

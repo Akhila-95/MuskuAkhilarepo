@@ -104,7 +104,8 @@ public class tc__PdpPagewithGuestuser extends baseClass {
 	private void writeReviewForProduct() throws InterruptedException {
 		List<WebElement> bopis =driver.findElements(By.xpath("(//span[@class='write-question-review-button-text font-color-gray-darker'])[1]"));
 		productDescriptionPage pdp = new productDescriptionPage(driver);
-		if(!(bopis.size()>0)) {
+		WebElement bopisDisplay =driver.findElement(By.xpath("(//span[@class='write-question-review-button-text font-color-gray-darker'])[1]"));
+		if(!(bopis.size()>0) && bopisDisplay.isDisplayed()) {
 		    
 		    pdp.clickOnWriteAReviewAtTop(driver);
 		    logger.info("Clicked on Write a Review at the top");
@@ -144,23 +145,7 @@ public class tc__PdpPagewithGuestuser extends baseClass {
 	    // Add any additional steps for adding the product to the cart
 	}
 	
-	/*//validation for the new arrivals of womens
-	private void validatiionNewArrivalWomens() {
-		//validate new arrival womens
-		test.info("verify that menu is selected");
-        WebElement NewwoMens = driver.findElement(By.xpath("//h1[@class ='header page-title text-uppercase m-0 p-0']"));
-        String ActualTitleofwoMens = NewwoMens.getText();
-        String ExpectedTitleofwoMens = "WOMENS";
-        logger.info(NewwoMens.getText());
-        if (ActualTitleofwoMens.equals(ExpectedTitleofwoMens)) {
-            test.pass("Successfully clicked on the NewArrival of  " + ActualTitleofwoMens + " " + " ");
-            logger.info("click Success New arrival womens");
-        } else {
-            test.fail("The page Title does not match expected " + ExpectedTitleofwoMens + " " + "  but found" + " " + ActualTitleofwoMens + " ");
-            logger.info("Click failed");
-        }
-        
-	}*/
+
 	
 	private void validateproductselect() {
 		

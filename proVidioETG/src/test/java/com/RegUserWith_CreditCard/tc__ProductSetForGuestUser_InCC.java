@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -15,12 +16,11 @@ import com.providio.testcases.baseClass;
 public class tc__ProductSetForGuestUser_InCC extends baseClass{
 	SoftAssert softAssert = new SoftAssert();
 	int minicartCountValue;
-	 @Test
+	 @Test(dependsOnMethods = {"com.providio.testcases.tc__LoginSc.verifySuccessfulLogin"}, alwaysRun = true)
 	public void productSet() throws InterruptedException {
 
-		 	driver.get(baseURL);
-		 	logger.info("Entered into url");
-		 	
+			if(isLoggedIn) {
+				
 		 	Thread.sleep(2000);
 			 List<WebElement> minicartcountList = driver.findElements(By.cssSelector(".minicart-quantity"));
 			 if(minicartcountList.size()>0) {
@@ -71,6 +71,9 @@ public class tc__ProductSetForGuestUser_InCC extends baseClass{
 		     tc__CreditCardPaymentProcess cc = new tc__CreditCardPaymentProcess();		     
 		     cc.paymentByCreditCard();
 
-	        } 
+	        }   else {
+		        Assert.fail("User not logged in");
+		    }
+		 }
 }
 

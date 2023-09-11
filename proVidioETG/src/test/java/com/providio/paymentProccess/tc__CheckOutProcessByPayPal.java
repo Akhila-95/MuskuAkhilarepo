@@ -52,7 +52,7 @@ public class tc__CheckOutProcessByPayPal extends baseClass{
 					//paypal window
 		
 					
-				}else if( brainPayPalButton.size()>0){
+				}else if(brainPayPalButton.size()>0){
 					logger.info("Brain tree activated");
 					WebElement brainPayPalButton1 = driver.findElement(By.xpath("//div[contains(@class,'js_braintree_paypal_cart_button')]"));
 					((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);",  brainPayPalButton1);
@@ -61,8 +61,7 @@ public class tc__CheckOutProcessByPayPal extends baseClass{
 					paymentpPage pp =new paymentpPage(driver);
 					Thread.sleep(3000);
 					//checkout.validatePaypalClick();
-					pp.paypalPopup(driver);
-					logger.info("Entered into paypal window and entered the paypal details");
+					pp.paypalPopup(driver);					
 				}else {
 					test.info("Cybersouce payment OR stripe payment integration  is activated so, No paypal for cybersouce and stripe");
 	            	test.pass("No paypal integration for cybersource and stripe , choose another integration to do the payment with payment");

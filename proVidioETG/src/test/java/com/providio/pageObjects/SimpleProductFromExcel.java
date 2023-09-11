@@ -71,7 +71,7 @@ import com.providio.testcases.baseClass;
 		
 		public void performRandomOperations(WebDriver driver) throws InterruptedException {
 			
-			String filePath = "C:\\Users\\user\\git\\MuskuAkhilaRepo16\\proVidioETG\\testDate\\Simple Products Skew.xlsx";
+			String filePath = "C:\\Users\\user\\git\\RunGuestTestSuite\\proVidioETG\\testDate\\Simple Products Skew.xlsx";
 			String sheetName = "SkewId";
 
 			try {
@@ -131,14 +131,15 @@ import com.providio.testcases.baseClass;
 							if(randomValue.equals(searchedForText)) {
 								test.pass(" searched for for the right product and product id is " +randomValue );
 								logger.info("Searched for right product");
+								//product add to cart
+								productDescriptionPage pdp =new productDescriptionPage(driver);
+								pdp.clickcartbutton(driver);
 							}
 							else {
 								test.fail("Searched product and the product after search are not matching");
 								logger.info("Searched product and the product after search are not matching");
 							}
-							//product add to cart
-							productDescriptionPage pdp =new productDescriptionPage(driver);
-							pdp.clickcartbutton(driver);
+							
 						
 							dataList.remove(randomValue);
 							System.out.println(" After searching the product we have this in datalist"+ dataList);

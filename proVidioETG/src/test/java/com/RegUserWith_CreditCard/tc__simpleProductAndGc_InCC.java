@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.providio.pageObjects.GiftCertificate;
@@ -18,9 +19,7 @@ public class tc__simpleProductAndGc_InCC extends baseClass {
 	@Test
 	public void simpleProduct_Gc() throws InterruptedException {
 		
-		 // enters into url
-	      driver.get(baseURL);		      
-          logger.info("enterd into url");	
+		if(isLoggedIn) {			
 		 
           Thread.sleep(2000);
  		 List<WebElement> minicartcountList = driver.findElements(By.cssSelector(".minicart-quantity"));
@@ -76,6 +75,9 @@ public class tc__simpleProductAndGc_InCC extends baseClass {
 	     //credit card
 	     tc__CreditCardPaymentProcess cc = new tc__CreditCardPaymentProcess();			     
 	     cc.paymentByCreditCard();
-	}
+	 } else {
+        Assert.fail("User not logged in");
+    }
+ }
 	
 }

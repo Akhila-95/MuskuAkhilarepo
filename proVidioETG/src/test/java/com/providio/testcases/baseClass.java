@@ -95,7 +95,7 @@ public class baseClass {
 	protected static boolean isLoggedIn=false;
 	
 	private static ExtentReports report = new ExtentReports();
-    private ExtentSparkReporter reporter = new ExtentSparkReporter("C:\\Users\\user\\eclipse-workspace\\Providio_25th\\AutomationsScripts-Etg-by-upendra-main\\proVidioETG_25th\\Reports\\ProvidioTestReport.html");
+    private ExtentSparkReporter reporter = new ExtentSparkReporter("C:\\Users\\user\\git\\RunGuestTestSuite\\proVidioETG\\Reports\\ProvidioTestReport.html");
 	
 	//Reporting
 	//static ExtentReports report;
@@ -188,14 +188,14 @@ public class baseClass {
 		   report.flush();
 		   
 
-		   driver.get("C:\\Users\\user\\eclipse-workspace\\Providio_25th\\AutomationsScripts-Etg-by-upendra-main\\proVidioETG_25th\\Reports\\ProvidioTestReport.html");
+		   driver.get("C:\\Users\\user\\git\\RunGuestTestSuite\\proVidioETG\\Reports\\ProvidioTestReport.html");
 			driver.manage().window().maximize();
 			Thread.sleep(5000);
 			// Take a screenshot of the entire browser window
 			File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
 			// Define the destination path for the screenshot
-			String screenshotPath = "C:\\Users\\user\\eclipse-workspace\\Providio_25th\\AutomationsScripts-Etg-by-upendra-main\\proVidioETG_25th\\Reports\\ReportsScreenshot.png";
+			String screenshotPath = "C:\\Users\\user\\git\\RunGuestTestSuite\\proVidioETG\\Reports\\ReportsScreenshot.png";
 			// Save the screenshot to the specified path
 			FileUtils.copyFile(screenshot, new File(screenshotPath));
 

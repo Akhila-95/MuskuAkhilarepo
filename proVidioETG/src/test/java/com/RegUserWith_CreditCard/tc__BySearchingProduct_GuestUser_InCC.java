@@ -21,10 +21,10 @@ public class tc__BySearchingProduct_GuestUser_InCC extends baseClass {
 	int minicartCountValue;
 	SoftAssert softAssert = new SoftAssert();
 
-	@Test//(dependsOnMethods = {"com.providio.testcases.tc__LoginSc.verifySuccessfulLogin"}, alwaysRun = true)
+	@Test(dependsOnMethods = {"com.providio.testcases.tc__LoginSc.verifySuccessfulLogin"}, alwaysRun = true)
     public void bySearchingProduct() throws InterruptedException {
-		    //step2 1: site url
-			driver.get(baseURL);
+		if(isLoggedIn) {
+			
 			
         	//searching a product 
             homePage homepage = new homePage(driver);
@@ -78,5 +78,9 @@ public class tc__BySearchingProduct_GuestUser_InCC extends baseClass {
             //payment by credit card
 		     tc__CreditCardPaymentProcess cc = new tc__CreditCardPaymentProcess();	     
 		     cc.paymentByCreditCard();
+		} else {
+	        Assert.fail("User not logged in");
+	    }
+	 
     }
 }

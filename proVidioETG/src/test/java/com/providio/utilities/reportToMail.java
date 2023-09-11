@@ -37,11 +37,11 @@ public class reportToMail {
 	    //Xog32763
 	    //smtp.office365.com
 	    
-	    String reportFilePath = "C:\\Users\\user\\eclipse-workspace\\Providio_25th\\AutomationsScripts-Etg-by-upendra-main\\proVidioETG_25th\\Reports\\ProvidioTestReport.html";
+	    String reportFilePath = "C:\\Users\\user\\git\\RunGuestTestSuite\\proVidioETG\\Reports\\ProvidioTestReport.html";
         String subject1 = "Automation Test Report of Provido Project Report";
         String body1 = "Please find the attached Automation Test Report of Provido Project.";
 
-	    String reportScreenshot = "C:\\Users\\user\\eclipse-workspace\\Providio_25th\\AutomationsScripts-Etg-by-upendra-main\\proVidioETG_25th\\Reports\\ReportsScreenshot.png";
+	    String reportScreenshot = "C:\\Users\\user\\git\\RunGuestTestSuite\\proVidioETG\\Reports\\ReportsScreenshot.png";
 	    String subject2 = "And Screenshot";
 	    String body2 = "Please find the attached screenshot Automation Test Report of Provido Project";
 

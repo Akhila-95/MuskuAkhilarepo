@@ -80,7 +80,7 @@ public class ProductSetFromExcel extends baseClass {
 	
 	public void performRandomOperations(WebDriver driver) throws InterruptedException {
 		
-		String filePath = "C:\\Users\\user\\git\\MuskuAkhilaRepo16\\proVidioETG\\testDate\\ProductSetSkewId.xlsx";
+		String filePath = "C:\\Users\\user\\git\\RunGuestTestSuite\\proVidioETG\\testDate\\ProductSetSkewId.xlsx";
 		String sheetName = "SkewId";
 
 		try {

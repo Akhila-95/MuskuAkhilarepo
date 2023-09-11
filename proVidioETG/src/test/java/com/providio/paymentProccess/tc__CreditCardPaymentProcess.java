@@ -51,8 +51,11 @@ public class tc__CreditCardPaymentProcess extends baseClass{
 		        paymentpPage pp = new paymentpPage(driver);
 		        
 				//brain tree
-				List<WebElement> creditcardscheck = driver.findElements(By.xpath("//a[@class ='nav-link creditcard-tab active']"));
-			    System.out.println("Brain tree payment"+creditcardscheck.size());
+				List<WebElement> braintreecheck = driver.findElements(By.id("braintreeCardOwner"));
+			    System.out.println("Brain tree payment name "+braintreecheck.size());
+			    
+			    List<WebElement> braintreecheck2 = driver.findElements(By.xpath("//a[@class ='nav-link creditcard-tab active']"));
+			    System.out.println(" brain tree"+braintreecheck2.size());
 			    
 			    //creditcard salesfornce
 	
@@ -61,13 +64,15 @@ public class tc__CreditCardPaymentProcess extends baseClass{
 			    
 			    //stripe payment
 				List<WebElement> stripePayment = driver.findElements(By.cssSelector("li.nav-item[data-method-id='CREDIT_CARD']"));
+				System.out.println("stripe"+ stripePayment.size()) ;
 				
 				//cybersource
 				//List<WebElement>  cybersource= driver.findElements(By.cssSelector("li.nav-item[data-method-id='CREDIT_CARD']"));
 				List<WebElement> cybersourceNum = driver.findElements(By.xpath("//label[@for='expirationMonth']"));
+				System.out.println("cyber source "+ cybersourceNum);
 				
 				//a[@class='nav-link credit-card-tab active']
-				    if(creditcardscheck.size()>0) {
+				    if(braintreecheck.size()>0 && braintreecheck2 .size()>0 ) {
 				    	test.info("Brain tree payment activated");
 				    	List<WebElement> savedCardsBrainTree = driver.findElements(By.xpath("//option[@class ='js_stored_card']"));
 				    	System.out.println(savedCardsBrainTree.size());
