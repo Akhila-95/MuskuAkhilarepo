@@ -486,7 +486,7 @@ public class tc__NavigationAllMenusWithGuestUser extends baseClass {
             NM.clickMensMenubaritems(driver);
             logger.info("Howered mens menu");
             
-            NM.ClickMensofPants();
+            NM.ClickMensofPants(driver);
             logger.info("Clicked mens of pants");
             Thread.sleep(5000L);
             

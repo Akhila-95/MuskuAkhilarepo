@@ -14,7 +14,7 @@ import com.providio.paymentProccess.tc__CheckOutProcess;
 import com.providio.paymentProccess.tc__CheckOutProcessByPayPal;
 import com.providio.testcases.baseClass;
 
-public class tc__Bundle_GcAndAllPromotions_Guest_InCheckoutPaypal extends baseClass{
+public class tc__Bundle_GcAndAllPromotions_Reg_InCheckoutPaypal extends baseClass{
 	int minicartCountValue;
 	@Test(dependsOnMethods = {"com.providio.testcases.tc__LoginSc.verifySuccessfulLogin"}, alwaysRun = true)
 	public void bundle_GcAndAllPromotions() throws InterruptedException {

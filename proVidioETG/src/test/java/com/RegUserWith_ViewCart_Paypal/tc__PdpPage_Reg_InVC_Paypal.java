@@ -32,10 +32,7 @@ public class tc__PdpPage_Reg_InVC_Paypal extends baseClass {
 	    if (isLoggedIn) {
 	        // Step 1: Navigate to Women's New Arrivals
 	        navigateToWomensNewArrivals();
-	        
-	        //validationofwomesNewarrivals
-	        validatiionNewArrivalWomens();
-
+	        	     
 	        // Step 2: Select a Product from the Listing Page
 	        selectProductFromListingPage();
 

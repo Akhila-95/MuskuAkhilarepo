@@ -2,6 +2,7 @@ package com.providio.paymentProccess;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -11,6 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.providio.Validations.Checkout_Validation;
+import com.providio.Validations.ShippingAndBilling_PaymentDetails;
 import com.providio.pageObjects.paymentpPage;
 import com.providio.pageObjects.reviewOrderPage;
 import com.providio.testcases.baseClass;
@@ -90,10 +92,8 @@ public class tc__CreditCardPaymentProcess extends baseClass{
 			                }else {
 			                	//new card
 			                	registerUserCC();
-			                }
-				    		    		
-				    	}
-				   	
+			                }				    		    		
+				    	}				   	
 				    }else if(creditcardsSalesForce.size()>0) {
 				    	
 				    	//new card salesforce
@@ -108,8 +108,15 @@ public class tc__CreditCardPaymentProcess extends baseClass{
 				    	if(savedCardsCyberSourece.size()>0) {
 				    		//select one and send the cvv number of that card
 				    		logger.info("Saved cards are there for cyber source");
-				    		
-				    		
+				    		List<WebElement> savedCards = driver.findElements(By.cssSelector("div.saved-payment-instrument"));
+				    		Random random = new Random();
+				            int randomIndex = random.nextInt(savedCards.size());
+				            // Select the randomly chosen payment instrument
+				            WebElement selectedPaymentInstrument = savedCards.get(randomIndex);
+				            // Perform actions on the selected payment instrument (e.g., click)
+				            selectedPaymentInstrument.click();
+				           WebElement securityCode = driver.findElement(By.id("saved-payment-security-code"));
+				            securityCode.sendKeys("9876");
 				    		
 				    	}else {
 				             // cyber source new card
@@ -144,6 +151,10 @@ public class tc__CreditCardPaymentProcess extends baseClass{
 				    			pp.clickonrevieworder(driver);
 						    	//js.executeScript("arguments[0].click();", element);							     //pp.clickonrevieworder(driver);
 								logger.info("clicked on the review oreder");
+								
+								//shipping and billing ,payment detailss
+					    		ShippingAndBilling_PaymentDetails details= new ShippingAndBilling_PaymentDetails();
+					    		details.placeOrderPageDetails();
 				    		}
 				    	} catch(Exception e) {
 				    		System.out.println(e);

@@ -17,7 +17,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class tc__BySearchingProduct_GuestUser_InCC extends baseClass {
+public class tc__BySearchingProduct_RegUser_InCC extends baseClass {
 	int minicartCountValue;
 	SoftAssert softAssert = new SoftAssert();
 

@@ -21,7 +21,7 @@ import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
 import com.providio.testcases.baseClass;
 
 
-public class  tc__PickUpStore_Guest_Checkout_Paypal extends baseClass {
+public class  tc__PickUpStore_Reg_InCc extends baseClass {
 	int minicartCountValue;
 	@Test(dependsOnMethods = {"com.providio.testcases.tc__LoginSc.verifySuccessfulLogin"}, alwaysRun = true)
 	public void paypalFromCheckoutPage() throws InterruptedException {	

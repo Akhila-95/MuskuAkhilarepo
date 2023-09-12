@@ -6,10 +6,10 @@
 		<listener class-name="com.providio.ExtentReports.ExtentReporterNG" />
 	</listeners> -->
   <test thread-count="5" name="Automation">
-
+ <!-- 
     <classes>
 	  
-	 <!--  
+	 
 	  <class name="com.providio.payments.tc__PaypalFromViewCartPage_GuestUser"/>
 	  <class name="com.providio.payments.tc__PaypalCheckout_MiniCart_GuestUser"/> 
 	   <class name="com.providio.payments.tc__PaypalFromPDPpage_GuestUser"/> 
@@ -18,7 +18,7 @@
 	   <class name="com.providio.payments.tc__OrderByGCandCC_GuestUser"/> 
 	   <class name="com.providio.payments.tc__OrderByGCandPaypalGuestUser"/> 
 	   <class name="com.providio.payments.tc__OrderByGc_GuestUser"/>
-	   
+	 
 	   <class name="com.providio.testcases.tc__LoginSc"/>
 	   
 	   <class name="com.providio.payments.tc__PaypalFromViewCartPage_RegUser"/> 
@@ -29,21 +29,20 @@
 	    <class name="com.providio.payments.tc__OrderByGCandPaypalRegUser"/> 
 	    <class name="com.providio.payments.tc__OrderByGc_RegUser"/> 
 	    
-	    <class name="com.providio.testcases.tc__LogOut" />  
-	     -->
+	    <class name="com.Logout.tc__LogOut" />  
+	     
 
+    </classes>
+       -->
+    <classes>
+      <class name="com.providio.testcases.tc__LoginSc"/>
+     
     </classes>
     
     <packages>
-            <package name="com.GuestUserWith_Checkout_Paypal" />  
-            <package name="com.GuestUserWith_CreditCard" />                  
-            <package name="com.GuestUserWith_Minicart_Paypal" /> 
-            <package name="com.GuestUserWith_ViewCart_Paypal" />
-            <package name="com.GuestUserWith_GcAndCC" />  
-            <package name="com.GuestUserWith_GiftCard" />  
-            
-          
+     <package name="com.RegUserWith_Checkout_Paypal" /> 
      </packages>
+  
   </test> <!-- Automation -->
   
  

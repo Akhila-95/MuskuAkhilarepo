@@ -1,17 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [ProvidioTestcases]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Automation(failed)">
     <classes>
-      <class name="com.RegUserWith_CreditCard.tc__PickUpStore_Guest_Checkout_Paypal">
+      <class name="com.RegUserWith_Checkout_Paypal.tc__OnlyGiftCards_Checkout_Paypal">
         <methods>
           <include name="setUpforReport"/>
           <include name="setUp"/>
           <include name="afterMethod"/>
-          <include name="paypalFromCheckoutPage"/>
+          <include name="OnlyGiftCards"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- com.RegUserWith_CreditCard.tc__PickUpStore_Guest_Checkout_Paypal -->
+      </class> <!-- com.RegUserWith_Checkout_Paypal.tc__OnlyGiftCards_Checkout_Paypal -->
+      <class name="com.RegUserWith_Checkout_Paypal.tc__SimpleProductAndGc_InCheckout_Paypal">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="simpleProduct_Gc"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.RegUserWith_Checkout_Paypal.tc__SimpleProductAndGc_InCheckout_Paypal -->
+      <class name="com.RegUserWith_Checkout_Paypal.tc__ProductSetForRegUser_InCheckoutPaypal">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="productSet"/>
+        </methods>
+      </class> <!-- com.RegUserWith_Checkout_Paypal.tc__ProductSetForRegUser_InCheckoutPaypal -->
+      <class name="com.RegUserWith_Checkout_Paypal.tc__ShippingAndBillingAddressDiffer__Reg_CheckoutPaypal">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="shippingAndBillingAddressDiffer_Guest"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.RegUserWith_Checkout_Paypal.tc__ShippingAndBillingAddressDiffer__Reg_CheckoutPaypal -->
+      <class name="com.providio.testcases.tc__LoginSc">
+        <methods>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.providio.testcases.tc__LoginSc -->
+      <class name="com.RegUserWith_Checkout_Paypal.tc__SimpleProductsAndBundle_Gc_InCheckout_Paypal">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="simpleProducts_Bundle_Gc"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.RegUserWith_Checkout_Paypal.tc__SimpleProductsAndBundle_Gc_InCheckout_Paypal -->
+      <class name="com.RegUserWith_Checkout_Paypal.tc__PickUpStore_Guest_Checkout_Paypal">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="paypalFromCheckoutPage"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.RegUserWith_Checkout_Paypal.tc__PickUpStore_Guest_Checkout_Paypal -->
+      <class name="com.RegUserWith_Checkout_Paypal.tc__BySearchingProduct_RegUser_InCheckoutPaypal">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="bySearchingProduct"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.RegUserWith_Checkout_Paypal.tc__BySearchingProduct_RegUser_InCheckoutPaypal -->
+      <class name="com.RegUserWith_Checkout_Paypal.tc__PaypalFromCheckoutPage_RegUser">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="paypalFromCheckoutPage"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.RegUserWith_Checkout_Paypal.tc__PaypalFromCheckoutPage_RegUser -->
+      <class name="com.RegUserWith_Checkout_Paypal.tc__VariationProductForGuestUser_InCheckoutPaypal">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="variationProduct"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.RegUserWith_Checkout_Paypal.tc__VariationProductForGuestUser_InCheckoutPaypal -->
+      <class name="com.RegUserWith_Checkout_Paypal.tc__SimpleProductForRegUser_InPaypal">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="setUp"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+          <include name="simpleProduct"/>
+        </methods>
+      </class> <!-- com.RegUserWith_Checkout_Paypal.tc__SimpleProductForRegUser_InPaypal -->
+      <class name="com.RegUserWith_Checkout_Paypal.tc__Bundle_GcAndAllPromotions_Reg_InCheckoutPaypal">
+        <methods>
+          <include name="setUpforReport"/>
+          <include name="bundle_GcAndAllPromotions"/>
+          <include name="afterMethod"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.RegUserWith_Checkout_Paypal.tc__Bundle_GcAndAllPromotions_Reg_InCheckoutPaypal -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Automation(failed) -->
+</suite> <!-- Failed suite [ProvidioTestcases] -->

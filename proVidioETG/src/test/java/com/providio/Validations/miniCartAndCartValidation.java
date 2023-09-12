@@ -35,7 +35,7 @@ public class miniCartAndCartValidation extends baseClass {
 	        
 	        test.info("Verify the viewcart, checkout, paypal buttons and products are displayed");
 	        List<WebElement> productsinthecart = driver.findElements(By.cssSelector(".line-item-name"));
-	        logger.info("Products count in minicart are" + productsinthecart.size());
+	        test.info("The number of Products in minicart are" + productsinthecart.size());
 	        
 	        //count of products and its name in minicart
 	        if(productsinthecart.size()>0) {

@@ -47,15 +47,5 @@ WebDriver lDriver;
 	    	}
 	      }
     } 
-    public void trackTheOrderId(WebDriver driver) {
-        WebElement orderID = driver.findElement(By.xpath("//span[contains(@class, 'summary-details order-number')]"));
-        String orderIDtext= orderID.getText();
-        System.out.println("Thank you for your order");
-        System.out.println("Order Number " + orderIDtext);
-
  
-
-    } 
-
-
 }

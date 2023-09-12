@@ -13,7 +13,7 @@ import com.providio.pageObjects.SizeSelectionForProductSet;
 import com.providio.paymentProccess.tc__CheckOutProcess;
 import com.providio.paymentProccess.tc__CreditCardPaymentProcess;
 import com.providio.testcases.baseClass;
-public class tc__ProductSetForGuestUser_InCC extends baseClass{
+public class tc__ProductSetForRegUser_InCC extends baseClass{
 	SoftAssert softAssert = new SoftAssert();
 	int minicartCountValue;
 	 @Test(dependsOnMethods = {"com.providio.testcases.tc__LoginSc.verifySuccessfulLogin"}, alwaysRun = true)

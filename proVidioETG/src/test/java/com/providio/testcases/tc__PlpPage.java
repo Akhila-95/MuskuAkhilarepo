@@ -69,7 +69,7 @@ public class tc__PlpPage extends baseClass{
 		    logger.info("Hovered over the Men's menu");
 		    Thread.sleep(5000);
 
-		    NM.ClickMensofPants();
+		    NM.ClickMensofPants(driver);
 		    logger.info("Clicked on Men's Pants");
 		    Thread.sleep(5000);
 		}

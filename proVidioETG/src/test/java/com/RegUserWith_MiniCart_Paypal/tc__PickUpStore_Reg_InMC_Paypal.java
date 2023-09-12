@@ -54,8 +54,8 @@ public class  tc__PickUpStore_Reg_InMC_Paypal extends baseClass {
 		    		 
 	    	 }else { 
 	    	     //selecting mens-pants category
-	    	     Mens_Pants_PickUpInStore pickUpstore = new Mens_Pants_PickUpInStore();
-	    	     pickUpstore.mens_Pants_PickUpInStore(driver);
+	    	      Mens_Pants_PickUpInStore pickUpstore = new Mens_Pants_PickUpInStore();
+	    	      pickUpstore.mens_Pants_PickUpInStore(driver);
 	    	     
 	    	     //checkout from mini cart by paypal	        
 			      tc__CheckOutProcessByPayPal checkOutProcessByPayPal= new tc__CheckOutProcessByPayPal();

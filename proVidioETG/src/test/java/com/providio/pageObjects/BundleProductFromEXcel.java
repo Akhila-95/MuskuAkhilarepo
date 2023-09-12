@@ -123,6 +123,8 @@ import com.providio.testcases.baseClass;
 								test.pass(" searched for for the right product and product id is " +randomValue );
 								logger.info("Searched for right product");
 								
+								WebElement productName= driver.findElement(By.xpath("(//h1[@class='product-name'])[1]"));
+								test.info("Product name is " + productName.getText());
 								//product add to cart 
 								 bundleProductAddAllToCart addToCart= new bundleProductAddAllToCart();
 								 addToCart.addAllToCart(driver);

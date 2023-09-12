@@ -11,7 +11,7 @@ import com.providio.pageObjects.GiftCertificate;
 import com.providio.pageObjects.SimpleProductFromExcel;
 import com.providio.testcases.baseClass;
 
-public class tc__ShippingAndBillingAddressDiffer extends baseClass{
+public class tc__ShippingAndBillingAddressDiffer_InCheckoutPaypal extends baseClass{
 	int minicartCountValue;
 	@Test
 	public void shippingAndBillingAddressDiffer_Guest() throws InterruptedException {

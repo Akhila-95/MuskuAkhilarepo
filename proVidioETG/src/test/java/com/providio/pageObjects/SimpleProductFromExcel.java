@@ -124,13 +124,16 @@ import com.providio.testcases.baseClass;
 					
 						
 							//validation of product
-							Thread.sleep(2000);
-							WebElement searchedForProduct= driver.findElement(By.xpath("//div[@class='product-number d-flex align-items-center ']/span"));
+							//Thread.sleep(2000);
+							WebElement searchedForProduct= driver.findElement(By.xpath("(//span[contains(@class,'product-id')])[2]"));
 							String searchedForText= searchedForProduct.getText();
 							System.out.println("The product ID in PDP is "+ searchedForText);
 							if(randomValue.equals(searchedForText)) {
 								test.pass(" searched for for the right product and product id is " +randomValue );
 								logger.info("Searched for right product");
+								
+								WebElement productName= driver.findElement(By.xpath("(//h1[contains(@class,'product-name')])[2]"));
+								test.info("Product name is " + productName.getText());
 								//product add to cart
 								productDescriptionPage pdp =new productDescriptionPage(driver);
 								pdp.clickcartbutton(driver);

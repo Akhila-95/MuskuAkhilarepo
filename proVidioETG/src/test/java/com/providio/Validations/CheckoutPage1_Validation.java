@@ -13,8 +13,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
- 
-
+import com.Logout.tc__LogOut;
 import com.github.javafaker.Faker;
 import com.providio.pageObjects.CreateAccount;
 import com.providio.pageObjects.guestUserLoginPage;
@@ -24,7 +23,6 @@ import com.providio.pageObjects.navigationPage;
 import com.providio.pageObjects.productListingPage;
 import com.providio.testcases.baseClass;
 import com.providio.testcases.size;
-import com.providio.testcases.tc__LogOut;
 import com.providio.testcases.tc__createAccount;
 
  

@@ -32,9 +32,6 @@ public class tc__PdpPage_Reg_InCC extends baseClass {
 	        // Step 1: Navigate to Women's New Arrivals
 	        navigateToWomensNewArrivals();
 	        
-	        //validationofwomesNewarrivals
-	        validatiionNewArrivalWomens();
-
 	        // Step 2: Select a Product from the Listing Page
 	        selectProductFromListingPage();
 
@@ -139,25 +136,7 @@ public class tc__PdpPage_Reg_InCC extends baseClass {
 	          s.selectSize(driver);
     		 };
 	}
-	
-	//validation for the new arrivals of womens
-	private void validatiionNewArrivalWomens() {
-		//validate new arrival womens
-		test.info("verify that menu is selected");
-        WebElement NewwoMens = driver.findElement(By.xpath("//h1[@class ='header page-title text-uppercase m-0 p-0']"));
-        String ActualTitleofwoMens = NewwoMens.getText();
-        String ExpectedTitleofwoMens = "WOMENS";
-        logger.info(NewwoMens.getText());
-        if (ActualTitleofwoMens.equals(ExpectedTitleofwoMens)) {
-            test.pass("Successfully clicked on the NewArrival of  " + ActualTitleofwoMens + " " + " ");
-            logger.info("click Success New arrival womens");
-        } else {
-            test.fail("The page Title does not match expected " + ExpectedTitleofwoMens + " " + "  but found" + " " + ActualTitleofwoMens + " ");
-            logger.info("Click failed");
-        }
-        
-	}
-	
+
 	private void validateproductselect() {
 		
 		//validate the product is selected

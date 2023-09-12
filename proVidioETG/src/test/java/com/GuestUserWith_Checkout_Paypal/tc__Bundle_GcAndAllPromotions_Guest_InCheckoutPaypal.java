@@ -39,7 +39,7 @@ public class tc__Bundle_GcAndAllPromotions_Guest_InCheckoutPaypal extends baseCl
 		 //searching the bundle product from excel sheet
 		 BundleProductFromEXcel bundleProduct = new  BundleProductFromEXcel();
 		 bundleProduct.performRandomOperations(driver);
-		 logger.info("Searched a product");
+		 logger.info("Searched bundle  product");
 		 
 		 //adding GC into cart
 		 for(int i=1; i<=1;i++) {

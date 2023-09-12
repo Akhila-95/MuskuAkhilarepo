@@ -368,14 +368,15 @@ public void ClickMensofShorts(){
 
 @FindBy(xpath="//a[@id='mens-clothing-pants']")
 
-WebElement MensPants;
+WebElement mensPants;
 
-public void ClickMensofPants() throws InterruptedException{
-
+public void ClickMensofPants(WebDriver driver) throws InterruptedException{
     Thread.sleep(1000);
-
-    MensPants.click();
-
+    mensPants.click();
+    if(mensPants.isDisplayed()) {
+    	JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", mensPants);
+    }
 }
 
 //ties

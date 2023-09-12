@@ -7,6 +7,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 import com.providio.Validations.Checkout_Validation;
+import com.providio.Validations.ShippingAndBilling_PaymentDetails;
 import com.providio.pageObjects.checkOutPage;
 import com.providio.pageObjects.miniCartPage;
 import com.providio.pageObjects.paymentpPage;
@@ -203,6 +204,10 @@ public class tc__CheckOutProcessByPayPal extends baseClass{
 					    		rop.clickonReviewOrder(driver);
 					    		logger.info("Clicked on review order button");
 					    		Thread.sleep(2000);
+					    		
+					    		//shipping and billing ,payment detailss
+					    		ShippingAndBilling_PaymentDetails details= new ShippingAndBilling_PaymentDetails();
+					    		details.placeOrderPageDetails();
 				    		}
 				    		//placeorder
 				    		WebElement placeOrder= driver.findElement(By.cssSelector("button.place-order"));	

@@ -1,4 +1,4 @@
-package com.providio.testcases;
+package com.Logout;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -6,6 +6,7 @@ import org.testng.asserts.SoftAssert;
 
 import com.providio.pageObjects.logOut;
 import com.providio.pageObjects.profilePage;
+import com.providio.testcases.baseClass;
 
  
 

@@ -29,7 +29,7 @@ int minicartCountValue;
     		 test.info("Entered into random menu " + pageTitle1.getText());
     	 }
 	    
-    	 navPage.ClickMensofPants();
+    	 navPage.ClickMensofPants(driver);
     	 test.info("Selected mens-pants category");
 	  //selected a random product 
     	 productListingPage plp = new productListingPage(driver);

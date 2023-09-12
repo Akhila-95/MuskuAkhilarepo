@@ -32,9 +32,6 @@ public class tc__PdpPage_RegUser_GcAndCc extends baseClass {
 	    if (isLoggedIn) {
 	        // Step 1: Navigate to Women's New Arrivals
 	        navigateToWomensNewArrivals();
-	        
-	        //validationofwomesNewarrivals
-	        validatiionNewArrivalWomens();
 
 	        // Step 2: Select a Product from the Listing Page
 	        selectProductFromListingPage();

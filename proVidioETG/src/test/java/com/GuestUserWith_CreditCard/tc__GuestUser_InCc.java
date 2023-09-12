@@ -17,16 +17,16 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class tc__GuestUser extends baseClass {
+public class tc__GuestUser_InCc extends baseClass {
 	SoftAssert softAssert = new SoftAssert();
 	int  minicartCountValue;
 
     @Test
     public void guestlogin() throws InterruptedException {
     	
-        driver.get("https://zzqi-002.dx.commercecloud.salesforce.com/s/RefArch/electronics/gaming/game%20consoles/microsoft-xbox360-consoleM.html?lang=en_US");
+        driver.get(baseURL);
         logger.info("enterd into url");
-       /*
+      
         navigationPage navPage =new navigationPage(driver);
   	    navPage.selectRandomMenu(driver);
   	    test.info("Randomly selected a Menu");
@@ -40,7 +40,7 @@ public class tc__GuestUser extends baseClass {
   	    productListingPage plp = new productListingPage(driver);
   	    plp.selectProductRandom(driver);
   	    test.info("Randomly selected a product");
-  	    */
+  	    
   	    List<WebElement> productName1 = driver.findElements(By.xpath("//h1[@class='product-name hidden-sm-down']"));
 	     if(productName1.size()>0) {
 	    	 WebElement productName = driver.findElement(By.xpath("//h1[@class='product-name hidden-sm-down']"));
@@ -89,8 +89,9 @@ public class tc__GuestUser extends baseClass {
 			     tc__CheckOutProcess cp = new tc__CheckOutProcess();			     
 			     cp.checkoutprocess();
 			     
-			     //Payment process
-		     
+			    
+			     
+			     //Payment process		     
 			     tc__CreditCardPaymentProcess cc = new tc__CreditCardPaymentProcess();			     
 			     cc.paymentByCreditCard();
     }

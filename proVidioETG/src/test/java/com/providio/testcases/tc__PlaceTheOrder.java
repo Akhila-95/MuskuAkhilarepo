@@ -41,7 +41,7 @@ public class tc__PlaceTheOrder extends baseClass{
 		n.clickMensMenubaritems(driver);
 		logger.info("clicked menus");
 		
-		n.ClickMensofPants();
+		n.ClickMensofPants(driver);
 		logger.info("clickd submenus");
 		
 		//validate mens of pants

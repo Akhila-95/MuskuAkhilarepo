@@ -55,15 +55,10 @@ public class ProductSetFromExcel extends baseClass {
 	            String stringValue = cell.toString();
 	            data.add(stringValue);
 	        }
-	    }
-
-		
-		
+	    }	
 		workbook.close();
 		return data;
-	}
-
-	
+	}	
 	public String pickRandomValueWithoutDuplicate(List<String> dataList) {
 		if (dataList.isEmpty()) {
 			return null; 
@@ -131,7 +126,7 @@ public class ProductSetFromExcel extends baseClass {
 					
 					//validation of product
 					Thread.sleep(2000);
-					WebElement searchedForProduct= driver.findElement(By.xpath("//div[@class='product-number d-flex align-items-center']/span"));
+					WebElement searchedForProduct= driver.findElement(By.xpath("//div[@class='product-number d-flex align-items-center ']"));
 					String searchedForText= searchedForProduct.getText();
 					System.out.println("The product ID in PDP is "+ searchedForText);
 					if(randomValue.equals(searchedForText)) {

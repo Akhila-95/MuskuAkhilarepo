@@ -162,6 +162,7 @@ public class baseClass {
 	            System.out.println("Exception while taking screenshot: " + e.getMessage());
 	        }
 	    }
+	   
 	       if(result.getStatus() == ITestResult.FAILURE) {
 	    	  homePage hp =new homePage(driver);
               hp.clickOnLogo();

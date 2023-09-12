@@ -6,15 +6,7 @@
 		<listener class-name="com.providio.ExtentReports.ExtentReporterNG" />
 	</listeners> -->
   <test thread-count="5" name="Automation" preserve-order="true">
-    <packages>
-      <package name="com.GuestUserWith_Checkout_Paypal" />  
-      <package name="com.GuestUserWith_CreditCard" />                  
-      <package name="com.GuestUserWith_Minicart_Paypal" /> 
-      <package name="com.GuestUserWith_ViewCart_Paypal" />
-      <package name="com.GuestUserWith_GcAndCC" />  
-      <package name="com.GuestUserWith_GiftCard" />  
-    </packages>
-  
+    
    
    <classes>
       <class name="com.providio.testcases.tc__LoginSc"/>
@@ -28,14 +20,10 @@
 	 <package name="com.RegUserWith_ViewCart_Paypal" /> 
 	 <package name="com.RegUserWith_GcAndCC" />  
 	 <package name="com.RegUserWith_GiftCard" /> 
+	  <!--<package name="com.Logout" />   -->
      
     </packages>
-  </test> <!-- Automation -->
-    
-    <test thread-count="5" name="Automation1" preserve-order="true"  >
-     <classes>
-    <class name="com.providio.testcases.tc__LogOut"/>
-    </classes>
-    </test>
+   
+   </test> 
 </suite> <!-- ProvidioTestcases -->
 

@@ -112,27 +112,6 @@ public class Checkout_Validation extends baseClass {
         }	        	
     }
     
-    //paypal window validation
-   public void validatePaypalClick() throws InterruptedException {
-    	
-	 
-    	Thread.sleep(3000);
-    	System.out.println("The url for payapal is " +driver.getCurrentUrl());
-    	Thread.sleep(4000);
-    	
-//    	WebElement paypalWindow = driver.findElement(By.xpath("//h1[contains(@class,'headerText')]"));
-//    	String actualPaypaltext= paypalWindow.getText();
-//    	String expectedPaypalText="Pay with PayPal";
-//    	if( actualPaypaltext.equals(expectedPaypalText)) {
-//    		test.info("Validating paypal window");
-//    		test.pass("Succesfully opened the Paypal window ");
-//    		logger.info("Succesfully opened the Paypal window ");
-//    	}else {
-//    		test.info("Succesfully opened the Paypal window ");
-//    		logger.info("Succesfully opened the Paypal window ");
-//    	}
-    }
-    
 	//validate the order number and date of order
 	public void ordernumberandOrderdat() throws InterruptedException {
 		

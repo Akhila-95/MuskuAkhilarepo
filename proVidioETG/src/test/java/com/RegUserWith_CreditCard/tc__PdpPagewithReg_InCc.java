@@ -21,7 +21,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class tc__PdpPagewithGuestuser extends baseClass {
+public class tc__PdpPagewithReg_InCc extends baseClass {
 
 	SoftAssert softAssert = new SoftAssert();
 
